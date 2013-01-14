@@ -9,4 +9,4 @@ env.Append(LIBPATH=['evaluator/pbots_calc'])
 env.Append(CPPPATH = ['evaluator/pbots_calc'])
 
 boost_libs = ['boost_program_options', 'boost_system']
-env.Program('player', ['main.cpp', 'player.cpp', 'actionselector/ActionSelector.cpp', 'evaluator/Evaluator.cpp'], LIBS=[boost_libs,'pbots_calc','poker-eval'])
+env.Program('player', ['main.cpp', 'player.cpp', 'actionselector/ActionSelector.cpp', 'evaluator/Evaluator.cpp', 'opponentmodeler/OpponentModeler.cpp'], LIBS=[boost_libs,'pbots_calc','poker-eval'])

@@ -105,6 +105,10 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
    }      
  }
 
+
+
+/* Discard functions */
+
 void ActionSelector::discardUniform(std::vector<std::string> &holeCards, std::string &myDiscard, ActionInfo &actionInfo){  
   // discard a card at random lol
   //todo lol replace this with discard selector instead of this 
@@ -117,6 +121,7 @@ void ActionSelector::discardUniform(std::vector<std::string> &holeCards, std::st
   holeCards.erase(holeCards.begin() + remove);
   std::cout << "holecards post discard: " << holeCards.size() << std::endl;
 }
+
 /* Helper methods*/
 
 void ActionSelector::packetlist2vector(std::stringstream &ss, std::vector<std::string> &packetlist, int length){
