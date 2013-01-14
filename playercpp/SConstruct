@@ -1,0 +1,10 @@
+import os
+# On Windows, the path is incorrect, so change the path to
+# the environment one. Even though windows is the problem,
+# do it for all platforms
+newpath=os.environ.get('PATH')
+env = Environment(ENV = { 'PATH' : newpath })
+env = Environment(CCFLAGS = '-g');
+
+boost_libs = ['boost_program_options', 'boost_system']
+env.Program('player', ['main.cpp', 'player.cpp', 'actionselector/ActionSelector.cpp'], LIBS=boost_libs)
