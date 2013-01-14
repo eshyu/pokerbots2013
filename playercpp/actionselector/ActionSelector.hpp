@@ -4,9 +4,12 @@
 #include <string>
 #include <vector>
 
+#include "../evaluator/Evaluator.hpp"
+
 class ActionSelector {
 public:
   ActionSelector();
+  ActionSelector(Evaluator &_evaluator);
   
   //TODO:  
   // OpponentModeler oppModel;    
@@ -23,7 +26,7 @@ public:
   // bet-fold
   // bet-raise
   // ...
-  enum ACTION_TYPE {CHECKFOLD_BET, DISCARD_ONE, FOLD_CALL_RAISE};
+  enum ACTION_TYPE {CHECK_BET, DISCARD_ONE, FOLD_CALL_RAISE};
 
   /* return to player the action it will take*/
   struct ActionInfo
@@ -39,18 +42,26 @@ public:
     ACTION_TYPE actionType;
     int callMin;
     int raiseMin;
-    int raiseMax;
+    int raiseMax;    
   };
-  
-  /* blackbox for choosing action for current game*/
-  ActionInfo getAction(const std::string &getaction_str, const std::string &holeCard1, const std::string &holeCard2, const std::string &holeCard3, bool myButton, int stackSize);
 
+  // hand evaluator 
+  Evaluator evaluator;
+
+  /* blackbox for choosing action for current game*/
+  ActionInfo getAction(const std::string &getaction_str, std::vector<std::string> &holeCards, std::string &myDiscard, bool myButton, int stackSize);
 
 private:
   /* TODO lol this should disappear in favor of BettingSelector, DiscardSelector*/
-  void evalMagic(int potSize, bool myButton,
-		 std::string holeCard1, std::string holeCard2, std::string holeCard3,
-		 const LegalAction &legalAction, ActionInfo &actionInfo);
+  void evalMagic(int potSize, bool myButton, 
+		 const std::vector<std::string> &boardCards,
+		 const std::vector<std::string> &holeCards,
+		 const std::string &myDiscard,
+		 const LegalAction &legalAction, 
+		 ActionInfo &actionInfo);
+
+  /* TODO: this should be in a DiscardSelector */
+  void discardUniform(std::vector<std::string> &holeCards, std::string &myDiscard, ActionInfo &actionInfo);
 
   /* convert list of items from packet to vector of strings */
   void packetlist2vector(std::stringstream &ss, std::vector<std::string> &packetlist, int length);

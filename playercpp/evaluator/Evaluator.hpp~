@@ -1,0 +1,19 @@
+#ifndef __EVALUATOR_HPP__
+#define __EVALUATOR_HPP__
+
+#include <string>
+#include <vector>
+
+class Evaluator {
+public:
+  Evaluator();
+  
+  // todo: use opponent hand distribution
+  double evaluate(const std::vector<std::string> &holeCards,
+				   const std::vector<std::string> &boardCards,
+				   const std::string &myDiscard);
+				   
+
+};
+
+#endif  // __EVALUATOR_HPP__

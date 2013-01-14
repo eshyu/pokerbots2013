@@ -7,11 +7,13 @@
 
 #include <boost/algorithm/string.hpp>
 
-//#include "../evaluator/..pbots_calc.h"
-
 ActionSelector::ActionSelector(){}
 
-ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getaction_str, const std::string &holeCard1, const std::string &holeCard2, const std::string &holeCard3, bool myButton, int stackSize){
+ActionSelector::ActionSelector(Evaluator &_evaluator){
+  evaluator = _evaluator;
+}
+
+ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getaction_str, std::vector<std::string> &holeCards, std::string &myDiscard, bool myButton, int stackSize){
  
   LegalAction legalAction;
   ActionInfo actionInfo;
@@ -33,65 +35,89 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
   ss >> numLegalActions;
 
   legalAction = actionlist2struct(ss, numLegalActions, lastActions[numLastActions-1]);
+  
+  // OpponentModeler.update(lastAction);
+  
+  //  float myEval = handEval.eval(holeCards, boardCards);  
+  switch(legalAction.actionType){
+  case DISCARD_ONE:
+    // DiscardSelector.discard();
+    discardUniform(holeCards, myDiscard, actionInfo);
+    break;
+  case CHECK_BET:
+    // Be 
+    evalMagic(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
+    break;
+  case FOLD_CALL_RAISE:
+     // use myEval, potOdds, numBoar
+    evalMagic(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
+     break;
+   }
 
-  // TODO: hand evaluator, opponent modeler, betting selector
-  evalMagic(potSize, myButton, holeCard1, holeCard2, holeCard3, legalAction, actionInfo);
+   return actionInfo;
+ }
 
-  return actionInfo;
+ /* this will be replaced with something more sophisticated later */
+ void ActionSelector::evalMagic(int potSize, bool myButton, 
+				const std::vector<std::string> &boardCards, 
+				const std::vector<std::string> &holeCards, 
+				const std::string &myDiscard,
+				const ActionSelector::LegalAction &legalAction,
+				ActionSelector::ActionInfo &actionInfo){
+   // TODO: .....
+   //dumbass bot allin 25% of time, never raises except allin  
+   //  case CHECKFOLD_BET:   case FOLD_CALL_RAISE:              
+   int coin = rand() % 4; //LOL
+   int callMin = legalAction.callMin;
+   
+   //std::cout << "coin is " << coin;
+   
+   if (coin == 1){
+     if (legalAction.raiseMax > 0){
+       actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
+       actionInfo.betAmount=legalAction.raiseMax;
+     } else { 
+       // opponent already put us all in
+       std::cout << "ActionSelector.cpp:L78 Calling All-in" << std::cout;
+       actionInfo.action = CALL;
+     }
+     //std::cout << "raising to " << actionInfo.betAmount << std::endl;
+   } else {
+     
+     // compute pot odds and either call or fold    
+     double potOdds = (double)potSize/(callMin+potSize);
+     // TODO: lol
+     double equity = evaluator.evaluate(holeCards, boardCards, myDiscard);
+     
+     std::cout << "myPotOdds: " << potOdds << " vs. equity: " << equity << std::endl;
+
+     //TODO: lol
+     if (legalAction.callMin > 0){
+       if (potOdds > equity){
+	 actionInfo.action=CALL;
+       } else {
+	 actionInfo.action=FOLD;
+       }
+     } else {      
+       actionInfo.action=CHECK;
+     }
+     
+   }      
+ }
+
+void ActionSelector::discardUniform(std::vector<std::string> &holeCards, std::string &myDiscard, ActionInfo &actionInfo){  
+  // discard a card at random lol
+  //todo lol replace this with discard selector instead of this 
+
+  int remove = rand() % 3;  
+  myDiscard = std::string(holeCards[remove]);
+  actionInfo.cardNum=myDiscard[0]; actionInfo.cardSuit=myDiscard[1];    
+  actionInfo.action = DISCARD;
+  std::cout << "holecards b4 discard: " << holeCards.size() << std::endl;
+  holeCards.erase(holeCards.begin() + remove);
+  std::cout << "holecards post discard: " << holeCards.size() << std::endl;
 }
-
-/* this will be replaced with something more sophisticated later */
-void ActionSelector::evalMagic(int potSize, bool myButton,
-	       std::string holeCard1, std::string holeCard2, std::string holeCard3,
-	       const ActionSelector::LegalAction &legalAction, ActionSelector::ActionInfo &actionInfo){
-  // TODO: .....
-  //dumbass bot allin 25% of time, never raises except allin
-  if (legalAction.actionType == DISCARD_ONE){
-    actionInfo.action = DISCARD;
-    
-    //todo lol replace this with discard selector instead of this 
-    std::string discard;
-    int tricoin = rand() % 3;
-    if (tricoin == 0) discard=holeCard1;
-    if (tricoin == 1) discard=holeCard2;
-    if (tricoin == 2) discard=holeCard3;
-    actionInfo.cardNum=discard[0]; actionInfo.cardSuit=discard[1];
-  } else {
-    //  case CHECKFOLD_BET:   case FOLD_CALL_RAISE:              
-    int coin = rand() % 4; //LOL
-    int callMin = legalAction.callMin;
-    
-    std::cout << "coin is " << coin;
-
-    if (coin == 1){
-      actionInfo.action= (legalAction.actionType == CHECKFOLD_BET) ? BET : RAISE;
-      actionInfo.betAmount=legalAction.raiseMax;
-      std::cout << "raising to " << actionInfo.betAmount << std::endl;
-    } else {
-
-      // compute pot odds and either call or fold    
-      double potOdds = (double)potSize/(callMin+potSize);
-      std::cout << "myPotOdds: " << potOdds << std::endl;
-      /* TODO: lol
-	 std::string calcString = holeCard1+holeCard2+holeCard3+":"+"xxx"
-	 double equity = calc(calc
-      */
-    double equity = 0.2; //TODO LOL
-    
-    //TODO: lol
-    if (legalAction.callMin > 0){
-      if (potOdds > equity){
-	actionInfo.action=CALL;
-      } else {
-	actionInfo.action=FOLD;
-      }
-    } else {      
-      actionInfo.action=CHECK;
-    }
-    
-    }    
-  }
-}
+/* Helper methods*/
 
 void ActionSelector::packetlist2vector(std::stringstream &ss, std::vector<std::string> &packetlist, int length){
   std::string item;
@@ -105,12 +131,12 @@ ActionSelector::LegalAction ActionSelector::actionlist2struct(std::stringstream 
 
   LegalAction legalAction;
   std::vector<std::string> tokens;
-  legalAction.actionType = CHECKFOLD_BET;    
+  legalAction.actionType = CHECK_BET;
 
   // get call amount from last action
   boost::split(tokens, lastAction, boost::is_any_of(":"));
   
-  std::cout << "last action is: " << tokens[0] << std::endl;
+  // std::cout << "last action is: " << tokens[0] << std::endl;
 
   int callMin=0, raiseMin=0, raiseMax=0;
   if ((!tokens[0].compare("BET") || !tokens[0].compare("RAISE") ||
@@ -129,11 +155,11 @@ ActionSelector::LegalAction ActionSelector::actionlist2struct(std::stringstream 
       raiseMin = atoi(tokens[1].c_str());
       raiseMax = atoi(tokens[2].c_str());
       legalAction.actionType  = FOLD_CALL_RAISE;    
-      //      std::cout << "ACTION IS fold_call_raise" << std::endl;
+      // std::cout << "ACTION IS fold_call_raise" << std::endl;
     } else if (!tokens[0].compare("BET")){
       raiseMin = atoi(tokens[1].c_str());
       raiseMax = atoi(tokens[2].c_str());
-      legalAction.actionType  = CHECKFOLD_BET;   
+      legalAction.actionType  = CHECK_BET;   
     } else if (!tokens[0].compare("DISCARD")){
       legalAction.actionType = DISCARD_ONE;
       // std::cout << "ACTION IS discard" << std::endl;

@@ -8,22 +8,29 @@
 Player::Player() {
 }
 
+
 /* current hand state vriables */
 bool myButton;
 float myTimeBank;
 int myHandId, myBankroll, oppBankroll;
 int potSize, numBoardCards;
-std::string holeCard1, holeCard2, holeCard3;
+std::vector<std::string>  holeCards;
+std::string myDiscard="";
 
 /* Pokerbot execution loop */
 void Player::run(tcp::iostream &stream) 
 {
   std::string line, packet_type, tmp, button_str;
-  ActionSelector::ActionInfo nextAction;
+  std::string holeCard1, holeCard2, holeCard3;
+  
+  evaluator = new Evaluator();
+  evaluator->populatePreFlopTable(); //initialize preflop equities
+  actionSelector = new ActionSelector(*evaluator);
 
+  ActionSelector::ActionInfo nextAction;  
   while (std::getline(stream, line)) {
     // print packet for debugging   
-    std::cout << line << "\n";
+    std::cout << "(" << line << ")\n";
 
     std::stringstream ss(line); 
     ss >> packet_type;
@@ -31,7 +38,7 @@ void Player::run(tcp::iostream &stream)
     if (!packet_type.compare("GETACTION")) {
       // get next action from action selector, write to stream
 
-      nextAction = actionSelector.getAction(line, holeCard1, holeCard2, holeCard3, 
+      nextAction = actionSelector->getAction(line, holeCards, myDiscard,
 					    myButton, STACK_SIZE);      
       std::string action = action2str(nextAction);
       std::cout << "action: " << action;
@@ -40,11 +47,11 @@ void Player::run(tcp::iostream &stream)
     } else if (!packet_type.compare("NEWHAND")){
       // update info for new hand
       ss >> myHandId >> button_str >> holeCard1 >> holeCard2 >> holeCard3 >> myBankroll >> oppBankroll >> myTimeBank;
-      myButton = !button_str.compare("true");
+      newHand(holeCard1, holeCard2, holeCard3, button_str);
       
     } else if (!packet_type.compare("HANDOVER")){
       // TODO: ...
-
+      
     } else if (!packet_type.compare("REQUESTKEYVALUES")){
       // TODO ...
       stream << "FINISH\n";
@@ -61,10 +68,24 @@ void Player::run(tcp::iostream &stream)
   
   std::cout << "Gameover, engine disconnected.\n";
 
+  delete actionSelector;
+  delete evaluator;
+
 } // end void Player::run(...)
 
-std::string Player::action2str(const ActionSelector::ActionInfo &info){
-  std::cout << "hello thar\n";
+/* resets hand state variables after new hand*/
+void Player::newHand(const std::string &holeCard1, const std::string& holeCard2, const std::string &holeCard3, const std::string &button_str)
+{
+  holeCards.clear();
+  holeCards.push_back(holeCard1); holeCards.push_back(holeCard2); holeCards.push_back(holeCard3);
+  myButton = !button_str.compare("true");
+  myDiscard = std::string("");
+  evaluator->clearMemoizedEquities();
+}
+
+/* Converts ActionInfo struct into string */
+std::string Player::action2str(const ActionSelector::ActionInfo &info)
+{
   switch(info.action){
   case ActionSelector::BET:
     return std::string("BET:" + boost::lexical_cast<std::string>(info.betAmount) + "\n");
@@ -76,7 +97,7 @@ std::string Player::action2str(const ActionSelector::ActionInfo &info){
     return std::string("CHECK\n");
     break;
   case ActionSelector::DISCARD:
-    return std::string("DISCARD:" + std::string(1, info.cardNum) + std::string(1, info.cardSuit) + "\n");
+    return std::string("DISCARD:" + myDiscard + "\n");
     break;
   case ActionSelector::FOLD:
     return std::string("FOLD\n");
