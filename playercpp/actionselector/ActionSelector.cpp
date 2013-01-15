@@ -4,7 +4,7 @@
 #include <string>
 #include <cstdlib>
 #include <sstream>
-
+#include <algorithm>
 #include <boost/algorithm/string.hpp>
 
 ActionSelector::ActionSelector(){}
@@ -88,20 +88,29 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
      double potOdds = (double)potSize/(callMin+potSize);
      // TODO: lol
      double equity = evaluator.evaluate(holeCards, boardCards, myDiscard);
+    
+     if (equity>0.5 and coin!=2){
+        double oppEquity=1-equity;
+        int newPotSize=callMin+potSize;
+        int raise=1+(int)((double)newPotSize/oppEquity-newPotSize);
+        int betAmt=std::min(raise,legalAction.raiseMax);
+	actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
+        actionInfo.betAmount=betAmt;
+     }else{
      
-     std::cout << "myPotOdds: " << potOdds << " vs. equity: " << equity << std::endl;
+       std::cout << "myPotOdds: " << potOdds << " vs. equity: " << equity << std::endl;
 
-     //TODO: lol
-     if (legalAction.callMin > 0){
-       if (potOdds > equity){
-	 actionInfo.action=CALL;
-       } else {
-	 actionInfo.action=FOLD;
+       //TODO: lol
+       if (legalAction.callMin > 0){
+	 if (potOdds > equity){
+	   actionInfo.action=CALL;
+	 } else {
+	   actionInfo.action=FOLD;
+	 }
+       } else {      
+	 actionInfo.action=CHECK;
        }
-     } else {      
-       actionInfo.action=CHECK;
      }
-     
    }      
  }
 
