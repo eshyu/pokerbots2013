@@ -3,10 +3,10 @@ import os
 # the environment one. Even though windows is the problem,
 # do it for all platforms
 newpath=os.environ.get('PATH')
-env = Environment(ENV = { 'PATH' : newpath }, CCFLAGS = '-g')
+env = Environment(ENV = { 'PATH' : newpath }, CCFLAGS = '-O3')
 
-env.Append(LIBPATH=['evaluator/pbots_calc'])
-env.Append(CPPPATH = ['evaluator/pbots_calc'])
+env.Append(LIBPATH=['evaluator/pbots_calc/export/linux2/lib'])
+env.Append(CPPPATH = ['evaluator/pbots_calc/export/linux2/include'])
 
 boost_libs = ['boost_program_options', 'boost_system']
 env.Program('player', ['main.cpp', 'player.cpp', 'actionselector/ActionSelector.cpp', 'evaluator/Evaluator.cpp', 'opponentmodeler/OpponentModeler.cpp'], LIBS=[boost_libs,'pbots_calc','poker-eval'])
