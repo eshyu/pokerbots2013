@@ -1,12 +1,57 @@
-import os
+#import os
+
 # On Windows, the path is incorrect, so change the path to
 # the environment one. Even though windows is the problem,
 # do it for all platforms
-newpath=os.environ.get('PATH')
-env = Environment(ENV = { 'PATH' : newpath }, CCFLAGS = '-O3')
+#newpath=os.environ.get('PATH')
+#env = Environment(ENV = { 'PATH' : newpath }, CCFLAGS = '-O3')
 
-env.Append(LIBPATH=['evaluator/pbots_calc/export/linux2/lib'])
-env.Append(CPPPATH = ['evaluator/pbots_calc/export/linux2/include'])
+#env.Append(LIBPATH=['evaluator/pbots_calc/export/linux2/lib'])
+#env.Append(CPPPATH = ['evaluator/pbots_calc/export/linux2/include'])
+
+import os
+import sys
+import subprocess
+
+linkflags = []
+ccflags = ['-I.', '-MD']
+platform = sys.platform
+# need to do something like  on windows?
+if sys.platform.startswith('win'):
+    subprocess.call("vcvars32.bat")
+    linkflags.extend(['-OPT:REF', '-OPT:ICF', '-NOLOGO'])
+    ccflags.extend(['-W3', '-Ox', '-nologo'])
+else:
+    linkflags.extend(['-O3'])
+    ccflags.extend(['-Wall', '-O3', '-Wpointer-arith'])
+
+include = "#export/%s/include" % platform
+lib = "#export/%s/lib" % platform
+bin = "#export/%s/bin" % platform
+
+ld_library_path = os.path.abspath(lib[1:])
+
+env = Environment(ENV = os.environ,
+                  TARGET_ARCH = "x86",
+                  PLATFORM = platform,
+                  CCFLAGS = ccflags,
+                  LINKFLAGS = linkflags,
+                  BINDIR = bin,
+                  INCDIR = include,
+                  LIBDIR = lib,
+                  CPPPATH = [include, 'evaluator/pbots_calc/export/linux2/include'],
+                  LIBPATH = [lib, 'evaluator/pbots_calc/export/linux2/lib'],
+                  LD_LIBRARY_PATH = ld_library_path)
+
+#env.Append(LIBPATH=['evaluator/pbots_calc/export/linux2/lib'])
+#env.Append(CPPPATH = ['evaluator/pbots_calc/export/linux2/include'])
+
+Export("env")
+
+env.Alias('build', ['.'])
+
+env.SConscript(["evaluator/pbots_calc/src/SConscript"], exports='env')
 
 boost_libs = ['boost_program_options', 'boost_system']
-env.Program('player', ['main.cpp', 'player.cpp', 'actionselector/ActionSelector.cpp', 'evaluator/Evaluator.cpp', 'opponentmodeler/OpponentModeler.cpp'], LIBS=[boost_libs,'pbots_calc','poker-eval'])
+env.Program('player', ['main.cpp', 'player.cpp', 'actionselector/ActionSelector.cpp', 'evaluator/Evaluator.cpp', 'opponentmodeler/OpponentModeler.cpp'], 
+			LIBS=[boost_libs,'pbots_calc','poker-eval'])

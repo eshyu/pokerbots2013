@@ -63,6 +63,8 @@ private:
   /* TODO: this should be in a DiscardSelector */
   void discardUniform(std::vector<std::string> &holeCards, std::string &myDiscard, ActionInfo &actionInfo);
 
+  void discardGreedy(std::vector<std::string> &holeCards, std::string &myDiscard, ActionInfo &actionInfo);
+  
   /* convert list of items from packet to vector of strings */
   void packetlist2vector(std::stringstream &ss, std::vector<std::string> &packetlist, int length);
 

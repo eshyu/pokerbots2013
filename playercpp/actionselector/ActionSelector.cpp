@@ -122,6 +122,18 @@ void ActionSelector::discardUniform(std::vector<std::string> &holeCards, std::st
   std::cout << "holecards post discard: " << holeCards.size() << std::endl;
 }
 
+void ActionSelector::discardGreedy(std::vector<std::string> &holeCards, std::string &myDiscard, ActionInfo &actionInfo){  
+
+  // Try all two card hands and discard the 
+  int remove = rand() % 3;  
+  myDiscard = std::string(holeCards[remove]);
+  actionInfo.cardNum=myDiscard[0]; actionInfo.cardSuit=myDiscard[1];    
+  actionInfo.action = DISCARD;
+  std::cout << "holecards b4 discard: " << holeCards.size() << std::endl;
+  holeCards.erase(holeCards.begin() + remove);
+  std::cout << "holecards post discard: " << holeCards.size() << std::endl;
+}
+
 /* Helper methods*/
 
 void ActionSelector::packetlist2vector(std::stringstream &ss, std::vector<std::string> &packetlist, int length){
