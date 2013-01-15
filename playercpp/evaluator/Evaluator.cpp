@@ -90,6 +90,38 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
 
  }
 
+double Evaluator::evaluate_discard_pairs(const std::string &holeCards,
+					 const std::string &boardCards,
+					 const std::string &myDiscard)
+{   
+  int NUM_SIMULATIONS = 10000;
+
+  std::string calcString=holeCards+":xx";
+
+  char board_c_str[boardCards.size()+1];
+  for (int i=0;i<boardCards.size();++i) board_c_str[i] = boardCards[i];
+  board_c_str[boardCards.size()] = '\0';
+
+  // create discard c_string
+  char discard_c_str[myDiscard.size()+1];
+  for (int i=0;i<myDiscard.size(); i++) discard_c_str[i] = myDiscard[i];
+  discard_c_str[myDiscard.size()] = '\0';
+  
+  std::cout << "calcstring: " << calcString << " | " << "boardCards: " << boardCards << "myDicsard: " << myDiscard << std::endl;
+
+  Results *result = alloc_results();
+
+  calc(calcString.c_str(), board_c_str, discard_c_str, NUM_SIMULATIONS, result);
+
+  double myEv = result->ev[0]; // opponent equity from this calculator is 1-ours
+
+  // make sure to free result
+  free_results(result);
+
+  return myEv;
+
+ }
+
 /* This should be called by main() during set-up to initialize pre-flop equities*/
 void Evaluator::populatePreFlopTable()
 {

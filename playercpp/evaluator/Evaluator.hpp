@@ -30,6 +30,11 @@ public:
 				   const std::vector<std::string> &boardCards,
 				   const std::string &myDiscard);
 
+  // simple version of evaluate function for evaulating discard pairs
+  double evaluate_discard_pairs(const std::string &holeCards,
+				const std::string &boardCards,
+				const std::string &myDiscard);
+
   /* maps a 3-card hand to index into one of 1655 equivalent classes*/
   int threeCards2index(const std::string &holeCard1, const std::string &holeCard2,
 		       const std::string &holeCard3);

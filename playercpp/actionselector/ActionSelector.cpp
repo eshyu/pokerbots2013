@@ -42,7 +42,8 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
   switch(legalAction.actionType){
   case DISCARD_ONE:
     // DiscardSelector.discard();
-    discardUniform(holeCards, myDiscard, actionInfo);
+    //discardUniform(holeCards, myDiscard, actionInfo);
+    discardGreedy(holeCards, boardCards, myDiscard, actionInfo);
     break;
   case CHECK_BET:
     // Be 
@@ -131,15 +132,41 @@ void ActionSelector::discardUniform(std::vector<std::string> &holeCards, std::st
   std::cout << "holecards post discard: " << holeCards.size() << std::endl;
 }
 
-void ActionSelector::discardGreedy(std::vector<std::string> &holeCards, std::string &myDiscard, ActionInfo &actionInfo){  
+void ActionSelector::discardGreedy(std::vector<std::string> &holeCards, std::vector<std::string> &boardCards, std::string &myDiscard, ActionInfo &actionInfo){  
 
-  // Try all two card hands and discard the 
-  int remove = rand() % 3;  
-  myDiscard = std::string(holeCards[remove]);
+  // Try all two card hands and discard the lowest equity one
+  std::string discard0 = holeCards[1] + holeCards[2];
+  std::string discard1 = holeCards[0] + holeCards[2];
+  std::string discard2 = holeCards[0] + holeCards[1];
+
+  std::string boardString;
+  for (int i=0;i<boardCards.size();i++) boardString = boardString + boardCards[i];
+  
+  double eval0 = evaluator.evaluate_discard_pairs(discard0, boardString, holeCards[0]);
+  double eval1 = evaluator.evaluate_discard_pairs(discard1, boardString, holeCards[1]);
+  double eval2 = evaluator.evaluate_discard_pairs(discard2, boardString, holeCards[2]);  
+
+  // higest
+  int discard;
+  if (eval0 >= eval1 && eval0 >= eval2){
+    discard=0;
+  } else if (eval1 >= eval0 && eval1 >= eval2) {
+    discard=1;
+  } else if (eval2 >= eval0 && eval2 >= eval1){
+    discard=2;
+  }
+  
+  std::cout << "Equities: " << discard0 << ", " << eval0 << " | "
+	    << discard1 << ", " << eval1 << " | " 
+	    << discard2 << ", " << eval2 << " | "
+	    << " discarding: " << holeCards[discard] << std::endl;
+  
+  myDiscard = std::string(holeCards[discard]);
+    
   actionInfo.cardNum=myDiscard[0]; actionInfo.cardSuit=myDiscard[1];    
   actionInfo.action = DISCARD;
   std::cout << "holecards b4 discard: " << holeCards.size() << std::endl;
-  holeCards.erase(holeCards.begin() + remove);
+  holeCards.erase(holeCards.begin() + discard);
   std::cout << "holecards post discard: " << holeCards.size() << std::endl;
 }
 
