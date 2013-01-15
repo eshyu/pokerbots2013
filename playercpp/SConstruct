@@ -39,8 +39,8 @@ env = Environment(ENV = os.environ,
                   BINDIR = bin,
                   INCDIR = include,
                   LIBDIR = lib,
-                  CPPPATH = [include, 'evaluator/pbots_calc/export/linux2/include'],
-                  LIBPATH = [lib, 'evaluator/pbots_calc/export/linux2/lib'],
+                  CPPPATH = [include, 'export/linux2/include'],
+                  LIBPATH = [lib, 'export/linux2/lib'],
                   LD_LIBRARY_PATH = ld_library_path)
 
 #env.Append(LIBPATH=['evaluator/pbots_calc/export/linux2/lib'])

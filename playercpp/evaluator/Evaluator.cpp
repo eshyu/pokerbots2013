@@ -5,7 +5,8 @@
 #include <iostream>
 
 extern "C" {
-#include "pbots_calc/export/linux2/include/pbots_calc.h"
+  //#include "pbots_calc/export/linux2/include/pbots_calc.h"
+  #include "../export/linux2/include/pbots_calc.h"
 }
 
 // number of simulations
