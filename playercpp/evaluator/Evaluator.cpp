@@ -132,7 +132,7 @@ void Evaluator::populatePreFlopTable()
 
   std::cout << "Initializing pre-flop equity table..." << std::endl;
   
-  for (int i=0;i<1655;i++){
+  for (int i=0;i<1755;i++){
     fin >> index >> hand >> ev;
     preFlopEquities[i] = ev;    
   }
