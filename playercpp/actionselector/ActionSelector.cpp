@@ -89,14 +89,24 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
      double potOdds = (double)potSize/(callMin+potSize);
      // TODO: lol
      double equity = evaluator.evaluate(holeCards, boardCards, myDiscard);
-    
+     //     if (myButton) equity = equity*1.2;
+     
      if (equity>0.5 and coin!=2){
+       if (legalAction.raiseMax > 0){
         double oppEquity=1-equity;
         int newPotSize=callMin+potSize;
-        int raise=1+(int)((double)newPotSize/oppEquity-newPotSize);
-        int betAmt=std::min(raise,legalAction.raiseMax);
-	actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
-        actionInfo.betAmount=betAmt;
+	int raise=1+(int)(newPotSize/oppEquity-newPotSize);
+        int betAmt=std::max(std::min(raise,legalAction.raiseMax),0);
+	if (betAmt){
+	  actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
+	  actionInfo.betAmount=betAmt;
+	} else {
+	  actionInfo.action = (legalAction.actionType == CHECK_BET) ? CHECK : FOLD;
+	}
+       } else {
+	 std::cout << "ActionSelector.cpp:L103 Calling All-in" << std::cout;
+	 actionInfo.action = CALL;
+       }
      }else{
      
        std::cout << "myPotOdds: " << potOdds << " vs. equity: " << equity << std::endl;

@@ -13,10 +13,10 @@ public:
   enum BETTING_ROUND {FLOP, TURN, RIVER};  
 
   // pre-compute pre-flop equities for all starting hands
-  double preFlopEquities[3];
+  double preFlopEquities[1755];
 
   // memoize the hand equity for the flop, turn, river
-  double memoizedEquities[1655];
+  double memoizedEquities[3];
 
   // populate preflop equity table
   void populatePreFlopTable();
