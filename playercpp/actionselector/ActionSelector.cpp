@@ -6,6 +6,7 @@
 #include <sstream>
 #include <algorithm>
 #include <boost/algorithm/string.hpp>
+#include <time>
 
 ActionSelector::ActionSelector(){}
 
@@ -67,7 +68,11 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
 				ActionSelector::ActionInfo &actionInfo){
    // TODO: .....
    //dumbass bot allin 25% of time, never raises except allin  
-   //  case CHECKFOLD_BET:   case FOLD_CALL_RAISE:              
+   //  case CHECKFOLD_BET:   case FOLD_CALL_RAISE:  
+
+   //josep: seeding the randomness!!!!!
+   srand(time(NULL));
+
    int coin = rand() % 6; //LOL
    int callMin = legalAction.callMin;
    
