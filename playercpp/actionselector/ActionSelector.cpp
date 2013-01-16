@@ -6,7 +6,7 @@
 #include <sstream>
 #include <algorithm>
 #include <boost/algorithm/string.hpp>
-#include <time>
+#include <ctime>
 
 ActionSelector::ActionSelector(){}
 
@@ -103,7 +103,8 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
         double oppEquity=1-equity;
         int newPotSize=callMin+potSize;
 	int raise=(int)((newPotSize*oppEquity/(1-oppEquity))-1);
-        int betAmt=std::max(std::min(raise,legalAction.raiseMax),0);
+        int betAmt= std::max(std::min(raise,legalAction.raiseMax), legalAction.raiseMin);
+
 	std::cout << "betAmt: " << betAmt << " vs. raise: " << raise << std::endl;
 	if (betAmt){
 	  actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
