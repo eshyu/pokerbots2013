@@ -68,7 +68,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
    // TODO: .....
    //dumbass bot allin 25% of time, never raises except allin  
    //  case CHECKFOLD_BET:   case FOLD_CALL_RAISE:              
-   int coin = rand() % 4; //LOL
+   int coin = rand() % 6; //LOL
    int callMin = legalAction.callMin;
    
    //std::cout << "coin is " << coin;
