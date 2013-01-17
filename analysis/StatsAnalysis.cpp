@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
   boost::program_options::options_description desc("Allowed options");
   desc.add_options()
     ("help", "produce help message")
-    ("daynumber", boost::program_options::value<string>(&day), "day number")
-    ("player1", boost::program_options::value<string>(&p1Name), "player 1 name")
-    ("player2", boost::program_options::value<string>(&p2Name), "player 2 name")    
+    ("day", boost::program_options::value<string>(&day), "day")
+    ("p1", boost::program_options::value<string>(&p1Name), "p1")
+    ("p2", boost::program_options::value<string>(&p2Name), "p2")    
     ;
 
   boost::program_options::variables_map vm;
@@ -41,25 +41,25 @@ int main(int argc, char *argv[])
 
   if (vm.count("help"))
     {
-      //cout << desc << "\n";
+      cout << desc << "\n";
       return 1;
     }
 
-  if (vm.count("daynumber") == 0)
+  if (vm.count("day") == 0)
     {
-      //cout << "Must specify day" << endl;
+     cout << "Must specify day" << endl;
       return 1;
     }
 
-  if (vm.count("player1") == 0)
+  if (vm.count("p1") == 0)
     {
-      //cout << "Must specify player 1" << endl;
+      cout << "Must specify player 1" << endl;
       return 1;
     }
 
-  if (vm.count("player2") == 0)
+  if (vm.count("p2") == 0)
     {
-      //cout << "Must specify player 2" << endl;
+      cout << "Must specify player 2" << endl;
       return 1;
     }
 
