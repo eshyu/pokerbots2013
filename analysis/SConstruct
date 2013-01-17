@@ -1,0 +1,43 @@
+import os
+import sys
+import subprocess
+
+linkflags = []
+ccflags = ['-I.', '-MD']
+platform = sys.platform
+# need to do something like  on windows?
+if sys.platform.startswith('win'):
+    subprocess.call("vcvars32.bat")
+    linkflags.extend(['-OPT:REF', '-OPT:ICF', '-NOLOGO'])
+    ccflags.extend(['-W3', '-Ox', '-nologo'])
+else:
+    linkflags.extend(['-O3'])
+    ccflags.extend(['-Wall', '-g', '-Wpointer-arith'])
+
+include = "#export/%s/include" % platform
+lib = "#export/%s/lib" % platform
+bin = "#export/%s/bin" % platform
+
+ld_library_path = os.path.abspath(lib[1:])
+
+env = Environment(ENV = os.environ,
+                  TARGET_ARCH = "x86",
+                  PLATFORM = platform,
+                  CCFLAGS = ccflags,
+                  LINKFLAGS = linkflags,
+                  BINDIR = bin,
+                  INCDIR = include,
+                  LIBDIR = lib,
+                  CPPPATH = [include, '../playercpp/export/linux2/include'],
+                  LIBPATH = [lib, '../playercpp/export/linux2/lib'],
+                  LD_LIBRARY_PATH = ld_library_path)
+
+Export("env")
+
+env.Alias('build', ['.'])
+
+#env.SConscript(["evaluator/pbots_calc/src/SConscript"], exports='env')
+
+boost_libs = ['boost_program_options', 'boost_system']
+env.Program('analysis', ['StatsAnalysis.cpp', '../playercpp/evaluator/Evaluator.cpp'], 
+			LIBS=[boost_libs,'pbots_calc','poker-eval'])
