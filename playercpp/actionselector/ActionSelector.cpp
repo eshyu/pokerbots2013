@@ -161,9 +161,9 @@ void ActionSelector::discardGreedy(std::vector<std::string> &holeCards, std::vec
   std::string boardString;
   for (int i=0;i<boardCards.size();i++) boardString = boardString + boardCards[i];
   
-  double eval0 = evaluator.evaluate_discard_pairs(discard0, boardString, holeCards[0]);
-  double eval1 = evaluator.evaluate_discard_pairs(discard1, boardString, holeCards[1]);
-  double eval2 = evaluator.evaluate_discard_pairs(discard2, boardString, holeCards[2]);  
+  double eval0 = evaluator.evaluate_pairs(discard0, boardString, holeCards[0]);
+  double eval1 = evaluator.evaluate_pairs(discard1, boardString, holeCards[1]);
+  double eval2 = evaluator.evaluate_pairs(discard2, boardString, holeCards[2]);  
 
   // higest
   int discard;

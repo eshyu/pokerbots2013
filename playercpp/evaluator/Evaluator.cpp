@@ -23,7 +23,9 @@ Evaluator::~Evaluator(){}
 //  TODO: use opponent hand distribution or implied equity 
 double Evaluator::evaluate(const std::vector<std::string> &holeCards,
 			   const std::vector<std::string> &boardCards,
-			   const std::string &myDiscard)
+			   const std::string &myDiscard, 
+			   int manualNumSimulations,
+			   bool memoize)
 {   
   BETTING_ROUND round;
   int NUM_SIMULATIONS;
@@ -44,7 +46,7 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
   }
 
   // do not recompute if already computed for this round
-  if (memoizedEquities[round]){
+  if (memoize && memoizedEquities[round]){
     return memoizedEquities[round];
   }
 
@@ -72,9 +74,12 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
   for (int i=0;i<myDiscard.size(); i++) discard_c_str[i] = myDiscard[i];
   discard_c_str[myDiscard.size()] = '\0';
   
-  std::cout << "calcstring: " << calcString << " | " << "boardString: " << boardString << "myDicsard: " << myDiscard << std::endl;
+  //  std::cout << "calcstring: " << calcString << " | " << "boardString: " << boardString << "myDicsard: " << myDiscard << std::endl;
 
   Results *result = alloc_results();
+
+  // TODO: this is a hack for the analysis tool, probalby getting rid of this later
+  if (!memoize && manualNumSimulations > 0) NUM_SIMULATIONS = manualNumSimulations;
 
   calc(calcString.c_str(), board_c_str, discard_c_str, NUM_SIMULATIONS, result);
 
@@ -90,7 +95,7 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
 
  }
 
-double Evaluator::evaluate_discard_pairs(const std::string &holeCards,
+double Evaluator::evaluate_pairs(const std::string &holeCards,
 					 const std::string &boardCards,
 					 const std::string &myDiscard)
 {   
@@ -107,7 +112,52 @@ double Evaluator::evaluate_discard_pairs(const std::string &holeCards,
   for (int i=0;i<myDiscard.size(); i++) discard_c_str[i] = myDiscard[i];
   discard_c_str[myDiscard.size()] = '\0';
   
-  std::cout << "calcstring: " << calcString << " | " << "boardCards: " << boardCards << "myDicsard: " << myDiscard << std::endl;
+  //  std::cout << "calcstring: " << calcString << " | " << "boardCards: " << boardCards << "myDicsard: " << myDiscard << std::endl;
+
+  Results *result = alloc_results();
+
+  calc(calcString.c_str(), board_c_str, discard_c_str, NUM_SIMULATIONS, result);
+
+  double myEv = result->ev[0]; // opponent equity from this calculator is 1-ours
+
+  // make sure to free result
+  free_results(result);
+
+  return myEv;
+
+ }
+
+/* compute the true equities of both players, if we know real cards */
+double Evaluator::evaluate_true(const std::vector<std::string> &myHoleCards,
+				const std::vector<std::string> &oppHoleCards,
+				const std::vector<std::string> &boardCards,
+				const std::string &myDiscard,
+				const std::string &oppDiscard)
+{   
+  int NUM_SIMULATIONS = 10000;
+
+  std::string myHoleCards_str, oppHoleCards_str;
+  for (int i=0;i<myHoleCards.size();i++) myHoleCards_str = myHoleCards_str + myHoleCards[i];
+  for (int i=0;i<oppHoleCards.size();i++) oppHoleCards_str = oppHoleCards_str + oppHoleCards[i];
+  std::string calcString = myHoleCards_str + ":" + oppHoleCards_str;
+
+  // create board c_str
+  std::string boardCards_str;
+  char board_c_str[boardCards_str.size()+1];
+  for (int i=0;i<boardCards.size();i++) boardCards_str = boardCards_str + boardCards[i];
+  for (int i=0;i<boardCards_str.size();++i) board_c_str[i] = boardCards_str[i];
+  board_c_str[boardCards_str.size()] = '\0';
+
+  // create discard c_string
+  char discard_c_str[myDiscard.size()+oppDiscard.size()+1];
+  int i;
+  for (i=0;i<myDiscard.size(); i++) discard_c_str[i] = myDiscard[i];
+  for (;i<oppDiscard.size(); i++) discard_c_str[i] = oppDiscard[i];
+  discard_c_str[myDiscard.size()+oppDiscard.size()] = '\0';
+
+  discard_c_str[oppDiscard.size()] = '\0';
+  
+  //  std::cout << "calcstring: " << calcString << " | " << "boardCards: " << boardCards_str << " |  discard: " << discard_c_str << std::endl;
 
   Results *result = alloc_results();
 

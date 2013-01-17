@@ -27,13 +27,22 @@ public:
   // todo: use opponent hand distribution
   /* evaluates opponents hand using pbots_calc */
   double evaluate(const std::vector<std::string> &holeCards,
-				   const std::vector<std::string> &boardCards,
-				   const std::string &myDiscard);
+		  const std::vector<std::string> &boardCards,
+		  const std::string &myDiscard,
+		  int manualNumSimulations=0,
+		  bool memoize=true);
 
   // simple version of evaluate function for evaulating discard pairs
-  double evaluate_discard_pairs(const std::string &holeCards,
+  double evaluate_pairs(const std::string &holeCards,
 				const std::string &boardCards,
 				const std::string &myDiscard);
+
+  // for evaluation when we know both our and opponent cards
+  double evaluate_true(const std::vector<std::string> &myHoleCards,
+		       const std::vector<std::string> &oppHoleCards,
+		       const std::vector<std::string> &boardCards,
+		       const std::string &myDiscard,
+		       const std::string &oppDiscard);
 
   /* maps a 3-card hand to index into one of 1655 equivalent classes*/
   int threeCards2index(const std::string &holeCard1, const std::string &holeCard2,
