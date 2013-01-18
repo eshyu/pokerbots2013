@@ -10,7 +10,7 @@
 
 ActionSelector::ActionSelector(){}
 
-ActionSelector::ActionSelector(Evaluator &_evaluator){
+ActionSelector::ActionSelector(Evaluator *_evaluator){
   evaluator = _evaluator;
 }
 
@@ -73,12 +73,15 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
    //josep: seeding the randomness!!!!!
    srand(time(NULL));
 
-   int coin = rand() % 6; //LOL
+   int coin = rand() % 3; //LOL
    int callMin = legalAction.callMin;
    
    //std::cout << "coin is " << coin;
-   
-   if (coin == 7){
+
+   std::cout << "evaluating with # board cards: " << boardCards.size() << std::endl;
+   double equity = evaluator->evaluate(holeCards, boardCards, myDiscard);
+
+   if (coin == 1 && equity > 0.65 && boardCards.size() == 0){
      if (legalAction.raiseMax > 0){
        std::cout << "ALL IN"<< std::endl;
        actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
@@ -92,17 +95,22 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
    } else {
      
      // compute pot odds and either call or fold    
-     double potOdds = (double)potSize/(callMin+potSize);
+     double potOdds = (double)callMin/(callMin+potSize);
      // TODO: lol
-     double equity = evaluator.evaluate(holeCards, boardCards, myDiscard);
+
      //     if (myButton) equity = equity*1.2;
      
-     if (equity>0.5){
+     if (equity>0.6){
        std::cout << "myPotOdds: " << potOdds << " vs. equity: " << equity << std::endl;
        if (legalAction.raiseMax > 0){
         double oppEquity=1-equity;
         int newPotSize=callMin+potSize;
-	int raise=1+(int)(newPotSize/oppEquity-newPotSize);
+	//	int raise=1+(int)(newPotSize/oppEquity-newPotSize);
+	
+	int raise=std::max((int)((newPotSize*oppEquity/equity)),
+			   (int)((newPotSize*0.161/(1-0.161)))
+			   ) + callMin;
+
         int betAmt= std::max(std::min(raise,legalAction.raiseMax), legalAction.raiseMin);
 
 	std::cout << "betAmt: " << betAmt << " vs. raise: " << raise << std::endl;
@@ -122,7 +130,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
 
        //TODO: lol
        if (legalAction.callMin > 0){
-	 if (equity<potOdds){
+	 if (equity>(potOdds+0.05)){ //so we don't call too much
 	   actionInfo.action=CALL;
 	 } else {
 	   actionInfo.action=FOLD;
@@ -133,8 +141,6 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
      }
    }      
  }
-
-
 
 /* Discard functions */
 
@@ -157,13 +163,12 @@ void ActionSelector::discardGreedy(std::vector<std::string> &holeCards, std::vec
   std::string discard0 = holeCards[1] + holeCards[2];
   std::string discard1 = holeCards[0] + holeCards[2];
   std::string discard2 = holeCards[0] + holeCards[1];
-
   std::string boardString;
   for (int i=0;i<boardCards.size();i++) boardString = boardString + boardCards[i];
-  
-  double eval0 = evaluator.evaluate_pairs(discard0, boardString, holeCards[0]);
-  double eval1 = evaluator.evaluate_pairs(discard1, boardString, holeCards[1]);
-  double eval2 = evaluator.evaluate_pairs(discard2, boardString, holeCards[2]);  
+
+  double eval0=evaluator->memoized_evaluate_pairs(discard0, boardString, holeCards[0], 0);
+  double eval1=evaluator->memoized_evaluate_pairs(discard1, boardString, holeCards[1], 1);
+  double eval2=evaluator->memoized_evaluate_pairs(discard2, boardString, holeCards[2], 2);
 
   // higest
   int discard;
@@ -184,9 +189,8 @@ void ActionSelector::discardGreedy(std::vector<std::string> &holeCards, std::vec
     
   actionInfo.cardNum=myDiscard[0]; actionInfo.cardSuit=myDiscard[1];    
   actionInfo.action = DISCARD;
-  std::cout << "holecards b4 discard: " << holeCards.size() << std::endl;
   holeCards.erase(holeCards.begin() + discard);
-  std::cout << "holecards post discard: " << holeCards.size() << std::endl;
+
 }
 
 /* Helper methods*/
