@@ -10,14 +10,16 @@ extern "C" {
 }
 
 // number of simulations
-int NUM_SIMULATIONS_FAST = 100000;
-int NUM_SIMULATIONS_SLOW = 100000;
+int NUM_SIMULATIONS_FAST = 5000;
+int NUM_SIMULATIONS_SLOW = 1000;
 
 int numHoleCards;
 
 Evaluator::Evaluator(){}
 
-Evaluator::~Evaluator(){}
+Evaluator::~Evaluator(){
+
+}
 
 /* evaluate current hand given board cards and discard  */
 //  TODO: use opponent hand distribution or implied equity 
@@ -46,54 +48,57 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
   }
 
   // do not recompute if already computed for this round
-  if (memoize && memoizedEquities[round]){
+  if (memoize && memoizedEquities[round] > 0){
+    std::cout << "====Table says Memoized equities: " << memoizedEquities[0] << " " 
+	      << memoizedEquities[1] << " " << memoizedEquities[2] << std::endl;
     return memoizedEquities[round];
   }
 
-  std::string calcString="";
-  numHoleCards = holeCards.size();
-  if (numHoleCards == 2){
-    calcString = holeCards[0] + holeCards[1] + ":xx";
-    NUM_SIMULATIONS = NUM_SIMULATIONS_FAST;
-  } else if (numHoleCards == 3){
-    calcString = holeCards[0] + holeCards[1] + holeCards[2] + ":xxx";
-    NUM_SIMULATIONS = NUM_SIMULATIONS_SLOW;
+  double myEv;
+  std::string boardString;
+  for (int i=0;i<boardCards.size();i++) boardString = boardString + boardCards[i];
+    
+  if (round == FLOP){
+    std::string discard0 = holeCards[1] + holeCards[2];
+    std::string discard1 = holeCards[0] + holeCards[2];
+    std::string discard2 = holeCards[0] + holeCards[1];
+    
+    double eval0 = evaluate_pairs(discard0, boardString, holeCards[0]);
+    double eval1 = evaluate_pairs(discard1, boardString, holeCards[1]);
+    double eval2 = evaluate_pairs(discard2, boardString, holeCards[2]);
+
+    std::cout << eval0 << ", " << eval1 << ", " << eval2 << std::endl;
+    
+    memoizedHandPairs[0]=eval0;
+    memoizedHandPairs[1]=eval1;
+    memoizedHandPairs[2]=eval2;
+    
+    myEv = (eval0+eval1+eval2)/3;
   } else {
-    std::cout << "Evaluator.cpp:L24: ERROR: number of hole cards is not 2 or 3!!" << std::endl;
+    myEv = evaluate_pairs(holeCards[0]+holeCards[1], boardString, myDiscard);
   }
   
-  // create board c_string
-  std::string boardString;
-  char board_c_str[boardString.size()+1];
-  for (int i=0;i<boardCards.size();i++) boardString = boardString + boardCards[i];  
-  for (int i=0;i<boardString.size();++i) board_c_str[i] = boardString[i];
-  board_c_str[boardString.size()] = '\0';
-
-  // create discard c_string
-  char discard_c_str[myDiscard.size()+1];
-  for (int i=0;i<myDiscard.size(); i++) discard_c_str[i] = myDiscard[i];
-  discard_c_str[myDiscard.size()] = '\0';
-  
-  //  std::cout << "calcstring: " << calcString << " | " << "boardString: " << boardString << "myDicsard: " << myDiscard << std::endl;
-
-  Results *result = alloc_results();
-
-  // TODO: this is a hack for the analysis tool, probalby getting rid of this later
-  if (!memoize && manualNumSimulations > 0) NUM_SIMULATIONS = manualNumSimulations;
-
-  calc(calcString.c_str(), board_c_str, discard_c_str, NUM_SIMULATIONS, result);
-
-  double myEv = result->ev[0]; // opponent equity from this calculator is 1-ours
-
-  // make sure to free result
-  free_results(result);
-
   // memoize
   memoizedEquities[round] = myEv;
-
+  
   return myEv;
+    
+  }
 
- }
+
+double Evaluator::memoized_evaluate_pairs(const std::string &holeCards,
+					  const std::string &boardCards,
+					  const std::string &myDiscard,
+					  int discardIdx)
+{
+  if (memoizedHandPairs[discardIdx] > 0){
+    return memoizedHandPairs[discardIdx];
+  }
+
+  double ev = evaluate_pairs(holeCards, boardCards, myDiscard);
+  memoizedHandPairs[discardIdx] = ev;
+  return ev;
+}
 
 double Evaluator::evaluate_pairs(const std::string &holeCards,
 					 const std::string &boardCards,
@@ -192,7 +197,10 @@ void Evaluator::populatePreFlopTable()
 }
 
 void Evaluator::clearMemoizedEquities(){
-  for (int i=0;i<3;i++) memoizedEquities[i]=0;
+  for (int i=0;i<3;i++) {
+    memoizedEquities[i]=0;
+    memoizedHandPairs[i]=0;
+  }
 }
 
 /* Enumeration goes like this:

@@ -17,11 +17,14 @@ public:
 
   // memoize the hand equity for the flop, turn, river
   double memoizedEquities[3];
+  
+  // memoize the equity for discard pairs
+  double memoizedHandPairs[3];
 
   // populate preflop equity table
   void populatePreFlopTable();
   
-  // clear memoized equities table
+  // clear memoized equities tables
   void clearMemoizedEquities();
 
   // todo: use opponent hand distribution
@@ -31,6 +34,11 @@ public:
 		  const std::string &myDiscard,
 		  int manualNumSimulations=0,
 		  bool memoize=true);
+
+  double memoized_evaluate_pairs(const std::string &holeCards,
+				 const std::string &boardCards,
+				 const std::string &myDiscard,
+				 int discardIdx);
 
   // simple version of evaluate function for evaulating discard pairs
   double evaluate_pairs(const std::string &holeCards,

@@ -9,7 +9,7 @@
 class ActionSelector {
 public:
   ActionSelector();
-  ActionSelector(Evaluator &_evaluator);
+  ActionSelector(Evaluator *_evaluator);
   
   //TODO:  
   // OpponentModeler oppModel;    
@@ -46,7 +46,7 @@ public:
   };
 
   // hand evaluator 
-  Evaluator evaluator;
+  Evaluator *evaluator;
 
   /* blackbox for choosing action for current game*/
   ActionInfo getAction(const std::string &getaction_str, std::vector<std::string> &holeCards, std::string &myDiscard, bool myButton, int stackSize);
