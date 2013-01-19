@@ -1,0 +1,41 @@
+6.S912 MIT Pokerbots - mybotisamazing vs zeteswithhugedec (stack=400, bb=2)
+Hand #1, mybotisamazing (0), zeteswithhugedec (0)
+mybotisamazing posts the blind of 1
+zeteswithhugedec posts the blind of 2
+Dealt to mybotisamazing [2d 7s 3d] (hEq: 0.35584)
+Dealt to zeteswithhugedec [6h 5s Td] (hEq: 0.44045)
+tEq: 2d7s3d (0.4035) vs. 6h5sTd (0.5965)
+mybotisamazing folds (bEq: 0.35584[0.4035], had potOdds: 1/4=0.25)
+zeteswithhugedec wins the pot (3)
+
+Hand #2, zeteswithhugedec (1), mybotisamazing (-1)
+zeteswithhugedec posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to zeteswithhugedec [4d Ac 6c] (hEq: 0.523515)
+Dealt to mybotisamazing [As 8d Ah] (hEq: 0.67112)
+tEq: As8dAh (0.69835) vs. 4dAc6c (0.30165)
+zeteswithhugedec calls (bEq: 0.523515[0.30165], getting potOdds: 1/4=0.25)
+mybotisamazing raises to 400 (bEq: 0.67112[0.69835], giving potOdds: 398/800=0.4975)
+zeteswithhugedec folds (bEq: 0.523515[0.30165], had potOdds: 398/800=0.4975)
+Uncalled bet of 398 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #3, mybotisamazing (1), zeteswithhugedec (-1)
+mybotisamazing posts the blind of 1
+zeteswithhugedec posts the blind of 2
+Dealt to mybotisamazing [4s 2s 2c] (hEq: 0.37749)
+Dealt to zeteswithhugedec [8d 3c 4d] (hEq: 0.388875)
+tEq: 4s2s2c (0.42) vs. 8d3c4d (0.58)
+mybotisamazing folds (bEq: 0.37749[0.42], had potOdds: 1/4=0.25)
+zeteswithhugedec wins the pot (3)
+
+Hand #4, zeteswithhugedec (0), mybotisamazing (0)
+zeteswithhugedec posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to zeteswithhugedec [Kd Kc Jh] (hEq: 0.66112)
+Dealt to mybotisamazing [6h Jc 2h] (hEq: 0.43403)
+tEq: 6hJc2h (0.2494) vs. KdKcJh (0.7506)
+zeteswithhugedec calls (bEq: 0.66112[0.7506], getting potOdds: 1/4=0.25)
+mybotisamazing checks (bEq: 0.43403[0.2494])
+*** FLOP *** (4) [Kh Ad Js]
+True equities: 6hJc2h (0.0246709) vs. KdKcJh (0.975329)

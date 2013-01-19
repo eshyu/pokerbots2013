@@ -1,0 +1,2117 @@
+6.S912 MIT Pokerbots - mybotisamazing vs RAISE (stack=400, bb=2)
+Hand #1, mybotisamazing (0), RAISE (0)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [4h Th 6c] (hEq: 0.43871)
+Dealt to RAISE [9s Ks Jc] (hEq: 0.584245)
+tEq: 4hTh6c (0.35395) vs. 9sKsJc (0.64605)
+mybotisamazing calls (bEq: 0.43871[0.35395], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.584245[0.64605], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.43871[0.35395], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Kh 7h Qc]
+True equities: 4hTh6c (0.235019) vs. 9sKsJc (0.764981)
+RAISE bets 14 (bEq: 0.723667[0.764981], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.389083[0.235019], getting potOdds: 14/42=0.333333)
+RAISE discards [9s]
+mybotisamazing discards [6c]
+*** TURN *** (42) [Kh 7h Qc] [7s]
+True equities: 4hTh (0.209302) vs. KsJc (0.790698)
+RAISE bets 42 (bEq: 0.82385[0.790698], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.4237[0.209302], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Kh 7h Qc 7s] [8d]
+True equities: 4hTh (0) vs. KsJc (1)
+RAISE checks (bEq: 0.843552[1])
+mybotisamazing checks (bEq: 0.247357[0])
+mybotisamazing shows [4h Th]
+RAISE shows [Ks Jc]
+RAISE wins the pot (126)
+
+Hand #2, RAISE (63), mybotisamazing (-63)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [9c Qc Tc] (hEq: 0.56711)
+Dealt to mybotisamazing [3h 5d Jh] (hEq: 0.442365)
+tEq: 3h5dJh (0.3969) vs. 9cQcTc (0.6031)
+RAISE raises to 7 (bEq: 0.56711[0.6031], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.442365[0.3969], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Ad 9h As]
+True equities: 3h5dJh (0.15227) vs. 9cQcTc (0.84773)
+mybotisamazing checks (bEq: 0.36155[0.15227])
+RAISE checks (bEq: 0.7242[0.84773])
+mybotisamazing discards [5d]
+RAISE discards [Tc]
+*** TURN *** (14) [Ad 9h As] [Js]
+True equities: 3hJh (0.883721) vs. 9cQc (0.116279)
+mybotisamazing checks (bEq: 0.79335[0.883721])
+RAISE checks (bEq: 0.71905[0.116279])
+*** RIVER *** (14) [Ad 9h As Js] [4s]
+True equities: 3hJh (1) vs. 9cQc (0)
+mybotisamazing checks (bEq: 0.787526[1])
+RAISE checks (bEq: 0.708774[0])
+RAISE shows [9c Qc]
+mybotisamazing shows [3h Jh]
+mybotisamazing wins the pot (14)
+
+Hand #3, mybotisamazing (-56), RAISE (56)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Ts 7s 3c] (hEq: 0.43789)
+Dealt to RAISE [Js Ah 8c] (hEq: 0.5933)
+tEq: Ts7s3c (0.3616) vs. JsAh8c (0.6384)
+mybotisamazing calls (bEq: 0.43789[0.3616], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.5933[0.6384], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.43789[0.3616], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [7h 5d 9s]
+True equities: Ts7s3c (0.49514) vs. JsAh8c (0.50486)
+RAISE checks (bEq: 0.5262[0.50486])
+mybotisamazing checks (bEq: 0.511467[0.49514])
+RAISE discards [Ah]
+mybotisamazing discards [3c]
+*** TURN *** (14) [7h 5d 9s] [9d]
+True equities: Ts7s (0.697674) vs. Js8c (0.302326)
+RAISE checks (bEq: 0.4279[0.302326])
+mybotisamazing checks (bEq: 0.71205[0.697674])
+*** RIVER *** (14) [7h 5d 9s 9d] [Td]
+True equities: Ts7s (0) vs. Js8c (1)
+RAISE checks (bEq: 0.918605[1])
+mybotisamazing checks (bEq: 0.736786[0])
+mybotisamazing shows [Ts 7s]
+RAISE shows [Js 8c]
+RAISE wins the pot (14)
+
+Hand #4, RAISE (63), mybotisamazing (-63)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [8s Ks 7d] (hEq: 0.53683)
+Dealt to mybotisamazing [Jd 8d Js] (hEq: 0.56205)
+tEq: Jd8dJs (0.5349) vs. 8sKs7d (0.4651)
+RAISE raises to 7 (bEq: 0.53683[0.4651], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.56205[0.5349], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [6h 7s Ah]
+True equities: Jd8dJs (0.365941) vs. 8sKs7d (0.634059)
+mybotisamazing checks (bEq: 0.458017[0.365941])
+RAISE bets 14 (bEq: 0.61825[0.634059], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.458017[0.365941], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [8d]
+RAISE discards [8s]
+*** TURN *** (42) [6h 7s Ah] [2c]
+True equities: JdJs (0.883721) vs. Ks7d (0.116279)
+mybotisamazing checks (bEq: 0.7572[0.883721])
+RAISE bets 42 (bEq: 0.73295[0.116279], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.7572[0.883721], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [6h 7s Ah 2c] [8h]
+True equities: JdJs (1) vs. Ks7d (0)
+mybotisamazing checks (bEq: 0.701374[1])
+RAISE checks (bEq: 0.628436[0])
+RAISE shows [Ks 7d]
+mybotisamazing shows [Jd Js]
+mybotisamazing wins the pot (126)
+
+Hand #5, mybotisamazing (0), RAISE (0)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [5c 3s 7s] (hEq: 0.389145)
+Dealt to RAISE [4s Qd Td] (hEq: 0.51197)
+tEq: 5c3s7s (0.3998) vs. 4sQdTd (0.6002)
+mybotisamazing folds (bEq: 0.389145[0.3998], had potOdds: 1/4=0.25)
+RAISE wins the pot (3)
+
+Hand #6, RAISE (1), mybotisamazing (-1)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [2d Jd 9c] (hEq: 0.46879)
+Dealt to mybotisamazing [Qd 5c 9h] (hEq: 0.501715)
+tEq: Qd5c9h (0.5761) vs. 2dJd9c (0.4239)
+RAISE raises to 7 (bEq: 0.46879[0.4239], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.501715[0.5761], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [2s Jc 3d]
+True equities: Qd5c9h (0.128215) vs. 2dJd9c (0.871785)
+mybotisamazing checks (bEq: 0.350267[0.128215])
+RAISE bets 14 (bEq: 0.762133[0.871785], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.3511[0.128215], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [5c]
+RAISE discards [9c]
+*** TURN *** (42) [2s Jc 3d] [9s]
+True equities: Qd9h (0.116279) vs. 2dJd (0.883721)
+mybotisamazing checks (bEq: 0.74175[0.116279])
+RAISE bets 42 (bEq: 0.92025[0.883721], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.74175[0.116279], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [2s Jc 3d 9s] [2h]
+True equities: Qd9h (0) vs. 2dJd (1)
+mybotisamazing checks (bEq: 0.730444[0])
+RAISE checks (bEq: 0.993658[1])
+RAISE shows [2d Jd]
+mybotisamazing shows [Qd 9h]
+RAISE wins the pot (126)
+
+Hand #7, mybotisamazing (-64), RAISE (64)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [6d Tc 7d] (hEq: 0.46248)
+Dealt to RAISE [2h 5s 8s] (hEq: 0.38781)
+tEq: 6dTc7d (0.5947) vs. 2h5s8s (0.4053)
+mybotisamazing calls (bEq: 0.46248[0.5947], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.38781[0.4053], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.46248[0.5947], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [7h 9s 9c]
+True equities: 6dTc7d (0.823551) vs. 2h5s8s (0.176449)
+RAISE checks (bEq: 0.297883[0.176449])
+mybotisamazing checks (bEq: 0.6012[0.823551])
+RAISE discards [2h]
+mybotisamazing discards [6d]
+*** TURN *** (14) [7h 9s 9c] [2d]
+True equities: Tc7d (0.860465) vs. 5s8s (0.139535)
+RAISE checks (bEq: 0.2624[0.139535])
+mybotisamazing checks (bEq: 0.7646[0.860465])
+*** RIVER *** (14) [7h 9s 9c 2d] [8d]
+True equities: Tc7d (0) vs. 5s8s (1)
+RAISE checks (bEq: 0.763214[1])
+mybotisamazing checks (bEq: 0.678647[0])
+mybotisamazing shows [Tc 7d]
+RAISE shows [5s 8s]
+RAISE wins the pot (14)
+
+Hand #8, RAISE (71), mybotisamazing (-71)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Jd Jh 3c] (hEq: 0.538325)
+Dealt to mybotisamazing [Kc 5c Th] (hEq: 0.536195)
+tEq: Kc5cTh (0.4901) vs. JdJh3c (0.5099)
+RAISE raises to 7 (bEq: 0.538325[0.5099], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.536195[0.4901], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Kd 7c 5h]
+True equities: Kc5cTh (0.856282) vs. JdJh3c (0.143718)
+mybotisamazing checks (bEq: 0.7862[0.856282])
+RAISE bets 14 (bEq: 0.44145[0.143718], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.7862[0.856282], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [Th]
+RAISE discards [3c]
+*** TURN *** (42) [Kd 7c 5h] [9c]
+True equities: Kc5c (0.976744) vs. JdJh (0.0232558)
+mybotisamazing checks (bEq: 0.9168[0.976744])
+RAISE bets 42 (bEq: 0.7269[0.0232558], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.9168[0.976744], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Kd 7c 5h 9c] [8d]
+True equities: Kc5c (1) vs. JdJh (0)
+mybotisamazing checks (bEq: 0.77907[1])
+RAISE checks (bEq: 0.612579[0])
+RAISE shows [Jd Jh]
+mybotisamazing shows [Kc 5c]
+mybotisamazing wins the pot (126)
+
+Hand #9, mybotisamazing (-8), RAISE (8)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [6h Ks 9h] (hEq: 0.536155)
+Dealt to RAISE [3s 9d 4s] (hEq: 0.39809)
+tEq: 6hKs9h (0.66185) vs. 3s9d4s (0.33815)
+mybotisamazing calls (bEq: 0.536155[0.66185], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.39809[0.33815], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.536155[0.66185], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Qs 4d 7s]
+True equities: 6hKs9h (0.385997) vs. 3s9d4s (0.614003)
+RAISE checks (bEq: 0.5118[0.614003])
+mybotisamazing checks (bEq: 0.39075[0.385997])
+RAISE discards [9d]
+mybotisamazing discards [6h]
+*** TURN *** (14) [Qs 4d 7s] [Jd]
+True equities: Ks9h (0.186047) vs. 3s4s (0.813953)
+RAISE checks (bEq: 0.62565[0.813953])
+mybotisamazing checks (bEq: 0.4145[0.186047])
+*** RIVER *** (14) [Qs 4d 7s Jd] [Th]
+True equities: Ks9h (1) vs. 3s4s (0)
+RAISE checks (bEq: 0.40592[0])
+mybotisamazing checks (bEq: 0.982558[1])
+mybotisamazing shows [Ks 9h]
+RAISE shows [3s 4s]
+mybotisamazing wins the pot (14)
+
+Hand #10, RAISE (1), mybotisamazing (-1)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Ac 5h Jh] (hEq: 0.577105)
+Dealt to mybotisamazing [As 6d Ah] (hEq: 0.65434)
+tEq: As6dAh (0.61145) vs. Ac5hJh (0.38855)
+RAISE raises to 7 (bEq: 0.577105[0.38855], giving potOdds: 5/14=0.357143)
+mybotisamazing raises to 12 (bEq: 0.65434[0.61145], giving potOdds: 10/29=0.344828)
+RAISE raises to 36 (bEq: 0.577105[0.38855], giving potOdds: 26/81=0.320988)
+mybotisamazing raises to 60 (bEq: 0.65434[0.61145], giving potOdds: 34/149=0.228188)
+RAISE calls (bEq: 0.577105[0.38855], getting potOdds: 34/149=0.228188)
+*** FLOP *** (120) [Qh 3h 2s]
+True equities: As6dAh (0.558632) vs. Ac5hJh (0.441368)
+mybotisamazing checks (bEq: 0.60565[0.558632])
+RAISE bets 120 (bEq: 0.567517[0.441368], giving potOdds: 120/389=0.308483)
+mybotisamazing calls (bEq: 0.60565[0.558632], getting potOdds: 120/389=0.308483)
+mybotisamazing discards [6d]
+RAISE discards [Ac]
+*** TURN *** (360) [Qh 3h 2s] [7s]
+True equities: AsAh (0.813953) vs. 5hJh (0.186047)
+mybotisamazing checks (bEq: 0.8825[0.813953])
+RAISE bets 220 (bEq: 0.4219[0.186047], giving potOdds: 220/829=0.26538)
+mybotisamazing calls (bEq: 0.8825[0.813953], getting potOdds: 220/829=0.26538)
+*** RIVER *** (800) [Qh 3h 2s 7s] [2c]
+True equities: AsAh (1) vs. 5hJh (0)
+RAISE shows [5h Jh]
+mybotisamazing shows [As Ah]
+mybotisamazing wins the pot (800)
+
+Hand #11, mybotisamazing (399), RAISE (-399)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Qs 9s Kd] (hEq: 0.59203)
+Dealt to RAISE [3d Ts Ah] (hEq: 0.542045)
+tEq: Qs9sKd (0.5044) vs. 3dTsAh (0.4956)
+mybotisamazing calls (bEq: 0.59203[0.5044], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.542045[0.4956], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.59203[0.5044], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Ac Td 5d]
+True equities: Qs9sKd (0.149379) vs. 3dTsAh (0.850621)
+RAISE bets 14 (bEq: 0.8278[0.850621], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.5083[0.149379], getting potOdds: 14/42=0.333333)
+RAISE discards [3d]
+mybotisamazing discards [9s]
+*** TURN *** (42) [Ac Td 5d] [Qc]
+True equities: QsKd (0.139535) vs. TsAh (0.860465)
+RAISE bets 42 (bEq: 0.895[0.860465], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.783[0.139535], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Ac Td 5d Qc] [8h]
+True equities: QsKd (0) vs. TsAh (1)
+RAISE bets 126 (bEq: 0.946089[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.776956[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #12, RAISE (-336), mybotisamazing (336)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Qs 2s 4h] (hEq: 0.444385)
+Dealt to mybotisamazing [9d Kd 3h] (hEq: 0.51118)
+tEq: 9dKd3h (0.5551) vs. Qs2s4h (0.4449)
+RAISE raises to 7 (bEq: 0.444385[0.4449], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.51118[0.5551], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [6d Ks 2d]
+True equities: 9dKd3h (0.670481) vs. Qs2s4h (0.329519)
+mybotisamazing checks (bEq: 0.671217[0.670481])
+RAISE bets 14 (bEq: 0.50825[0.329519], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.671217[0.670481], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [3h]
+RAISE discards [4h]
+*** TURN *** (42) [6d Ks 2d] [Jc]
+True equities: 9dKd (0.906977) vs. Qs2s (0.0930233)
+mybotisamazing checks (bEq: 0.88935[0.906977])
+RAISE bets 42 (bEq: 0.52585[0.0930233], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.88935[0.906977], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [6d Ks 2d Jc] [2h]
+True equities: 9dKd (0) vs. Qs2s (1)
+mybotisamazing checks (bEq: 0.839323[0])
+RAISE bets 126 (bEq: 0.975159[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.839323[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #13, mybotisamazing (273), RAISE (-273)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Td 6h 2d] (hEq: 0.420245)
+Dealt to RAISE [Jd 6s Kd] (hEq: 0.555745)
+tEq: Td6h2d (0.30625) vs. Jd6sKd (0.69375)
+mybotisamazing calls (bEq: 0.420245[0.30625], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.555745[0.69375], giving potOdds: 5/14=0.357143)
+mybotisamazing folds (bEq: 0.420245[0.30625], had potOdds: 5/14=0.357143)
+Uncalled bet of 5 returned to RAISE
+RAISE wins the pot (4)
+
+Hand #14, RAISE (-271), mybotisamazing (271)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [5d 9c 7s] (hEq: 0.43672)
+Dealt to mybotisamazing [Tc Qh 3h] (hEq: 0.505745)
+tEq: TcQh3h (0.60805) vs. 5d9c7s (0.39195)
+RAISE raises to 7 (bEq: 0.43672[0.39195], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.505745[0.60805], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Th 2s Jd]
+True equities: TcQh3h (0.846192) vs. 5d9c7s (0.153808)
+mybotisamazing checks (bEq: 0.62305[0.846192])
+RAISE bets 14 (bEq: 0.302583[0.153808], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.621617[0.846192], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [3h]
+RAISE discards [5d]
+*** TURN *** (42) [Th 2s Jd] [4s]
+True equities: TcQh (0.906977) vs. 9c7s (0.0930233)
+mybotisamazing checks (bEq: 0.7487[0.906977])
+RAISE bets 42 (bEq: 0.2817[0.0930233], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.7487[0.906977], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Th 2s Jd 4s] [8c]
+True equities: TcQh (0) vs. 9c7s (1)
+mybotisamazing checks (bEq: 0.743129[0])
+RAISE bets 126 (bEq: 0.982558[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.743129[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #15, mybotisamazing (208), RAISE (-208)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Jh 7s Ad] (hEq: 0.580025)
+Dealt to RAISE [9h Kc Qd] (hEq: 0.587415)
+tEq: Jh7sAd (0.52205) vs. 9hKcQd (0.47795)
+mybotisamazing calls (bEq: 0.580025[0.52205], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.587415[0.47795], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.580025[0.52205], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Ks 4d 2d]
+True equities: Jh7sAd (0.279377) vs. 9hKcQd (0.720623)
+RAISE bets 14 (bEq: 0.71355[0.720623], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.465817[0.279377], getting potOdds: 14/42=0.333333)
+RAISE discards [9h]
+mybotisamazing discards [7s]
+*** TURN *** (42) [Ks 4d 2d] [9d]
+True equities: JhAd (0.255814) vs. KcQd (0.744186)
+RAISE checks (bEq: 0.8682[0.744186])
+mybotisamazing checks (bEq: 0.555[0.255814])
+*** RIVER *** (42) [Ks 4d 2d 9d] [Jc]
+True equities: JhAd (0) vs. KcQd (1)
+RAISE checks (bEq: 0.850951[1])
+mybotisamazing checks (bEq: 0.750529[0])
+mybotisamazing shows [Jh Ad]
+RAISE shows [Kc Qd]
+RAISE wins the pot (42)
+
+Hand #16, RAISE (-187), mybotisamazing (187)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Kd 8c 8h] (hEq: 0.588645)
+Dealt to mybotisamazing [7c Js Jc] (hEq: 0.55412)
+tEq: 7cJsJc (0.4649) vs. Kd8c8h (0.5351)
+RAISE raises to 7 (bEq: 0.588645[0.5351], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.55412[0.4649], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Qd 6c 3s]
+True equities: 7cJsJc (0.427587) vs. Kd8c8h (0.572413)
+mybotisamazing checks (bEq: 0.485867[0.427587])
+RAISE bets 14 (bEq: 0.493083[0.572413], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.48575[0.427587], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [7c]
+RAISE discards [Kd]
+*** TURN *** (42) [Qd 6c 3s] [Th]
+True equities: JsJc (0.953488) vs. 8c8h (0.0465116)
+mybotisamazing checks (bEq: 0.76625[0.953488])
+RAISE bets 42 (bEq: 0.6549[0.0465116], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.76625[0.953488], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Qd 6c 3s Th] [Tc]
+True equities: JsJc (1) vs. 8c8h (0)
+mybotisamazing checks (bEq: 0.763742[1])
+RAISE bets 126 (bEq: 0.754228[0], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.763742[1], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #17, mybotisamazing (124), RAISE (-124)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [9d Kh 6d] (hEq: 0.536155)
+Dealt to RAISE [Js Kd 5h] (hEq: 0.547515)
+tEq: 9dKh6d (0.48775) vs. JsKd5h (0.51225)
+mybotisamazing calls (bEq: 0.536155[0.48775], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.547515[0.51225], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.536155[0.48775], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Jh Jd 9c]
+True equities: 9dKh6d (0.274209) vs. JsKd5h (0.725791)
+RAISE bets 14 (bEq: 0.788167[0.725791], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.671567[0.274209], getting potOdds: 14/42=0.333333)
+RAISE discards [5h]
+mybotisamazing discards [6d]
+*** TURN *** (42) [Jh Jd 9c] [4s]
+True equities: 9dKh (0) vs. JsKd (1)
+RAISE bets 42 (bEq: 0.9669[1], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.81395[0], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Jh Jd 9c 4s] [Tc]
+True equities: 9dKh (0) vs. JsKd (1)
+RAISE bets 126 (bEq: 0.928647[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.705074[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #18, RAISE (-61), mybotisamazing (61)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Jc Ah Qs] (hEq: 0.62515)
+Dealt to mybotisamazing [3s Th Kh] (hEq: 0.52459)
+tEq: 3sThKh (0.40045) vs. JcAhQs (0.59955)
+RAISE raises to 7 (bEq: 0.62515[0.59955], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.52459[0.40045], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Qd 4h 7c]
+True equities: 3sThKh (0.163529) vs. JcAhQs (0.836471)
+mybotisamazing checks (bEq: 0.3842[0.163529])
+RAISE bets 14 (bEq: 0.74075[0.836471], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.3842[0.163529], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [3s]
+RAISE discards [Jc]
+*** TURN *** (42) [Qd 4h 7c] [Jd]
+True equities: ThKh (0.232558) vs. AhQs (0.767442)
+mybotisamazing checks (bEq: 0.4775[0.232558])
+RAISE bets 42 (bEq: 0.86505[0.767442], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.4775[0.232558], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Qd 4h 7c Jd] [Tc]
+True equities: ThKh (0) vs. AhQs (1)
+mybotisamazing checks (bEq: 0.650106[0])
+RAISE checks (bEq: 0.858351[1])
+RAISE shows [Ah Qs]
+mybotisamazing shows [Th Kh]
+RAISE wins the pot (126)
+
+Hand #19, mybotisamazing (-2), RAISE (2)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [8c Ks 4h] (hEq: 0.49791)
+Dealt to RAISE [Ah 2c Ac] (hEq: 0.64006)
+tEq: 8cKs4h (0.33795) vs. Ah2cAc (0.66205)
+mybotisamazing calls (bEq: 0.49791[0.33795], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.64006[0.66205], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.49791[0.33795], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [5c Th Js]
+True equities: 8cKs4h (0.197121) vs. Ah2cAc (0.802879)
+RAISE checks (bEq: 0.591183[0.802879])
+mybotisamazing checks (bEq: 0.356067[0.197121])
+RAISE discards [2c]
+mybotisamazing discards [4h]
+*** TURN *** (14) [5c Th Js] [5h]
+True equities: 8cKs (0) vs. AhAc (1)
+RAISE checks (bEq: 0.87805[1])
+mybotisamazing checks (bEq: 0.4233[0])
+*** RIVER *** (14) [5c Th Js 5h] [Kh]
+True equities: 8cKs (0) vs. AhAc (1)
+RAISE checks (bEq: 0.837738[1])
+mybotisamazing checks (bEq: 0.769556[0])
+mybotisamazing shows [8c Ks]
+RAISE shows [Ah Ac]
+RAISE wins the pot (14)
+
+Hand #20, RAISE (9), mybotisamazing (-9)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [2d 3c 5d] (hEq: 0.352365)
+Dealt to mybotisamazing [6s Js 3d] (hEq: 0.443335)
+tEq: 6sJs3d (0.6408) vs. 2d3c5d (0.3592)
+RAISE raises to 7 (bEq: 0.352365[0.3592], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.443335[0.6408], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [6h Th 4d]
+True equities: 6sJs3d (0.757475) vs. 2d3c5d (0.242525)
+mybotisamazing checks (bEq: 0.49985[0.757475])
+RAISE bets 14 (bEq: 0.283717[0.242525], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.49985[0.757475], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [3d]
+RAISE discards [2d]
+*** TURN *** (42) [6h Th 4d] [Ks]
+True equities: 6sJs (0.813953) vs. 3c5d (0.186047)
+mybotisamazing checks (bEq: 0.63675[0.813953])
+RAISE bets 42 (bEq: 0.2198[0.186047], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.63675[0.813953], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [6h Th 4d Ks] [7s]
+True equities: 6sJs (0) vs. 3c5d (1)
+mybotisamazing checks (bEq: 0.523256[0])
+RAISE bets 126 (bEq: 0.965645[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.523256[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #21, mybotisamazing (-72), RAISE (72)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [9d 6c 6d] (hEq: 0.49991)
+Dealt to RAISE [Td 7s 4s] (hEq: 0.445395)
+tEq: 9d6c6d (0.5051) vs. Td7s4s (0.4949)
+mybotisamazing calls (bEq: 0.49991[0.5051], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.445395[0.4949], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.49991[0.5051], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Jd 5d 3d]
+True equities: 9d6c6d (0.611726) vs. Td7s4s (0.388274)
+RAISE checks (bEq: 0.430067[0.388274])
+mybotisamazing checks (bEq: 0.689367[0.611726])
+RAISE discards [Td]
+mybotisamazing discards [6c]
+*** TURN *** (14) [Jd 5d 3d] [9s]
+True equities: 9d6d (1) vs. 7s4s (0)
+RAISE checks (bEq: 0.1737[0])
+mybotisamazing checks (bEq: 0.9484[1])
+*** RIVER *** (14) [Jd 5d 3d 9s] [Ac]
+True equities: 9d6d (1) vs. 7s4s (0)
+RAISE checks (bEq: 0.0375264[0])
+mybotisamazing checks (bEq: 0.976744[1])
+mybotisamazing shows [9d 6d]
+RAISE shows [7s 4s]
+mybotisamazing wins the pot (14)
+
+Hand #22, RAISE (65), mybotisamazing (-65)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [6c 8h Qd] (hEq: 0.498895)
+Dealt to mybotisamazing [2d Ks 6s] (hEq: 0.476015)
+tEq: 2dKs6s (0.52585) vs. 6c8hQd (0.47415)
+RAISE raises to 7 (bEq: 0.498895[0.47415], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.476015[0.52585], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [7c As Jd]
+True equities: 2dKs6s (0.580965) vs. 6c8hQd (0.419035)
+mybotisamazing checks (bEq: 0.362833[0.580965])
+RAISE bets 14 (bEq: 0.360917[0.419035], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.362833[0.580965], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [2d]
+RAISE discards [Qd]
+*** TURN *** (42) [7c As Jd] [8d]
+True equities: Ks6s (0.0697674) vs. 6c8h (0.930233)
+mybotisamazing checks (bEq: 0.3613[0.0697674])
+RAISE bets 42 (bEq: 0.59885[0.930233], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.3613[0.0697674], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [7c As Jd 8d] [9s]
+True equities: Ks6s (0) vs. 6c8h (1)
+mybotisamazing checks (bEq: 0.22833[0])
+RAISE checks (bEq: 0.42389[1])
+RAISE shows [6c 8h]
+mybotisamazing shows [Ks 6s]
+RAISE wins the pot (126)
+
+Hand #23, mybotisamazing (-128), RAISE (128)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [5d 4h 6c] (hEq: 0.3838)
+Dealt to RAISE [Jc Ks 7s] (hEq: 0.56363)
+tEq: 5d4h6c (0.3477) vs. JcKs7s (0.6523)
+mybotisamazing folds (bEq: 0.3838[0.3477], had potOdds: 1/4=0.25)
+RAISE wins the pot (3)
+
+Hand #24, RAISE (129), mybotisamazing (-129)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [3s Jh As] (hEq: 0.56314)
+Dealt to mybotisamazing [7h Kh Qs] (hEq: 0.57463)
+tEq: 7hKhQs (0.48785) vs. 3sJhAs (0.51215)
+RAISE raises to 7 (bEq: 0.56314[0.51215], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.57463[0.48785], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [4d Qc 8d]
+True equities: 7hKhQs (0.732127) vs. 3sJhAs (0.267873)
+mybotisamazing checks (bEq: 0.66755[0.732127])
+RAISE bets 14 (bEq: 0.418417[0.267873], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.674483[0.732127], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [7h]
+RAISE discards [3s]
+*** TURN *** (42) [4d Qc 8d] [7d]
+True equities: KhQs (0.930233) vs. JhAs (0.0697674)
+mybotisamazing checks (bEq: 0.7431[0.930233])
+RAISE checks (bEq: 0.3585[0.0697674])
+*** RIVER *** (42) [4d Qc 8d 7d] [Td]
+True equities: KhQs (1) vs. JhAs (0)
+mybotisamazing checks (bEq: 0.522199[1])
+RAISE bets 42 (bEq: 0.169133[0], giving potOdds: 42/126=0.333333)
+mybotisamazing folds (bEq: 0.522199[1], had potOdds: 42/126=0.333333)
+Uncalled bet of 42 returned to RAISE
+RAISE wins the pot (42)
+
+Hand #25, mybotisamazing (-150), RAISE (150)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [7d Ts Jc] (hEq: 0.51576)
+Dealt to RAISE [7h 5s 5d] (hEq: 0.45227)
+tEq: 7dTsJc (0.64635) vs. 7h5s5d (0.35365)
+mybotisamazing calls (bEq: 0.51576[0.64635], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.45227[0.35365], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.51576[0.64635], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Td 4c Qd]
+True equities: 7dTsJc (0.847668) vs. 7h5s5d (0.152332)
+RAISE checks (bEq: 0.337283[0.152332])
+mybotisamazing checks (bEq: 0.62065[0.847668])
+RAISE discards [7h]
+mybotisamazing discards [7d]
+*** TURN *** (14) [Td 4c Qd] [3s]
+True equities: TsJc (0.953488) vs. 5s5d (0.0465116)
+RAISE checks (bEq: 0.60115[0.0465116])
+mybotisamazing checks (bEq: 0.74345[0.953488])
+*** RIVER *** (14) [Td 4c Qd 3s] [4s]
+True equities: TsJc (1) vs. 5s5d (0)
+RAISE checks (bEq: 0.621036[0])
+mybotisamazing checks (bEq: 0.715645[1])
+mybotisamazing shows [Ts Jc]
+RAISE shows [5s 5d]
+mybotisamazing wins the pot (14)
+
+Hand #26, RAISE (143), mybotisamazing (-143)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Td 2c Qc] (hEq: 0.49919)
+Dealt to mybotisamazing [4c 8s 6h] (hEq: 0.403115)
+tEq: 4c8s6h (0.417) vs. Td2cQc (0.583)
+RAISE raises to 7 (bEq: 0.49919[0.583], giving potOdds: 5/14=0.357143)
+mybotisamazing folds (bEq: 0.403115[0.417], had potOdds: 5/14=0.357143)
+Uncalled bet of 5 returned to RAISE
+RAISE wins the pot (4)
+
+Hand #27, mybotisamazing (-145), RAISE (145)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [5d Qh Kh] (hEq: 0.561765)
+Dealt to RAISE [Qc 6d 8c] (hEq: 0.506215)
+tEq: 5dQhKh (0.57025) vs. Qc6d8c (0.42975)
+mybotisamazing calls (bEq: 0.561765[0.57025], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.506215[0.42975], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.561765[0.57025], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [4h 7d 2c]
+True equities: 5dQhKh (0.620463) vs. Qc6d8c (0.379537)
+RAISE checks (bEq: 0.375883[0.379537])
+mybotisamazing checks (bEq: 0.429[0.620463])
+RAISE discards [Qc]
+mybotisamazing discards [5d]
+*** TURN *** (14) [4h 7d 2c] [3h]
+True equities: QhKh (0.860465) vs. 6d8c (0.139535)
+RAISE checks (bEq: 0.18685[0.139535])
+mybotisamazing checks (bEq: 0.4998[0.860465])
+*** RIVER *** (14) [4h 7d 2c 3h] [Kc]
+True equities: QhKh (1) vs. 6d8c (0)
+RAISE checks (bEq: 0.0174419[0])
+mybotisamazing checks (bEq: 0.860465[1])
+mybotisamazing shows [Qh Kh]
+RAISE shows [6d 8c]
+mybotisamazing wins the pot (14)
+
+Hand #28, RAISE (138), mybotisamazing (-138)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Ac Tc 8h] (hEq: 0.59002)
+Dealt to mybotisamazing [3d 5s Js] (hEq: 0.442365)
+tEq: 3d5sJs (0.4051) vs. AcTc8h (0.5949)
+RAISE raises to 7 (bEq: 0.59002[0.5949], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.442365[0.4051], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Qh Qd 4h]
+True equities: 3d5sJs (0.335733) vs. AcTc8h (0.664267)
+mybotisamazing checks (bEq: 0.338167[0.335733])
+RAISE bets 14 (bEq: 0.535867[0.664267], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.338167[0.335733], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [3d]
+RAISE discards [8h]
+*** TURN *** (42) [Qh Qd 4h] [Jh]
+True equities: 5sJs (0.837209) vs. AcTc (0.162791)
+mybotisamazing checks (bEq: 0.7005[0.837209])
+RAISE checks (bEq: 0.52725[0.162791])
+*** RIVER *** (42) [Qh Qd 4h Jh] [Ts]
+True equities: 5sJs (1) vs. AcTc (0)
+mybotisamazing checks (bEq: 0.744186[1])
+RAISE checks (bEq: 0.688689[0])
+RAISE shows [Ac Tc]
+mybotisamazing shows [5s Js]
+mybotisamazing wins the pot (42)
+
+Hand #29, mybotisamazing (-117), RAISE (117)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Kc 8h 4h] (hEq: 0.505395)
+Dealt to RAISE [As 5s Ac] (hEq: 0.66451)
+tEq: Kc8h4h (0.3285) vs. As5sAc (0.6715)
+mybotisamazing calls (bEq: 0.505395[0.3285], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.66451[0.6715], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.505395[0.3285], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [7d 9s Kd]
+True equities: Kc8h4h (0.504614) vs. As5sAc (0.495386)
+RAISE checks (bEq: 0.55605[0.495386])
+mybotisamazing checks (bEq: 0.608983[0.504614])
+RAISE discards [5s]
+mybotisamazing discards [4h]
+*** TURN *** (14) [7d 9s Kd] [Js]
+True equities: Kc8h (0.209302) vs. AsAc (0.790698)
+RAISE checks (bEq: 0.7965[0.790698])
+mybotisamazing checks (bEq: 0.78965[0.209302])
+*** RIVER *** (14) [7d 9s Kd Js] [8c]
+True equities: Kc8h (1) vs. AsAc (0)
+RAISE checks (bEq: 0.700317[0])
+mybotisamazing checks (bEq: 0.781184[1])
+mybotisamazing shows [Kc 8h]
+RAISE shows [As Ac]
+mybotisamazing wins the pot (14)
+
+Hand #30, RAISE (110), mybotisamazing (-110)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [4s 5d 7h] (hEq: 0.39287)
+Dealt to mybotisamazing [Qd As 3c] (hEq: 0.567255)
+tEq: QdAs3c (0.5938) vs. 4s5d7h (0.4062)
+RAISE raises to 7 (bEq: 0.39287[0.4062], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.567255[0.5938], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Kd 4h 8d]
+True equities: QdAs3c (0.339609) vs. 4s5d7h (0.660391)
+mybotisamazing checks (bEq: 0.469483[0.339609])
+RAISE bets 14 (bEq: 0.503133[0.660391], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.471867[0.339609], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [3c]
+RAISE discards [4s]
+*** TURN *** (42) [Kd 4h 8d] [Ac]
+True equities: QdAs (0.906977) vs. 5d7h (0.0930233)
+mybotisamazing checks (bEq: 0.88915[0.906977])
+RAISE bets 42 (bEq: 0.2202[0.0930233], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.88915[0.906977], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Kd 4h 8d Ac] [Ad]
+True equities: QdAs (1) vs. 5d7h (0)
+mybotisamazing checks (bEq: 0.941332[1])
+RAISE checks (bEq: 0.107822[0])
+RAISE shows [5d 7h]
+mybotisamazing shows [Qd As]
+mybotisamazing wins the pot (126)
+
+Hand #31, mybotisamazing (-47), RAISE (47)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [7h 9d 5d] (hEq: 0.444285)
+Dealt to RAISE [3h 9c 3s] (hEq: 0.42574)
+tEq: 7h9d5d (0.55295) vs. 3h9c3s (0.44705)
+mybotisamazing calls (bEq: 0.444285[0.55295], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.42574[0.44705], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.444285[0.55295], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Jd Kh As]
+True equities: 7h9d5d (0.418912) vs. 3h9c3s (0.581088)
+RAISE checks (bEq: 0.33245[0.581088])
+mybotisamazing checks (bEq: 0.289833[0.418912])
+RAISE discards [9c]
+mybotisamazing discards [7h]
+*** TURN *** (14) [Jd Kh As] [8s]
+True equities: 9d5d (0.139535) vs. 3h3s (0.860465)
+RAISE checks (bEq: 0.4274[0.860465])
+mybotisamazing checks (bEq: 0.234[0.139535])
+*** RIVER *** (14) [Jd Kh As 8s] [8d]
+True equities: 9d5d (0) vs. 3h3s (1)
+RAISE checks (bEq: 0.499471[1])
+mybotisamazing checks (bEq: 0.193975[0])
+mybotisamazing shows [9d 5d]
+RAISE shows [3h 3s]
+RAISE wins the pot (14)
+
+Hand #32, RAISE (54), mybotisamazing (-54)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [6c 7s 2h] (hEq: 0.37333)
+Dealt to mybotisamazing [Jd 5c Ah] (hEq: 0.5657)
+tEq: Jd5cAh (0.63605) vs. 6c7s2h (0.36395)
+RAISE raises to 7 (bEq: 0.37333[0.36395], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.5657[0.63605], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [3s 3c Th]
+True equities: Jd5cAh (0.752307) vs. 6c7s2h (0.247693)
+mybotisamazing checks (bEq: 0.50575[0.752307])
+RAISE bets 14 (bEq: 0.22705[0.247693], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.500717[0.752307], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [5c]
+RAISE discards [2h]
+*** TURN *** (42) [3s 3c Th] [Qc]
+True equities: JdAh (0.860465) vs. 6c7s (0.139535)
+mybotisamazing checks (bEq: 0.579[0.860465])
+RAISE bets 42 (bEq: 0.1692[0.139535], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.579[0.860465], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [3s 3c Th Qc] [5d]
+True equities: JdAh (1) vs. 6c7s (0)
+mybotisamazing checks (bEq: 0.524841[1])
+RAISE bets 126 (bEq: 0.05074[0], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.524841[1], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #33, mybotisamazing (-117), RAISE (117)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Ad Tc 3s] (hEq: 0.542045)
+Dealt to RAISE [Ah 9c 8h] (hEq: 0.578835)
+tEq: AdTc3s (0.50205) vs. Ah9c8h (0.49795)
+mybotisamazing calls (bEq: 0.542045[0.50205], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.578835[0.49795], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.542045[0.50205], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [3c 2s 5h]
+True equities: AdTc3s (0.734465) vs. Ah9c8h (0.265535)
+RAISE checks (bEq: 0.430483[0.265535])
+mybotisamazing checks (bEq: 0.5783[0.734465])
+RAISE discards [9c]
+mybotisamazing discards [Tc]
+*** TURN *** (14) [3c 2s 5h] [Ts]
+True equities: Ad3s (0.883721) vs. Ah8h (0.116279)
+RAISE checks (bEq: 0.43145[0.116279])
+mybotisamazing checks (bEq: 0.62575[0.883721])
+*** RIVER *** (14) [3c 2s 5h Ts] [Jh]
+True equities: Ad3s (1) vs. Ah8h (0)
+RAISE checks (bEq: 0.31871[0])
+mybotisamazing checks (bEq: 0.575053[1])
+mybotisamazing shows [Ad 3s]
+RAISE shows [Ah 8h]
+mybotisamazing wins the pot (14)
+
+Hand #34, RAISE (110), mybotisamazing (-110)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [3s Kh 2h] (hEq: 0.45586)
+Dealt to mybotisamazing [Qh 4c 2s] (hEq: 0.435235)
+tEq: Qh4c2s (0.4403) vs. 3sKh2h (0.5597)
+RAISE raises to 7 (bEq: 0.45586[0.5597], giving potOdds: 5/14=0.357143)
+mybotisamazing folds (bEq: 0.435235[0.4403], had potOdds: 5/14=0.357143)
+Uncalled bet of 5 returned to RAISE
+RAISE wins the pot (4)
+
+Hand #35, mybotisamazing (-112), RAISE (112)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [5h As 8h] (hEq: 0.543825)
+Dealt to RAISE [3c Jc Jh] (hEq: 0.52459)
+tEq: 5hAs8h (0.501) vs. 3cJcJh (0.499)
+mybotisamazing calls (bEq: 0.543825[0.501], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.52459[0.499], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.543825[0.501], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Td 2h 6c]
+True equities: 5hAs8h (0.457487) vs. 3cJcJh (0.542513)
+RAISE checks (bEq: 0.465183[0.542513])
+mybotisamazing checks (bEq: 0.415867[0.457487])
+RAISE discards [3c]
+mybotisamazing discards [5h]
+*** TURN *** (14) [Td 2h 6c] [5d]
+True equities: As8h (0.0697674) vs. JcJh (0.930233)
+RAISE checks (bEq: 0.8045[0.930233])
+mybotisamazing checks (bEq: 0.41335[0.0697674])
+*** RIVER *** (14) [Td 2h 6c 5d] [6h]
+True equities: As8h (0) vs. JcJh (1)
+RAISE checks (bEq: 0.868393[1])
+mybotisamazing checks (bEq: 0.469873[0])
+mybotisamazing shows [As 8h]
+RAISE shows [Jc Jh]
+RAISE wins the pot (14)
+
+Hand #36, RAISE (119), mybotisamazing (-119)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Ah Jc 2c] (hEq: 0.555765)
+Dealt to mybotisamazing [Jh 8c As] (hEq: 0.5933)
+tEq: Jh8cAs (0.53815) vs. AhJc2c (0.46185)
+RAISE raises to 7 (bEq: 0.555765[0.46185], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.5933[0.53815], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [6h 7c 2s]
+True equities: Jh8cAs (0.220684) vs. AhJc2c (0.779316)
+mybotisamazing checks (bEq: 0.4498[0.220684])
+RAISE bets 14 (bEq: 0.550617[0.779316], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.4498[0.220684], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [8c]
+RAISE discards [Jc]
+*** TURN *** (42) [6h 7c 2s] [9c]
+True equities: JhAs (0.0697674) vs. Ah2c (0.930233)
+mybotisamazing checks (bEq: 0.4036[0.0697674])
+RAISE bets 42 (bEq: 0.48315[0.930233], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.4036[0.0697674], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [6h 7c 2s 9c] [7s]
+True equities: JhAs (0) vs. Ah2c (1)
+mybotisamazing checks (bEq: 0.455074[0])
+RAISE bets 126 (bEq: 0.577167[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.455074[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #37, mybotisamazing (-182), RAISE (182)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [6d 8d Jd] (hEq: 0.499425)
+Dealt to RAISE [3h 7c 8h] (hEq: 0.40891)
+tEq: 6d8dJd (0.6258) vs. 3h7c8h (0.3742)
+mybotisamazing calls (bEq: 0.499425[0.6258], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.40891[0.3742], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.499425[0.6258], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [6s Th 7d]
+True equities: 6d8dJd (0.468069) vs. 3h7c8h (0.531931)
+RAISE checks (bEq: 0.560567[0.531931])
+mybotisamazing checks (bEq: 0.576917[0.468069])
+RAISE discards [3h]
+mybotisamazing discards [Jd]
+*** TURN *** (14) [6s Th 7d] [5d]
+True equities: 6d8d (0.302326) vs. 7c8h (0.697674)
+RAISE checks (bEq: 0.69365[0.697674])
+mybotisamazing checks (bEq: 0.696[0.302326])
+*** RIVER *** (14) [6s Th 7d 5d] [9d]
+True equities: 6d8d (1) vs. 7c8h (0)
+RAISE checks (bEq: 0.884778[0])
+mybotisamazing checks (bEq: 1[1])
+mybotisamazing shows [6d 8d]
+RAISE shows [7c 8h]
+mybotisamazing wins the pot (14)
+
+Hand #38, RAISE (175), mybotisamazing (-175)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [7c Ks Kh] (hEq: 0.62645)
+Dealt to mybotisamazing [9s Kd Jd] (hEq: 0.584245)
+tEq: 9sKdJd (0.46825) vs. 7cKsKh (0.53175)
+RAISE raises to 7 (bEq: 0.62645[0.53175], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.584245[0.46825], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Th Qc 3c]
+True equities: 9sKdJd (0.501538) vs. 7cKsKh (0.498462)
+mybotisamazing checks (bEq: 0.532067[0.501538])
+RAISE bets 14 (bEq: 0.552817[0.498462], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.5218[0.501538], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [9s]
+RAISE discards [7c]
+*** TURN *** (42) [Th Qc 3c] [2s]
+True equities: KdJd (0.162791) vs. KsKh (0.837209)
+mybotisamazing checks (bEq: 0.4646[0.162791])
+RAISE bets 42 (bEq: 0.8566[0.837209], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.4646[0.162791], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Th Qc 3c 2s] [8d]
+True equities: KdJd (0) vs. KsKh (1)
+mybotisamazing checks (bEq: 0.26797[0])
+RAISE bets 126 (bEq: 0.865222[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.26797[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #39, mybotisamazing (-238), RAISE (238)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [3d 7s 3h] (hEq: 0.402735)
+Dealt to RAISE [8c 8s 5s] (hEq: 0.507715)
+tEq: 3d7s3h (0.3285) vs. 8c8s5s (0.6715)
+mybotisamazing calls (bEq: 0.402735[0.3285], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.507715[0.6715], giving potOdds: 5/14=0.357143)
+mybotisamazing folds (bEq: 0.402735[0.3285], had potOdds: 5/14=0.357143)
+Uncalled bet of 5 returned to RAISE
+RAISE wins the pot (4)
+
+Hand #40, RAISE (240), mybotisamazing (-240)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [2c 6h Js] (hEq: 0.426735)
+Dealt to mybotisamazing [5d 3d Ac] (hEq: 0.51159)
+tEq: 5d3dAc (0.5784) vs. 2c6hJs (0.4216)
+RAISE raises to 7 (bEq: 0.426735[0.4216], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.51159[0.5784], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [2h 8h 5h]
+True equities: 5d3dAc (0.489726) vs. 2c6hJs (0.510274)
+mybotisamazing checks (bEq: 0.494383[0.489726])
+RAISE checks (bEq: 0.512633[0.510274])
+mybotisamazing discards [3d]
+RAISE discards [Js]
+*** TURN *** (14) [2h 8h 5h] [Qc]
+True equities: 5dAc (0.674419) vs. 2c6h (0.325581)
+mybotisamazing checks (bEq: 0.5538[0.674419])
+RAISE checks (bEq: 0.53055[0.325581])
+*** RIVER *** (14) [2h 8h 5h Qc] [4h]
+True equities: 5dAc (0) vs. 2c6h (1)
+mybotisamazing checks (bEq: 0.387949[0])
+RAISE bets 14 (bEq: 0.704017[1], giving potOdds: 14/42=0.333333)
+mybotisamazing folds (bEq: 0.387949[0], had potOdds: 14/42=0.333333)
+Uncalled bet of 14 returned to RAISE
+RAISE wins the pot (14)
+
+Hand #41, mybotisamazing (-247), RAISE (247)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [5c 8h 9d] (hEq: 0.443875)
+Dealt to RAISE [2c Qd 4c] (hEq: 0.444385)
+tEq: 5c8h9d (0.50295) vs. 2cQd4c (0.49705)
+mybotisamazing calls (bEq: 0.443875[0.50295], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.444385[0.49705], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.443875[0.50295], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [7d 8d 5d]
+True equities: 5c8h9d (0.7205) vs. 2cQd4c (0.2795)
+RAISE checks (bEq: 0.419717[0.2795])
+mybotisamazing checks (bEq: 0.717633[0.7205])
+RAISE discards [2c]
+mybotisamazing discards [5c]
+*** TURN *** (14) [7d 8d 5d] [3d]
+True equities: 8h9d (0.0232558) vs. Qd4c (0.976744)
+RAISE bets 14 (bEq: 0.8987[0.976744], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.7898[0.0232558], getting potOdds: 14/42=0.333333)
+*** RIVER *** (42) [7d 8d 5d 3d] [2h]
+True equities: 8h9d (0) vs. Qd4c (1)
+RAISE bets 42 (bEq: 0.908034[1], giving potOdds: 42/126=0.333333)
+mybotisamazing folds (bEq: 0.782241[0], had potOdds: 42/126=0.333333)
+Uncalled bet of 42 returned to RAISE
+RAISE wins the pot (42)
+
+Hand #42, RAISE (268), mybotisamazing (-268)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Jd 5h 7h] (hEq: 0.47081)
+Dealt to mybotisamazing [7s 9c Ah] (hEq: 0.561245)
+tEq: 7s9cAh (0.58595) vs. Jd5h7h (0.41405)
+RAISE raises to 7 (bEq: 0.47081[0.41405], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.561245[0.58595], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [9s Qs As]
+True equities: 7s9cAh (0.95152) vs. Jd5h7h (0.0484804)
+mybotisamazing checks (bEq: 0.794317[0.95152])
+RAISE checks (bEq: 0.283333[0.0484804])
+mybotisamazing discards [9c]
+RAISE discards [5h]
+*** TURN *** (14) [9s Qs As] [2h]
+True equities: 7sAh (1) vs. Jd7h (0)
+mybotisamazing checks (bEq: 0.83835[1])
+RAISE checks (bEq: 0.26915[0])
+*** RIVER *** (14) [9s Qs As 2h] [3s]
+True equities: 7sAh (1) vs. Jd7h (0)
+mybotisamazing checks (bEq: 0.824524[1])
+RAISE bets 14 (bEq: 0.124736[0], giving potOdds: 14/42=0.333333)
+mybotisamazing folds (bEq: 0.824524[1], had potOdds: 14/42=0.333333)
+Uncalled bet of 14 returned to RAISE
+RAISE wins the pot (14)
+
+Hand #43, mybotisamazing (-275), RAISE (275)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Qs 6s 3d] (hEq: 0.463645)
+Dealt to RAISE [7d 8s Qc] (hEq: 0.50449)
+tEq: Qs6s3d (0.39015) vs. 7d8sQc (0.60985)
+mybotisamazing calls (bEq: 0.463645[0.39015], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.50449[0.60985], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.463645[0.39015], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [3s Qh Ks]
+True equities: Qs6s3d (0.642426) vs. 7d8sQc (0.357574)
+RAISE checks (bEq: 0.587417[0.357574])
+mybotisamazing checks (bEq: 0.774017[0.642426])
+RAISE discards [7d]
+mybotisamazing discards [6s]
+*** TURN *** (14) [3s Qh Ks] [Ad]
+True equities: Qs3d (0.860465) vs. 8sQc (0.139535)
+RAISE checks (bEq: 0.66205[0.139535])
+mybotisamazing checks (bEq: 0.85385[0.860465])
+*** RIVER *** (14) [3s Qh Ks Ad] [Qd]
+True equities: Qs3d (1) vs. 8sQc (0)
+RAISE bets 14 (bEq: 0.946089[0], giving potOdds: 14/42=0.333333)
+mybotisamazing folds (bEq: 0.986258[1], had potOdds: 14/42=0.333333)
+Uncalled bet of 14 returned to RAISE
+RAISE wins the pot (14)
+
+Hand #44, RAISE (282), mybotisamazing (-282)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Tc 9h Js] (hEq: 0.534175)
+Dealt to mybotisamazing [6h Ac 9d] (hEq: 0.55235)
+tEq: 6hAc9d (0.50385) vs. Tc9hJs (0.49615)
+RAISE raises to 7 (bEq: 0.534175[0.49615], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.55235[0.50385], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [5h 3d Jd]
+True equities: 6hAc9d (0.298327) vs. Tc9hJs (0.701673)
+mybotisamazing checks (bEq: 0.42865[0.298327])
+RAISE bets 14 (bEq: 0.626867[0.701673], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.428[0.298327], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [6h]
+RAISE discards [Tc]
+*** TURN *** (42) [5h 3d Jd] [Ah]
+True equities: Ac9d (0.953488) vs. 9hJs (0.0465116)
+mybotisamazing checks (bEq: 0.80975[0.953488])
+RAISE bets 42 (bEq: 0.71875[0.0465116], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.80975[0.953488], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [5h 3d Jd Ah] [Qd]
+True equities: Ac9d (1) vs. 9hJs (0)
+mybotisamazing checks (bEq: 0.817125[1])
+RAISE checks (bEq: 0.623679[0])
+RAISE shows [9h Js]
+mybotisamazing shows [Ac 9d]
+mybotisamazing wins the pot (126)
+
+Hand #45, mybotisamazing (-219), RAISE (219)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [3c 9s 9h] (hEq: 0.4843)
+Dealt to RAISE [6s Jd Qs] (hEq: 0.53597)
+tEq: 3c9s9h (0.42435) vs. 6sJdQs (0.57565)
+mybotisamazing calls (bEq: 0.4843[0.42435], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.53597[0.57565], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.4843[0.42435], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Ah 5c 6h]
+True equities: 3c9s9h (0.391411) vs. 6sJdQs (0.608589)
+RAISE checks (bEq: 0.569467[0.608589])
+mybotisamazing checks (bEq: 0.3952[0.391411])
+RAISE discards [Jd]
+mybotisamazing discards [3c]
+*** TURN *** (14) [Ah 5c 6h] [5s]
+True equities: 9s9h (0.883721) vs. 6sQs (0.116279)
+RAISE checks (bEq: 0.6587[0.116279])
+mybotisamazing checks (bEq: 0.7072[0.883721])
+*** RIVER *** (14) [Ah 5c 6h 5s] [9c]
+True equities: 9s9h (1) vs. 6sQs (0)
+RAISE checks (bEq: 0.580338[0])
+mybotisamazing checks (bEq: 0.995772[1])
+mybotisamazing shows [9s 9h]
+RAISE shows [6s Qs]
+mybotisamazing wins the pot (14)
+
+Hand #46, RAISE (212), mybotisamazing (-212)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Tc 5h Jc] (hEq: 0.50326)
+Dealt to mybotisamazing [8s Qd 7d] (hEq: 0.51824)
+tEq: 8sQd7d (0.5489) vs. Tc5hJc (0.4511)
+RAISE raises to 7 (bEq: 0.50326[0.4511], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.51824[0.5489], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [As Ah 9c]
+True equities: 8sQd7d (0.578504) vs. Tc5hJc (0.421496)
+mybotisamazing checks (bEq: 0.448883[0.578504])
+RAISE checks (bEq: 0.433467[0.421496])
+mybotisamazing discards [7d]
+RAISE discards [5h]
+*** TURN *** (14) [As Ah 9c] [7h]
+True equities: 8sQd (0.790698) vs. TcJc (0.209302)
+mybotisamazing checks (bEq: 0.453[0.790698])
+RAISE bets 14 (bEq: 0.4605[0.209302], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.453[0.790698], getting potOdds: 14/42=0.333333)
+*** RIVER *** (42) [As Ah 9c 7h] [4h]
+True equities: 8sQd (1) vs. TcJc (0)
+mybotisamazing checks (bEq: 0.358351[1])
+RAISE checks (bEq: 0.262156[0])
+RAISE shows [Tc Jc]
+mybotisamazing shows [8s Qd]
+mybotisamazing wins the pot (42)
+
+Hand #47, mybotisamazing (-191), RAISE (191)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [9h Qh Qc] (hEq: 0.584245)
+Dealt to RAISE [6d 7c Ac] (hEq: 0.54515)
+tEq: 9hQhQc (0.56325) vs. 6d7cAc (0.43675)
+mybotisamazing calls (bEq: 0.584245[0.56325], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.54515[0.43675], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.584245[0.56325], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Tc 9c 8h]
+True equities: 9hQhQc (0.499139) vs. 6d7cAc (0.500861)
+RAISE checks (bEq: 0.6617[0.500861])
+mybotisamazing checks (bEq: 0.723133[0.499139])
+RAISE discards [6d]
+mybotisamazing discards [9h]
+*** TURN *** (14) [Tc 9c 8h] [9d]
+True equities: QhQc (0.674419) vs. 7cAc (0.325581)
+RAISE checks (bEq: 0.61[0.325581])
+mybotisamazing checks (bEq: 0.8224[0.674419])
+*** RIVER *** (14) [Tc 9c 8h 9d] [3d]
+True equities: QhQc (1) vs. 7cAc (0)
+RAISE checks (bEq: 0.404863[0])
+mybotisamazing checks (bEq: 0.889535[1])
+mybotisamazing shows [Qh Qc]
+RAISE shows [7c Ac]
+mybotisamazing wins the pot (14)
+
+Hand #48, RAISE (184), mybotisamazing (-184)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Jc Kh 2h] (hEq: 0.528575)
+Dealt to mybotisamazing [Kd 8c Jd] (hEq: 0.572905)
+tEq: Kd8cJd (0.5446) vs. JcKh2h (0.4554)
+RAISE raises to 7 (bEq: 0.528575[0.4554], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.572905[0.5446], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [6c 2d 5s]
+True equities: Kd8cJd (0.232989) vs. JcKh2h (0.767011)
+mybotisamazing checks (bEq: 0.38835[0.232989])
+RAISE bets 14 (bEq: 0.490183[0.767011], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.38835[0.232989], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [8c]
+RAISE discards [Jc]
+*** TURN *** (42) [6c 2d 5s] [8s]
+True equities: KdJd (0.0697674) vs. Kh2h (0.930233)
+mybotisamazing checks (bEq: 0.3295[0.0697674])
+RAISE bets 42 (bEq: 0.452[0.930233], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.3295[0.0697674], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [6c 2d 5s 8s] [Ad]
+True equities: KdJd (0) vs. Kh2h (1)
+mybotisamazing checks (bEq: 0.347252[0])
+RAISE bets 126 (bEq: 0.424947[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.347252[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #49, mybotisamazing (-247), RAISE (247)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [8d 7h 2c] (hEq: 0.391765)
+Dealt to RAISE [Js Ad 3d] (hEq: 0.56314)
+tEq: 8d7h2c (0.3696) vs. JsAd3d (0.6304)
+mybotisamazing folds (bEq: 0.391765[0.3696], had potOdds: 1/4=0.25)
+RAISE wins the pot (3)
+
+Hand #50, RAISE (248), mybotisamazing (-248)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Kc 2s 8h] (hEq: 0.48267)
+Dealt to mybotisamazing [7c 6c 5c] (hEq: 0.43066)
+tEq: 7c6c5c (0.44515) vs. Kc2s8h (0.55485)
+RAISE raises to 7 (bEq: 0.48267[0.55485], giving potOdds: 5/14=0.357143)
+mybotisamazing folds (bEq: 0.43066[0.44515], had potOdds: 5/14=0.357143)
+Uncalled bet of 5 returned to RAISE
+RAISE wins the pot (4)
+
+Hand #51, mybotisamazing (-250), RAISE (250)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [3h 8s 7c] (hEq: 0.400205)
+Dealt to RAISE [7s Th Qh] (hEq: 0.537915)
+tEq: 3h8s7c (0.3161) vs. 7sThQh (0.6839)
+mybotisamazing calls (bEq: 0.400205[0.3161], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.537915[0.6839], giving potOdds: 5/14=0.357143)
+mybotisamazing folds (bEq: 0.400205[0.3161], had potOdds: 5/14=0.357143)
+Uncalled bet of 5 returned to RAISE
+RAISE wins the pot (4)
+
+Hand #52, RAISE (252), mybotisamazing (-252)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Ah 2s Kd] (hEq: 0.574095)
+Dealt to mybotisamazing [9h 3s Jc] (hEq: 0.46694)
+tEq: 9h3sJc (0.4006) vs. Ah2sKd (0.5994)
+RAISE raises to 7 (bEq: 0.574095[0.5994], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.46694[0.4006], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Ad 6c 7c]
+True equities: 9h3sJc (0.158669) vs. Ah2sKd (0.841331)
+mybotisamazing checks (bEq: 0.323383[0.158669])
+RAISE bets 14 (bEq: 0.673483[0.841331], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.32285[0.158669], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [3s]
+RAISE discards [2s]
+*** TURN *** (42) [Ad 6c 7c] [6h]
+True equities: 9hJc (0) vs. AhKd (1)
+mybotisamazing checks (bEq: 0.3352[0])
+RAISE bets 42 (bEq: 0.85885[1], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.3352[0], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Ad 6c 7c 6h] [Jd]
+True equities: 9hJc (0) vs. AhKd (1)
+mybotisamazing checks (bEq: 0.724101[0])
+RAISE bets 126 (bEq: 0.886892[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.724101[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #53, mybotisamazing (-315), RAISE (315)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [7h 5d 4s] (hEq: 0.39287)
+Dealt to RAISE [Js Qc 4h] (hEq: 0.51956)
+tEq: 7h5d4s (0.3372) vs. JsQc4h (0.6628)
+mybotisamazing folds (bEq: 0.39287[0.3372], had potOdds: 1/4=0.25)
+RAISE wins the pot (3)
+
+Hand #54, RAISE (316), mybotisamazing (-316)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [7d 5d 5s] (hEq: 0.459985)
+Dealt to mybotisamazing [Qd 6s As] (hEq: 0.590855)
+tEq: Qd6sAs (0.5813) vs. 7d5d5s (0.4187)
+RAISE raises to 7 (bEq: 0.459985[0.4187], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.590855[0.5813], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [7c 9c Ts]
+True equities: Qd6sAs (0.336471) vs. 7d5d5s (0.663529)
+mybotisamazing checks (bEq: 0.439017[0.336471])
+RAISE bets 14 (bEq: 0.476317[0.663529], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.439017[0.336471], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [Qd]
+RAISE discards [7d]
+*** TURN *** (42) [7c 9c Ts] [Qh]
+True equities: 6sAs (0.232558) vs. 5d5s (0.767442)
+mybotisamazing checks (bEq: 0.41025[0.232558])
+RAISE bets 42 (bEq: 0.4139[0.767442], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.41025[0.232558], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [7c 9c Ts Qh] [4d]
+True equities: 6sAs (0) vs. 5d5s (1)
+mybotisamazing checks (bEq: 0.307082[0])
+RAISE bets 126 (bEq: 0.471987[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.307082[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #55, mybotisamazing (-379), RAISE (379)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [8d Kd 6d] (hEq: 0.533295)
+Dealt to RAISE [9c 5h 3c] (hEq: 0.411335)
+tEq: 8dKd6d (0.60165) vs. 9c5h3c (0.39835)
+mybotisamazing calls (bEq: 0.533295[0.60165], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.411335[0.39835], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.533295[0.60165], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Jh Jd 6h]
+True equities: 8dKd6d (0.823244) vs. 9c5h3c (0.176756)
+RAISE checks (bEq: 0.27505[0.176756])
+mybotisamazing checks (bEq: 0.6384[0.823244])
+RAISE discards [3c]
+mybotisamazing discards [8d]
+*** TURN *** (14) [Jh Jd 6h] [6s]
+True equities: Kd6d (0.976744) vs. 9c5h (0.0232558)
+RAISE checks (bEq: 0.27535[0.0232558])
+mybotisamazing checks (bEq: 0.87265[0.976744])
+*** RIVER *** (14) [Jh Jd 6h 6s] [Js]
+True equities: Kd6d (0.5) vs. 9c5h (0.5)
+RAISE bets 14 (bEq: 0.456131[0.5], giving potOdds: 14/42=0.333333)
+mybotisamazing folds (bEq: 0.458245[0.5], had potOdds: 14/42=0.333333)
+Uncalled bet of 14 returned to RAISE
+RAISE wins the pot (14)
+
+Hand #56, RAISE (386), mybotisamazing (-386)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [8s Qs 9c] (hEq: 0.53586)
+Dealt to mybotisamazing [5h Kc 5c] (hEq: 0.55466)
+tEq: 5hKc5c (0.53955) vs. 8sQs9c (0.46045)
+RAISE raises to 7 (bEq: 0.53586[0.46045], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.55466[0.53955], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [6c Jh Ac]
+True equities: 5hKc5c (0.75483) vs. 8sQs9c (0.24517)
+mybotisamazing checks (bEq: 0.549583[0.75483])
+RAISE bets 14 (bEq: 0.40685[0.24517], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.549583[0.75483], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [5h]
+RAISE discards [8s]
+*** TURN *** (42) [6c Jh Ac] [2h]
+True equities: Kc5c (0.883721) vs. Qs9c (0.116279)
+mybotisamazing checks (bEq: 0.515[0.883721])
+RAISE bets 42 (bEq: 0.3469[0.116279], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.515[0.883721], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [6c Jh Ac 2h] [5d]
+True equities: Kc5c (1) vs. Qs9c (0)
+mybotisamazing checks (bEq: 0.569239[1])
+RAISE bets 126 (bEq: 0.247886[0], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.569239[1], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #57, mybotisamazing (-449), RAISE (449)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Jd Kc 3s] (hEq: 0.532055)
+Dealt to RAISE [9s Tc 8s] (hEq: 0.505685)
+tEq: JdKc3s (0.5652) vs. 9sTc8s (0.4348)
+mybotisamazing calls (bEq: 0.532055[0.5652], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.505685[0.4348], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.532055[0.5652], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [2d Ks 5c]
+True equities: JdKc3s (0.883229) vs. 9sTc8s (0.116771)
+RAISE checks (bEq: 0.320367[0.116771])
+mybotisamazing checks (bEq: 0.676883[0.883229])
+RAISE discards [8s]
+mybotisamazing discards [3s]
+*** TURN *** (14) [2d Ks 5c] [Ac]
+True equities: JdKc (1) vs. 9sTc (0)
+RAISE checks (bEq: 0.2574[0])
+mybotisamazing checks (bEq: 0.77335[1])
+*** RIVER *** (14) [2d Ks 5c Ac] [2h]
+True equities: JdKc (1) vs. 9sTc (0)
+RAISE checks (bEq: 0.230444[0])
+mybotisamazing checks (bEq: 0.724101[1])
+mybotisamazing shows [Jd Kc]
+RAISE shows [9s Tc]
+mybotisamazing wins the pot (14)
+
+Hand #58, RAISE (442), mybotisamazing (-442)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [5h 4h Kc] (hEq: 0.48934)
+Dealt to mybotisamazing [2s 4d 9s] (hEq: 0.390795)
+tEq: 2s4d9s (0.40055) vs. 5h4hKc (0.59945)
+RAISE raises to 7 (bEq: 0.48934[0.59945], giving potOdds: 5/14=0.357143)
+mybotisamazing folds (bEq: 0.390795[0.40055], had potOdds: 5/14=0.357143)
+Uncalled bet of 5 returned to RAISE
+RAISE wins the pot (4)
+
+Hand #59, mybotisamazing (-444), RAISE (444)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Ts 2h 7s] (hEq: 0.427075)
+Dealt to RAISE [Jd 9c 7c] (hEq: 0.506105)
+tEq: Ts2h7s (0.37885) vs. Jd9c7c (0.62115)
+mybotisamazing calls (bEq: 0.427075[0.37885], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.506105[0.62115], giving potOdds: 5/14=0.357143)
+mybotisamazing folds (bEq: 0.427075[0.37885], had potOdds: 5/14=0.357143)
+Uncalled bet of 5 returned to RAISE
+RAISE wins the pot (4)
+
+Hand #60, RAISE (446), mybotisamazing (-446)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [5c Ac Tc] (hEq: 0.57021)
+Dealt to mybotisamazing [8s Qd 4c] (hEq: 0.4816)
+tEq: 8sQd4c (0.4101) vs. 5cAcTc (0.5899)
+RAISE raises to 7 (bEq: 0.57021[0.5899], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.4816[0.4101], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [8c 5s 5d]
+True equities: 8sQd4c (0.236188) vs. 5cAcTc (0.763812)
+mybotisamazing checks (bEq: 0.623933[0.236188])
+RAISE bets 14 (bEq: 0.827133[0.763812], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.623933[0.236188], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [4c]
+RAISE discards [5c]
+*** TURN *** (42) [8c 5s 5d] [7c]
+True equities: 8sQd (0.697674) vs. AcTc (0.302326)
+mybotisamazing checks (bEq: 0.7166[0.697674])
+RAISE bets 42 (bEq: 0.6052[0.302326], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.7166[0.697674], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [8c 5s 5d 7c] [3d]
+True equities: 8sQd (1) vs. AcTc (0)
+mybotisamazing checks (bEq: 0.811839[1])
+RAISE checks (bEq: 0.465645[0])
+RAISE shows [Ac Tc]
+mybotisamazing shows [8s Qd]
+mybotisamazing wins the pot (126)
+
+Hand #61, mybotisamazing (-383), RAISE (383)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [7h 6d 7s] (hEq: 0.479125)
+Dealt to RAISE [Th 4d 8d] (hEq: 0.456785)
+tEq: 7h6d7s (0.46445) vs. Th4d8d (0.53555)
+mybotisamazing calls (bEq: 0.479125[0.46445], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.456785[0.53555], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.479125[0.46445], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [5s Jh Js]
+True equities: 7h6d7s (0.453734) vs. Th4d8d (0.546266)
+RAISE checks (bEq: 0.331383[0.546266])
+mybotisamazing checks (bEq: 0.4261[0.453734])
+RAISE discards [4d]
+mybotisamazing discards [6d]
+*** TURN *** (14) [5s Jh Js] [6c]
+True equities: 7h7s (0.860465) vs. Th8d (0.139535)
+RAISE checks (bEq: 0.2974[0.139535])
+mybotisamazing checks (bEq: 0.7903[0.860465])
+*** RIVER *** (14) [5s Jh Js 6c] [4s]
+True equities: 7h7s (1) vs. Th8d (0)
+RAISE checks (bEq: 0.137421[0])
+mybotisamazing checks (bEq: 0.79334[1])
+mybotisamazing shows [7h 7s]
+RAISE shows [Th 8d]
+mybotisamazing wins the pot (14)
+
+Hand #62, RAISE (376), mybotisamazing (-376)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Qs 8d Jc] (hEq: 0.550095)
+Dealt to mybotisamazing [3h As 3c] (hEq: 0.541535)
+tEq: 3hAs3c (0.5455) vs. Qs8dJc (0.4545)
+RAISE raises to 7 (bEq: 0.550095[0.4545], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.541535[0.5455], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Ks 2s Tc]
+True equities: 3hAs3c (0.651409) vs. Qs8dJc (0.348591)
+mybotisamazing checks (bEq: 0.4909[0.651409])
+RAISE bets 14 (bEq: 0.490867[0.348591], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.4909[0.651409], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [As]
+RAISE discards [Qs]
+*** TURN *** (42) [Ks 2s Tc] [9h]
+True equities: 3h3c (0.674419) vs. 8dJc (0.325581)
+mybotisamazing checks (bEq: 0.4768[0.674419])
+RAISE bets 42 (bEq: 0.39175[0.325581], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.4768[0.674419], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Ks 2s Tc 9h] [3s]
+True equities: 3h3c (1) vs. 8dJc (0)
+mybotisamazing checks (bEq: 0.936575[1])
+RAISE checks (bEq: 0.192389[0])
+RAISE shows [8d Jc]
+mybotisamazing shows [3h 3c]
+mybotisamazing wins the pot (126)
+
+Hand #63, mybotisamazing (-313), RAISE (313)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Qd 8s 3d] (hEq: 0.474015)
+Dealt to RAISE [4d Ts 7h] (hEq: 0.4402)
+tEq: Qd8s3d (0.5513) vs. 4dTs7h (0.4487)
+mybotisamazing calls (bEq: 0.474015[0.5513], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.4402[0.4487], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.474015[0.5513], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Ah 9d Jh]
+True equities: Qd8s3d (0.603851) vs. 4dTs7h (0.396149)
+RAISE checks (bEq: 0.341567[0.396149])
+mybotisamazing checks (bEq: 0.3808[0.603851])
+RAISE discards [4d]
+mybotisamazing discards [3d]
+*** TURN *** (14) [Ah 9d Jh] [Tc]
+True equities: Qd8s (1) vs. Ts7h (0)
+RAISE checks (bEq: 0.6076[0])
+mybotisamazing checks (bEq: 0.9431[1])
+*** RIVER *** (14) [Ah 9d Jh Tc] [2s]
+True equities: Qd8s (1) vs. Ts7h (0)
+RAISE checks (bEq: 0.614165[0])
+mybotisamazing checks (bEq: 0.982558[1])
+mybotisamazing shows [Qd 8s]
+RAISE shows [Ts 7h]
+mybotisamazing wins the pot (14)
+
+Hand #64, RAISE (306), mybotisamazing (-306)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Qd 8d 5h] (hEq: 0.49743)
+Dealt to mybotisamazing [Ah Jc 7h] (hEq: 0.589105)
+tEq: AhJc7h (0.56815) vs. Qd8d5h (0.43185)
+RAISE raises to 7 (bEq: 0.49743[0.43185], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.589105[0.56815], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [7d 2c Jd]
+True equities: AhJc7h (0.754522) vs. Qd8d5h (0.245478)
+mybotisamazing checks (bEq: 0.812367[0.754522])
+RAISE bets 14 (bEq: 0.418867[0.245478], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.812367[0.754522], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [Ah]
+RAISE discards [5h]
+*** TURN *** (42) [7d 2c Jd] [8h]
+True equities: Jc7h (0.674419) vs. Qd8d (0.325581)
+mybotisamazing checks (bEq: 0.8892[0.674419])
+RAISE bets 42 (bEq: 0.77715[0.325581], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.8892[0.674419], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [7d 2c Jd 8h] [6h]
+True equities: Jc7h (1) vs. Qd8d (0)
+mybotisamazing checks (bEq: 0.929175[1])
+RAISE checks (bEq: 0.717759[0])
+RAISE shows [Qd 8d]
+mybotisamazing shows [Jc 7h]
+mybotisamazing wins the pot (126)
+
+Hand #65, mybotisamazing (-243), RAISE (243)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Kc 9d 7c] (hEq: 0.54473)
+Dealt to RAISE [9s 3c 6s] (hEq: 0.416395)
+tEq: Kc9d7c (0.6581) vs. 9s3c6s (0.3419)
+mybotisamazing calls (bEq: 0.54473[0.6581], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.416395[0.3419], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.54473[0.6581], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [3d Qc Qh]
+True equities: Kc9d7c (0.449366) vs. 9s3c6s (0.550634)
+RAISE checks (bEq: 0.524583[0.550634])
+mybotisamazing checks (bEq: 0.462583[0.449366])
+RAISE discards [6s]
+mybotisamazing discards [7c]
+*** TURN *** (14) [3d Qc Qh] [6d]
+True equities: Kc9d (0.186047) vs. 9s3c (0.813953)
+RAISE checks (bEq: 0.61995[0.813953])
+mybotisamazing checks (bEq: 0.45305[0.186047])
+*** RIVER *** (14) [3d Qc Qh 6d] [Ks]
+True equities: Kc9d (1) vs. 9s3c (0)
+RAISE checks (bEq: 0.614165[0])
+mybotisamazing checks (bEq: 0.867865[1])
+mybotisamazing shows [Kc 9d]
+RAISE shows [9s 3c]
+mybotisamazing wins the pot (14)
+
+Hand #66, RAISE (236), mybotisamazing (-236)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Jh Qd Jc] (hEq: 0.62956)
+Dealt to mybotisamazing [Qc 7h Ah] (hEq: 0.60066)
+tEq: Qc7hAh (0.4955) vs. JhQdJc (0.5045)
+RAISE raises to 7 (bEq: 0.62956[0.5045], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.60066[0.4955], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [5s 6h Kh]
+True equities: Qc7hAh (0.539436) vs. JhQdJc (0.460564)
+mybotisamazing checks (bEq: 0.557133[0.539436])
+RAISE bets 14 (bEq: 0.523083[0.460564], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.560017[0.539436], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [Qc]
+RAISE discards [Qd]
+*** TURN *** (42) [5s 6h Kh] [5c]
+True equities: 7hAh (0.232558) vs. JhJc (0.767442)
+mybotisamazing checks (bEq: 0.6155[0.232558])
+RAISE bets 42 (bEq: 0.7382[0.767442], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.6155[0.232558], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [5s 6h Kh 5c] [Ts]
+True equities: 7hAh (0) vs. JhJc (1)
+mybotisamazing checks (bEq: 0.451903[0])
+RAISE bets 126 (bEq: 0.766913[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.451903[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #67, mybotisamazing (-299), RAISE (299)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Ah 3d 4d] (hEq: 0.50731)
+Dealt to RAISE [6h Ks 5d] (hEq: 0.495965)
+tEq: Ah3d4d (0.51965) vs. 6hKs5d (0.48035)
+mybotisamazing calls (bEq: 0.50731[0.51965], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.495965[0.48035], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.50731[0.51965], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [8d Kd 3s]
+True equities: Ah3d4d (0.428571) vs. 6hKs5d (0.571429)
+RAISE bets 14 (bEq: 0.63[0.571429], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.6102[0.428571], getting potOdds: 14/42=0.333333)
+RAISE discards [6h]
+mybotisamazing discards [Ah]
+*** TURN *** (42) [8d Kd 3s] [5h]
+True equities: 3d4d (0.232558) vs. Ks5d (0.767442)
+RAISE bets 42 (bEq: 0.93615[0.767442], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.6217[0.232558], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [8d Kd 3s 5h] [4c]
+True equities: 3d4d (0) vs. Ks5d (1)
+RAISE checks (bEq: 0.937632[1])
+mybotisamazing checks (bEq: 0.87315[0])
+mybotisamazing shows [3d 4d]
+RAISE shows [Ks 5d]
+RAISE wins the pot (126)
+
+Hand #68, RAISE (362), mybotisamazing (-362)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [6h 3d 3s] (hEq: 0.39931)
+Dealt to mybotisamazing [Ah Tc 8s] (hEq: 0.5817)
+tEq: AhTc8s (0.62425) vs. 6h3d3s (0.37575)
+RAISE raises to 7 (bEq: 0.39931[0.37575], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.5817[0.62425], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [7d Ks 6d]
+True equities: AhTc8s (0.322013) vs. 6h3d3s (0.677987)
+mybotisamazing checks (bEq: 0.463433[0.322013])
+RAISE bets 14 (bEq: 0.536517[0.677987], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.460933[0.322013], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [8s]
+RAISE discards [6h]
+*** TURN *** (42) [7d Ks 6d] [Qd]
+True equities: AhTc (0.162791) vs. 3d3s (0.837209)
+mybotisamazing checks (bEq: 0.4289[0.162791])
+RAISE checks (bEq: 0.491[0.837209])
+*** RIVER *** (42) [7d Ks 6d Qd] [Qs]
+True equities: AhTc (0) vs. 3d3s (1)
+mybotisamazing checks (bEq: 0.45666[0])
+RAISE checks (bEq: 0.518499[1])
+RAISE shows [3d 3s]
+mybotisamazing shows [Ah Tc]
+RAISE wins the pot (42)
+
+Hand #69, mybotisamazing (-383), RAISE (383)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Jh 8d 6s] (hEq: 0.48308)
+Dealt to RAISE [9s 9h 5h] (hEq: 0.515925)
+tEq: Jh8d6s (0.47435) vs. 9s9h5h (0.52565)
+mybotisamazing calls (bEq: 0.48308[0.47435], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.515925[0.52565], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.48308[0.47435], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [3c 2c 5d]
+True equities: Jh8d6s (0.298634) vs. 9s9h5h (0.701366)
+RAISE bets 14 (bEq: 0.605433[0.701366], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.319233[0.298634], getting potOdds: 14/42=0.333333)
+RAISE discards [9s]
+mybotisamazing discards [8d]
+*** TURN *** (42) [3c 2c 5d] [4c]
+True equities: Jh6s (0.965116) vs. 9h5h (0.0348837)
+RAISE checks (bEq: 0.40685[0.0348837])
+mybotisamazing checks (bEq: 0.78425[0.965116])
+*** RIVER *** (42) [3c 2c 5d 4c] [8s]
+True equities: Jh6s (1) vs. 9h5h (0)
+RAISE checks (bEq: 0.413848[0])
+mybotisamazing checks (bEq: 0.884778[1])
+mybotisamazing shows [Jh 6s]
+RAISE shows [9h 5h]
+mybotisamazing wins the pot (42)
+
+Hand #70, RAISE (362), mybotisamazing (-362)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Tc Ad 5s] (hEq: 0.5572)
+Dealt to mybotisamazing [3h 4d Qc] (hEq: 0.44425)
+tEq: 3h4dQc (0.4105) vs. TcAd5s (0.5895)
+RAISE raises to 7 (bEq: 0.5572[0.5895], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.44425[0.4105], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Ac 2d 5c]
+True equities: 3h4dQc (0.43257) vs. TcAd5s (0.56743)
+mybotisamazing checks (bEq: 0.61265[0.43257])
+RAISE bets 14 (bEq: 0.787767[0.56743], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.61265[0.43257], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [Qc]
+RAISE discards [Tc]
+*** TURN *** (42) [Ac 2d 5c] [Th]
+True equities: 3h4d (0.906977) vs. Ad5s (0.0930233)
+mybotisamazing checks (bEq: 0.9665[0.906977])
+RAISE bets 42 (bEq: 0.9151[0.0930233], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.96545[0.906977], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Ac 2d 5c Th] [6s]
+True equities: 3h4d (1) vs. Ad5s (0)
+mybotisamazing checks (bEq: 0.995243[1])
+RAISE bets 126 (bEq: 0.960888[0], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.995243[1], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #71, mybotisamazing (-425), RAISE (425)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [2s 7d 7c] (hEq: 0.42561)
+Dealt to RAISE [5s Js 6h] (hEq: 0.46097)
+tEq: 2s7d7c (0.48515) vs. 5sJs6h (0.51485)
+mybotisamazing calls (bEq: 0.42561[0.48515], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.46097[0.51485], giving potOdds: 5/14=0.357143)
+mybotisamazing folds (bEq: 0.42561[0.48515], had potOdds: 5/14=0.357143)
+Uncalled bet of 5 returned to RAISE
+RAISE wins the pot (4)
+
+Hand #72, RAISE (427), mybotisamazing (-427)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [2c Ac 9c] (hEq: 0.53917)
+Dealt to mybotisamazing [6d 7c 8h] (hEq: 0.43339)
+tEq: 6d7c8h (0.4066) vs. 2cAc9c (0.5934)
+RAISE raises to 7 (bEq: 0.53917[0.5934], giving potOdds: 5/14=0.357143)
+mybotisamazing folds (bEq: 0.43339[0.4066], had potOdds: 5/14=0.357143)
+Uncalled bet of 5 returned to RAISE
+RAISE wins the pot (4)
+
+Hand #73, mybotisamazing (-429), RAISE (429)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [5c 2s 8h] (hEq: 0.37714)
+Dealt to RAISE [Js 9c 7s] (hEq: 0.506105)
+tEq: 5c2s8h (0.34025) vs. Js9c7s (0.65975)
+mybotisamazing folds (bEq: 0.37714[0.34025], had potOdds: 1/4=0.25)
+RAISE wins the pot (3)
+
+Hand #74, RAISE (430), mybotisamazing (-430)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [6s 4h 3h] (hEq: 0.372125)
+Dealt to mybotisamazing [8d Ts 6h] (hEq: 0.467735)
+tEq: 8dTs6h (0.67025) vs. 6s4h3h (0.32975)
+RAISE raises to 7 (bEq: 0.372125[0.32975], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.467735[0.67025], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [7h 2h 4s]
+True equities: 8dTs6h (0.397687) vs. 6s4h3h (0.602313)
+mybotisamazing checks (bEq: 0.325967[0.397687])
+RAISE bets 14 (bEq: 0.556333[0.602313], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.325967[0.397687], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [Ts]
+RAISE discards [6s]
+*** TURN *** (42) [7h 2h 4s] [9s]
+True equities: 8d6h (0.232558) vs. 4h3h (0.767442)
+mybotisamazing checks (bEq: 0.28245[0.232558])
+RAISE bets 42 (bEq: 0.65575[0.767442], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.28245[0.232558], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [7h 2h 4s 9s] [Kc]
+True equities: 8d6h (0) vs. 4h3h (1)
+mybotisamazing checks (bEq: 0.0724101[0])
+RAISE bets 126 (bEq: 0.524313[1], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.0724101[0], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #75, mybotisamazing (-493), RAISE (493)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [2s Ks Js] (hEq: 0.54131)
+Dealt to RAISE [9c 8d Th] (hEq: 0.496335)
+tEq: 2sKsJs (0.6075) vs. 9c8dTh (0.3925)
+mybotisamazing calls (bEq: 0.54131[0.6075], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.496335[0.3925], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.54131[0.6075], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [6d 9d Jc]
+True equities: 2sKsJs (0.549649) vs. 9c8dTh (0.450351)
+RAISE checks (bEq: 0.66135[0.450351])
+mybotisamazing checks (bEq: 0.636117[0.549649])
+RAISE discards [9c]
+mybotisamazing discards [2s]
+*** TURN *** (14) [6d 9d Jc] [3c]
+True equities: KsJs (0.813953) vs. 8dTh (0.186047)
+RAISE checks (bEq: 0.37575[0.186047])
+mybotisamazing checks (bEq: 0.82865[0.813953])
+*** RIVER *** (14) [6d 9d Jc 3c] [7s]
+True equities: KsJs (0) vs. 8dTh (1)
+RAISE bets 14 (bEq: 0.995243[1], giving potOdds: 14/42=0.333333)
+mybotisamazing folds (bEq: 0.825581[0], had potOdds: 14/42=0.333333)
+Uncalled bet of 14 returned to RAISE
+RAISE wins the pot (14)
+
+Hand #76, RAISE (500), mybotisamazing (-500)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [6h 2d Th] (hEq: 0.420245)
+Dealt to mybotisamazing [7s Tc Ts] (hEq: 0.54473)
+tEq: 7sTcTs (0.70485) vs. 6h2dTh (0.29515)
+RAISE raises to 7 (bEq: 0.420245[0.29515], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.54473[0.70485], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [9d Js 8s]
+True equities: 7sTcTs (0.908576) vs. 6h2dTh (0.0914236)
+mybotisamazing checks (bEq: 0.877783[0.908576])
+RAISE bets 14 (bEq: 0.349967[0.0914236], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.877783[0.908576], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [Tc]
+RAISE discards [2d]
+*** TURN *** (42) [9d Js 8s] [2c]
+True equities: 7sTs (0.930233) vs. 6hTh (0.0697674)
+mybotisamazing checks (bEq: 0.966[0.930233])
+RAISE bets 42 (bEq: 0.3349[0.0697674], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.966[0.930233], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [9d Js 8s 2c] [8d]
+True equities: 7sTs (1) vs. 6hTh (0)
+mybotisamazing checks (bEq: 0.958774[1])
+RAISE checks (bEq: 0.176004[0])
+RAISE shows [6h Th]
+mybotisamazing shows [7s Ts]
+mybotisamazing wins the pot (126)
+
+Hand #77, mybotisamazing (-437), RAISE (437)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Qd 9c 9s] (hEq: 0.596565)
+Dealt to RAISE [Td 2d 2c] (hEq: 0.4386)
+tEq: Qd9c9s (0.64745) vs. Td2d2c (0.35255)
+mybotisamazing calls (bEq: 0.596565[0.64745], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.4386[0.35255], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.596565[0.64745], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Kd 9d 8d]
+True equities: Qd9c9s (0.681002) vs. Td2d2c (0.318998)
+RAISE bets 14 (bEq: 0.635517[0.318998], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.815933[0.681002], getting potOdds: 14/42=0.333333)
+RAISE discards [Td]
+mybotisamazing discards [Qd]
+*** TURN *** (42) [Kd 9d 8d] [Jc]
+True equities: 9c9s (0.837209) vs. 2d2c (0.162791)
+RAISE bets 42 (bEq: 0.43665[0.162791], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.8426[0.837209], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Kd 9d 8d Jc] [3c]
+True equities: 9c9s (1) vs. 2d2c (0)
+RAISE bets 126 (bEq: 0.346195[0], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.927061[1], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #78, RAISE (500), mybotisamazing (-500)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [8h 7h 9d] (hEq: 0.472045)
+Dealt to mybotisamazing [Tc 3d Qs] (hEq: 0.499995)
+tEq: Tc3dQs (0.57215) vs. 8h7h9d (0.42785)
+RAISE raises to 7 (bEq: 0.472045[0.42785], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.499995[0.57215], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Th Jd 6h]
+True equities: Tc3dQs (0.620647) vs. 8h7h9d (0.379353)
+mybotisamazing checks (bEq: 0.586883[0.620647])
+RAISE bets 14 (bEq: 0.48435[0.379353], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.588567[0.620647], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [3d]
+RAISE discards [8h]
+*** TURN *** (42) [Th Jd 6h] [8c]
+True equities: TcQs (0.0697674) vs. 7h9d (0.930233)
+mybotisamazing checks (bEq: 0.73535[0.0697674])
+RAISE bets 42 (bEq: 0.9443[0.930233], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.73535[0.0697674], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Th Jd 6h 8c] [9h]
+True equities: TcQs (1) vs. 7h9d (0)
+mybotisamazing checks (bEq: 0.884778[1])
+RAISE checks (bEq: 0.742072[0])
+RAISE shows [7h 9d]
+mybotisamazing shows [Tc Qs]
+mybotisamazing wins the pot (126)
+
+Hand #79, mybotisamazing (-437), RAISE (437)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Td 6s 5s] (hEq: 0.447135)
+Dealt to RAISE [5d 9h 2c] (hEq: 0.3911)
+tEq: Td6s5s (0.6092) vs. 5d9h2c (0.3908)
+mybotisamazing calls (bEq: 0.447135[0.6092], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.3911[0.3908], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.447135[0.6092], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [8d 7c 9s]
+True equities: Td6s5s (0.817522) vs. 5d9h2c (0.182478)
+RAISE checks (bEq: 0.50665[0.182478])
+mybotisamazing checks (bEq: 0.728883[0.817522])
+RAISE discards [2c]
+mybotisamazing discards [5s]
+*** TURN *** (14) [8d 7c 9s] [Jh]
+True equities: Td6s (0.965116) vs. 5d9h (0.0348837)
+RAISE checks (bEq: 0.56995[0.0348837])
+mybotisamazing checks (bEq: 0.88365[0.965116])
+*** RIVER *** (14) [8d 7c 9s Jh] [2h]
+True equities: Td6s (1) vs. 5d9h (0)
+RAISE checks (bEq: 0.58351[0])
+mybotisamazing checks (bEq: 0.927061[1])
+mybotisamazing shows [Td 6s]
+RAISE shows [5d 9h]
+mybotisamazing wins the pot (14)
+
+Hand #80, RAISE (430), mybotisamazing (-430)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [4h 4c 7d] (hEq: 0.4253)
+Dealt to mybotisamazing [Jc Kh Js] (hEq: 0.646245)
+tEq: JcKhJs (0.6737) vs. 4h4c7d (0.3263)
+RAISE raises to 7 (bEq: 0.4253[0.3263], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.646245[0.6737], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [3s Qs Ad]
+True equities: JcKhJs (0.754399) vs. 4h4c7d (0.245601)
+mybotisamazing checks (bEq: 0.62095[0.754399])
+RAISE bets 14 (bEq: 0.3141[0.245601], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.619383[0.754399], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [Kh]
+RAISE discards [7d]
+*** TURN *** (42) [3s Qs Ad] [3c]
+True equities: JcJs (0.953488) vs. 4h4c (0.0465116)
+mybotisamazing checks (bEq: 0.6664[0.953488])
+RAISE bets 42 (bEq: 0.56405[0.0465116], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.6664[0.953488], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [3s Qs Ad 3c] [8c]
+True equities: JcJs (1) vs. 4h4c (0)
+mybotisamazing checks (bEq: 0.659091[1])
+RAISE bets 126 (bEq: 0.516385[0], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.659091[1], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #81, mybotisamazing (-493), RAISE (493)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Ks 5d 8d] (hEq: 0.515925)
+Dealt to RAISE [4h Td 9d] (hEq: 0.466845)
+tEq: Ks5d8d (0.53025) vs. 4hTd9d (0.46975)
+mybotisamazing calls (bEq: 0.515925[0.53025], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.466845[0.46975], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.515925[0.53025], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [6c Qd Ad]
+True equities: Ks5d8d (0.56989) vs. 4hTd9d (0.43011)
+RAISE checks (bEq: 0.414783[0.43011])
+mybotisamazing checks (bEq: 0.492517[0.56989])
+RAISE discards [4h]
+mybotisamazing discards [Ks]
+*** TURN *** (14) [6c Qd Ad] [8h]
+True equities: 5d8d (0.55814) vs. Td9d (0.44186)
+RAISE checks (bEq: 0.5331[0.44186])
+mybotisamazing checks (bEq: 0.72655[0.55814])
+*** RIVER *** (14) [6c Qd Ad 8h] [4s]
+True equities: 5d8d (1) vs. Td9d (0)
+RAISE checks (bEq: 0.190803[0])
+mybotisamazing checks (bEq: 0.62685[1])
+mybotisamazing shows [5d 8d]
+RAISE shows [Td 9d]
+mybotisamazing wins the pot (14)
+
+Hand #82, RAISE (486), mybotisamazing (-486)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Th Td 2h] (hEq: 0.50206)
+Dealt to mybotisamazing [3h Jd 8c] (hEq: 0.45579)
+tEq: 3hJd8c (0.47805) vs. ThTd2h (0.52195)
+RAISE raises to 7 (bEq: 0.50206[0.52195], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.45579[0.47805], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [9s 8h As]
+True equities: 3hJd8c (0.60662) vs. ThTd2h (0.39338)
+mybotisamazing checks (bEq: 0.518167[0.60662])
+RAISE bets 14 (bEq: 0.427083[0.39338], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.519117[0.60662], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [3h]
+RAISE discards [2h]
+*** TURN *** (42) [9s 8h As] [Ac]
+True equities: Jd8c (0.116279) vs. ThTd (0.883721)
+mybotisamazing checks (bEq: 0.6793[0.116279])
+RAISE checks (bEq: 0.82015[0.883721])
+*** RIVER *** (42) [9s 8h As Ac] [Js]
+True equities: Jd8c (1) vs. ThTd (0)
+mybotisamazing checks (bEq: 0.757928[1])
+RAISE checks (bEq: 0.701374[0])
+RAISE shows [Th Td]
+mybotisamazing shows [Jd 8c]
+mybotisamazing wins the pot (42)
+
+Hand #83, mybotisamazing (-465), RAISE (465)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [8s 4h Tc] (hEq: 0.45115)
+Dealt to RAISE [Jd 2c Qd] (hEq: 0.50915)
+tEq: 8s4hTc (0.4027) vs. Jd2cQd (0.5973)
+mybotisamazing calls (bEq: 0.45115[0.4027], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.50915[0.5973], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.45115[0.4027], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [4d 4s 8h]
+True equities: 8s4hTc (0.930417) vs. Jd2cQd (0.0695829)
+RAISE checks (bEq: 0.399083[0.0695829])
+mybotisamazing checks (bEq: 0.89845[0.930417])
+RAISE discards [2c]
+mybotisamazing discards [Tc]
+*** TURN *** (14) [4d 4s 8h] [5h]
+True equities: 8s4h (1) vs. JdQd (0)
+RAISE checks (bEq: 0.3483[0])
+mybotisamazing checks (bEq: 0.9839[1])
+*** RIVER *** (14) [4d 4s 8h 5h] [3h]
+True equities: 8s4h (1) vs. JdQd (0)
+RAISE checks (bEq: 0.22833[0])
+mybotisamazing checks (bEq: 0.994715[1])
+mybotisamazing shows [8s 4h]
+RAISE shows [Jd Qd]
+mybotisamazing wins the pot (14)
+
+Hand #84, RAISE (458), mybotisamazing (-458)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [9c Qc As] (hEq: 0.615365)
+Dealt to mybotisamazing [Td Js Tc] (hEq: 0.599145)
+tEq: TdJsTc (0.4582) vs. 9cQcAs (0.5418)
+RAISE raises to 7 (bEq: 0.615365[0.5418], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.599145[0.4582], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Kc 5s 8s]
+True equities: TdJsTc (0.411837) vs. 9cQcAs (0.588163)
+mybotisamazing checks (bEq: 0.499117[0.411837])
+RAISE bets 14 (bEq: 0.505933[0.588163], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.499117[0.411837], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [Js]
+RAISE discards [9c]
+*** TURN *** (42) [Kc 5s 8s] [5c]
+True equities: TdTc (0.860465) vs. QcAs (0.139535)
+mybotisamazing checks (bEq: 0.7175[0.860465])
+RAISE bets 42 (bEq: 0.5473[0.139535], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.727[0.860465], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [Kc 5s 8s 5c] [3s]
+True equities: TdTc (1) vs. QcAs (0)
+mybotisamazing checks (bEq: 0.730973[1])
+RAISE checks (bEq: 0.476216[0])
+RAISE shows [Qc As]
+mybotisamazing shows [Td Tc]
+mybotisamazing wins the pot (126)
+
+Hand #85, mybotisamazing (-395), RAISE (395)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [4s 5h As] (hEq: 0.518165)
+Dealt to RAISE [Js Ts 3d] (hEq: 0.48715)
+tEq: 4s5hAs (0.53225) vs. JsTs3d (0.46775)
+mybotisamazing calls (bEq: 0.518165[0.53225], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.48715[0.46775], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.518165[0.53225], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [Th 4d Qd]
+True equities: 4s5hAs (0.373939) vs. JsTs3d (0.626061)
+RAISE checks (bEq: 0.605233[0.626061])
+mybotisamazing checks (bEq: 0.531117[0.373939])
+RAISE discards [3d]
+mybotisamazing discards [5h]
+*** TURN *** (14) [Th 4d Qd] [5s]
+True equities: 4sAs (0.116279) vs. JsTs (0.883721)
+RAISE checks (bEq: 0.7416[0.883721])
+mybotisamazing checks (bEq: 0.5697[0.116279])
+*** RIVER *** (14) [Th 4d Qd 5s] [6s]
+True equities: 4sAs (0) vs. JsTs (1)
+RAISE checks (bEq: 0.730444[1])
+mybotisamazing checks (bEq: 0.468288[0])
+mybotisamazing shows [4s As]
+RAISE shows [Js Ts]
+RAISE wins the pot (14)
+
+Hand #86, RAISE (402), mybotisamazing (-402)
+RAISE posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to RAISE [Ts 3h 6d] (hEq: 0.4225)
+Dealt to mybotisamazing [Tc Qd 8d] (hEq: 0.545595)
+tEq: TcQd8d (0.6805) vs. Ts3h6d (0.3195)
+RAISE raises to 7 (bEq: 0.4225[0.3195], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.545595[0.6805], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [2d Kh 2s]
+True equities: TcQd8d (0.709671) vs. Ts3h6d (0.290329)
+mybotisamazing checks (bEq: 0.440883[0.709671])
+RAISE bets 14 (bEq: 0.298617[0.290329], giving potOdds: 14/42=0.333333)
+mybotisamazing calls (bEq: 0.440883[0.709671], getting potOdds: 14/42=0.333333)
+mybotisamazing discards [8d]
+RAISE discards [3h]
+*** TURN *** (42) [2d Kh 2s] [Ks]
+True equities: TcQd (0.837209) vs. Ts6d (0.162791)
+mybotisamazing checks (bEq: 0.4876[0.837209])
+RAISE bets 42 (bEq: 0.32875[0.162791], giving potOdds: 42/126=0.333333)
+mybotisamazing calls (bEq: 0.4876[0.837209], getting potOdds: 42/126=0.333333)
+*** RIVER *** (126) [2d Kh 2s Ks] [Ah]
+True equities: TcQd (0.5) vs. Ts6d (0.5)
+mybotisamazing checks (bEq: 0.325053[0.5])
+RAISE bets 126 (bEq: 0.325053[0.5], giving potOdds: 126/378=0.333333)
+mybotisamazing folds (bEq: 0.325053[0.5], had potOdds: 126/378=0.333333)
+Uncalled bet of 126 returned to RAISE
+RAISE wins the pot (126)
+
+Hand #87, mybotisamazing (-465), RAISE (465)
+mybotisamazing posts the blind of 1
+RAISE posts the blind of 2
+Dealt to mybotisamazing [Ad Jd 9d] (hEq: 0.610075)
+Dealt to RAISE [Th 7h 4d] (hEq: 0.445395)
+tEq: AdJd9d (0.6426) vs. Th7h4d (0.3574)
+mybotisamazing calls (bEq: 0.610075[0.6426], getting potOdds: 1/4=0.25)
+RAISE raises to 7 (bEq: 0.445395[0.3574], giving potOdds: 5/14=0.357143)
+mybotisamazing calls (bEq: 0.610075[0.6426], getting potOdds: 5/14=0.357143)
+*** FLOP *** (14) [6d 9s Jc]
+True equities: AdJd9d (0.875231) vs. Th7h4d (0.124769)
+RAISE checks (bEq: 0.309333[0.124769])
+mybotisamazing checks (bEq: 0.835833[0.875231])
+RAISE discards [4d]
+mybotisamazing discards [Ad]
+*** TURN *** (14) [6d 9s Jc] [Qs]
+True equities: Jd9d (0.813953) vs. Th7h (0.186047)
+RAISE checks (bEq: 0.3654[0.186047])
