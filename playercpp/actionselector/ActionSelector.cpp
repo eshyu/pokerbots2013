@@ -35,7 +35,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
   packetlist2vector(ss, lastActions, numLastActions);      
   ss >> numLegalActions;
 
-  legalAction = actionlist2struct(ss, numLegalActions, lastActions[numLastActions-1]);
+  legalAction = actionlist2struct(ss, numLegalActions, lastActions[numLastActions-1], myButton);
   
   // OpponentModeler.update(lastAction);
   
@@ -73,7 +73,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
    //josep: seeding the randomness!!!!!
    srand(time(NULL));
 
-   int coin = rand() % 4; //LOL
+   int coin = rand() % 3; //LOL
    int callMin = legalAction.callMin;
    
    //std::cout << "coin is " << coin;
@@ -81,7 +81,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
    std::cout << "evaluating with # board cards: " << boardCards.size() << std::endl;
    double equity = evaluator->evaluate(holeCards, boardCards, myDiscard);
 
-   if (coin == 1 && equity > 0.7){
+   if (coin == 1 && equity > 0.85){
      if (legalAction.raiseMax > 0){
        std::cout << "ALL IN"<< std::endl;
        actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
@@ -103,7 +103,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
      //     if (myButton) equity = equity*1.2;
      
      if (equity>0.6){
-       std::cout << "myPotOdds: " << potOdds << " vs. equity: " << equity << std::endl;
+       std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
        if (legalAction.raiseMax > 0){
         double oppEquity=1-equity;
         int newPotSize=callMin+potSize;
@@ -124,7 +124,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
 	  raise = std::max(raise, 200);
 	}
 
-	if (numBoardCards == 5 && equity > 0.75){
+	if (numBoardCards == 5 && equity > 0.85){
 	  raise = std::max(raise, 300);
 	}
 
@@ -142,12 +142,11 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
 	 actionInfo.action = CALL;
        }
      }else{
-     
-       std::cout << "myPotOdds: " << potOdds << " vs. equity: " << equity << std::endl;
+       std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
 
        //TODO: lol
        if (legalAction.callMin > 0){
-	 if (equity>(potOdds)){
+	 if (equity>(potOdds)+0.04){ //less likely to call if we are down
 	   actionInfo.action=CALL;
 	 } else {
 	   actionInfo.action=FOLD;
@@ -220,7 +219,7 @@ void ActionSelector::packetlist2vector(std::stringstream &ss, std::vector<std::s
   }
 }
 
-ActionSelector::LegalAction ActionSelector::actionlist2struct(std::stringstream &ss, int length, std::string lastAction){
+ActionSelector::LegalAction ActionSelector::actionlist2struct(std::stringstream &ss, int length, std::string lastAction, bool myButton){
 
   LegalAction legalAction;
   std::vector<std::string> tokens;
@@ -232,12 +231,20 @@ ActionSelector::LegalAction ActionSelector::actionlist2struct(std::stringstream 
   // std::cout << "last action is: " << tokens[0] << std::endl;
 
   int callMin=0, raiseMin=0, raiseMax=0;
-  if ((!tokens[0].compare("BET") || !tokens[0].compare("RAISE") ||
-	!tokens[0].compare("POST"))){
-    // cuz the call amount doesnt appear in the action..
-    callMin = atoi(tokens[1].c_str());
+  if ((!tokens[0].compare("BET") || !tokens[0].compare("RAISE"))){
+      // cuz the call amount doesnt appear in the action..
+    callMin = atoi(tokens[1].c_str());    
     legalAction.actionType = FOLD_CALL_RAISE;
-  } 
+  }
+    
+  if (!tokens[0].compare("POST")){
+    int blind = atoi(tokens[1].c_str());
+    if (!myButton){
+      callMin = blind;
+    } else {
+      callMin = blind/2;
+    }
+  }
 
   /* TODO: lol this looks at all the actions to decide what to do*/
   std::string tmp;
