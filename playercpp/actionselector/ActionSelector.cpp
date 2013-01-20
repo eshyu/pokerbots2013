@@ -73,7 +73,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
    //josep: seeding the randomness!!!!!
    srand(time(NULL));
 
-   int coin = rand() % 3; //LOL
+   int coin = rand() % 4; //LOL
    int callMin = legalAction.callMin;
    
    //std::cout << "coin is " << coin;
@@ -81,7 +81,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
    std::cout << "evaluating with # board cards: " << boardCards.size() << std::endl;
    double equity = evaluator->evaluate(holeCards, boardCards, myDiscard);
 
-   if (coin == 1 && equity > 0.65 && boardCards.size() == 0){
+   if (coin == 1 && equity > 0.7){
      if (legalAction.raiseMax > 0){
        std::cout << "ALL IN"<< std::endl;
        actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
@@ -92,7 +92,9 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
        actionInfo.action = CALL;
      }
      //std::cout << "raising to " << actionInfo.betAmount << std::endl;
-   } else {
+   } 
+   
+   else {
      
      // compute pot odds and either call or fold    
      double potOdds = (double)callMin/(callMin+potSize);
@@ -111,9 +113,24 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
 			   (int)((newPotSize*0.161/(1-0.161)))
 			   ) + callMin;
 
+	int numBoardCards = boardCards.size();
+	if (numBoardCards == 0){
+	  raise = 20;
+	} else if (numBoardCards >= 3){
+	  raise = std::max(raise, 100); // so we actually can make money
+	}
+
+	if (numBoardCards >= 4 && equity > 0.7){
+	  raise = std::max(raise, 200);
+	}
+
+	if (numBoardCards == 5 && equity > 0.75){
+	  raise = std::max(raise, 300);
+	}
+
         int betAmt= std::max(std::min(raise,legalAction.raiseMax), legalAction.raiseMin);
 
-	std::cout << "betAmt: " << betAmt << " vs. raise: " << raise << std::endl;
+	std::cout << "betAmt: " << betAmt << " vs. raise: " << raise << "(raiseMin, max) " << legalAction.raiseMin << ", " << legalAction.raiseMax << std::endl;
 	if (betAmt){
 	  actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
 	  actionInfo.betAmount=betAmt;
@@ -130,7 +147,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
 
        //TODO: lol
        if (legalAction.callMin > 0){
-	 if (equity>(potOdds+0.05)){ //so we don't call too much
+	 if (equity>(potOdds)){
 	   actionInfo.action=CALL;
 	 } else {
 	   actionInfo.action=FOLD;
