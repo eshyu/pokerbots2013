@@ -69,7 +69,7 @@ private:
   void packetlist2vector(std::stringstream &ss, std::vector<std::string> &packetlist, int length);
 
   /* converts actionlist to legal action */
-  LegalAction actionlist2struct(std::stringstream &ss, int length, std::string lastAction);
+  LegalAction actionlist2struct(std::stringstream &ss, int length, std::string lastAction, bool myButton);
   
 };
 
