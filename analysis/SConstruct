@@ -39,5 +39,13 @@ env.Alias('build', ['.'])
 #env.SConscript(["evaluator/pbots_calc/src/SConscript"], exports='env')
 
 boost_libs = ['boost_program_options', 'boost_system']
-env.Program('analysis', ['StatsAnalysis.cpp', '../playercpp/evaluator/Evaluator.cpp'], 
+env.Program('annotator', ['HandAnnotator.cpp', '../playercpp/evaluator/Evaluator.cpp'], 
 			LIBS=[boost_libs,'pbots_calc','poker-eval'])
+
+env.Program('neuralgen', ['NeuralNetDataGen.cpp', '../playercpp/evaluator/Evaluator.cpp'], 
+			LIBS=[boost_libs, 'pbots_calc', 'poker-eval'])
+
+env.Program('analysis', ['StatsAnalysis.cpp', '../playercpp/evaluator/Evaluator.cpp'], 
+			LIBS=[boost_libs, 'pbots_calc', 'poker-eval'])
+
+

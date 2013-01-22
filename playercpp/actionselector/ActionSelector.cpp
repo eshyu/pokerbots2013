@@ -73,7 +73,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
    //josep: seeding the randomness!!!!!
    srand(time(NULL));
 
-   int coin = rand() % 3; //LOL
+   int coin = rand() % 4; //LOL
    int callMin = legalAction.callMin;
    
    //std::cout << "coin is " << coin;
@@ -81,7 +81,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
    std::cout << "evaluating with # board cards: " << boardCards.size() << std::endl;
    double equity = evaluator->evaluate(holeCards, boardCards, myDiscard);
 
-   if (coin == 1 && equity > 0.85){
+   if (coin == 1 && equity > 0.8){
      if (legalAction.raiseMax > 0){
        std::cout << "ALL IN"<< std::endl;
        actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
@@ -102,7 +102,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
 
      //     if (myButton) equity = equity*1.2;
      
-     if (equity>0.6){
+     if (equity>0.62){
        std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
        if (legalAction.raiseMax > 0){
         double oppEquity=1-equity;
@@ -144,9 +144,18 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
      }else{
        std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
 
+       int roundDiscount=0;
+       int numBoardCards = boardCards.size();
+
+       // Discount our equity, so we are less willing to call with low equity on later streets (especially the river)
+	if (numBoardCards == 5){
+	  roundDiscount=0.2;
+	}       
+
        //TODO: lol
        if (legalAction.callMin > 0){
-	 if (equity>(potOdds)+0.04){ //less likely to call if we are down
+	 if (equity-roundDiscount>(potOdds)+0.04){ //less likely to call if we are down
+	   //std::cout << "equity: " << equity << ", w/ round discount: " << equity-roundDiscout << std:endl;
 	   actionInfo.action=CALL;
 	 } else {
 	   actionInfo.action=FOLD;
