@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "computing Eqs for hand histories"
+
+for file in ./handhistories/*
+do
+  echo "opening $file"
+  python ./rancor.py $file
+done

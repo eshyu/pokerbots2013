@@ -1,0 +1,6566 @@
+6.S912 MIT Pokerbots - Bobbit vs mybotisamazing (stack=400, bb=2)
+Hand #1, Bobbit (0), mybotisamazing (0)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7s 7c Ts]
+Dealt to mybotisamazing [Td 4s Qd]
+Bobbit raises to 51
+mybotisamazing folds
+Uncalled bet of 49 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #2, mybotisamazing (-2), Bobbit (2)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ts As 2s]
+Dealt to Bobbit [Kh 9c 3c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8s 6s 6c]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #3, Bobbit (0), mybotisamazing (0)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kc 9c 5d]
+Dealt to mybotisamazing [2d Jd 2c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3c 7s 8s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Jd]
+Bobbit discards [5d]
+*** TURN *** (4) [3c 7s 8s] [4d]
+mybotisamazing checks
+Bobbit bets 73
+mybotisamazing folds
+Uncalled bet of 73 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #4, mybotisamazing (-2), Bobbit (2)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9d Ad 5s]
+Dealt to Bobbit [Ac 5c Ts]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Kd Jh 5h]
+Bobbit bets 70
+mybotisamazing calls
+Bobbit discards [Ts]
+mybotisamazing discards [9d]
+*** TURN *** (144) [Kd Jh 5h] [Jc]
+Bobbit bets 48
+mybotisamazing raises to 160
+Bobbit folds
+Uncalled bet of 112 returned to mybotisamazing
+mybotisamazing wins the pot (240)
+
+Hand #5, Bobbit (-118), mybotisamazing (118)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4h 5h 8c]
+Dealt to mybotisamazing [Td Ks 6h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qc As 9s]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+mybotisamazing discards [6h]
+Bobbit discards [4h]
+*** TURN *** (8) [Qc As 9s] [Qs]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #6, mybotisamazing (122), Bobbit (-122)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9c Td 7c]
+Dealt to Bobbit [Kc 3h Kh]
+mybotisamazing calls
+Bobbit raises to 61
+mybotisamazing folds
+Uncalled bet of 59 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #7, Bobbit (-120), mybotisamazing (120)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8s 6d Jh]
+Dealt to mybotisamazing [8c 2s Ad]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Kc Qc Qh]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+mybotisamazing discards [2s]
+Bobbit discards [6d]
+*** TURN *** (8) [Kc Qc Qh] [6c]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (8) [Kc Qc Qh 6c] [4h]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [8s Jh]
+mybotisamazing shows [8c Ad]
+mybotisamazing wins the pot (8)
+
+Hand #8, mybotisamazing (124), Bobbit (-124)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Kc Td Qs]
+Dealt to Bobbit [8c Jd Ts]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qh 6h 3c]
+Bobbit bets 2
+mybotisamazing raises to 100
+Bobbit folds
+Uncalled bet of 98 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #9, Bobbit (-128), mybotisamazing (128)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4h 4d 6s]
+Dealt to mybotisamazing [9c 2s 3d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Jd 5s 2h]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+mybotisamazing discards [9c]
+Bobbit discards [6s]
+*** TURN *** (8) [Jd 5s 2h] [7s]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (8) [Jd 5s 2h 7s] [Kc]
+mybotisamazing checks
+Bobbit bets 147
+mybotisamazing folds
+Uncalled bet of 147 returned to Bobbit
+Bobbit wins the pot (8)
+
+Hand #10, mybotisamazing (124), Bobbit (-124)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Th Ah 4h]
+Dealt to Bobbit [3c 7c Jc]
+mybotisamazing calls
+Bobbit raises to 14
+mybotisamazing calls
+*** FLOP *** (28) [Tc 8d Qd]
+Bobbit bets 2
+mybotisamazing calls
+Bobbit discards [7c]
+mybotisamazing discards [4h]
+*** TURN *** (32) [Tc 8d Qd] [Ac]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (32)
+
+Hand #11, Bobbit (-140), mybotisamazing (140)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ac Qc 6h]
+Dealt to mybotisamazing [5s 2d Ts]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [5h 5d 8d]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #12, mybotisamazing (142), Bobbit (-142)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4c Ad 2h]
+Dealt to Bobbit [Jh 7d Td]
+mybotisamazing calls
+Bobbit raises to 25
+mybotisamazing folds
+Uncalled bet of 23 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #13, Bobbit (-140), mybotisamazing (140)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ah Kc 5d]
+Dealt to mybotisamazing [4s 8h Kh]
+Bobbit raises to 59
+mybotisamazing folds
+Uncalled bet of 57 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #14, mybotisamazing (138), Bobbit (-138)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6s 9s Jh]
+Dealt to Bobbit [As Ts 4s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ad Kd 8d]
+Bobbit bets 89
+mybotisamazing folds
+Uncalled bet of 89 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #15, Bobbit (-136), mybotisamazing (136)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [6d 9s 5d]
+Dealt to mybotisamazing [Tc Jc 6h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Kc Kh 7s]
+mybotisamazing checks
+Bobbit bets 41
+mybotisamazing folds
+Uncalled bet of 41 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #16, mybotisamazing (134), Bobbit (-134)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7c 5s 5c]
+Dealt to Bobbit [Kc 8c 4s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9h 5h 3d]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #17, Bobbit (-136), mybotisamazing (136)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9d Ad 2c]
+Dealt to mybotisamazing [5d Kc 4h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [2d 3h Kd]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #18, mybotisamazing (138), Bobbit (-138)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4h 4d Ac]
+Dealt to Bobbit [Td 5c As]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9s 3c 9c]
+Bobbit bets 64
+mybotisamazing calls
+Bobbit discards [5c]
+mybotisamazing discards [Ac]
+*** TURN *** (132) [9s 3c 9c] [4s]
+Bobbit bets 29
+mybotisamazing raises to 334
+Bobbit folds
+Uncalled bet of 305 returned to mybotisamazing
+mybotisamazing wins the pot (190)
+
+Hand #19, Bobbit (-233), mybotisamazing (233)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9s 6h Kh]
+Dealt to mybotisamazing [Ah Ad As]
+Bobbit calls
+mybotisamazing raises to 400
+Bobbit folds
+Uncalled bet of 398 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #20, mybotisamazing (235), Bobbit (-235)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2d Kd 4c]
+Dealt to Bobbit [7h 4h Ac]
+mybotisamazing calls
+Bobbit raises to 18
+mybotisamazing folds
+Uncalled bet of 16 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #21, Bobbit (-233), mybotisamazing (233)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kc Qh 3h]
+Dealt to mybotisamazing [Qc 7c 9s]
+Bobbit raises to 35
+mybotisamazing folds
+Uncalled bet of 33 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #22, mybotisamazing (231), Bobbit (-231)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ts Ks 9d]
+Dealt to Bobbit [Jd 3h Js]
+mybotisamazing calls
+Bobbit raises to 61
+mybotisamazing calls
+*** FLOP *** (122) [6d 5d 5s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3h]
+mybotisamazing discards [Ts]
+*** TURN *** (122) [6d 5d 5s] [Qh]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (122) [6d 5d 5s Qh] [Qs]
+Bobbit bets 159
+mybotisamazing calls
+mybotisamazing shows [Ks 9d]
+Bobbit shows [Jd Js]
+Bobbit wins the pot (440)
+
+Hand #23, Bobbit (-11), mybotisamazing (11)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ac 4c As]
+Dealt to mybotisamazing [Qh Jh 6c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7c Th 6d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Jh]
+Bobbit discards [4c]
+*** TURN *** (4) [7c Th 6d] [9d]
+mybotisamazing checks
+Bobbit bets 130
+mybotisamazing folds
+Uncalled bet of 130 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #24, mybotisamazing (9), Bobbit (-9)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5s 4d 8c]
+Dealt to Bobbit [9c 5c 8h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [4c Kc 7c]
+Bobbit bets 157
+mybotisamazing calls
+Bobbit discards [8h]
+mybotisamazing discards [5s]
+*** TURN *** (318) [4c Kc 7c] [Th]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (318) [4c Kc 7c Th] [9s]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [4d 8c]
+Bobbit shows [9c 5c]
+Bobbit wins the pot (318)
+
+Hand #25, Bobbit (150), mybotisamazing (-150)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kc Ad 2c]
+Dealt to mybotisamazing [9d Qd 5s]
+Bobbit raises to 51
+mybotisamazing folds
+Uncalled bet of 49 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #26, mybotisamazing (-152), Bobbit (152)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3s 6h 2d]
+Dealt to Bobbit [Ah 9c Ad]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [2h Ac 9d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [9c]
+mybotisamazing discards [6h]
+*** TURN *** (4) [2h Ac 9d] [Td]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [2h Ac 9d Td] [5s]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [3s 2d]
+Bobbit shows [Ah Ad]
+Bobbit wins the pot (4)
+
+Hand #27, Bobbit (154), mybotisamazing (-154)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [6s 2s 9c]
+Dealt to mybotisamazing [Ah 7d Kh]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3c Qd Jc]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [7d]
+Bobbit discards [2s]
+*** TURN *** (4) [3c Qd Jc] [8d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [3c Qd Jc 8d] [Kd]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #28, mybotisamazing (-152), Bobbit (152)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6h Kc 2h]
+Dealt to Bobbit [Qd Kd Jc]
+mybotisamazing calls
+Bobbit raises to 61
+mybotisamazing folds
+Uncalled bet of 59 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #29, Bobbit (154), mybotisamazing (-154)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ts Qc Kh]
+Dealt to mybotisamazing [2c 4s 2h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7s 8c 9h]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing folds
+Uncalled bet of 2 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #30, mybotisamazing (-156), Bobbit (156)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ks Jd Ts]
+Dealt to Bobbit [Ah 5c 5s]
+mybotisamazing calls
+Bobbit raises to 46
+mybotisamazing calls
+*** FLOP *** (92) [9h 2d 8s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Ah]
+mybotisamazing discards [Ks]
+*** TURN *** (92) [9h 2d 8s] [7s]
+Bobbit bets 50
+mybotisamazing raises to 200
+Bobbit folds
+Uncalled bet of 150 returned to mybotisamazing
+mybotisamazing wins the pot (192)
+
+Hand #31, Bobbit (60), mybotisamazing (-60)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kd Th 7h]
+Dealt to mybotisamazing [3d Js Qh]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [5d Jc Ac]
+mybotisamazing checks
+Bobbit bets 61
+mybotisamazing calls
+mybotisamazing discards [3d]
+Bobbit discards [7h]
+*** TURN *** (126) [5d Jc Ac] [Ts]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (126)
+
+Hand #32, mybotisamazing (3), Bobbit (-3)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Tc Ad 5s]
+Dealt to Bobbit [7s 2c Ks]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3d Jc 9d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [2c]
+mybotisamazing discards [5s]
+*** TURN *** (4) [3d Jc 9d] [8d]
+Bobbit bets 2
+mybotisamazing calls
+*** RIVER *** (8) [3d Jc 9d 8d] [6d]
+Bobbit bets 2
+mybotisamazing raises to 300
+Bobbit folds
+Uncalled bet of 298 returned to mybotisamazing
+mybotisamazing wins the pot (12)
+
+Hand #33, Bobbit (-9), mybotisamazing (9)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [As Ks Th]
+Dealt to mybotisamazing [Tc Kd Td]
+Bobbit calls
+mybotisamazing raises to 20
+Bobbit calls
+*** FLOP *** (40) [Ac 2h Kc]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [Td]
+Bobbit discards [Th]
+*** TURN *** (240) [Ac 2h Kc] [9h]
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (640) [Ac 2h Kc 9h] [3c]
+mybotisamazing bets 80
+Bobbit calls
+Bobbit shows [As Ks]
+mybotisamazing shows [Tc Kd]
+Bobbit wins the pot (800)
+
+Hand #34, mybotisamazing (-391), Bobbit (391)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ac Js Jd]
+Dealt to Bobbit [Ts 3s 4d]
+mybotisamazing raises to 20
+Bobbit folds
+Uncalled bet of 18 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #35, Bobbit (389), mybotisamazing (-389)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kc Qd Th]
+Dealt to mybotisamazing [8h 7d Jd]
+Bobbit raises to 61
+mybotisamazing folds
+Uncalled bet of 59 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #36, mybotisamazing (-391), Bobbit (391)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8s 5h 8h]
+Dealt to Bobbit [4d 4h Ah]
+mybotisamazing calls
+Bobbit raises to 40
+mybotisamazing folds
+Uncalled bet of 38 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #37, Bobbit (393), mybotisamazing (-393)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7s Qc As]
+Dealt to mybotisamazing [6h 8c 6d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3c 3h Kh]
+mybotisamazing checks
+Bobbit bets 64
+mybotisamazing folds
+Uncalled bet of 64 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #38, mybotisamazing (-395), Bobbit (395)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qs Jd 2h]
+Dealt to Bobbit [Ts 7d 8s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Td 6h 3c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [7d]
+mybotisamazing discards [2h]
+*** TURN *** (4) [Td 6h 3c] [Kh]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Td 6h 3c Kh] [4s]
+Bobbit bets 215
+mybotisamazing folds
+Uncalled bet of 215 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #39, Bobbit (397), mybotisamazing (-397)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2h 9c 6c]
+Dealt to mybotisamazing [Th 3d 3c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Jh 2s Jd]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Th]
+Bobbit discards [6c]
+*** TURN *** (4) [Jh 2s Jd] [5d]
+mybotisamazing checks
+Bobbit bets 111
+mybotisamazing calls
+*** RIVER *** (226) [Jh 2s Jd 5d] [4h]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [2h 9c]
+mybotisamazing shows [3d 3c]
+mybotisamazing wins the pot (226)
+
+Hand #40, mybotisamazing (-284), Bobbit (284)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7d Qd 2c]
+Dealt to Bobbit [Kh Th 6h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5c Jc 5s]
+Bobbit bets 58
+mybotisamazing folds
+Uncalled bet of 58 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #41, Bobbit (286), mybotisamazing (-286)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7h Ks Qh]
+Dealt to mybotisamazing [Tc Jh Th]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ac 4c 4h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Jh]
+Bobbit discards [7h]
+*** TURN *** (4) [Ac 4c 4h] [Jd]
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (204) [Ac 4c 4h Jd] [Qs]
+mybotisamazing checks
+Bobbit bets 4
+mybotisamazing calls
+Bobbit shows [Ks Qh]
+mybotisamazing shows [Tc Th]
+Bobbit wins the pot (212)
+
+Hand #42, mybotisamazing (-392), Bobbit (392)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Td 5s Kd]
+Dealt to Bobbit [9c 2c Qh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [4s 2h Ad]
+Bobbit bets 63
+mybotisamazing folds
+Uncalled bet of 63 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #43, Bobbit (394), mybotisamazing (-394)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ts 7s Jd]
+Dealt to mybotisamazing [5d 8s Kh]
+Bobbit raises to 25
+mybotisamazing folds
+Uncalled bet of 23 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #44, mybotisamazing (-396), Bobbit (396)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9c Ks 8h]
+Dealt to Bobbit [Th 6h 7h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9h 4d 7c]
+Bobbit bets 92
+mybotisamazing raises to 186
+Bobbit folds
+Uncalled bet of 94 returned to mybotisamazing
+mybotisamazing wins the pot (188)
+
+Hand #45, Bobbit (302), mybotisamazing (-302)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2d Qc Kd]
+Dealt to mybotisamazing [4d 8h Ah]
+Bobbit raises to 28
+mybotisamazing calls
+*** FLOP *** (56) [Kc Ks 3d]
+mybotisamazing checks
+Bobbit bets 131
+mybotisamazing calls
+mybotisamazing discards [4d]
+Bobbit discards [2d]
+*** TURN *** (318) [Kc Ks 3d] [3c]
+mybotisamazing checks
+Bobbit bets 114
+mybotisamazing calls
+*** RIVER *** (546) [Kc Ks 3d 3c] [Jc]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Qc Kd]
+mybotisamazing shows [8h Ah]
+Bobbit wins the pot (546)
+
+Hand #46, mybotisamazing (-575), Bobbit (575)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3d 5d Qh]
+Dealt to Bobbit [Ad 3h 8h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jc Ks 7h]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3h]
+mybotisamazing discards [3d]
+*** TURN *** (4) [Jc Ks 7h] [6h]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Jc Ks 7h 6h] [Ah]
+Bobbit bets 398
+mybotisamazing folds
+Uncalled bet of 398 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #47, Bobbit (577), mybotisamazing (-577)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9c Jd 7h]
+Dealt to mybotisamazing [Qc 8c 8s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qd Ts 9s]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #48, mybotisamazing (-575), Bobbit (575)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4d 5s Jh]
+Dealt to Bobbit [As 8s Ac]
+mybotisamazing calls
+Bobbit raises to 61
+mybotisamazing folds
+Uncalled bet of 59 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #49, Bobbit (577), mybotisamazing (-577)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [As Qd 9s]
+Dealt to mybotisamazing [Kc 6s 5s]
+Bobbit raises to 54
+mybotisamazing folds
+Uncalled bet of 52 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #50, mybotisamazing (-579), Bobbit (579)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4h Ac Jd]
+Dealt to Bobbit [8h 5s 4d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jc 8d Qs]
+Bobbit bets 2
+mybotisamazing raises to 100
+Bobbit calls
+Bobbit discards [4d]
+mybotisamazing discards [4h]
+*** TURN *** (204) [Jc 8d Qs] [Tc]
+Bobbit checks
+mybotisamazing bets 115
+Bobbit folds
+Uncalled bet of 115 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #51, Bobbit (477), mybotisamazing (-477)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4s 7c 7d]
+Dealt to mybotisamazing [3s Td Kc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ks 3d 8c]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [Td]
+Bobbit discards [4s]
+*** TURN *** (204) [Ks 3d 8c] [9s]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #52, mybotisamazing (-375), Bobbit (375)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5d 2c Ks]
+Dealt to Bobbit [Qs Ah 3s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qd 9d 6c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3s]
+mybotisamazing discards [2c]
+*** TURN *** (4) [Qd 9d 6c] [Kh]
+Bobbit bets 218
+mybotisamazing raises to 398
+Bobbit folds
+Uncalled bet of 180 returned to mybotisamazing
+mybotisamazing wins the pot (440)
+
+Hand #53, Bobbit (155), mybotisamazing (-155)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4h Qd Jd]
+Dealt to mybotisamazing [9h Ks 3c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9d Th Tc]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [3c]
+Bobbit discards [4h]
+*** TURN *** (204) [9d Th Tc] [5d]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #54, mybotisamazing (-53), Bobbit (53)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7c Qh 4s]
+Dealt to Bobbit [6h Ts 8s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qd 5c 5d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [6h]
+mybotisamazing discards [4s]
+*** TURN *** (4) [Qd 5c 5d] [Jh]
+Bobbit bets 74
+mybotisamazing raises to 200
+Bobbit folds
+Uncalled bet of 126 returned to mybotisamazing
+mybotisamazing wins the pot (152)
+
+Hand #55, Bobbit (-23), mybotisamazing (23)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7d 4d 2h]
+Dealt to mybotisamazing [6s 6c Qs]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [4c 9h 3c]
+mybotisamazing checks
+Bobbit bets 38
+mybotisamazing folds
+Uncalled bet of 38 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #56, mybotisamazing (21), Bobbit (-21)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6d Qh Ah]
+Dealt to Bobbit [Qc Jd 8s]
+mybotisamazing calls
+Bobbit raises to 32
+mybotisamazing calls
+*** FLOP *** (64) [Kc 3s Js]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [8s]
+mybotisamazing discards [6d]
+*** TURN *** (64) [Kc 3s Js] [7h]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (64) [Kc 3s Js 7h] [8d]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Qh Ah]
+Bobbit shows [Qc Jd]
+Bobbit wins the pot (64)
+
+Hand #57, Bobbit (11), mybotisamazing (-11)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ah Jc Qs]
+Dealt to mybotisamazing [9c Th Ad]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3s 4s Kh]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+mybotisamazing discards [9c]
+Bobbit discards [Jc]
+*** TURN *** (8) [3s 4s Kh] [2h]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+*** RIVER *** (12) [3s 4s Kh 2h] [Td]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (12)
+
+Hand #58, mybotisamazing (-5), Bobbit (5)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7h Jd 5c]
+Dealt to Bobbit [9d 5h 2c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jc Td Js]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #59, Bobbit (3), mybotisamazing (-3)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [3s 7h 6c]
+Dealt to mybotisamazing [9c 5c Td]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ad Ts 2d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [5c]
+Bobbit discards [3s]
+*** TURN *** (4) [Ad Ts 2d] [6s]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #60, mybotisamazing (-1), Bobbit (1)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2s Jc Ts]
+Dealt to Bobbit [9c As 4s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Td 2h 9h]
+Bobbit bets 79
+mybotisamazing raises to 158
+Bobbit folds
+Uncalled bet of 79 returned to mybotisamazing
+mybotisamazing wins the pot (162)
+
+Hand #61, Bobbit (-80), mybotisamazing (80)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ah Kd Tc]
+Dealt to mybotisamazing [Jc 9d Qc]
+Bobbit raises to 54
+mybotisamazing calls
+*** FLOP *** (108) [Ks 8d 4s]
+mybotisamazing checks
+Bobbit bets 56
+mybotisamazing calls
+mybotisamazing discards [9d]
+Bobbit discards [Tc]
+*** TURN *** (220) [Ks 8d 4s] [6s]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (220) [Ks 8d 4s 6s] [8s]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Ah Kd]
+mybotisamazing shows [Jc Qc]
+Bobbit wins the pot (220)
+
+Hand #62, mybotisamazing (-30), Bobbit (30)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Td As 6d]
+Dealt to Bobbit [8c Ks 2d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8d Th 7s]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #63, Bobbit (28), mybotisamazing (-28)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4s 5d 8s]
+Dealt to mybotisamazing [Jd 5c Qh]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qs Ad 6d]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #64, mybotisamazing (-26), Bobbit (26)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7h 9c Js]
+Dealt to Bobbit [Jh Ac 8c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qs 4s 5s]
+Bobbit bets 2
+mybotisamazing calls
+Bobbit discards [8c]
+mybotisamazing discards [7h]
+*** TURN *** (8) [Qs 4s 5s] [Ad]
+Bobbit bets 149
+mybotisamazing folds
+Uncalled bet of 149 returned to Bobbit
+Bobbit wins the pot (8)
+
+Hand #65, Bobbit (30), mybotisamazing (-30)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8c Jc 8s]
+Dealt to mybotisamazing [5c 3d 3h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Td Kd 8h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [5c]
+Bobbit discards [Jc]
+*** TURN *** (4) [Td Kd 8h] [5d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Td Kd 8h 5d] [8d]
+mybotisamazing bets 100
+Bobbit calls
+Bobbit shows [8c 8s]
+mybotisamazing shows [3d 3h]
+Bobbit wins the pot (204)
+
+Hand #66, mybotisamazing (-132), Bobbit (132)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7d 6h 3s]
+Dealt to Bobbit [7h 6s Ah]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ks Td Jc]
+Bobbit bets 2
+mybotisamazing folds
+Uncalled bet of 2 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #67, Bobbit (134), mybotisamazing (-134)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [6c Qs 8s]
+Dealt to mybotisamazing [7d Qc Ts]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7s 5d Kh]
+mybotisamazing checks
+Bobbit bets 56
+mybotisamazing calls
+mybotisamazing discards [Ts]
+Bobbit discards [Qs]
+*** TURN *** (116) [7s 5d Kh] [Qd]
+mybotisamazing bets 342
+Bobbit folds
+Uncalled bet of 342 returned to mybotisamazing
+mybotisamazing wins the pot (116)
+
+Hand #68, mybotisamazing (-76), Bobbit (76)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Th 7h Ah]
+Dealt to Bobbit [2c Tc 8c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [6s 8h 7s]
+Bobbit bets 71
+mybotisamazing calls
+Bobbit discards [2c]
+mybotisamazing discards [Ah]
+*** TURN *** (146) [6s 8h 7s] [3d]
+Bobbit bets 18
+mybotisamazing raises to 110
+Bobbit folds
+Uncalled bet of 92 returned to mybotisamazing
+mybotisamazing wins the pot (182)
+
+Hand #69, Bobbit (-15), mybotisamazing (15)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qh 5c 3c]
+Dealt to mybotisamazing [5d 7c Jh]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9h Js Qd]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [5d]
+Bobbit discards [5c]
+*** TURN *** (4) [9h Js Qd] [4h]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #70, mybotisamazing (17), Bobbit (-17)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3c 5s 2d]
+Dealt to Bobbit [6h 6c 8d]
+mybotisamazing calls
+Bobbit raises to 18
+mybotisamazing folds
+Uncalled bet of 16 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #71, Bobbit (-15), mybotisamazing (15)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Js Kd 2c]
+Dealt to mybotisamazing [5c 7c 6d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [6s Qd 2s]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+mybotisamazing discards [5c]
+Bobbit discards [Kd]
+*** TURN *** (8) [6s Qd 2s] [Kh]
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (208) [6s Qd 2s Kh] [7s]
+mybotisamazing bets 296
+Bobbit folds
+Uncalled bet of 296 returned to mybotisamazing
+mybotisamazing wins the pot (208)
+
+Hand #72, mybotisamazing (119), Bobbit (-119)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8h Tc 4d]
+Dealt to Bobbit [9d 3c Kc]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ad 4h Jh]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3c]
+mybotisamazing discards [Tc]
+*** TURN *** (4) [Ad 4h Jh] [6d]
+Bobbit bets 84
+mybotisamazing folds
+Uncalled bet of 84 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #73, Bobbit (-117), mybotisamazing (117)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [5h 6s 7c]
+Dealt to mybotisamazing [Jc 6c 2h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Td 4s Jd]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2h]
+Bobbit discards [5h]
+*** TURN *** (4) [Td 4s Jd] [9h]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #74, mybotisamazing (119), Bobbit (-119)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7c 6d 4c]
+Dealt to Bobbit [Qh Kh Tc]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9c As Qd]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Tc]
+mybotisamazing discards [6d]
+*** TURN *** (4) [9c As Qd] [9d]
+Bobbit bets 164
+mybotisamazing folds
+Uncalled bet of 164 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #75, Bobbit (-117), mybotisamazing (117)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qd Jh 4d]
+Dealt to mybotisamazing [Kh Qc 2c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qs Td 4s]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [2c]
+Bobbit discards [Jh]
+*** TURN *** (204) [Qs Td 4s] [5d]
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (604) [Qs Td 4s 5d] [5c]
+mybotisamazing bets 98
+Bobbit calls
+Bobbit shows [Qd 4d]
+mybotisamazing shows [Kh Qc]
+mybotisamazing wins the pot (800)
+
+Hand #76, mybotisamazing (517), Bobbit (-517)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2h 5h 2s]
+Dealt to Bobbit [7d 9s Ac]
+mybotisamazing calls
+Bobbit raises to 39
+mybotisamazing folds
+Uncalled bet of 37 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #77, Bobbit (-515), mybotisamazing (515)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2d 9d 4c]
+Dealt to mybotisamazing [Qh 5h Kc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3h 6h 7h]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #78, mybotisamazing (517), Bobbit (-517)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Th 7d Td]
+Dealt to Bobbit [9d 9c 8c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jh 9s 7c]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+Bobbit discards [8c]
+mybotisamazing discards [7d]
+*** TURN *** (204) [Jh 9s 7c] [6c]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (604) [Jh 9s 7c 6c] [4c]
+Bobbit checks
+mybotisamazing bets 98
+Bobbit calls
+mybotisamazing shows [Th Td]
+Bobbit shows [9d 9c]
+Bobbit wins the pot (800)
+
+Hand #79, Bobbit (-117), mybotisamazing (117)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qc 4d Td]
+Dealt to mybotisamazing [9s As Tc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [4h Ad 8h]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #80, mybotisamazing (119), Bobbit (-119)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9d Js 3c]
+Dealt to Bobbit [3s Td Jd]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7s 4c 4s]
+Bobbit bets 2
+mybotisamazing calls
+Bobbit discards [3s]
+mybotisamazing discards [3c]
+*** TURN *** (8) [7s 4c 4s] [5h]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (8) [7s 4c 4s 5h] [3d]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [9d Js]
+Bobbit shows [Td Jd]
+Bobbit wins the pot (8)
+
+Hand #81, Bobbit (-115), mybotisamazing (115)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2c Ad 8d]
+Dealt to mybotisamazing [Kh 9c 4s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3d 4d 5s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [9c]
+Bobbit discards [8d]
+*** TURN *** (4) [3d 4d 5s] [2d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [3d 4d 5s 2d] [3c]
+mybotisamazing checks
+Bobbit bets 245
+mybotisamazing folds
+Uncalled bet of 245 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #82, mybotisamazing (113), Bobbit (-113)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8h Js 6h]
+Dealt to Bobbit [Tc Qc 9d]
+mybotisamazing calls
+Bobbit raises to 41
+mybotisamazing folds
+Uncalled bet of 39 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #83, Bobbit (-111), mybotisamazing (111)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Th 4s 7h]
+Dealt to mybotisamazing [8s Js 9c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qc Ad 6s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [9c]
+Bobbit discards [4s]
+*** TURN *** (4) [Qc Ad 6s] [3d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Qc Ad 6s 3d] [Td]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Th 7h]
+mybotisamazing shows [8s Js]
+Bobbit wins the pot (4)
+
+Hand #84, mybotisamazing (109), Bobbit (-109)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3d 5s Qh]
+Dealt to Bobbit [Ac Ks Ts]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8d Jh Qd]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Ks]
+mybotisamazing discards [5s]
+*** TURN *** (4) [8d Jh Qd] [As]
+Bobbit bets 238
+mybotisamazing raises to 398
+Bobbit folds
+Uncalled bet of 160 returned to mybotisamazing
+mybotisamazing wins the pot (480)
+
+Hand #85, Bobbit (-349), mybotisamazing (349)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9h 4c 8d]
+Dealt to mybotisamazing [4h Ah 8h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [5s Ad Ac]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #86, mybotisamazing (351), Bobbit (-351)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4d As 3h]
+Dealt to Bobbit [Kc Tc 5d]
+mybotisamazing calls
+Bobbit raises to 23
+mybotisamazing folds
+Uncalled bet of 21 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #87, Bobbit (-349), mybotisamazing (349)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ah 7s Tc]
+Dealt to mybotisamazing [8d 4c 9d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [6h 8h Ad]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4c]
+Bobbit discards [7s]
+*** TURN *** (4) [6h 8h Ad] [Qc]
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (204) [6h 8h Ad Qc] [Kd]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Ah Tc]
+mybotisamazing shows [8d 9d]
+Bobbit wins the pot (204)
+
+Hand #88, mybotisamazing (247), Bobbit (-247)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7d 5s 8d]
+Dealt to Bobbit [Ac 2s Jd]
+mybotisamazing calls
+Bobbit raises to 31
+mybotisamazing folds
+Uncalled bet of 29 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #89, Bobbit (-245), mybotisamazing (245)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ah 7c 3s]
+Dealt to mybotisamazing [3c Js 6c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qc As 3d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6c]
+Bobbit discards [7c]
+*** TURN *** (4) [Qc As 3d] [9h]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Qc As 3d 9h] [4s]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Ah 3s]
+mybotisamazing shows [3c Js]
+Bobbit wins the pot (4)
+
+Hand #90, mybotisamazing (243), Bobbit (-243)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9s 7c Js]
+Dealt to Bobbit [5d Kh 5c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jd As 6s]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #91, Bobbit (-245), mybotisamazing (245)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ks Td 8c]
+Dealt to mybotisamazing [6h Qh Qs]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [8d Kc As]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6h]
+Bobbit discards [Td]
+*** TURN *** (4) [8d Kc As] [4c]
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (404) [8d Kc As 4c] [3c]
+mybotisamazing bets 198
+Bobbit folds
+Uncalled bet of 198 returned to mybotisamazing
+mybotisamazing wins the pot (404)
+
+Hand #92, mybotisamazing (447), Bobbit (-447)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9d 6h Ks]
+Dealt to Bobbit [9h 4h 3c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Tc Td 6s]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #93, Bobbit (-449), mybotisamazing (449)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qs 7s Kh]
+Dealt to mybotisamazing [Qh Ac Js]
+Bobbit raises to 46
+mybotisamazing raises to 90
+Bobbit calls
+*** FLOP *** (180) [5h 9c 3h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Js]
+Bobbit discards [7s]
+*** TURN *** (180) [5h 9c 3h] [9h]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (180) [5h 9c 3h 9h] [3s]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+Bobbit shows [Qs Kh]
+mybotisamazing shows [Qh Ac]
+mybotisamazing wins the pot (184)
+
+Hand #94, mybotisamazing (541), Bobbit (-541)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6s 7h 8d]
+Dealt to Bobbit [5h 4c Ac]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [6c Qc 7d]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+Bobbit discards [5h]
+mybotisamazing discards [8d]
+*** TURN *** (204) [6c Qc 7d] [8c]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (604) [6c Qc 7d 8c] [Kc]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [6s 7h]
+Bobbit shows [4c Ac]
+Bobbit wins the pot (604)
+
+Hand #95, Bobbit (-239), mybotisamazing (239)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jh 2d 4c]
+Dealt to mybotisamazing [Tc Ts Qs]
+Bobbit calls
+mybotisamazing raises to 20
+Bobbit folds
+Uncalled bet of 18 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #96, mybotisamazing (241), Bobbit (-241)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2s Ad 8d]
+Dealt to Bobbit [5s 6s Kh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jh 5h 6d]
+Bobbit bets 157
+mybotisamazing folds
+Uncalled bet of 157 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #97, Bobbit (-239), mybotisamazing (239)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [3d 4h Qc]
+Dealt to mybotisamazing [5d Jd Ac]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Kd 8h 9h]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+mybotisamazing discards [5d]
+Bobbit discards [3d]
+*** TURN *** (8) [Kd 8h 9h] [Ad]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #98, mybotisamazing (243), Bobbit (-243)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8d Td 2c]
+Dealt to Bobbit [7s Qh Kh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ad Jd 9s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [7s]
+mybotisamazing discards [2c]
+*** TURN *** (4) [Ad Jd 9s] [Qs]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #99, Bobbit (-245), mybotisamazing (245)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [5h Jd Ks]
+Dealt to mybotisamazing [8s 8h 3d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7s As Jc]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3d]
+Bobbit discards [5h]
+*** TURN *** (4) [7s As Jc] [7h]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [7s As Jc 7h] [Ah]
+mybotisamazing bets 100
+Bobbit calls
+Bobbit shows [Jd Ks]
+mybotisamazing shows [8s 8h]
+Bobbit wins the pot (204)
+
+Hand #100, mybotisamazing (143), Bobbit (-143)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4h 7c 6s]
+Dealt to Bobbit [Ad 4s 9h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7h 9c Qs]
+Bobbit bets 90
+mybotisamazing folds
+Uncalled bet of 90 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #101, Bobbit (-141), mybotisamazing (141)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Td Kc Qc]
+Dealt to mybotisamazing [Tc 7h 2c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3h As 5s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [7h]
+Bobbit discards [Qc]
+*** TURN *** (4) [3h As 5s] [2h]
+mybotisamazing checks
+Bobbit bets 74
+mybotisamazing folds
+Uncalled bet of 74 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #102, mybotisamazing (139), Bobbit (-139)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7h Jh 9s]
+Dealt to Bobbit [Qc Tc 3h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5s 8c Ks]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3h]
+mybotisamazing discards [Jh]
+*** TURN *** (4) [5s 8c Ks] [8s]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [5s 8c Ks 8s] [8h]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [7h 9s]
+Bobbit shows [Qc Tc]
+Bobbit wins the pot (4)
+
+Hand #103, Bobbit (-137), mybotisamazing (137)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4c 9h Kh]
+Dealt to mybotisamazing [3c Jc 4d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7s 4s 3s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Jc]
+Bobbit discards [9h]
+*** TURN *** (4) [7s 4s 3s] [8h]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #104, mybotisamazing (139), Bobbit (-139)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2c 5s 6d]
+Dealt to Bobbit [Jc 4c Jh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Js 9h Qc]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4c]
+mybotisamazing discards [2c]
+*** TURN *** (4) [Js 9h Qc] [8h]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Js 9h Qc 8h] [7d]
+Bobbit checks
+mybotisamazing bets 398
+Bobbit calls
+mybotisamazing shows [5s 6d]
+Bobbit shows [Jc Jh]
+mybotisamazing wins the pot (800)
+
+Hand #105, Bobbit (-539), mybotisamazing (539)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8h 3h Ah]
+Dealt to mybotisamazing [2s 8c 5s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Jc 6c 4h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2s]
+Bobbit discards [3h]
+*** TURN *** (4) [Jc 6c 4h] [8d]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #106, mybotisamazing (541), Bobbit (-541)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6h Td Ts]
+Dealt to Bobbit [3d 7c 8d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [2s Jc 2c]
+Bobbit bets 2
+mybotisamazing calls
+Bobbit discards [3d]
+mybotisamazing discards [6h]
+*** TURN *** (8) [2s Jc 2c] [7h]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #107, Bobbit (-545), mybotisamazing (545)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2c Jd 8h]
+Dealt to mybotisamazing [Jc Js 6s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ac Jh Ah]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [6s]
+Bobbit discards [2c]
+*** TURN *** (204) [Ac Jh Ah] [7h]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #108, mybotisamazing (647), Bobbit (-647)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9c 3d 3s]
+Dealt to Bobbit [5d Ad Qs]
+mybotisamazing calls
+Bobbit raises to 56
+mybotisamazing folds
+Uncalled bet of 54 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #109, Bobbit (-645), mybotisamazing (645)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7c Kh 2d]
+Dealt to mybotisamazing [6c Ah Jd]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qs 9d Th]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6c]
+Bobbit discards [2d]
+*** TURN *** (4) [Qs 9d Th] [9s]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Qs 9d Th 9s] [Qd]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+Bobbit shows [7c Kh]
+mybotisamazing shows [Ah Jd]
+mybotisamazing wins the pot (8)
+
+Hand #110, mybotisamazing (649), Bobbit (-649)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ad 7c 6h]
+Dealt to Bobbit [7d Qc 6c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qd 5c Qh]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [6c]
+mybotisamazing discards [6h]
+*** TURN *** (4) [Qd 5c Qh] [6d]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Qd 5c Qh 6d] [Th]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Ad 7c]
+Bobbit shows [7d Qc]
+Bobbit wins the pot (4)
+
+Hand #111, Bobbit (-647), mybotisamazing (647)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2d 3c 8h]
+Dealt to mybotisamazing [Ts 6s 3h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9d 8c 6d]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+mybotisamazing discards [3h]
+Bobbit discards [3c]
+*** TURN *** (8) [9d 8c 6d] [Qh]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (8) [9d 8c 6d Qh] [Ks]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [2d 8h]
+mybotisamazing shows [Ts 6s]
+Bobbit wins the pot (8)
+
+Hand #112, mybotisamazing (643), Bobbit (-643)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6s 5d 2s]
+Dealt to Bobbit [Kc 9s Kh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jc 3s Td]
+Bobbit bets 137
+mybotisamazing folds
+Uncalled bet of 137 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #113, Bobbit (-641), mybotisamazing (641)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Tc 9d Ac]
+Dealt to mybotisamazing [7d 4c Jc]
+Bobbit raises to 56
+mybotisamazing folds
+Uncalled bet of 54 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #114, mybotisamazing (639), Bobbit (-639)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6s As 6h]
+Dealt to Bobbit [6c Kd Qd]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8c 7h Jh]
+Bobbit bets 49
+mybotisamazing folds
+Uncalled bet of 49 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #115, Bobbit (-637), mybotisamazing (637)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4s Js Ad]
+Dealt to mybotisamazing [7c 4c 5c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qc 6c Ks]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4c]
+Bobbit discards [4s]
+*** TURN *** (4) [Qc 6c Ks] [Qh]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+*** RIVER *** (8) [Qc 6c Ks Qh] [6s]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Js Ad]
+mybotisamazing shows [7c 5c]
+Bobbit wins the pot (8)
+
+Hand #116, mybotisamazing (633), Bobbit (-633)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2h 6h 3h]
+Dealt to Bobbit [Qd 4h Kc]
+mybotisamazing calls
+Bobbit raises to 35
+mybotisamazing folds
+Uncalled bet of 33 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #117, Bobbit (-631), mybotisamazing (631)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8s Js 2s]
+Dealt to mybotisamazing [9d 4c Kd]
+Bobbit raises to 15
+mybotisamazing calls
+*** FLOP *** (30) [7s As Ks]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4c]
+Bobbit discards [2s]
+*** TURN *** (30) [7s As Ks] [4h]
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (230) [7s As Ks 4h] [2h]
+mybotisamazing bets 200
+Bobbit calls
+Bobbit shows [8s Js]
+mybotisamazing shows [9d Kd]
+Bobbit wins the pot (630)
+
+Hand #118, mybotisamazing (316), Bobbit (-316)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Kc 9d 7d]
+Dealt to Bobbit [Qc 7h 8d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qd Jc Ac]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [7h]
+mybotisamazing discards [7d]
+*** TURN *** (4) [Qd Jc Ac] [9c]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #119, Bobbit (-318), mybotisamazing (318)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7h 3h 8h]
+Dealt to mybotisamazing [4c 9d 6c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Kd 6h Jh]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4c]
+Bobbit discards [3h]
+*** TURN *** (4) [Kd 6h Jh] [8d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Kd 6h Jh 8d] [Qs]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [7h 8h]
+mybotisamazing shows [9d 6c]
+Bobbit wins the pot (4)
+
+Hand #120, mybotisamazing (316), Bobbit (-316)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8h Ad 8s]
+Dealt to Bobbit [5d 4s Kc]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [4h Kd 2c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [5d]
+mybotisamazing discards [Ad]
+*** TURN *** (4) [4h Kd 2c] [Qd]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (204) [4h Kd 2c Qd] [3h]
+Bobbit checks
+mybotisamazing bets 108
+Bobbit calls
+mybotisamazing shows [8h 8s]
+Bobbit shows [4s Kc]
+Bobbit wins the pot (420)
+
+Hand #121, Bobbit (-106), mybotisamazing (106)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kd 4d 8d]
+Dealt to mybotisamazing [2s 5c 2d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ts 7d 6s]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing folds
+Uncalled bet of 2 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #122, mybotisamazing (104), Bobbit (-104)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8h Jh Ah]
+Dealt to Bobbit [4c 6h 6c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [6d 6s 9h]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4c]
+mybotisamazing discards [8h]
+*** TURN *** (4) [6d 6s 9h] [7d]
+Bobbit bets 271
+mybotisamazing folds
+Uncalled bet of 271 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #123, Bobbit (-102), mybotisamazing (102)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qd Kh 7d]
+Dealt to mybotisamazing [Qc Ks 9h]
+Bobbit raises to 61
+mybotisamazing calls
+*** FLOP *** (122) [Js Ad Jc]
+mybotisamazing checks
+Bobbit bets 5
+mybotisamazing calls
+mybotisamazing discards [9h]
+Bobbit discards [7d]
+*** TURN *** (132) [Js Ad Jc] [2s]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (132) [Js Ad Jc 2s] [9s]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Qd Kh]
+mybotisamazing shows [Qc Ks]
+Bobbit ties for the pot (66)
+mybotisamazing ties for the pot (66)
+
+Hand #124, mybotisamazing (102), Bobbit (-102)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7s 4c 6s]
+Dealt to Bobbit [2d Jd Ts]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3c 2h Qd]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Ts]
+mybotisamazing discards [7s]
+*** TURN *** (4) [3c 2h Qd] [Qs]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [3c 2h Qd Qs] [8d]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [4c 6s]
+Bobbit shows [2d Jd]
+Bobbit wins the pot (4)
+
+Hand #125, Bobbit (-100), mybotisamazing (100)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jc 4d 2c]
+Dealt to mybotisamazing [2d 4h 9c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qc 8c Kd]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2d]
+Bobbit discards [4d]
+*** TURN *** (4) [Qc 8c Kd] [4s]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Qc 8c Kd 4s] [8d]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Jc 2c]
+mybotisamazing shows [4h 9c]
+mybotisamazing wins the pot (4)
+
+Hand #126, mybotisamazing (102), Bobbit (-102)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4s 6h Ac]
+Dealt to Bobbit [8d 6s 9s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jc Th Qs]
+Bobbit bets 133
+mybotisamazing folds
+Uncalled bet of 133 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #127, Bobbit (-100), mybotisamazing (100)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2d Tc Qd]
+Dealt to mybotisamazing [7h Qh 9d]
+Bobbit raises to 22
+mybotisamazing calls
+*** FLOP *** (44) [Qc Ac 2s]
+mybotisamazing checks
+Bobbit bets 119
+mybotisamazing calls
+mybotisamazing discards [7h]
+Bobbit discards [Tc]
+*** TURN *** (282) [Qc Ac 2s] [9s]
+mybotisamazing bets 259
+Bobbit folds
+Uncalled bet of 259 returned to mybotisamazing
+mybotisamazing wins the pot (282)
+
+Hand #128, mybotisamazing (241), Bobbit (-241)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ah 9c 2h]
+Dealt to Bobbit [2c 4s 6c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ad Ks 7d]
+Bobbit bets 2
+mybotisamazing raises to 100
+Bobbit folds
+Uncalled bet of 98 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #129, Bobbit (-245), mybotisamazing (245)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qs 8s 4c]
+Dealt to mybotisamazing [Kc 5s 3c]
+Bobbit raises to 19
+mybotisamazing folds
+Uncalled bet of 17 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #130, mybotisamazing (243), Bobbit (-243)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7d 3s 6h]
+Dealt to Bobbit [Ac Jc 2c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qd Ts 4h]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [2c]
+mybotisamazing discards [3s]
+*** TURN *** (4) [Qd Ts 4h] [9c]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Qd Ts 4h 9c] [Ks]
+Bobbit bets 398
+mybotisamazing folds
+Uncalled bet of 398 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #131, Bobbit (-241), mybotisamazing (241)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9s 2s 3c]
+Dealt to mybotisamazing [Js Qs As]
+Bobbit calls
+mybotisamazing raises to 20
+Bobbit folds
+Uncalled bet of 18 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #132, mybotisamazing (243), Bobbit (-243)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Tc 7h 5d]
+Dealt to Bobbit [5h 7s 2h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9c 2c 6c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [5h]
+mybotisamazing discards [5d]
+*** TURN *** (4) [9c 2c 6c] [Qc]
+Bobbit bets 2
+mybotisamazing raises to 398
+Bobbit folds
+Uncalled bet of 396 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #133, Bobbit (-247), mybotisamazing (247)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9d Ks 8h]
+Dealt to mybotisamazing [2d 4c 4d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7d 5d 9h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2d]
+Bobbit discards [Ks]
+*** TURN *** (4) [7d 5d 9h] [4h]
+mybotisamazing bets 398
+Bobbit folds
+Uncalled bet of 398 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #134, mybotisamazing (249), Bobbit (-249)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qs 2c 7c]
+Dealt to Bobbit [6c 2s Ts]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5d 6s 4d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Ts]
+mybotisamazing discards [2c]
+*** TURN *** (4) [5d 6s 4d] [8d]
+Bobbit bets 2
+mybotisamazing raises to 200
+Bobbit folds
+Uncalled bet of 198 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #135, Bobbit (-253), mybotisamazing (253)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7d Ah 9d]
+Dealt to mybotisamazing [Kc 4h 5c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [2d 2c 9s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4h]
+Bobbit discards [7d]
+*** TURN *** (4) [2d 2c 9s] [Js]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [2d 2c 9s Js] [2h]
+mybotisamazing checks
+Bobbit bets 237
+mybotisamazing folds
+Uncalled bet of 237 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #136, mybotisamazing (251), Bobbit (-251)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7d 5h 8s]
+Dealt to Bobbit [Ts Jc As]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5c Td 3d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Jc]
+mybotisamazing discards [8s]
+*** TURN *** (4) [5c Td 3d] [8d]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (204) [5c Td 3d 8d] [8c]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing shows [7d 5h]
+Bobbit shows [Ts As]
+Bobbit wins the pot (404)
+
+Hand #137, Bobbit (-49), mybotisamazing (49)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4s Js As]
+Dealt to mybotisamazing [2h Qh 5c]
+Bobbit raises to 46
+mybotisamazing folds
+Uncalled bet of 44 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #138, mybotisamazing (47), Bobbit (-47)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9d Ac 4d]
+Dealt to Bobbit [6h 8d 3h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [2s Jh Ks]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [8d]
+mybotisamazing discards [4d]
+*** TURN *** (4) [2s Jh Ks] [2h]
+Bobbit bets 73
+mybotisamazing folds
+Uncalled bet of 73 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #139, Bobbit (-45), mybotisamazing (45)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kh 5c 2c]
+Dealt to mybotisamazing [4d 9d As]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qh Ad 3c]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #140, mybotisamazing (47), Bobbit (-47)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5h 2c Tc]
+Dealt to Bobbit [Jc Kc 7d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8h Kh 8s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [7d]
+mybotisamazing discards [2c]
+*** TURN *** (4) [8h Kh 8s] [9h]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [8h Kh 8s 9h] [4c]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [5h Tc]
+Bobbit shows [Jc Kc]
+Bobbit wins the pot (4)
+
+Hand #141, Bobbit (-45), mybotisamazing (45)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9h 8s 4c]
+Dealt to mybotisamazing [2d 3h Ah]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [8h 7h Ad]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #142, mybotisamazing (47), Bobbit (-47)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Th 3s 5s]
+Dealt to Bobbit [Ad Qd Tc]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5d Ts 2s]
+Bobbit bets 157
+mybotisamazing raises to 398
+Bobbit calls
+Bobbit discards [Qd]
+mybotisamazing discards [3s]
+*** TURN *** (800) [5d Ts 2s] [4s]
+*** RIVER *** (800) [5d Ts 2s 4s] [Td]
+mybotisamazing shows [Th 5s]
+Bobbit shows [Ad Tc]
+mybotisamazing wins the pot (800)
+
+Hand #143, Bobbit (-447), mybotisamazing (447)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7c 4s Jh]
+Dealt to mybotisamazing [Th 8d Qc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3s 2h Td]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #144, mybotisamazing (449), Bobbit (-449)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qd 3s 7d]
+Dealt to Bobbit [7c 3c Kh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7h Kc Ad]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3c]
+mybotisamazing discards [3s]
+*** TURN *** (4) [7h Kc Ad] [Qh]
+Bobbit bets 271
+mybotisamazing raises to 398
+Bobbit calls
+*** RIVER *** (800) [7h Kc Ad Qh] [Jd]
+mybotisamazing shows [Qd 7d]
+Bobbit shows [7c Kh]
+Bobbit wins the pot (800)
+
+Hand #145, Bobbit (-49), mybotisamazing (49)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Js 4d Qd]
+Dealt to mybotisamazing [Qc Jh 7c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [4h 5s Ah]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [7c]
+Bobbit discards [Js]
+*** TURN *** (4) [4h 5s Ah] [3d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [4h 5s Ah 3d] [4c]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [4d Qd]
+mybotisamazing shows [Qc Jh]
+Bobbit wins the pot (4)
+
+Hand #146, mybotisamazing (47), Bobbit (-47)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Jh 6h Qd]
+Dealt to Bobbit [8s Tc 3s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Js Ac 3c]
+Bobbit bets 65
+mybotisamazing calls
+Bobbit discards [8s]
+mybotisamazing discards [6h]
+*** TURN *** (134) [Js Ac 3c] [8h]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (134)
+
+Hand #147, Bobbit (-114), mybotisamazing (114)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kd 5h 5c]
+Dealt to mybotisamazing [Tc Kc 8h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [5s 5d Qc]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [8h]
+Bobbit discards [Kd]
+*** TURN *** (4) [5s 5d Qc] [9s]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [5s 5d Qc 9s] [4s]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [5h 5c]
+mybotisamazing shows [Tc Kc]
+Bobbit wins the pot (4)
+
+Hand #148, mybotisamazing (112), Bobbit (-112)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2h 5s Kd]
+Dealt to Bobbit [5c 6s 7s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ts 8d Th]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [5c]
+mybotisamazing discards [2h]
+*** TURN *** (4) [Ts 8d Th] [3d]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Ts 8d Th 3d] [Qs]
+Bobbit bets 2
+mybotisamazing calls
+mybotisamazing shows [5s Kd]
+Bobbit shows [6s 7s]
+mybotisamazing wins the pot (8)
+
+Hand #149, Bobbit (-116), mybotisamazing (116)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8d 7d 6h]
+Dealt to mybotisamazing [As 7h 5s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9s 4s 7s]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [7h]
+Bobbit discards [6h]
+*** TURN *** (204) [9s 4s 7s] [Qc]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #150, mybotisamazing (218), Bobbit (-218)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qh Th 2s]
+Dealt to Bobbit [7h As Ad]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ks Qc 3s]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+Bobbit discards [7h]
+mybotisamazing discards [2s]
+*** TURN *** (204) [Ks Qc 3s] [9c]
+Bobbit bets 41
+mybotisamazing raises to 200
+Bobbit folds
+Uncalled bet of 159 returned to mybotisamazing
+mybotisamazing wins the pot (286)
+
+Hand #151, Bobbit (-361), mybotisamazing (361)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9h 5h Th]
+Dealt to mybotisamazing [Qc Qd 7d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9d 2c 3s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [7d]
+Bobbit discards [5h]
+*** TURN *** (4) [9d 2c 3s] [4d]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #152, mybotisamazing (363), Bobbit (-363)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ks 3s Ac]
+Dealt to Bobbit [Kc Kh 9s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [6c 7s Js]
+Bobbit bets 112
+mybotisamazing folds
+Uncalled bet of 112 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #153, Bobbit (-361), mybotisamazing (361)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8h Kh 3c]
+Dealt to mybotisamazing [4h 8d Ts]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [2d Qh 5c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4h]
+Bobbit discards [3c]
+*** TURN *** (4) [2d Qh 5c] [8s]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #154, mybotisamazing (363), Bobbit (-363)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3d Ah 7h]
+Dealt to Bobbit [Ts Ks 4s]
+mybotisamazing calls
+Bobbit raises to 28
+mybotisamazing folds
+Uncalled bet of 26 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #155, Bobbit (-361), mybotisamazing (361)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7c Td 8d]
+Dealt to mybotisamazing [Ks Jc 7s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Th As 5d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [7s]
+Bobbit discards [7c]
+*** TURN *** (4) [Th As 5d] [7d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Th As 5d 7d] [9d]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Td 8d]
+mybotisamazing shows [Ks Jc]
+Bobbit wins the pot (4)
+
+Hand #156, mybotisamazing (359), Bobbit (-359)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3c 4s 8s]
+Dealt to Bobbit [4c 2h 6d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qc 3h 9c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [2h]
+mybotisamazing discards [4s]
+*** TURN *** (4) [Qc 3h 9c] [9s]
+Bobbit bets 2
+mybotisamazing calls
+*** RIVER *** (8) [Qc 3h 9c 9s] [2c]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #157, Bobbit (-363), mybotisamazing (363)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2s Jh 6c]
+Dealt to mybotisamazing [3s 7h Ts]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ks Tc 2h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [7h]
+Bobbit discards [6c]
+*** TURN *** (4) [Ks Tc 2h] [4s]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #158, mybotisamazing (365), Bobbit (-365)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2s Kd 6d]
+Dealt to Bobbit [Tc 4d Ac]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Kh 6c 9d]
+Bobbit bets 64
+mybotisamazing raises to 128
+Bobbit folds
+Uncalled bet of 64 returned to mybotisamazing
+mybotisamazing wins the pot (132)
+
+Hand #159, Bobbit (-431), mybotisamazing (431)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ts 2s 8s]
+Dealt to mybotisamazing [Ac 3d 7c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9d 3c 8h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [7c]
+Bobbit discards [2s]
+*** TURN *** (4) [9d 3c 8h] [6s]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [9d 3c 8h 6s] [Qd]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Ts 8s]
+mybotisamazing shows [Ac 3d]
+Bobbit wins the pot (4)
+
+Hand #160, mybotisamazing (429), Bobbit (-429)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4d Qd Kc]
+Dealt to Bobbit [7c 2c 6d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8d Kd Qh]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #161, Bobbit (-431), mybotisamazing (431)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jc 7s 5s]
+Dealt to mybotisamazing [Qs 3c 6s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Jh 7c 2c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6s]
+Bobbit discards [5s]
+*** TURN *** (4) [Jh 7c 2c] [Ad]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Jh 7c 2c Ad] [2h]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Jc 7s]
+mybotisamazing shows [Qs 3c]
+Bobbit wins the pot (4)
+
+Hand #162, mybotisamazing (429), Bobbit (-429)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8d 5c 6h]
+Dealt to Bobbit [7d Qd 2s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3c 6s Ts]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [2s]
+mybotisamazing discards [5c]
+*** TURN *** (4) [3c 6s Ts] [3s]
+Bobbit bets 2
+mybotisamazing calls
+*** RIVER *** (8) [3c 6s Ts 3s] [4s]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [8d 6h]
+Bobbit shows [7d Qd]
+mybotisamazing wins the pot (8)
+
+Hand #163, Bobbit (-433), mybotisamazing (433)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ad Ts Jd]
+Dealt to mybotisamazing [2d 8s 8h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Js 3s Kd]
+mybotisamazing checks
+Bobbit bets 112
+mybotisamazing folds
+Uncalled bet of 112 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #164, mybotisamazing (431), Bobbit (-431)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Th 6s 4d]
+Dealt to Bobbit [9s Js 3s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3h Ac Kh]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [9s]
+mybotisamazing discards [4d]
+*** TURN *** (4) [3h Ac Kh] [4c]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [3h Ac Kh 4c] [8d]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Th 6s]
+Bobbit shows [Js 3s]
+Bobbit wins the pot (4)
+
+Hand #165, Bobbit (-429), mybotisamazing (429)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4d Jh Ts]
+Dealt to mybotisamazing [5s Ad 8c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9s 4c 3d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [8c]
+Bobbit discards [Jh]
+*** TURN *** (4) [9s 4c 3d] [3h]
+mybotisamazing checks
+Bobbit bets 84
+mybotisamazing calls
+*** RIVER *** (172) [9s 4c 3d 3h] [3c]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [4d Ts]
+mybotisamazing shows [5s Ad]
+Bobbit wins the pot (172)
+
+Hand #166, mybotisamazing (343), Bobbit (-343)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9s Jh 7s]
+Dealt to Bobbit [7h 6h 4c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [2h 8d Js]
+Bobbit bets 2
+mybotisamazing raises to 100
+Bobbit folds
+Uncalled bet of 98 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #167, Bobbit (-347), mybotisamazing (347)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qh 4h Kc]
+Dealt to mybotisamazing [6h 5s 8s]
+Bobbit raises to 37
+mybotisamazing folds
+Uncalled bet of 35 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #168, mybotisamazing (345), Bobbit (-345)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qd 4d 3d]
+Dealt to Bobbit [7h 9d 7c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Kh Ks 4s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [9d]
+mybotisamazing discards [3d]
+*** TURN *** (4) [Kh Ks 4s] [9c]
+Bobbit bets 140
+mybotisamazing raises to 298
+Bobbit folds
+Uncalled bet of 158 returned to mybotisamazing
+mybotisamazing wins the pot (284)
+
+Hand #169, Bobbit (-487), mybotisamazing (487)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jd Ts 6h]
+Dealt to mybotisamazing [6s Jh 8d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [4h 5d Ad]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Jh]
+Bobbit discards [6h]
+*** TURN *** (4) [4h 5d Ad] [6d]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #170, mybotisamazing (489), Bobbit (-489)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [As 5c Qc]
+Dealt to Bobbit [4d Js Kc]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qs Ts 2h]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #171, Bobbit (-491), mybotisamazing (491)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kh Jh 8c]
+Dealt to mybotisamazing [2s 7h Jc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7c Qc 7s]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #172, mybotisamazing (493), Bobbit (-493)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7h 8h 7d]
+Dealt to Bobbit [2d Kh 8d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3h 2h Jc]
+Bobbit bets 2
+mybotisamazing calls
+Bobbit discards [8d]
+mybotisamazing discards [8h]
+*** TURN *** (8) [3h 2h Jc] [7c]
+Bobbit checks
+mybotisamazing bets 396
+Bobbit folds
+Uncalled bet of 396 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #173, Bobbit (-497), mybotisamazing (497)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Th 6h Qs]
+Dealt to mybotisamazing [7s 9c 2d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9h Kh 4c]
+mybotisamazing checks
+Bobbit bets 63
+mybotisamazing folds
+Uncalled bet of 63 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #174, mybotisamazing (495), Bobbit (-495)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2c Ks 5c]
+Dealt to Bobbit [As Tc 4h]
+mybotisamazing calls
+Bobbit raises to 35
+mybotisamazing folds
+Uncalled bet of 33 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #175, Bobbit (-493), mybotisamazing (493)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4s Th 9h]
+Dealt to mybotisamazing [7s Ts Ac]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qh 9c 6c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [7s]
+Bobbit discards [4s]
+*** TURN *** (4) [Qh 9c 6c] [5h]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Qh 9c 6c 5h] [5d]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Th 9h]
+mybotisamazing shows [Ts Ac]
+Bobbit wins the pot (4)
+
+Hand #176, mybotisamazing (491), Bobbit (-491)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4d Qd 5h]
+Dealt to Bobbit [7c 7h Qh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5s 4h Th]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #177, Bobbit (-493), mybotisamazing (493)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kd Ah Ac]
+Dealt to mybotisamazing [Td 3h 3c]
+Bobbit raises to 61
+mybotisamazing folds
+Uncalled bet of 59 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #178, mybotisamazing (491), Bobbit (-491)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8s 3s 3d]
+Dealt to Bobbit [Ts Jh 6c]
+mybotisamazing calls
+Bobbit raises to 22
+mybotisamazing folds
+Uncalled bet of 20 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #179, Bobbit (-489), mybotisamazing (489)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Tc 7d Qh]
+Dealt to mybotisamazing [8s 3d 9d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ac Qc Jd]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3d]
+Bobbit discards [7d]
+*** TURN *** (4) [Ac Qc Jd] [5s]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Ac Qc Jd 5s] [Qd]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Tc Qh]
+mybotisamazing shows [8s 9d]
+Bobbit wins the pot (4)
+
+Hand #180, mybotisamazing (487), Bobbit (-487)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4h Qd 7h]
+Dealt to Bobbit [8d 3h Th]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Kc 4c 7d]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #181, Bobbit (-489), mybotisamazing (489)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2h Jh 6h]
+Dealt to mybotisamazing [5c Th 3c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Kd Qc Ac]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Th]
+Bobbit discards [2h]
+*** TURN *** (4) [Kd Qc Ac] [4d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Kd Qc Ac 4d] [5h]
+mybotisamazing checks
+Bobbit bets 102
+mybotisamazing folds
+Uncalled bet of 102 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #182, mybotisamazing (487), Bobbit (-487)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ac 5s Jh]
+Dealt to Bobbit [4h Js 2h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7h As 8c]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #183, Bobbit (-489), mybotisamazing (489)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7c Ah 5d]
+Dealt to mybotisamazing [Qc 9d 5h]
+Bobbit raises to 18
+mybotisamazing folds
+Uncalled bet of 16 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #184, mybotisamazing (487), Bobbit (-487)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9d 7c Qs]
+Dealt to Bobbit [4s Qd 6s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3d Qh Td]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+Bobbit discards [4s]
+mybotisamazing discards [7c]
+*** TURN *** (204) [3d Qh Td] [Ts]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #185, Bobbit (-589), mybotisamazing (589)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8d Kh Ad]
+Dealt to mybotisamazing [4d Ks 9d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [8s 8c 6s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4d]
+Bobbit discards [Kh]
+*** TURN *** (4) [8s 8c 6s] [Jh]
+mybotisamazing checks
+Bobbit bets 271
+mybotisamazing folds
+Uncalled bet of 271 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #186, mybotisamazing (587), Bobbit (-587)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Jc 2s 5c]
+Dealt to Bobbit [Kh Ts 6d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3s Qs Ah]
+Bobbit bets 64
+mybotisamazing folds
+Uncalled bet of 64 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #187, Bobbit (-585), mybotisamazing (585)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qd Td 3d]
+Dealt to mybotisamazing [4c 9h Jd]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Jc 8s Qh]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4c]
+Bobbit discards [3d]
+*** TURN *** (4) [Jc 8s Qh] [9c]
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (404) [Jc 8s Qh 9c] [8c]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Qd Td]
+mybotisamazing shows [9h Jd]
+Bobbit wins the pot (404)
+
+Hand #188, mybotisamazing (383), Bobbit (-383)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7c 4c 6s]
+Dealt to Bobbit [Qd 4s Kd]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Th Ac Kc]
+Bobbit bets 107
+mybotisamazing folds
+Uncalled bet of 107 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #189, Bobbit (-381), mybotisamazing (381)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ts 4s 3h]
+Dealt to mybotisamazing [Tc 9c 3c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [2d 6c 9h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3c]
+Bobbit discards [Ts]
+*** TURN *** (4) [2d 6c 9h] [Kc]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #190, mybotisamazing (383), Bobbit (-383)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8h 5d Qh]
+Dealt to Bobbit [4c 6h Jd]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3h 7h Jc]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4c]
+mybotisamazing discards [5d]
+*** TURN *** (4) [3h 7h Jc] [Kc]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [3h 7h Jc Kc] [Ts]
+Bobbit bets 196
+mybotisamazing folds
+Uncalled bet of 196 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #191, Bobbit (-381), mybotisamazing (381)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2c Qc 7h]
+Dealt to mybotisamazing [Qh Ts 4h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Kc 5s Jc]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4h]
+Bobbit discards [7h]
+*** TURN *** (4) [Kc 5s Jc] [Ad]
+mybotisamazing bets 398
+Bobbit folds
+Uncalled bet of 398 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #192, mybotisamazing (383), Bobbit (-383)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5d Ks Jc]
+Dealt to Bobbit [8c 2d 5c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7h 3h 9d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [2d]
+mybotisamazing discards [5d]
+*** TURN *** (4) [7h 3h 9d] [2s]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [7h 3h 9d 2s] [6h]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Ks Jc]
+Bobbit shows [8c 5c]
+Bobbit wins the pot (4)
+
+Hand #193, Bobbit (-381), mybotisamazing (381)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [3h 4h Jh]
+Dealt to mybotisamazing [Ah Kc Kh]
+Bobbit calls
+mybotisamazing raises to 20
+Bobbit folds
+Uncalled bet of 18 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #194, mybotisamazing (383), Bobbit (-383)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6h Js As]
+Dealt to Bobbit [3d Ts 4h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jh 8c 8h]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #195, Bobbit (-385), mybotisamazing (385)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4s 8d Js]
+Dealt to mybotisamazing [As Kd Ts]
+Bobbit calls
+mybotisamazing raises to 20
+Bobbit calls
+*** FLOP *** (40) [8s 7s 4h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Kd]
+Bobbit discards [Js]
+*** TURN *** (40) [8s 7s 4h] [Ah]
+mybotisamazing bets 380
+Bobbit folds
+Uncalled bet of 380 returned to mybotisamazing
+mybotisamazing wins the pot (40)
+
+Hand #196, mybotisamazing (405), Bobbit (-405)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Jh Ks 6h]
+Dealt to Bobbit [6c 8c 3d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ts 2h Qd]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3d]
+mybotisamazing discards [6h]
+*** TURN *** (4) [Ts 2h Qd] [2c]
+Bobbit bets 2
+mybotisamazing calls
+*** RIVER *** (8) [Ts 2h Qd 2c] [Ad]
+Bobbit checks
+mybotisamazing bets 300
+Bobbit folds
+Uncalled bet of 300 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #197, Bobbit (-409), mybotisamazing (409)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qs 9c 4c]
+Dealt to mybotisamazing [9h 6c 3h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7d 4d 6d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3h]
+Bobbit discards [9c]
+*** TURN *** (4) [7d 4d 6d] [Jd]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [7d 4d 6d Jd] [Qh]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Qs 4c]
+mybotisamazing shows [9h 6c]
+Bobbit wins the pot (4)
+
+Hand #198, mybotisamazing (407), Bobbit (-407)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9s Tc 6s]
+Dealt to Bobbit [Ad Td 2h]
+mybotisamazing calls
+Bobbit raises to 28
+mybotisamazing folds
+Uncalled bet of 26 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #199, Bobbit (-405), mybotisamazing (405)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Td 7s 6d]
+Dealt to mybotisamazing [Qd 4h 7d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [6c Kc Jh]
+mybotisamazing checks
+Bobbit bets 68
+mybotisamazing folds
+Uncalled bet of 68 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #200, mybotisamazing (403), Bobbit (-403)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9c Kd 5d]
+Dealt to Bobbit [8s As Ac]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9h Qs 5s]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+Bobbit discards [8s]
+mybotisamazing discards [Kd]
+*** TURN *** (204) [9h Qs 5s] [2h]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (604) [9h Qs 5s 2h] [2c]
+Bobbit bets 98
+mybotisamazing calls
+mybotisamazing shows [9c 5d]
+Bobbit shows [As Ac]
+Bobbit wins the pot (800)
+
+Hand #201, Bobbit (-3), mybotisamazing (3)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Js Th 2s]
+Dealt to mybotisamazing [3c 2d 6s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [6c 5s 8c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2d]
+Bobbit discards [2s]
+*** TURN *** (4) [6c 5s 8c] [Qh]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [6c 5s 8c Qh] [9d]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Js Th]
+mybotisamazing shows [3c 6s]
+Bobbit wins the pot (4)
+
+Hand #202, mybotisamazing (1), Bobbit (-1)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qc 9d 8c]
+Dealt to Bobbit [5h 9h 4s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jd Ah 5c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4s]
+mybotisamazing discards [9d]
+*** TURN *** (4) [Jd Ah 5c] [Ks]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Jd Ah 5c Ks] [8h]
+Bobbit bets 2
+mybotisamazing calls
+mybotisamazing shows [Qc 8c]
+Bobbit shows [5h 9h]
+mybotisamazing wins the pot (8)
+
+Hand #203, Bobbit (-5), mybotisamazing (5)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [6s Qh 9c]
+Dealt to mybotisamazing [Ts 3d 2s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ks 7d 8c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3d]
+Bobbit discards [Qh]
+*** TURN *** (4) [Ks 7d 8c] [5s]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Ks 7d 8c 5s] [Td]
+mybotisamazing bets 100
+Bobbit calls
+Bobbit shows [6s 9c]
+mybotisamazing shows [Ts 2s]
+Bobbit wins the pot (204)
+
+Hand #204, mybotisamazing (-97), Bobbit (97)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2d 5h Qs]
+Dealt to Bobbit [9d As 3s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ac 7d 2s]
+Bobbit bets 141
+mybotisamazing folds
+Uncalled bet of 141 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #205, Bobbit (99), mybotisamazing (-99)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2c Jd Qh]
+Dealt to mybotisamazing [Td 3d 5s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3h Qc 4c]
+mybotisamazing checks
+Bobbit bets 157
+mybotisamazing folds
+Uncalled bet of 157 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #206, mybotisamazing (-101), Bobbit (101)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8c Qc Kc]
+Dealt to Bobbit [4s 4c 6d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5s 3d Ks]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+Bobbit discards [6d]
+mybotisamazing discards [8c]
+*** TURN *** (204) [5s 3d Ks] [4d]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #207, Bobbit (-1), mybotisamazing (1)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ks 7d 8h]
+Dealt to mybotisamazing [Td 7s 8s]
+Bobbit raises to 26
+mybotisamazing folds
+Uncalled bet of 24 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #208, mybotisamazing (-1), Bobbit (1)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ac 4d 8c]
+Dealt to Bobbit [Qh 3s 6c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jh 3c 5s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [6c]
+mybotisamazing discards [8c]
+*** TURN *** (4) [Jh 3c 5s] [2c]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #209, Bobbit (-1), mybotisamazing (1)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9c 3c 7h]
+Dealt to mybotisamazing [5s Td Jc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [8c 9s Th]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [5s]
+Bobbit discards [3c]
+*** TURN *** (204) [8c 9s Th] [Ah]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #210, mybotisamazing (103), Bobbit (-103)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ac 4d Kh]
+Dealt to Bobbit [3s 7d 4s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9c Qs 6h]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3s]
+mybotisamazing discards [4d]
+*** TURN *** (4) [9c Qs 6h] [Ts]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [9c Qs 6h Ts] [7s]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Ac Kh]
+Bobbit shows [7d 4s]
+Bobbit wins the pot (4)
+
+Hand #211, Bobbit (-101), mybotisamazing (101)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kd Jh Js]
+Dealt to mybotisamazing [5s Th 4h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ks 2d 9d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [5s]
+Bobbit discards [Js]
+*** TURN *** (4) [Ks 2d 9d] [9h]
+mybotisamazing checks
+Bobbit bets 271
+mybotisamazing folds
+Uncalled bet of 271 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #212, mybotisamazing (99), Bobbit (-99)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2h 5h 6h]
+Dealt to Bobbit [Qd 7d Qh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9h 6c 5c]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+Bobbit discards [7d]
+mybotisamazing discards [2h]
+*** TURN *** (204) [9h 6c 5c] [9d]
+Bobbit bets 171
+mybotisamazing raises to 298
+Bobbit calls
+*** RIVER *** (800) [9h 6c 5c 9d] [Kc]
+mybotisamazing shows [5h 6h]
+Bobbit shows [Qd Qh]
+Bobbit wins the pot (800)
+
+Hand #213, Bobbit (301), mybotisamazing (-301)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9d Td 4c]
+Dealt to mybotisamazing [Jh 2d 3h]
+Bobbit raises to 15
+mybotisamazing folds
+Uncalled bet of 13 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #214, mybotisamazing (-303), Bobbit (303)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2d 3s 5c]
+Dealt to Bobbit [2c 4h 7s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5d Qc 6c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [2c]
+mybotisamazing discards [2d]
+*** TURN *** (4) [5d Qc 6c] [3c]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (404) [5d Qc 6c 3c] [Ac]
+Bobbit checks
+mybotisamazing bets 198
+Bobbit folds
+Uncalled bet of 198 returned to mybotisamazing
+mybotisamazing wins the pot (404)
+
+Hand #215, Bobbit (101), mybotisamazing (-101)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [5s Jh 7d]
+Dealt to mybotisamazing [9d 5d Tc]
+Bobbit raises to 14
+mybotisamazing folds
+Uncalled bet of 12 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #216, mybotisamazing (-103), Bobbit (103)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3c 7s 6c]
+Dealt to Bobbit [3h 2s 9c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [4s Kd 8s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3h]
+mybotisamazing discards [3c]
+*** TURN *** (4) [4s Kd 8s] [Ad]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [4s Kd 8s Ad] [6s]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [7s 6c]
+Bobbit shows [2s 9c]
+mybotisamazing wins the pot (4)
+
+Hand #217, Bobbit (101), mybotisamazing (-101)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Th Kd 8d]
+Dealt to mybotisamazing [9h Jh 2h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [4d Qh 3d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2h]
+Bobbit discards [Th]
+*** TURN *** (4) [4d Qh 3d] [7d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [4d Qh 3d 7d] [9s]
+mybotisamazing bets 200
+Bobbit calls
+Bobbit shows [Kd 8d]
+mybotisamazing shows [9h Jh]
+Bobbit wins the pot (404)
+
+Hand #218, mybotisamazing (-303), Bobbit (303)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Kd Tc 2c]
+Dealt to Bobbit [5d Kc 3h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7s Js Qs]
+Bobbit bets 2
+mybotisamazing calls
+Bobbit discards [3h]
+mybotisamazing discards [2c]
+*** TURN *** (8) [7s Js Qs] [8h]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (8) [7s Js Qs 8h] [8d]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Kd Tc]
+Bobbit shows [5d Kc]
+mybotisamazing ties for the pot (4)
+Bobbit ties for the pot (4)
+
+Hand #219, Bobbit (303), mybotisamazing (-303)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [3s 2s 8h]
+Dealt to mybotisamazing [3h 5s Ks]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ad 4s Qc]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3h]
+Bobbit discards [8h]
+*** TURN *** (4) [Ad 4s Qc] [Th]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Ad 4s Qc Th] [Kd]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [3s 2s]
+mybotisamazing shows [5s Ks]
+mybotisamazing wins the pot (4)
+
+Hand #220, mybotisamazing (-301), Bobbit (301)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7d Ts 6h]
+Dealt to Bobbit [Ad 3s Jd]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Kc 9s 7h]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3s]
+mybotisamazing discards [6h]
+*** TURN *** (4) [Kc 9s 7h] [9h]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (204) [Kc 9s 7h 9h] [Qh]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [7d Ts]
+Bobbit shows [Ad Jd]
+mybotisamazing wins the pot (204)
+
+Hand #221, Bobbit (199), mybotisamazing (-199)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [6c 6s Th]
+Dealt to mybotisamazing [Td 7h 9h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [4h 8h 9d]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [Td]
+Bobbit discards [Th]
+*** TURN *** (204) [4h 8h 9d] [Ac]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #222, mybotisamazing (-97), Bobbit (97)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Jc 6c 3h]
+Dealt to Bobbit [As Ks Ad]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ac Qs Kd]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Ks]
+mybotisamazing discards [3h]
+*** TURN *** (4) [Ac Qs Kd] [Qc]
+Bobbit bets 271
+mybotisamazing calls
+*** RIVER *** (546) [Ac Qs Kd Qc] [2c]
+Bobbit bets 127
+mybotisamazing calls
+mybotisamazing shows [Jc 6c]
+Bobbit shows [As Ad]
+Bobbit wins the pot (800)
+
+Hand #223, Bobbit (497), mybotisamazing (-497)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ac 9s Ad]
+Dealt to mybotisamazing [7c 5s 5c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Td 7h 5d]
+mybotisamazing bets 398
+Bobbit calls
+mybotisamazing discards [7c]
+Bobbit discards [9s]
+*** TURN *** (800) [Td 7h 5d] [2s]
+*** RIVER *** (800) [Td 7h 5d 2s] [Ts]
+Bobbit shows [Ac Ad]
+mybotisamazing shows [5s 5c]
+mybotisamazing wins the pot (800)
+
+Hand #224, mybotisamazing (-97), Bobbit (97)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5s 2c 5c]
+Dealt to Bobbit [Kh Qd 3s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [4c Qs 3c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Kh]
+mybotisamazing discards [2c]
+*** TURN *** (4) [4c Qs 3c] [Kc]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [4c Qs 3c Kc] [7d]
+Bobbit bets 398
+mybotisamazing calls
+mybotisamazing shows [5s 5c]
+Bobbit shows [Qd 3s]
+Bobbit wins the pot (800)
+
+Hand #225, Bobbit (497), mybotisamazing (-497)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kh Qc 5c]
+Dealt to mybotisamazing [6s As 6d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [8s Ad 9d]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [6s]
+Bobbit discards [5c]
+*** TURN *** (204) [8s Ad 9d] [5h]
+mybotisamazing bets 298
+Bobbit folds
+Uncalled bet of 298 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #226, mybotisamazing (-395), Bobbit (395)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9h 4h Jd]
+Dealt to Bobbit [Js 6s Qh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8s Jh Ac]
+Bobbit bets 143
+mybotisamazing calls
+Bobbit discards [6s]
+mybotisamazing discards [4h]
+*** TURN *** (290) [8s Jh Ac] [Tc]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (290)
+
+Hand #227, Bobbit (250), mybotisamazing (-250)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jc 5h Jd]
+Dealt to mybotisamazing [8s 9h 2c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ts 7c 4s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2c]
+Bobbit discards [5h]
+*** TURN *** (4) [Ts 7c 4s] [Kd]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Ts 7c 4s Kd] [7h]
+mybotisamazing checks
+Bobbit bets 311
+mybotisamazing folds
+Uncalled bet of 311 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #228, mybotisamazing (-252), Bobbit (252)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8h Tc 9s]
+Dealt to Bobbit [9d 2d 5c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7h Qh 6h]
+Bobbit bets 39
+mybotisamazing folds
+Uncalled bet of 39 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #229, Bobbit (254), mybotisamazing (-254)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qc 6s Kc]
+Dealt to mybotisamazing [Qd 4c 2s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ks 8c 6c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2s]
+Bobbit discards [6s]
+*** TURN *** (4) [Ks 8c 6c] [5d]
+mybotisamazing checks
+Bobbit bets 271
+mybotisamazing folds
+Uncalled bet of 271 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #230, mybotisamazing (-256), Bobbit (256)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7c 5s 8d]
+Dealt to Bobbit [6d Ks 2c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5c 5d 9s]
+Bobbit bets 55
+mybotisamazing raises to 110
+Bobbit folds
+Uncalled bet of 55 returned to mybotisamazing
+mybotisamazing wins the pot (114)
+
+Hand #231, Bobbit (199), mybotisamazing (-199)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [3s As 7d]
+Dealt to mybotisamazing [6s Kc 8h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [4d 4s 4c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6s]
+Bobbit discards [3s]
+*** TURN *** (4) [4d 4s 4c] [8d]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #232, mybotisamazing (-197), Bobbit (197)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Kc 8d Ks]
+Dealt to Bobbit [8s 7c 2c]
+mybotisamazing raises to 20
+Bobbit folds
+Uncalled bet of 18 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #233, Bobbit (195), mybotisamazing (-195)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jd 8d Ah]
+Dealt to mybotisamazing [4d 3s 8s]
+Bobbit raises to 61
+mybotisamazing folds
+Uncalled bet of 59 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #234, mybotisamazing (-197), Bobbit (197)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Th 6s 8s]
+Dealt to Bobbit [3c 6h 7c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [4s Td 7h]
+Bobbit bets 73
+mybotisamazing raises to 146
+Bobbit folds
+Uncalled bet of 73 returned to mybotisamazing
+mybotisamazing wins the pot (150)
+
+Hand #235, Bobbit (122), mybotisamazing (-122)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [6c Td 5c]
+Dealt to mybotisamazing [2h Th 7s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [6s 2c 6h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [7s]
+Bobbit discards [5c]
+*** TURN *** (4) [6s 2c 6h] [4d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [6s 2c 6h 4d] [Jh]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [6c Td]
+mybotisamazing shows [2h Th]
+Bobbit wins the pot (4)
+
+Hand #236, mybotisamazing (-124), Bobbit (124)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Th Jc 7c]
+Dealt to Bobbit [7h 4h 6d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7d Ac 8h]
+Bobbit bets 70
+mybotisamazing calls
+Bobbit discards [6d]
+mybotisamazing discards [Th]
+*** TURN *** (144) [7d Ac 8h] [6s]
+Bobbit bets 27
+mybotisamazing calls
+*** RIVER *** (198) [7d Ac 8h 6s] [5d]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Jc 7c]
+Bobbit shows [7h 4h]
+Bobbit wins the pot (198)
+
+Hand #237, Bobbit (223), mybotisamazing (-223)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2c Qh 8c]
+Dealt to mybotisamazing [Qd 6c Ts]
+Bobbit raises to 16
+mybotisamazing calls
+*** FLOP *** (32) [Ks 9c Qc]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (32)
+
+Hand #238, mybotisamazing (-207), Bobbit (207)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8s Th Qs]
+Dealt to Bobbit [Ts Kc 5h]
+mybotisamazing calls
+Bobbit raises to 27
+mybotisamazing calls
+*** FLOP *** (54) [8c 2h Qd]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (54)
+
+Hand #239, Bobbit (180), mybotisamazing (-180)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [As Kd Ks]
+Dealt to mybotisamazing [Td Jh 7s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3d 6d Js]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [7s]
+Bobbit discards [As]
+*** TURN *** (204) [3d 6d Js] [3c]
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (604) [3d 6d Js 3c] [5c]
+mybotisamazing bets 98
+Bobbit calls
+Bobbit shows [Kd Ks]
+mybotisamazing shows [Td Jh]
+Bobbit wins the pot (800)
+
+Hand #240, mybotisamazing (-580), Bobbit (580)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Tc Jh 4d]
+Dealt to Bobbit [Ah 4c Ac]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5c Ks 3h]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4c]
+mybotisamazing discards [4d]
+*** TURN *** (4) [5c Ks 3h] [Jc]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (404) [5c Ks 3h Jc] [3d]
+Bobbit checks
+mybotisamazing bets 198
+Bobbit calls
+mybotisamazing shows [Tc Jh]
+Bobbit shows [Ah Ac]
+Bobbit wins the pot (800)
+
+Hand #241, Bobbit (980), mybotisamazing (-980)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [6s Jc 7c]
+Dealt to mybotisamazing [9d 4h Qd]
+Bobbit raises to 18
+mybotisamazing folds
+Uncalled bet of 16 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #242, mybotisamazing (-982), Bobbit (982)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qh 8d 7h]
+Dealt to Bobbit [2d Kc 6h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Kh 6d 4s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [2d]
+mybotisamazing discards [8d]
+*** TURN *** (4) [Kh 6d 4s] [Jh]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Kh 6d 4s Jh] [9h]
+Bobbit bets 398
+mybotisamazing calls
+mybotisamazing shows [Qh 7h]
+Bobbit shows [Kc 6h]
+mybotisamazing wins the pot (800)
+
+Hand #243, Bobbit (582), mybotisamazing (-582)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2c Ac 8d]
+Dealt to mybotisamazing [8c Jh 5c]
+Bobbit raises to 25
+mybotisamazing folds
+Uncalled bet of 23 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #244, mybotisamazing (-584), Bobbit (584)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8h 9h Jh]
+Dealt to Bobbit [Js 3s 5c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8s 9d 4s]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #245, Bobbit (582), mybotisamazing (-582)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jd Ad Qh]
+Dealt to mybotisamazing [Qc 3h Js]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9c 4c 9h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3h]
+Bobbit discards [Jd]
+*** TURN *** (4) [9c 4c 9h] [2c]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [9c 4c 9h 2c] [Qs]
+mybotisamazing bets 200
+Bobbit calls
+Bobbit shows [Ad Qh]
+mybotisamazing shows [Qc Js]
+Bobbit wins the pot (404)
+
+Hand #246, mybotisamazing (-784), Bobbit (784)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ts 2h 3c]
+Dealt to Bobbit [3h 5c 7c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5d 2c Jc]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3h]
+mybotisamazing discards [Ts]
+*** TURN *** (4) [5d 2c Jc] [9d]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [5d 2c Jc 9d] [2s]
+Bobbit bets 2
+mybotisamazing raises to 300
+Bobbit folds
+Uncalled bet of 298 returned to mybotisamazing
+mybotisamazing wins the pot (8)
+
+Hand #247, Bobbit (780), mybotisamazing (-780)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7d Kh Ac]
+Dealt to mybotisamazing [5s 2d Qc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3h 8h Qh]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2d]
+Bobbit discards [7d]
+*** TURN *** (4) [3h 8h Qh] [5c]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #248, mybotisamazing (-778), Bobbit (778)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4h Qc Kc]
+Dealt to Bobbit [Th Kd Td]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [2s 9d 6s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Kd]
+mybotisamazing discards [4h]
+*** TURN *** (4) [2s 9d 6s] [2d]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [2s 9d 6s 2d] [Ad]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Qc Kc]
+Bobbit shows [Th Td]
+Bobbit wins the pot (4)
+
+Hand #249, Bobbit (780), mybotisamazing (-780)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9h 9c 7s]
+Dealt to mybotisamazing [Kd Th Ts]
+Bobbit raises to 61
+mybotisamazing raises to 120
+Bobbit calls
+*** FLOP *** (240) [Qh 6s Ah]
+mybotisamazing bets 145
+Bobbit folds
+Uncalled bet of 145 returned to mybotisamazing
+mybotisamazing wins the pot (240)
+
+Hand #250, mybotisamazing (-660), Bobbit (660)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5c 2h 9h]
+Dealt to Bobbit [3s Ah 6d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8h 6h Jc]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3s]
+mybotisamazing discards [5c]
+*** TURN *** (4) [8h 6h Jc] [9d]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #251, Bobbit (658), mybotisamazing (-658)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kd Ts Qc]
+Dealt to mybotisamazing [6h 7h 3h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Th Jh 5c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3h]
+Bobbit discards [Qc]
+*** TURN *** (4) [Th Jh 5c] [Qd]
+mybotisamazing checks
+Bobbit bets 176
+mybotisamazing folds
+Uncalled bet of 176 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #252, mybotisamazing (-660), Bobbit (660)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6c 5d 8s]
+Dealt to Bobbit [Jh Td 5h]
+mybotisamazing calls
+Bobbit raises to 22
+mybotisamazing folds
+Uncalled bet of 20 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #253, Bobbit (662), mybotisamazing (-662)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ac 2h 8h]
+Dealt to mybotisamazing [Jc Tc 9d]
+Bobbit raises to 25
+mybotisamazing calls
+*** FLOP *** (50) [Ad 2c 2d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [9d]
+Bobbit discards [8h]
+*** TURN *** (50) [Ad 2c 2d] [4c]
+mybotisamazing checks
+Bobbit bets 248
+mybotisamazing folds
+Uncalled bet of 248 returned to Bobbit
+Bobbit wins the pot (50)
+
+Hand #254, mybotisamazing (-687), Bobbit (687)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6c 2h 2d]
+Dealt to Bobbit [2s Ks 8d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5s 3c 6h]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [8d]
+mybotisamazing discards [2h]
+*** TURN *** (4) [5s 3c 6h] [4c]
+Bobbit bets 133
+mybotisamazing raises to 266
+Bobbit folds
+Uncalled bet of 133 returned to mybotisamazing
+mybotisamazing wins the pot (270)
+
+Hand #255, Bobbit (552), mybotisamazing (-552)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9d Ac 8s]
+Dealt to mybotisamazing [Qs Kc Ks]
+Bobbit calls
+mybotisamazing raises to 20
+Bobbit calls
+*** FLOP *** (40) [3h 7h 3d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Qs]
+Bobbit discards [8s]
+*** TURN *** (40) [3h 7h 3d] [Jd]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (40)
+
+Hand #256, mybotisamazing (-532), Bobbit (532)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3h Kd 6d]
+Dealt to Bobbit [Th 4c 2h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [6h Jc Jh]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4c]
+mybotisamazing discards [3h]
+*** TURN *** (4) [6h Jc Jh] [Ad]
+Bobbit bets 94
+mybotisamazing raises to 189
+Bobbit folds
+Uncalled bet of 95 returned to mybotisamazing
+mybotisamazing wins the pot (192)
+
+Hand #257, Bobbit (436), mybotisamazing (-436)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8h 9d Ks]
+Dealt to mybotisamazing [Qd 6d Ts]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ad 7c 6c]
+mybotisamazing checks
+Bobbit bets 59
+mybotisamazing calls
+mybotisamazing discards [Ts]
+Bobbit discards [Ks]
+*** TURN *** (122) [Ad 7c 6c] [3s]
+mybotisamazing checks
+Bobbit bets 2
+mybotisamazing calls
+*** RIVER *** (126) [Ad 7c 6c 3s] [8c]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [8h 9d]
+mybotisamazing shows [Qd 6d]
+Bobbit wins the pot (126)
+
+Hand #258, mybotisamazing (-499), Bobbit (499)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ah 3h Jd]
+Dealt to Bobbit [8c 6h 5s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8h 2c 4s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [5s]
+mybotisamazing discards [Jd]
+*** TURN *** (4) [8h 2c 4s] [Th]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [8h 2c 4s Th] [7h]
+Bobbit checks
+mybotisamazing bets 300
+Bobbit folds
+Uncalled bet of 300 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #259, Bobbit (497), mybotisamazing (-497)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8c 7c As]
+Dealt to mybotisamazing [Ad Kc 6s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [2s 5h 4h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6s]
+Bobbit discards [8c]
+*** TURN *** (4) [2s 5h 4h] [6c]
+mybotisamazing checks
+Bobbit bets 81
+mybotisamazing folds
+Uncalled bet of 81 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #260, mybotisamazing (-499), Bobbit (499)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [4h 9d Qc]
+Dealt to Bobbit [2s 8h Kh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [2c Th Td]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [8h]
+mybotisamazing discards [4h]
+*** TURN *** (4) [2c Th Td] [Tc]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [2c Th Td Tc] [Ac]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [9d Qc]
+Bobbit shows [2s Kh]
+Bobbit wins the pot (4)
+
+Hand #261, Bobbit (501), mybotisamazing (-501)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qd Td 5d]
+Dealt to mybotisamazing [3h 7h 4s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Jc Kd Th]
+mybotisamazing checks
+Bobbit bets 103
+mybotisamazing folds
+Uncalled bet of 103 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #262, mybotisamazing (-503), Bobbit (503)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qc Kd Ac]
+Dealt to Bobbit [Ks As 8c]
+mybotisamazing raises to 20
+Bobbit calls
+*** FLOP *** (40) [4s Js 8s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [8c]
+mybotisamazing discards [Qc]
+*** TURN *** (40) [4s Js 8s] [3d]
+Bobbit bets 253
+mybotisamazing folds
+Uncalled bet of 253 returned to Bobbit
+Bobbit wins the pot (40)
+
+Hand #263, Bobbit (523), mybotisamazing (-523)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [As 6s Kd]
+Dealt to mybotisamazing [Td 9d 8s]
+Bobbit raises to 61
+mybotisamazing folds
+Uncalled bet of 59 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #264, mybotisamazing (-525), Bobbit (525)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9c 9d Th]
+Dealt to Bobbit [7d 4s Qs]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [4d Jd Ah]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [7d]
+mybotisamazing discards [Th]
+*** TURN *** (4) [4d Jd Ah] [9s]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #265, Bobbit (523), mybotisamazing (-523)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9d 6s Jd]
+Dealt to mybotisamazing [6c 4h Qc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9h 7c Jh]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4h]
+Bobbit discards [6s]
+*** TURN *** (4) [9h 7c Jh] [Kh]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [9h 7c Jh Kh] [2h]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [9d Jd]
+mybotisamazing shows [6c Qc]
+Bobbit wins the pot (4)
+
+Hand #266, mybotisamazing (-525), Bobbit (525)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3d 6c 3c]
+Dealt to Bobbit [8d 4c Qh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7c 5h Jh]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4c]
+mybotisamazing discards [6c]
+*** TURN *** (4) [7c 5h Jh] [2s]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [7c 5h Jh 2s] [6h]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [3d 3c]
+Bobbit shows [8d Qh]
+mybotisamazing wins the pot (4)
+
+Hand #267, Bobbit (523), mybotisamazing (-523)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jc 6h 6d]
+Dealt to mybotisamazing [2s 2h Ts]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Js Qh Jh]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Ts]
+Bobbit discards [6d]
+*** TURN *** (4) [Js Qh Jh] [7s]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Js Qh Jh 7s] [Jd]
+mybotisamazing bets 100
+Bobbit raises to 298
+mybotisamazing raises to 398
+Bobbit calls
+Bobbit shows [Jc 6h]
+mybotisamazing shows [2s 2h]
+Bobbit wins the pot (800)
+
+Hand #268, mybotisamazing (-923), Bobbit (923)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qc 9h Qh]
+Dealt to Bobbit [Jd Qd Jh]
+mybotisamazing calls
+Bobbit raises to 61
+mybotisamazing calls
+*** FLOP *** (122) [4c 5h Qs]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+Bobbit discards [Jh]
+mybotisamazing discards [9h]
+*** TURN *** (322) [4c 5h Qs] [6s]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (322)
+
+Hand #269, Bobbit (762), mybotisamazing (-762)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ah 6c 4d]
+Dealt to mybotisamazing [5h Ad As]
+Bobbit calls
+mybotisamazing raises to 20
+Bobbit calls
+*** FLOP *** (40) [Kc 8d 5c]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [5h]
+Bobbit discards [4d]
+*** TURN *** (240) [Kc 8d 5c] [2h]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (240)
+
+Hand #270, mybotisamazing (-642), Bobbit (642)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qs 9s 3h]
+Dealt to Bobbit [6h 2d Ks]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jh 3d Qd]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #271, Bobbit (640), mybotisamazing (-640)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qh 2h 2d]
+Dealt to mybotisamazing [9c 9d 8d]
+Bobbit raises to 17
+mybotisamazing calls
+*** FLOP *** (34) [Kh Th 4c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [8d]
+Bobbit discards [2d]
+*** TURN *** (34) [Kh Th 4c] [5h]
+mybotisamazing checks
+Bobbit bets 256
+mybotisamazing calls
+*** RIVER *** (546) [Kh Th 4c 5h] [9h]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Qh 2h]
+mybotisamazing shows [9c 9d]
+Bobbit wins the pot (546)
+
+Hand #272, mybotisamazing (-913), Bobbit (913)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ac 7s 3s]
+Dealt to Bobbit [Qh 4d Qc]
+mybotisamazing calls
+Bobbit raises to 61
+mybotisamazing folds
+Uncalled bet of 59 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #273, Bobbit (915), mybotisamazing (-915)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4h Qd Tc]
+Dealt to mybotisamazing [Kh 5d 9h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3s Qh 6c]
+mybotisamazing checks
+Bobbit bets 157
+mybotisamazing folds
+Uncalled bet of 157 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #274, mybotisamazing (-917), Bobbit (917)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3h Ad 3d]
+Dealt to Bobbit [Kd Ks Jc]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [2s 4h 3c]
+Bobbit bets 116
+mybotisamazing raises to 232
+Bobbit folds
+Uncalled bet of 116 returned to mybotisamazing
+mybotisamazing wins the pot (236)
+
+Hand #275, Bobbit (799), mybotisamazing (-799)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8h 9c Ah]
+Dealt to mybotisamazing [2c 2h 4s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3s 6h 4c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2c]
+Bobbit discards [9c]
+*** TURN *** (4) [3s 6h 4c] [6c]
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (204) [3s 6h 4c 6c] [8c]
+mybotisamazing checks
+Bobbit bets 29
+mybotisamazing calls
+Bobbit shows [8h Ah]
+mybotisamazing shows [2h 4s]
+Bobbit wins the pot (262)
+
+Hand #276, mybotisamazing (-930), Bobbit (930)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8d Tc 9d]
+Dealt to Bobbit [6c Td 2c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Jd Ac 3h]
+Bobbit bets 39
+mybotisamazing folds
+Uncalled bet of 39 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #277, Bobbit (932), mybotisamazing (-932)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Js Qs 5d]
+Dealt to mybotisamazing [6s 8d 3h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7h 8s 8h]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [3h]
+Bobbit discards [5d]
+*** TURN *** (204) [7h 8s 8h] [7d]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #278, mybotisamazing (-830), Bobbit (830)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3s 3c 2c]
+Dealt to Bobbit [6h Ac Ah]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9d Qc 6s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [6h]
+mybotisamazing discards [2c]
+*** TURN *** (4) [9d Qc 6s] [7d]
+Bobbit bets 260
+mybotisamazing folds
+Uncalled bet of 260 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #279, Bobbit (832), mybotisamazing (-832)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9c 6c 7d]
+Dealt to mybotisamazing [Qs 9d 4c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [8c 4s 6h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Qs]
+Bobbit discards [9c]
+*** TURN *** (4) [8c 4s 6h] [8s]
+mybotisamazing checks
+Bobbit bets 160
+mybotisamazing calls
+*** RIVER *** (324) [8c 4s 6h 8s] [3h]
+mybotisamazing bets 168
+Bobbit folds
+Uncalled bet of 168 returned to mybotisamazing
+mybotisamazing wins the pot (324)
+
+Hand #280, mybotisamazing (-670), Bobbit (670)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [As Qc 9c]
+Dealt to Bobbit [Jd Jc 5s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7s 3d 6s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [5s]
+mybotisamazing discards [9c]
+*** TURN *** (4) [7s 3d 6s] [8c]
+Bobbit bets 187
+mybotisamazing folds
+Uncalled bet of 187 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #281, Bobbit (672), mybotisamazing (-672)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jh Ts 3s]
+Dealt to mybotisamazing [3h 7c Qc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9c 4c 6h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3h]
+Bobbit discards [3s]
+*** TURN *** (4) [9c 4c 6h] [Jd]
+mybotisamazing checks
+Bobbit bets 271
+mybotisamazing folds
+Uncalled bet of 271 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #282, mybotisamazing (-674), Bobbit (674)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5c Qs 5s]
+Dealt to Bobbit [9c 2c 7h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8s Ah Kc]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [2c]
+mybotisamazing discards [Qs]
+*** TURN *** (4) [8s Ah Kc] [Td]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [8s Ah Kc Td] [As]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [5c 5s]
+Bobbit shows [9c 7h]
+mybotisamazing wins the pot (4)
+
+Hand #283, Bobbit (672), mybotisamazing (-672)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2s 9c 3c]
+Dealt to mybotisamazing [Ts 4h Kd]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qh 5s 5h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4h]
+Bobbit discards [3c]
+*** TURN *** (4) [Qh 5s 5h] [2h]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Qh 5s 5h 2h] [2c]
+mybotisamazing checks
+Bobbit bets 398
+mybotisamazing folds
+Uncalled bet of 398 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #284, mybotisamazing (-674), Bobbit (674)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8h 2h 8c]
+Dealt to Bobbit [7d Js 7h]
+mybotisamazing calls
+Bobbit raises to 28
+mybotisamazing folds
+Uncalled bet of 26 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #285, Bobbit (676), mybotisamazing (-676)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8d 4c 7h]
+Dealt to mybotisamazing [5s Kc 2h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [4s Ts 6h]
+mybotisamazing checks
+Bobbit bets 66
+mybotisamazing folds
+Uncalled bet of 66 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #286, mybotisamazing (-678), Bobbit (678)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qh 8s 8c]
+Dealt to Bobbit [Kc Th 9s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [4h Ks 4d]
+Bobbit bets 157
+mybotisamazing folds
+Uncalled bet of 157 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #287, Bobbit (680), mybotisamazing (-680)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8h 6s Jc]
+Dealt to mybotisamazing [Ts Qs 6h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7h Qh Kh]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [Ts]
+Bobbit discards [6s]
+*** TURN *** (204) [7h Qh Kh] [6c]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #288, mybotisamazing (-578), Bobbit (578)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Kd 4d 8d]
+Dealt to Bobbit [4h Ad Qh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ts 7c 6d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4h]
+mybotisamazing discards [4d]
+*** TURN *** (4) [Ts 7c 6d] [Js]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Ts 7c 6d Js] [Td]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Kd 8d]
+Bobbit shows [Ad Qh]
+Bobbit wins the pot (4)
+
+Hand #289, Bobbit (580), mybotisamazing (-580)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7c Js 8h]
+Dealt to mybotisamazing [Ah 5h Qh]
+Bobbit raises to 20
+mybotisamazing calls
+*** FLOP *** (40) [Kc 6s 3h]
+mybotisamazing checks
+Bobbit bets 22
+mybotisamazing calls
+mybotisamazing discards [5h]
+Bobbit discards [8h]
+*** TURN *** (84) [Kc 6s 3h] [Kh]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (84)
+
+Hand #290, mybotisamazing (-538), Bobbit (538)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2c 5h Ac]
+Dealt to Bobbit [5d Js 4d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Td 6h Qs]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4d]
+mybotisamazing discards [2c]
+*** TURN *** (4) [Td 6h Qs] [Jh]
+Bobbit bets 123
+mybotisamazing folds
+Uncalled bet of 123 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #291, Bobbit (540), mybotisamazing (-540)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qh 5h Kd]
+Dealt to mybotisamazing [8c 9d 2d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9h Ad 7h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2d]
+Bobbit discards [Kd]
+*** TURN *** (4) [9h Ad 7h] [As]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #292, mybotisamazing (-538), Bobbit (538)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8c 4h Jc]
+Dealt to Bobbit [Ts 2d 3s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [6h 7s 5s]
+Bobbit bets 62
+mybotisamazing calls
+Bobbit discards [2d]
+mybotisamazing discards [Jc]
+*** TURN *** (128) [6h 7s 5s] [2c]
+Bobbit checks
+mybotisamazing bets 336
+Bobbit folds
+Uncalled bet of 336 returned to mybotisamazing
+mybotisamazing wins the pot (128)
+
+Hand #293, Bobbit (474), mybotisamazing (-474)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Th 2h 3h]
+Dealt to mybotisamazing [Ts Ad 9s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Js Jd Ac]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #294, mybotisamazing (-472), Bobbit (472)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3d 3c Js]
+Dealt to Bobbit [Ad 7c 3s]
+mybotisamazing calls
+Bobbit raises to 23
+mybotisamazing folds
+Uncalled bet of 21 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #295, Bobbit (474), mybotisamazing (-474)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9h Js Jc]
+Dealt to mybotisamazing [Qh Ts 5s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [8c 8d Qc]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [5s]
+Bobbit discards [9h]
+*** TURN *** (204) [8c 8d Qc] [Qd]
+mybotisamazing bets 298
+Bobbit folds
+Uncalled bet of 298 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #296, mybotisamazing (-372), Bobbit (372)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8c 6h Qd]
+Dealt to Bobbit [Js 3d Ks]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [6s 4c 9c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3d]
+mybotisamazing discards [Qd]
+*** TURN *** (4) [6s 4c 9c] [Tc]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #297, Bobbit (370), mybotisamazing (-370)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jh 4c Ac]
+Dealt to mybotisamazing [Ts 6c 3d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Th 3h Qs]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [6c]
+Bobbit discards [4c]
+*** TURN *** (204) [Th 3h Qs] [7c]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #298, mybotisamazing (-268), Bobbit (268)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6s 2s 9h]
+Dealt to Bobbit [Kd Ad Td]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3d 4c Th]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Kd]
+mybotisamazing discards [9h]
+*** TURN *** (4) [3d 4c Th] [2d]
+Bobbit bets 271
+mybotisamazing folds
+Uncalled bet of 271 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #299, Bobbit (270), mybotisamazing (-270)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qs 7d Qd]
+Dealt to mybotisamazing [Ad Tc 2d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ac 2c Ah]
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing discards [Tc]
+Bobbit discards [7d]
+*** TURN *** (204) [Ac 2c Ah] [4c]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #300, mybotisamazing (-168), Bobbit (168)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5c 9h 3d]
+Dealt to Bobbit [Qh 4c 9c]
+mybotisamazing calls
+Bobbit raises to 21
+mybotisamazing folds
+Uncalled bet of 19 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #301, Bobbit (170), mybotisamazing (-170)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7s 4d 8h]
+Dealt to mybotisamazing [2d Jh Tc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ks Jd Qd]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #302, mybotisamazing (-168), Bobbit (168)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5d 4h Kh]
+Dealt to Bobbit [2h Jd 7s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ah 2s Jc]
+Bobbit bets 157
+mybotisamazing folds
+Uncalled bet of 157 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #303, Bobbit (170), mybotisamazing (-170)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7h 6c 3s]
+Dealt to mybotisamazing [Ad Jh 6s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [5h Kh Ts]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6s]
+Bobbit discards [3s]
+*** TURN *** (4) [5h Kh Ts] [Jd]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #304, mybotisamazing (-168), Bobbit (168)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Jh Js 3d]
+Dealt to Bobbit [9c 2h 6h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [As 3h 6d]
+Bobbit bets 76
+mybotisamazing raises to 168
+Bobbit folds
+Uncalled bet of 92 returned to mybotisamazing
+mybotisamazing wins the pot (156)
+
+Hand #305, Bobbit (90), mybotisamazing (-90)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9s 5s Ts]
+Dealt to mybotisamazing [Kc 6c Ad]
+Bobbit raises to 19
+mybotisamazing calls
+*** FLOP *** (38) [5d 4c 7c]
+mybotisamazing checks
+Bobbit bets 44
+mybotisamazing calls
+mybotisamazing discards [Ad]
+Bobbit discards [Ts]
+*** TURN *** (126) [5d 4c 7c] [Kd]
+mybotisamazing bets 337
+Bobbit folds
+Uncalled bet of 337 returned to mybotisamazing
+mybotisamazing wins the pot (126)
+
+Hand #306, mybotisamazing (-27), Bobbit (27)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qh 2h As]
+Dealt to Bobbit [Qs 5c 6c]
+mybotisamazing calls
+Bobbit raises to 18
+mybotisamazing calls
+*** FLOP *** (36) [Jc Jh 5d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [6c]
+mybotisamazing discards [2h]
+*** TURN *** (36) [Jc Jh 5d] [7s]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (36) [Jc Jh 5d 7s] [Ad]
+Bobbit checks
+mybotisamazing bets 300
+Bobbit folds
+Uncalled bet of 300 returned to mybotisamazing
+mybotisamazing wins the pot (36)
+
+Hand #307, Bobbit (9), mybotisamazing (-9)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [As 2h 3s]
+Dealt to mybotisamazing [3c 8d 2c]
+Bobbit raises to 18
+mybotisamazing folds
+Uncalled bet of 16 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #308, mybotisamazing (-11), Bobbit (11)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Jd As 2d]
+Dealt to Bobbit [6s 8h 7s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3s Ad 4s]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+Bobbit discards [8h]
+mybotisamazing discards [2d]
+*** TURN *** (204) [3s Ad 4s] [Kd]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #309, Bobbit (-91), mybotisamazing (91)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7h 3h As]
+Dealt to mybotisamazing [2h Qs 9h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [5c 4c Kd]
+mybotisamazing checks
+Bobbit bets 58
+mybotisamazing folds
+Uncalled bet of 58 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #310, mybotisamazing (89), Bobbit (-89)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Kd 2d 5h]
+Dealt to Bobbit [3c 6d 8c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3d 7d 4c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [8c]
+mybotisamazing discards [5h]
+*** TURN *** (4) [3d 7d 4c] [7h]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [3d 7d 4c 7h] [4s]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Kd 2d]
+Bobbit shows [3c 6d]
+mybotisamazing wins the pot (4)
+
+Hand #311, Bobbit (-91), mybotisamazing (91)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7c 9s 4d]
+Dealt to mybotisamazing [4h Ks Qs]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Js Td 6d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4h]
+Bobbit discards [4d]
+*** TURN *** (4) [Js Td 6d] [7d]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Js Td 6d 7d] [Th]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [7c 9s]
+mybotisamazing shows [Ks Qs]
+Bobbit wins the pot (4)
+
+Hand #312, mybotisamazing (89), Bobbit (-89)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Js 9d 5c]
+Dealt to Bobbit [Ah 3d 3h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [2h 3c Qh]
+Bobbit bets 157
+mybotisamazing folds
+Uncalled bet of 157 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #313, Bobbit (-87), mybotisamazing (87)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [5s Tc Jh]
+Dealt to mybotisamazing [6h 6c 3s]
+Bobbit raises to 21
+mybotisamazing folds
+Uncalled bet of 19 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #314, mybotisamazing (85), Bobbit (-85)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ts 7s 4c]
+Dealt to Bobbit [9c 8h 7d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5h Tc 5d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [7d]
+mybotisamazing discards [4c]
+*** TURN *** (4) [5h Tc 5d] [3s]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #315, Bobbit (-87), mybotisamazing (87)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qs Qc 4s]
+Dealt to mybotisamazing [5h 6s Jd]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Kh 5c Ks]
+mybotisamazing checks
+Bobbit bets 157
+mybotisamazing calls
+mybotisamazing discards [6s]
+Bobbit discards [4s]
+*** TURN *** (318) [Kh 5c Ks] [2h]
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (718) [Kh 5c Ks 2h] [6h]
+mybotisamazing bets 41
+Bobbit calls
+Bobbit shows [Qs Qc]
+mybotisamazing shows [5h Jd]
+Bobbit wins the pot (800)
+
+Hand #316, mybotisamazing (-313), Bobbit (313)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5h Ts 9d]
+Dealt to Bobbit [4h 9c Kd]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [2s Jd 7s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4h]
+mybotisamazing discards [5h]
+*** TURN *** (4) [2s Jd 7s] [9s]
+Bobbit bets 123
+mybotisamazing raises to 246
+Bobbit folds
+Uncalled bet of 123 returned to mybotisamazing
+mybotisamazing wins the pot (250)
+
+Hand #317, Bobbit (188), mybotisamazing (-188)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Tc 5h 2h]
+Dealt to mybotisamazing [5s 7d 4h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9d 6c 4d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [5s]
+Bobbit discards [Tc]
+*** TURN *** (4) [9d 6c 4d] [Th]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [9d 6c 4d Th] [Ah]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [5h 2h]
+mybotisamazing shows [7d 4h]
+mybotisamazing wins the pot (4)
+
+Hand #318, mybotisamazing (-186), Bobbit (186)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qd Th Qs]
+Dealt to Bobbit [3h 3d Ad]
+mybotisamazing raises to 20
+Bobbit calls
+*** FLOP *** (40) [8s 8h 5c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3d]
+mybotisamazing discards [Th]
+*** TURN *** (40) [8s 8h 5c] [4c]
+Bobbit bets 80
+mybotisamazing raises to 380
+Bobbit folds
+Uncalled bet of 300 returned to mybotisamazing
+mybotisamazing wins the pot (200)
+
+Hand #319, Bobbit (86), mybotisamazing (-86)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qc Qd 2h]
+Dealt to mybotisamazing [Jd 4d Kd]
+Bobbit raises to 61
+mybotisamazing calls
+*** FLOP *** (122) [6h 3c 7h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Jd]
+Bobbit discards [2h]
+*** TURN *** (122) [6h 3c 7h] [4s]
+mybotisamazing checks
+Bobbit bets 57
+mybotisamazing calls
+*** RIVER *** (236) [6h 3c 7h 4s] [8s]
+mybotisamazing checks
+Bobbit bets 40
+mybotisamazing calls
+Bobbit shows [Qc Qd]
+mybotisamazing shows [4d Kd]
+Bobbit wins the pot (316)
+
+Hand #320, mybotisamazing (-244), Bobbit (244)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5d Qh 3d]
+Dealt to Bobbit [Ts 8d 4c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9d Kh 5s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4c]
+mybotisamazing discards [3d]
+*** TURN *** (4) [9d Kh 5s] [2s]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #321, Bobbit (242), mybotisamazing (-242)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4s 8d Kc]
+Dealt to mybotisamazing [2h 6d Kd]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Tc Ad 2s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6d]
+Bobbit discards [8d]
+*** TURN *** (4) [Tc Ad 2s] [Qd]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Tc Ad 2s Qd] [Qc]
+mybotisamazing checks
+Bobbit bets 134
+mybotisamazing calls
+Bobbit shows [4s Kc]
+mybotisamazing shows [2h Kd]
+mybotisamazing wins the pot (272)
+
+Hand #322, mybotisamazing (-106), Bobbit (106)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6h 4d Ad]
+Dealt to Bobbit [9h 6d Kh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5h 9s 3c]
+Bobbit bets 157
+mybotisamazing folds
+Uncalled bet of 157 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #323, Bobbit (108), mybotisamazing (-108)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7h 9s 3c]
+Dealt to mybotisamazing [Th Qs Kh]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Kc Kd 9d]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #324, mybotisamazing (-106), Bobbit (106)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [3h Ad 6d]
+Dealt to Bobbit [2s 3c 9d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8h Tc 6c]
+Bobbit bets 44
+mybotisamazing folds
+Uncalled bet of 44 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #325, Bobbit (108), mybotisamazing (-108)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [3h 5d Ah]
+Dealt to mybotisamazing [Kh Qd 8s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7s 2h 6d]
+mybotisamazing checks
+Bobbit bets 55
+mybotisamazing folds
+Uncalled bet of 55 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #326, mybotisamazing (-110), Bobbit (110)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Th Ah 8c]
+Dealt to Bobbit [9s 3d 7h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [2c 5d 7s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3d]
+mybotisamazing discards [Th]
+*** TURN *** (4) [2c 5d 7s] [Ad]
+Bobbit bets 129
+mybotisamazing raises to 398
+Bobbit folds
+Uncalled bet of 269 returned to mybotisamazing
+mybotisamazing wins the pot (262)
+
+Hand #327, Bobbit (-21), mybotisamazing (21)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Td Kd 7h]
+Dealt to mybotisamazing [Kc 6c 6d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3s Jh 4c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [Kc]
+Bobbit discards [7h]
+*** TURN *** (4) [3s Jh 4c] [Qc]
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (204) [3s Jh 4c Qc] [Ac]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Td Kd]
+mybotisamazing shows [6c 6d]
+Bobbit wins the pot (204)
+
+Hand #328, mybotisamazing (-81), Bobbit (81)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [2d Kh Jd]
+Dealt to Bobbit [Ts 3d Jh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [4h 4c Js]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #329, Bobbit (79), mybotisamazing (-79)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [3c 7d 6s]
+Dealt to mybotisamazing [Th 6d 8h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9d Kd 3d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [8h]
+Bobbit discards [6s]
+*** TURN *** (4) [9d Kd 3d] [9c]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [9d Kd 3d 9c] [2c]
+mybotisamazing checks
+Bobbit bets 183
+mybotisamazing folds
+Uncalled bet of 183 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #330, mybotisamazing (-81), Bobbit (81)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9c 6s 3h]
+Dealt to Bobbit [3s 9h Ad]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7d Ac 5d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3s]
+mybotisamazing discards [3h]
+*** TURN *** (4) [7d Ac 5d] [9s]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit calls
+*** RIVER *** (404) [7d Ac 5d 9s] [4c]
+Bobbit checks
+mybotisamazing bets 198
+Bobbit calls
+mybotisamazing shows [9c 6s]
+Bobbit shows [9h Ad]
+Bobbit wins the pot (800)
+
+Hand #331, Bobbit (481), mybotisamazing (-481)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [3d 8s Kc]
+Dealt to mybotisamazing [2s Qh Jc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [5s 8c Ac]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2s]
+Bobbit discards [3d]
+*** TURN *** (4) [5s 8c Ac] [5c]
+mybotisamazing checks
+Bobbit bets 173
+mybotisamazing folds
+Uncalled bet of 173 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #332, mybotisamazing (-483), Bobbit (483)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7s As 7c]
+Dealt to Bobbit [9d 8s Qh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ac 5s Ah]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #333, Bobbit (481), mybotisamazing (-481)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Ah 6s Jh]
+Dealt to mybotisamazing [7c 4s Tc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [5c Js 9s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4s]
+Bobbit discards [6s]
+*** TURN *** (4) [5c Js 9s] [3c]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [5c Js 9s 3c] [3h]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Ah Jh]
+mybotisamazing shows [7c Tc]
+Bobbit wins the pot (4)
+
+Hand #334, mybotisamazing (-483), Bobbit (483)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5s Jc 8d]
+Dealt to Bobbit [7s Jh Qs]
+mybotisamazing calls
+Bobbit raises to 29
+mybotisamazing folds
+Uncalled bet of 27 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #335, Bobbit (485), mybotisamazing (-485)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [5h Th Qs]
+Dealt to mybotisamazing [Kc 7d 3s]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Jd Qd Kd]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3s]
+Bobbit discards [5h]
+*** TURN *** (4) [Jd Qd Kd] [4d]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #336, mybotisamazing (-483), Bobbit (483)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5d 5s 8h]
+Dealt to Bobbit [7d 5c 7s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7h 4s Ad]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [5c]
+mybotisamazing discards [8h]
+*** TURN *** (4) [7h 4s Ad] [9d]
+Bobbit bets 271
+mybotisamazing calls
+*** RIVER *** (546) [7h 4s Ad 9d] [2c]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [5d 5s]
+Bobbit shows [7d 7s]
+Bobbit wins the pot (546)
+
+Hand #337, Bobbit (756), mybotisamazing (-756)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Jc Qc 4s]
+Dealt to mybotisamazing [5d 4c Ac]
+Bobbit raises to 26
+mybotisamazing folds
+Uncalled bet of 24 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #338, mybotisamazing (-758), Bobbit (758)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Kc 2d 7s]
+Dealt to Bobbit [6h Th 6s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ad 4h 5h]
+Bobbit bets 70
+mybotisamazing folds
+Uncalled bet of 70 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #339, Bobbit (760), mybotisamazing (-760)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Js 3c Jd]
+Dealt to mybotisamazing [3h 4h 4c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [5c Kc Jc]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3h]
+Bobbit discards [3c]
+*** TURN *** (4) [5c Kc Jc] [Qh]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [5c Kc Jc Qh] [Kd]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Js Jd]
+mybotisamazing shows [4h 4c]
+Bobbit wins the pot (4)
+
+Hand #340, mybotisamazing (-762), Bobbit (762)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [7s Kc Th]
+Dealt to Bobbit [Qd 2h Ks]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8s 5d Ad]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [2h]
+mybotisamazing discards [7s]
+*** TURN *** (4) [8s 5d Ad] [Kd]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (204) [8s 5d Ad Kd] [2d]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Kc Th]
+Bobbit shows [Qd Ks]
+Bobbit wins the pot (204)
+
+Hand #341, Bobbit (864), mybotisamazing (-864)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7c Th Jd]
+Dealt to mybotisamazing [7s 5d Tc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ah 4s Ac]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [5d]
+Bobbit discards [7c]
+*** TURN *** (4) [Ah 4s Ac] [Ks]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Ah 4s Ac Ks] [4c]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Th Jd]
+mybotisamazing shows [7s Tc]
+Bobbit ties for the pot (2)
+mybotisamazing ties for the pot (2)
+
+Hand #342, mybotisamazing (-864), Bobbit (864)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Kd 2d 8h]
+Dealt to Bobbit [4h 6d Jd]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ts Qc 5h]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [4h]
+mybotisamazing discards [2d]
+*** TURN *** (4) [Ts Qc 5h] [3s]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Ts Qc 5h 3s] [2c]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Kd 8h]
+Bobbit shows [6d Jd]
+mybotisamazing wins the pot (4)
+
+Hand #343, Bobbit (862), mybotisamazing (-862)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [5h Jh 9d]
+Dealt to mybotisamazing [4c 3h Ks]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [6s Jc Js]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4c]
+Bobbit discards [5h]
+*** TURN *** (4) [6s Jc Js] [Qh]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [6s Jc Js Qh] [Ac]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Jh 9d]
+mybotisamazing shows [3h Ks]
+Bobbit wins the pot (4)
+
+Hand #344, mybotisamazing (-864), Bobbit (864)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qh 2h 8c]
+Dealt to Bobbit [3d Jh 8h]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Kd 5s 6h]
+Bobbit bets 45
+mybotisamazing folds
+Uncalled bet of 45 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #345, Bobbit (866), mybotisamazing (-866)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [8s Qs 8h]
+Dealt to mybotisamazing [5c Jc Qc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7c Ts Th]
+mybotisamazing checks
+Bobbit bets 124
+mybotisamazing folds
+Uncalled bet of 124 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #346, mybotisamazing (-868), Bobbit (868)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qs 4c Qh]
+Dealt to Bobbit [3s 9d Jc]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [7c 6h 8c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [3s]
+mybotisamazing discards [4c]
+*** TURN *** (4) [7c 6h 8c] [5c]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [7c 6h 8c 5c] [Qc]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Qs Qh]
+Bobbit shows [9d Jc]
+Bobbit wins the pot (4)
+
+Hand #347, Bobbit (870), mybotisamazing (-870)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Qh 7c Td]
+Dealt to mybotisamazing [9d Ad 2s]
+Bobbit raises to 27
+mybotisamazing calls
+*** FLOP *** (54) [7s Jc 7d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2s]
+Bobbit discards [Td]
+*** TURN *** (54) [7s Jc 7d] [Js]
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (254) [7s Jc 7d Js] [As]
+mybotisamazing bets 200
+Bobbit calls
+Bobbit shows [Qh 7c]
+mybotisamazing shows [9d Ad]
+Bobbit wins the pot (654)
+
+Hand #348, mybotisamazing (-1197), Bobbit (1197)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ad 3c 2h]
+Dealt to Bobbit [6c Kh 4h]
+mybotisamazing calls
+Bobbit raises to 20
+mybotisamazing folds
+Uncalled bet of 18 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #349, Bobbit (1199), mybotisamazing (-1199)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2s As 7s]
+Dealt to mybotisamazing [4d 6d Qs]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [6s Tc Th]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [4d]
+Bobbit discards [2s]
+*** TURN *** (4) [6s Tc Th] [9c]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #350, mybotisamazing (-1197), Bobbit (1197)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Th 7c 9c]
+Dealt to Bobbit [7s Ah Jd]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Ad As Qc]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [7s]
+mybotisamazing discards [7c]
+*** TURN *** (4) [Ad As Qc] [Kc]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Ad As Qc Kc] [Tc]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Th 9c]
+Bobbit shows [Ah Jd]
+Bobbit wins the pot (4)
+
+Hand #351, Bobbit (1199), mybotisamazing (-1199)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9c 7c As]
+Dealt to mybotisamazing [2s 7h Qc]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [2h 4s Js]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [7h]
+Bobbit discards [7c]
+*** TURN *** (4) [2h 4s Js] [8c]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [2h 4s Js 8c] [2d]
+mybotisamazing bets 300
+Bobbit folds
+Uncalled bet of 300 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #352, mybotisamazing (-1197), Bobbit (1197)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Th Ts Kh]
+Dealt to Bobbit [Jd 9d 7d]
+mybotisamazing raises to 20
+Bobbit calls
+*** FLOP *** (40) [4d 5h Qh]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [7d]
+mybotisamazing discards [Kh]
+*** TURN *** (40) [4d 5h Qh] [Qs]
+Bobbit bets 57
+mybotisamazing raises to 200
+Bobbit folds
+Uncalled bet of 143 returned to mybotisamazing
+mybotisamazing wins the pot (154)
+
+Hand #353, Bobbit (1120), mybotisamazing (-1120)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2c 9s 3s]
+Dealt to mybotisamazing [Ac 8c Qh]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Js 9c 6d]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [8c]
+Bobbit discards [2c]
+*** TURN *** (4) [Js 9c 6d] [3h]
+mybotisamazing checks
+Bobbit bets 271
+mybotisamazing folds
+Uncalled bet of 271 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #354, mybotisamazing (-1122), Bobbit (1122)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Tc 6d 2d]
+Dealt to Bobbit [3c Th 2c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [9h 7c 9d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [2c]
+mybotisamazing discards [2d]
+*** TURN *** (4) [9h 7c 9d] [8s]
+Bobbit bets 68
+mybotisamazing raises to 200
+Bobbit folds
+Uncalled bet of 132 returned to mybotisamazing
+mybotisamazing wins the pot (140)
+
+Hand #355, Bobbit (1052), mybotisamazing (-1052)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [3h Qd Jd]
+Dealt to mybotisamazing [5s 3s 7h]
+Bobbit raises to 24
+mybotisamazing folds
+Uncalled bet of 22 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #356, mybotisamazing (-1054), Bobbit (1054)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [6h 2d 3s]
+Dealt to Bobbit [9h 6s Qd]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [8c 8h 8d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [6s]
+mybotisamazing discards [2d]
+*** TURN *** (4) [8c 8h 8d] [3d]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #357, Bobbit (1052), mybotisamazing (-1052)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2h 6d 5d]
+Dealt to mybotisamazing [5c Ts 5h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qh Td Tc]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #358, mybotisamazing (-1050), Bobbit (1050)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [5d Kc 2c]
+Dealt to Bobbit [Ah 9h 8d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qd 2s 6s]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [8d]
+mybotisamazing discards [5d]
+*** TURN *** (4) [Qd 2s 6s] [9c]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [Qd 2s 6s 9c] [4d]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Kc 2c]
+Bobbit shows [Ah 9h]
+Bobbit wins the pot (4)
+
+Hand #359, Bobbit (1052), mybotisamazing (-1052)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7h As Ks]
+Dealt to mybotisamazing [Qh 8c 6d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Th 8s 3c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6d]
+Bobbit discards [7h]
+*** TURN *** (4) [Th 8s 3c] [7d]
+mybotisamazing bets 100
+Bobbit calls
+*** RIVER *** (204) [Th 8s 3c 7d] [2d]
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (204)
+
+Hand #360, mybotisamazing (-950), Bobbit (950)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qs 4h Ks]
+Dealt to Bobbit [Kd 8s 7d]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3s Tc Ac]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [7d]
+mybotisamazing discards [4h]
+*** TURN *** (4) [3s Tc Ac] [6s]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [3s Tc Ac 6s] [2d]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Qs Ks]
+Bobbit shows [Kd 8s]
+mybotisamazing wins the pot (4)
+
+Hand #361, Bobbit (948), mybotisamazing (-948)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kd 2c Tc]
+Dealt to mybotisamazing [Jc 8s 5d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [7s 4c Kh]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [5d]
+Bobbit discards [2c]
+*** TURN *** (4) [7s 4c Kh] [6h]
+mybotisamazing checks
+Bobbit bets 256
+mybotisamazing folds
+Uncalled bet of 256 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #362, mybotisamazing (-950), Bobbit (950)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [9d Jd Th]
+Dealt to Bobbit [Qd 4d 7c]
+mybotisamazing calls
+Bobbit raises to 17
+mybotisamazing calls
+*** FLOP *** (34) [8c 5d 5h]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [7c]
+mybotisamazing discards [Th]
+*** TURN *** (34) [8c 5d 5h] [Jh]
+Bobbit checks
+mybotisamazing bets 200
+Bobbit folds
+Uncalled bet of 200 returned to mybotisamazing
+mybotisamazing wins the pot (34)
+
+Hand #363, Bobbit (933), mybotisamazing (-933)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [4d 2h 7d]
+Dealt to mybotisamazing [9h 9d 8c]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [9s 7h 3d]
+mybotisamazing bets 398
+Bobbit folds
+Uncalled bet of 398 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #364, mybotisamazing (-931), Bobbit (931)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ad Jd 2c]
+Dealt to Bobbit [3c Jc Kh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [6c Qc 4c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [Kh]
+mybotisamazing discards [Jd]
+*** TURN *** (4) [6c Qc 4c] [6s]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [6c Qc 4c 6s] [Qh]
+Bobbit bets 382
+mybotisamazing raises to 398
+Bobbit folds
+Uncalled bet of 16 returned to mybotisamazing
+mybotisamazing wins the pot (768)
+
+Hand #365, Bobbit (547), mybotisamazing (-547)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [2d Ad 9s]
+Dealt to mybotisamazing [7c Tc 9h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [4s 8s Jc]
+mybotisamazing checks
+Bobbit bets 57
+mybotisamazing folds
+Uncalled bet of 57 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #366, mybotisamazing (-549), Bobbit (549)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Ts 8c Qd]
+Dealt to Bobbit [Js 6s Qh]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [5d 7d 2c]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [6s]
+mybotisamazing discards [Ts]
+*** TURN *** (4) [5d 7d 2c] [Kc]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (4) [5d 7d 2c Kc] [5s]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [8c Qd]
+Bobbit shows [Js Qh]
+Bobbit wins the pot (4)
+
+Hand #367, Bobbit (551), mybotisamazing (-551)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [9h 4h Jd]
+Dealt to mybotisamazing [8h 4s 3d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Kh As 6c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [3d]
+Bobbit discards [4h]
+*** TURN *** (4) [Kh As 6c] [Ah]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Kh As 6c Ah] [9d]
+mybotisamazing checks
+Bobbit bets 212
+mybotisamazing folds
+Uncalled bet of 212 returned to Bobbit
+Bobbit wins the pot (4)
+
+Hand #368, mybotisamazing (-553), Bobbit (553)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qs 8h Jh]
+Dealt to Bobbit [Jc 7c 8s]
+mybotisamazing calls
+Bobbit raises to 21
+mybotisamazing calls
+*** FLOP *** (42) [Kh 6d 7d]
+Bobbit checks
+mybotisamazing checks
+Bobbit discards [8s]
+mybotisamazing discards [8h]
+*** TURN *** (42) [Kh 6d 7d] [Kd]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (42) [Kh 6d 7d Kd] [Ah]
+Bobbit checks
+mybotisamazing checks
+mybotisamazing shows [Qs Jh]
+Bobbit shows [Jc 7c]
+Bobbit wins the pot (42)
+
+Hand #369, Bobbit (574), mybotisamazing (-574)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [5d 7s 2d]
+Dealt to mybotisamazing [6c Jh 8d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Qc Td 9h]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6c]
+Bobbit discards [7s]
+*** TURN *** (4) [Qc Td 9h] [Jc]
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #370, mybotisamazing (-572), Bobbit (572)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [8d Ks 7h]
+Dealt to Bobbit [2h 2c 5s]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [Qh 3d 8h]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit folds
+Uncalled bet of 100 returned to mybotisamazing
+mybotisamazing wins the pot (4)
+
+Hand #371, Bobbit (570), mybotisamazing (-570)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [Kc 7s Ts]
+Dealt to mybotisamazing [8s 8c 6h]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [Ks Jc 3s]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [6h]
+Bobbit discards [7s]
+*** TURN *** (4) [Ks Jc 3s] [Qd]
+mybotisamazing checks
+Bobbit checks
+*** RIVER *** (4) [Ks Jc 3s Qd] [Qc]
+mybotisamazing checks
+Bobbit checks
+Bobbit shows [Kc Ts]
+mybotisamazing shows [8s 8c]
+Bobbit wins the pot (4)
+
+Hand #372, mybotisamazing (-572), Bobbit (572)
+mybotisamazing posts the blind of 1
+Bobbit posts the blind of 2
+Dealt to mybotisamazing [Qh Ad 4s]
+Dealt to Bobbit [6s 7s 4c]
+mybotisamazing calls
+Bobbit checks
+*** FLOP *** (4) [3s 4h Jd]
+Bobbit bets 70
+mybotisamazing calls
+Bobbit discards [6s]
+mybotisamazing discards [Qh]
+*** TURN *** (144) [3s 4h Jd] [6d]
+Bobbit checks
+mybotisamazing checks
+*** RIVER *** (144) [3s 4h Jd 6d] [Jc]
+Bobbit checks
+mybotisamazing bets 100
+Bobbit calls
+mybotisamazing shows [Ad 4s]
+Bobbit shows [7s 4c]
+mybotisamazing wins the pot (344)
+
+Hand #373, Bobbit (400), mybotisamazing (-400)
+Bobbit posts the blind of 1
+mybotisamazing posts the blind of 2
+Dealt to Bobbit [7c 8h Jd]
+Dealt to mybotisamazing [9s 2h 8d]
+Bobbit calls
+mybotisamazing checks
+*** FLOP *** (4) [3d 4s 9c]
+mybotisamazing checks
+Bobbit checks
+mybotisamazing discards [2h]
+Bobbit discards [7c]
+*** TURN *** (4) [3d 4s 9c] [Ah]
+mybotisamazing
