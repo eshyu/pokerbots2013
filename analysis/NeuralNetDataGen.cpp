@@ -26,7 +26,7 @@ int numRaise[2][4];
 int numCall[2][4];
 int numFold[2][4];  
 
-void printData(double myEquity, bool myButton, double myBet, ROUND round, ofstream &fout){ 
+void printData(int potSize, double myBetvsStack, double myEquity, bool myButton, double myBet, ROUND round, ofstream &fout){ 
   
   fout << myButton << " "
        << check[0][round] << " "
@@ -52,7 +52,9 @@ void printData(double myEquity, bool myButton, double myBet, ROUND round, ofstre
   
        << myBet << " " 
        << myEquity << " "
-
+       << potSize << " "
+       << myBetvsStack << " "
+    
        << endl;
 }
 
@@ -216,19 +218,21 @@ int stackSize, bb;
 	 numCall[player][round]+=1;
 
 	 if (player == 1 && round==PREFLOP){
-	   printData(myBeq, button==0, myBet, round, fout);
-	   fout << "0 0 1 0 0 " << " "<< oppTeq << endl;
+	   printData(potSize, (double)toCall/stackSize, myBeq, button==0, myBet, round, fout);
+	   fout << "0 0 1 0 0 " << " "<< oppTeq << " "<< 0 << endl;
 	 }
 	 
        } else if (!tokens[1].compare("checks")){
 	 numCheck[player][round]+=1;
 	 check[player][round]=true;
 	 if (player == 1 && round==PREFLOP){
-	   printData(myBeq, button==0, myBet, round, fout);
-	   fout << "0 1 0 0 0 " << " " << oppTeq << endl;
+	   printData(potSize, 0, myBeq, button==0, myBet, round, fout);
+	   fout << "0 1 0 0 0 " << " " << oppTeq << " 0" << endl;
 	 }
 
        } else if (!tokens[1].compare("bets")){      
+
+	 int prevBet = prevRaise;
 	 toCall=boost::lexical_cast<int>(tokens[2]);	
 	 prevRaise=toCall;
 	 potSize+=toCall;
@@ -242,8 +246,8 @@ int stackSize, bb;
 	}
 	
 	if (player == 1 && round==PREFLOP){
-	  printData(myBeq, button==0, myBet, round, fout);
-	  fout << "1 0 0 0 " << potOdds << " " << oppTeq  << endl;
+	  printData(potSize, (double)prevBet/stackSize, myBeq, button==0, myBet, round, fout);
+	  fout << "1 0 0 0 " << potOdds << " " << oppTeq  << " " << (double)toCall/stackSize<< endl;
 	}
 	
        } else if (!tokens[1].compare("raises")){
@@ -259,6 +263,7 @@ int stackSize, bb;
 	  }
 	}
 
+	int prevBet = prevRaise;
 	toCall = raise-prevRaise;
 	prevRaise=raise;
 	potSize+=raise;
@@ -273,8 +278,8 @@ int stackSize, bb;
 	}
 	
 	if (player == 1 && round==PREFLOP){
-	  printData(myBeq, button==0, myBet, round, fout);
-	  fout << "1 0 0 0 " << potOdds << " " <<  oppTeq  << endl;
+	  printData(potSize, (double)prevBet/stackSize, myBeq, button==0, myBet, round, fout);
+	  fout << "1 0 0 0 " << potOdds << " " <<  oppTeq  << " " << (double)raise/stackSize  << endl;
 	}	
 
       } else if (!tokens[1].compare("discards")){
