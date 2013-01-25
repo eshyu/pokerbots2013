@@ -5,9 +5,11 @@
 
 #include <boost/lexical_cast.hpp>
 
+#include <ctime>
+#include <cstdlib>
+
 Player::Player() {
 }
-
 
 /* current hand state vriables */
 bool myButton;
@@ -25,7 +27,8 @@ void Player::run(tcp::iostream &stream)
   
   evaluator = new Evaluator();
   evaluator->populatePreFlopTable(); //initialize preflop equities
-  actionSelector = new ActionSelector(*evaluator);
+  actionSelector = new ActionSelector(evaluator);
+  srand(time(NULL));
 
   ActionSelector::ActionInfo nextAction;  
   while (std::getline(stream, line)) {
@@ -48,7 +51,6 @@ void Player::run(tcp::iostream &stream)
       // update info for new hand
       ss >> myHandId >> button_str >> holeCard1 >> holeCard2 >> holeCard3 >> myBankroll >> oppBankroll >> myTimeBank;
       newHand(holeCard1, holeCard2, holeCard3, button_str);
-      
     } else if (!packet_type.compare("HANDOVER")){
       // TODO: ...
       

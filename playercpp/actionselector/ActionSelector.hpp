@@ -52,6 +52,22 @@ public:
   ActionInfo getAction(const std::string &getaction_str, std::vector<std::string> &holeCards, std::string &myDiscard, bool myButton, int stackSize);
 
 private:
+  void selectActionForRound(int potSize, bool myButton, 
+		 const std::vector<std::string> &boardCards,
+		 const std::vector<std::string> &holeCards,
+		 const std::string &myDiscard,
+		 const LegalAction &legalAction, 
+		 ActionInfo &actionInfo);
+
+  /* Different rounds */
+  void preflopSelector(int potSize, bool myButton, 
+		       const std::vector<std::string> &boardCards,
+		       const std::vector<std::string> &holeCards,
+		       const std::string &myDiscard,
+		       const LegalAction &legalAction, 
+		       ActionInfo &actionInfo);
+  
+  
   /* TODO lol this should disappear in favor of BettingSelector, DiscardSelector*/
   void evalMagic(int potSize, bool myButton, 
 		 const std::vector<std::string> &boardCards,
