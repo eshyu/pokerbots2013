@@ -1,0 +1,1456 @@
+
+Creating network.
+creating network with connection rate 1.000000
+input
+  layer       : 2 neurons, 1 bias
+  layer       : 3 neurons, 1 bias
+  layer       : 1 neurons, 1 bias
+output
+
+XOR test started.
+
+Network Type                         :  LAYER
+Input layer                          :   2 neurons, 1 bias
+  Hidden layer                       :   3 neurons, 1 bias
+Output layer                         :   1 neurons
+Total neurons and biases             :   8
+Total connections                    :  13
+Connection rate                      :   1.000
+Network type                         :   FANN_NETTYPE_LAYER
+Training algorithm                   :   FANN_TRAIN_QUICKPROP
+Training error function              :   FANN_ERRORFUNC_TANH
+Training stop function               :   FANN_STOPFUNC_MSE
+Bit fail limit                       :   0.350
+Learning rate                        :   0.070
+Learning momentum                    :   0.000
+Quickprop decay                      :  -0.000100
+Quickprop mu                         :   1.750
+RPROP increase factor                :   1.200
+RPROP decrease factor                :   0.500
+RPROP delta min                      :   0.000
+RPROP delta max                      :  50.000
+Cascade output change fraction       :   0.010000
+Cascade candidate change fraction    :   0.010000
+Cascade output stagnation epochs     :  12
+Cascade candidate stagnation epochs  :  12
+Cascade max output epochs            : 150
+Cascade min output epochs            :  50
+Cascade max candidate epochs         : 150
+Cascade min candidate epochs         :  50
+Cascade weight multiplier            :   0.400
+Cascade candidate limit              :1000.000
+Cascade activation functions[0]      :   FANN_SIGMOID
+Cascade activation functions[1]      :   FANN_SIGMOID_SYMMETRIC
+Cascade activation functions[2]      :   FANN_GAUSSIAN
+Cascade activation functions[3]      :   FANN_GAUSSIAN_SYMMETRIC
+Cascade activation functions[4]      :   FANN_ELLIOT
+Cascade activation functions[5]      :   FANN_ELLIOT_SYMMETRIC
+Cascade activation functions[6]      :   FANN_SIN_SYMMETRIC
+Cascade activation functions[7]      :   FANN_COS_SYMMETRIC
+Cascade activation functions[8]      :   FANN_SIN
+Cascade activation functions[9]      :   FANN_COS
+Cascade activation steepnesses[0]    :   0.250
+Cascade activation steepnesses[1]    :   0.500
+Cascade activation steepnesses[2]    :   0.750
+Cascade activation steepnesses[3]    :   1.000
+Cascade candidate groups             :   2
+Cascade no. of candidates            :  80
+
+Training network.
+Max Epochs   300000. Desired Error: 0.001
+Training with FANN_TRAIN_QUICKPROP
+Epochs            1. Current Error: 0.252967
+Epochs         1000. Current Error: 0.00207768
+Epochs         2000. Current Error: 0.00207767
+Epochs         3000. Current Error: 0.00207765
+Epochs         4000. Current Error: 0.00207764
+Epochs         5000. Current Error: 0.00207762
+Epochs         6000. Current Error: 0.00207761
+Epochs         7000. Current Error: 0.00207759
+Epochs         8000. Current Error: 0.00207758
+Epochs         9000. Current Error: 0.00207757
+Epochs        10000. Current Error: 0.00207755
+Epochs        11000. Current Error: 0.00207754
+Epochs        12000. Current Error: 0.00207753
+Epochs        13000. Current Error: 0.00207751
+Epochs        14000. Current Error: 0.0020775
+Epochs        15000. Current Error: 0.00207748
+Epochs        16000. Current Error: 0.00207747
+Epochs        17000. Current Error: 0.00207745
+Epochs        18000. Current Error: 0.00207744
+Epochs        19000. Current Error: 0.00207743
+Epochs        20000. Current Error: 0.00207741
+Epochs        21000. Current Error: 0.0020774
+Epochs        22000. Current Error: 0.00207739
+Epochs        23000. Current Error: 0.00207737
+Epochs        24000. Current Error: 0.00207736
+Epochs        25000. Current Error: 0.00207734
+Epochs        26000. Current Error: 0.00207733
+Epochs        27000. Current Error: 0.00207731
+Epochs        28000. Current Error: 0.0020773
+Epochs        29000. Current Error: 0.00207728
+Epochs        30000. Current Error: 0.00207727
+Epochs        31000. Current Error: 0.00207725
+Epochs        32000. Current Error: 0.00207724
+Epochs        33000. Current Error: 0.00207722
+Epochs        34000. Current Error: 0.0020772
+Epochs        35000. Current Error: 0.00207719
+Epochs        36000. Current Error: 0.00207717
+Epochs        37000. Current Error: 0.00207715
+Epochs        38000. Current Error: 0.00207714
+Epochs        39000. Current Error: 0.00207712
+Epochs        40000. Current Error: 0.0020771
+Epochs        41000. Current Error: 0.00207708
+Epochs        42000. Current Error: 0.00207706
+Epochs        43000. Current Error: 0.00207704
+Epochs        44000. Current Error: 0.00207703
+Epochs        45000. Current Error: 0.00207701
+Epochs        46000. Current Error: 0.00207699
+Epochs        47000. Current Error: 0.00207697
+Epochs        48000. Current Error: 0.00207695
+Epochs        49000. Current Error: 0.00207693
+Epochs        50000. Current Error: 0.0020769
+Epochs        51000. Current Error: 0.00207688
+Epochs        52000. Current Error: 0.00207686
+Epochs        53000. Current Error: 0.00207684
+Epochs        54000. Current Error: 0.00207681
+Epochs        55000. Current Error: 0.00207679
+Epochs        56000. Current Error: 0.00207676
+Epochs        57000. Current Error: 0.00207674
+Epochs        58000. Current Error: 0.00207671
+Epochs        59000. Current Error: 0.00207669
+Epochs        60000. Current Error: 0.00207666
+Epochs        61000. Current Error: 0.00207663
+Epochs        62000. Current Error: 0.0020766
+Epochs        63000. Current Error: 0.00207657
+Epochs        64000. Current Error: 0.00207654
+Epochs        65000. Current Error: 0.00207651
+Epochs        66000. Current Error: 0.00207649
+Epochs        67000. Current Error: 0.00207645
+Epochs        68000. Current Error: 0.00207642
+Epochs        69000. Current Error: 0.00207639
+Epochs        70000. Current Error: 0.00207635
+Epochs        71000. Current Error: 0.00207632
+Epochs        72000. Current Error: 0.00207629
+Epochs        73000. Current Error: 0.00207625
+Epochs        74000. Current Error: 0.00207621
+Epochs        75000. Current Error: 0.00207618
+Epochs        76000. Current Error: 0.00207614
+Epochs        77000. Current Error: 0.0020761
+Epochs        78000. Current Error: 0.00207606
+Epochs        79000. Current Error: 0.00207602
+Epochs        80000. Current Error: 0.00207598
+Epochs        81000. Current Error: 0.00207593
+Epochs        82000. Current Error: 0.00207589
+Epochs        83000. Current Error: 0.00207585
+Epochs        84000. Current Error: 0.0020758
+Epochs        85000. Current Error: 0.00207575
+Epochs        86000. Current Error: 0.00207571
+Epochs        87000. Current Error: 0.00207566
+Epochs        88000. Current Error: 0.00207561
+Epochs        89000. Current Error: 0.00207556
+Epochs        90000. Current Error: 0.0020755
+Epochs        91000. Current Error: 0.00207545
+Epochs        92000. Current Error: 0.0020754
+Epochs        93000. Current Error: 0.00207534
+Epochs        94000. Current Error: 0.00207528
+Epochs        95000. Current Error: 0.00207523
+Epochs        96000. Current Error: 0.00207517
+Epochs        97000. Current Error: 0.00207511
+Epochs        98000. Current Error: 0.00207504
+Epochs        99000. Current Error: 0.00207498
+Epochs       100000. Current Error: 0.00207491
+Epochs       101000. Current Error: 0.00207485
+Epochs       102000. Current Error: 0.00207478
+Epochs       103000. Current Error: 0.00207471
+Epochs       104000. Current Error: 0.00207464
+Epochs       105000. Current Error: 0.00207457
+Epochs       106000. Current Error: 0.00207449
+Epochs       107000. Current Error: 0.00207441
+Epochs       108000. Current Error: 0.00207433
+Epochs       109000. Current Error: 0.00207426
+Epochs       110000. Current Error: 0.00207417
+Epochs       111000. Current Error: 0.00207409
+Epochs       112000. Current Error: 0.002074
+Epochs       113000. Current Error: 0.00207392
+Epochs       114000. Current Error: 0.00207383
+Epochs       115000. Current Error: 0.00207373
+Epochs       116000. Current Error: 0.00207364
+Epochs       117000. Current Error: 0.00207354
+Epochs       118000. Current Error: 0.00207345
+Epochs       119000. Current Error: 0.00207335
+Epochs       120000. Current Error: 0.00207325
+Epochs       121000. Current Error: 0.00207314
+Epochs       122000. Current Error: 0.00207303
+Epochs       123000. Current Error: 0.00207292
+Epochs       124000. Current Error: 0.00207281
+Epochs       125000. Current Error: 0.0020727
+Epochs       126000. Current Error: 0.00207258
+Epochs       127000. Current Error: 0.00207246
+Epochs       128000. Current Error: 0.00207234
+Epochs       129000. Current Error: 0.00207221
+Epochs       130000. Current Error: 0.00207208
+Epochs       131000. Current Error: 0.00207195
+Epochs       132000. Current Error: 0.00207182
+Epochs       133000. Current Error: 0.00207168
+Epochs       134000. Current Error: 0.00207154
+Epochs       135000. Current Error: 0.0020714
+Epochs       136000. Current Error: 0.00207125
+Epochs       137000. Current Error: 0.0020711
+Epochs       138000. Current Error: 0.00207095
+Epochs       139000. Current Error: 0.00207079
+Epochs       140000. Current Error: 0.00207063
+Epochs       141000. Current Error: 0.00207047
+Epochs       142000. Current Error: 0.0020703
+Epochs       143000. Current Error: 0.00207013
+Epochs       144000. Current Error: 0.00206995
+Epochs       145000. Current Error: 0.00206977
+Epochs       146000. Current Error: 0.00206959
+Epochs       147000. Current Error: 0.0020694
+Epochs       148000. Current Error: 0.00206921
+Epochs       149000. Current Error: 0.00206901
+Epochs       150000. Current Error: 0.00206881
+Epochs       151000. Current Error: 0.00206861
+Epochs       152000. Current Error: 0.00206852
+Epochs       153000. Current Error: 0.00206846
+Epochs       154000. Current Error: 0.0020684
+Epochs       155000. Current Error: 0.00206834
+Epochs       156000. Current Error: 0.00206827
+Epochs       157000. Current Error: 0.00206821
+Epochs       158000. Current Error: 0.00206814
+Epochs       159000. Current Error: 0.00206807
+Epochs       160000. Current Error: 0.00206801
+Epochs       161000. Current Error: 0.00206793
+Epochs       162000. Current Error: 0.00206786
+Epochs       163000. Current Error: 0.00206779
+Epochs       164000. Current Error: 0.00206771
+Epochs       165000. Current Error: 0.00206763
+Epochs       166000. Current Error: 0.00206755
+Epochs       167000. Current Error: 0.00206747
+Epochs       168000. Current Error: 0.00206739
+Epochs       169000. Current Error: 0.0020673
+Epochs       170000. Current Error: 0.00206721
+Epochs       171000. Current Error: 0.00206713
+Epochs       172000. Current Error: 0.00206704
+Epochs       173000. Current Error: 0.00206694
+Epochs       174000. Current Error: 0.00206685
+Epochs       175000. Current Error: 0.00206675
+Epochs       176000. Current Error: 0.00206665
+Epochs       177000. Current Error: 0.00206655
+Epochs       178000. Current Error: 0.00206645
+Epochs       179000. Current Error: 0.00206634
+Epochs       180000. Current Error: 0.00206623
+Epochs       181000. Current Error: 0.00206612
+Epochs       182000. Current Error: 0.002066
+Epochs       183000. Current Error: 0.00206589
+Epochs       184000. Current Error: 0.00206577
+Epochs       185000. Current Error: 0.00206565
+Epochs       186000. Current Error: 0.00206552
+Epochs       187000. Current Error: 0.0020654
+Epochs       188000. Current Error: 0.00206526
+Epochs       189000. Current Error: 0.00206511
+Epochs       190000. Current Error: 0.00206496
+Epochs       191000. Current Error: 0.00206479
+Epochs       192000. Current Error: 0.00206461
+Epochs       193000. Current Error: 0.00206442
+Epochs       194000. Current Error: 0.00206422
+Epochs       195000. Current Error: 0.002064
+Epochs       196000. Current Error: 0.00206378
+Epochs       197000. Current Error: 0.00206354
+Epochs       198000. Current Error: 0.00206329
+Epochs       199000. Current Error: 0.00206303
+Epochs       200000. Current Error: 0.00206275
+Epochs       201000. Current Error: 0.00206246
+Epochs       202000. Current Error: 0.00206216
+Epochs       203000. Current Error: 0.00206184
+Epochs       204000. Current Error: 0.00206151
+Epochs       205000. Current Error: 0.00206116
+Epochs       206000. Current Error: 0.00206079
+Epochs       207000. Current Error: 0.00206042
+Epochs       208000. Current Error: 0.00206003
+Epochs       209000. Current Error: 0.00205961
+Epochs       210000. Current Error: 0.00205919
+Epochs       211000. Current Error: 0.00205875
+Epochs       212000. Current Error: 0.00205829
+Epochs       213000. Current Error: 0.00205781
+Epochs       214000. Current Error: 0.00205732
+Epochs       215000. Current Error: 0.00205681
+Epochs       216000. Current Error: 0.00205628
+Epochs       217000. Current Error: 0.00205573
+Epochs       218000. Current Error: 0.00205517
+Epochs       219000. Current Error: 0.00205458
+Epochs       220000. Current Error: 0.00205397
+Epochs       221000. Current Error: 0.00205335
+Epochs       222000. Current Error: 0.0020527
+Epochs       223000. Current Error: 0.00205203
+Epochs       224000. Current Error: 0.00205135
+Epochs       225000. Current Error: 0.00205063
+Epochs       226000. Current Error: 0.0020499
+Epochs       227000. Current Error: 0.00204915
+Epochs       228000. Current Error: 0.00204837
+Epochs       229000. Current Error: 0.00204757
+Epochs       230000. Current Error: 0.00204674
+Epochs       231000. Current Error: 0.00204589
+Epochs       232000. Current Error: 0.00204502
+Epochs       233000. Current Error: 0.00204412
+Epochs       234000. Current Error: 0.00204319
+Epochs       235000. Current Error: 0.00204224
+Epochs       236000. Current Error: 0.00204126
+Epochs       237000. Current Error: 0.00204045
+Epochs       238000. Current Error: 0.00203975
+Epochs       239000. Current Error: 0.00203901
+Epochs       240000. Current Error: 0.00203825
+Epochs       241000. Current Error: 0.00203746
+Epochs       242000. Current Error: 0.00203665
+Epochs       243000. Current Error: 0.0020358
+Epochs       244000. Current Error: 0.00203492
+Epochs       245000. Current Error: 0.002034
+Epochs       246000. Current Error: 0.00203306
+Epochs       247000. Current Error: 0.00203208
+Epochs       248000. Current Error: 0.00203107
+Epochs       249000. Current Error: 0.00203002
+Epochs       250000. Current Error: 0.00202895
+Epochs       251000. Current Error: 0.00202783
+Epochs       252000. Current Error: 0.00202668
+Epochs       253000. Current Error: 0.0020255
+Epochs       254000. Current Error: 0.00202427
+Epochs       255000. Current Error: 0.00202302
+Epochs       256000. Current Error: 0.00202172
+Epochs       257000. Current Error: 0.00202039
+Epochs       258000. Current Error: 0.00201901
+Epochs       259000. Current Error: 0.0020176
+Epochs       260000. Current Error: 0.00201626
+Epochs       261000. Current Error: 0.00201509
+Epochs       262000. Current Error: 0.00201389
+Epochs       263000. Current Error: 0.00201264
+Epochs       264000. Current Error: 0.00201134
+Epochs       265000. Current Error: 0.00201
+Epochs       266000. Current Error: 0.00200862
+Epochs       267000. Current Error: 0.00200719
+Epochs       268000. Current Error: 0.00200572
+Epochs       269000. Current Error: 0.0020042
+Epochs       270000. Current Error: 0.00200264
+Epochs       271000. Current Error: 0.00200102
+Epochs       272000. Current Error: 0.00199936
+Epochs       273000. Current Error: 0.00199765
+Epochs       274000. Current Error: 0.00199589
+Epochs       275000. Current Error: 0.00199408
+Epochs       276000. Current Error: 0.00199222
+Epochs       277000. Current Error: 0.00199062
+Epochs       278000. Current Error: 0.00198899
+Epochs       279000. Current Error: 0.0019873
+Epochs       280000. Current Error: 0.00198555
+Epochs       281000. Current Error: 0.00198375
+Epochs       282000. Current Error: 0.0019819
+Epochs       283000. Current Error: 0.00197999
+Epochs       284000. Current Error: 0.00197802
+Epochs       285000. Current Error: 0.001976
+Epochs       286000. Current Error: 0.00197392
+Epochs       287000. Current Error: 0.00197178
+Epochs       288000. Current Error: 0.00196959
+Epochs       289000. Current Error: 0.00196733
+Epochs       290000. Current Error: 0.00196534
+Epochs       291000. Current Error: 0.00196329
+Epochs       292000. Current Error: 0.00196118
+Epochs       293000. Current Error: 0.00195901
+Epochs       294000. Current Error: 0.00195677
+Epochs       295000. Current Error: 0.00195447
+Epochs       296000. Current Error: 0.00195212
+Epochs       297000. Current Error: 0.00194969
+Epochs       298000. Current Error: 0.0019472
+Epochs       299000. Current Error: 0.00194465
+Epochs       300000. Current Error: 0.00194204
+
+Testing network.
+XOR test (-1, -1) -> -0.911863, should be -1, difference = 0.0881371
+
+XOR test completed.
+
+XOR test started.
+
+Network Type                         :  LAYER
+Input layer                          :   2 neurons, 1 bias
+  Hidden layer                       :   3 neurons, 1 bias
+Output layer                         :   1 neurons
+Total neurons and biases             :   8
+Total connections                    :  13
+Connection rate                      :   1.000
+Network type                         :   FANN_NETTYPE_LAYER
+Training algorithm                   :   FANN_TRAIN_QUICKPROP
+Training error function              :   FANN_ERRORFUNC_TANH
+Training stop function               :   FANN_STOPFUNC_MSE
+Bit fail limit                       :   0.350
+Learning rate                        :   0.070
+Learning momentum                    :   0.000
+Quickprop decay                      :  -0.000100
+Quickprop mu                         :   1.750
+RPROP increase factor                :   1.200
+RPROP decrease factor                :   0.500
+RPROP delta min                      :   0.000
+RPROP delta max                      :  50.000
+Cascade output change fraction       :   0.010000
+Cascade candidate change fraction    :   0.010000
+Cascade output stagnation epochs     :  12
+Cascade candidate stagnation epochs  :  12
+Cascade max output epochs            : 150
+Cascade min output epochs            :  50
+Cascade max candidate epochs         : 150
+Cascade min candidate epochs         :  50
+Cascade weight multiplier            :   0.400
+Cascade candidate limit              :1000.000
+Cascade activation functions[0]      :   FANN_SIGMOID
+Cascade activation functions[1]      :   FANN_SIGMOID_SYMMETRIC
+Cascade activation functions[2]      :   FANN_GAUSSIAN
+Cascade activation functions[3]      :   FANN_GAUSSIAN_SYMMETRIC
+Cascade activation functions[4]      :   FANN_ELLIOT
+Cascade activation functions[5]      :   FANN_ELLIOT_SYMMETRIC
+Cascade activation functions[6]      :   FANN_SIN_SYMMETRIC
+Cascade activation functions[7]      :   FANN_COS_SYMMETRIC
+Cascade activation functions[8]      :   FANN_SIN
+Cascade activation functions[9]      :   FANN_COS
+Cascade activation steepnesses[0]    :   0.250
+Cascade activation steepnesses[1]    :   0.500
+Cascade activation steepnesses[2]    :   0.750
+Cascade activation steepnesses[3]    :   1.000
+Cascade candidate groups             :   2
+Cascade no. of candidates            :  80
+
+Training network.
+Max Epochs   300000. Desired Error: 0.001
+Training with FANN_TRAIN_QUICKPROP
+Epochs            1. Current Error: 0.910603
+Epochs         1000. Current Error: 0.00197802
+Epochs         2000. Current Error: 0.00197001
+Epochs         3000. Current Error: 0.00196224
+Epochs         4000. Current Error: 0.00195478
+Epochs         5000. Current Error: 0.00194742
+Epochs         6000. Current Error: 0.00194044
+Epochs         7000. Current Error: 0.0019336
+Epochs         8000. Current Error: 0.00192687
+Epochs         9000. Current Error: 0.00192052
+Epochs        10000. Current Error: 0.00191425
+Epochs        11000. Current Error: 0.00190807
+Epochs        12000. Current Error: 0.00190223
+Epochs        13000. Current Error: 0.00189649
+Epochs        14000. Current Error: 0.00189083
+Epochs        15000. Current Error: 0.00188531
+Epochs        16000. Current Error: 0.00188008
+Epochs        17000. Current Error: 0.0018749
+Epochs        18000. Current Error: 0.00186977
+Epochs        19000. Current Error: 0.00186475
+Epochs        20000. Current Error: 0.00186004
+Epochs        21000. Current Error: 0.00185536
+Epochs        22000. Current Error: 0.00185073
+Epochs        23000. Current Error: 0.00184614
+Epochs        24000. Current Error: 0.00184169
+Epochs        25000. Current Error: 0.00183748
+Epochs        26000. Current Error: 0.00183331
+Epochs        27000. Current Error: 0.00182917
+Epochs        28000. Current Error: 0.00182506
+Epochs        29000. Current Error: 0.00182098
+Epochs        30000. Current Error: 0.00181708
+Epochs        31000. Current Error: 0.00181336
+Epochs        32000. Current Error: 0.00180967
+Epochs        33000. Current Error: 0.001806
+Epochs        34000. Current Error: 0.00180235
+Epochs        35000. Current Error: 0.00179873
+Epochs        36000. Current Error: 0.00179512
+Epochs        37000. Current Error: 0.00179161
+Epochs        38000. Current Error: 0.00178835
+Epochs        39000. Current Error: 0.0017851
+Epochs        40000. Current Error: 0.00178187
+Epochs        41000. Current Error: 0.00177866
+Epochs        42000. Current Error: 0.00177546
+Epochs        43000. Current Error: 0.00177227
+Epochs        44000. Current Error: 0.0017691
+Epochs        45000. Current Error: 0.00176595
+Epochs        46000. Current Error: 0.0017628
+Epochs        47000. Current Error: 0.00175992
+Epochs        48000. Current Error: 0.00175711
+Epochs        49000. Current Error: 0.0017543
+Epochs        50000. Current Error: 0.0017515
+Epochs        51000. Current Error: 0.00174871
+Epochs        52000. Current Error: 0.00174593
+Epochs        53000. Current Error: 0.00174317
+Epochs        54000. Current Error: 0.0017404
+Epochs        55000. Current Error: 0.00173765
+Epochs        56000. Current Error: 0.0017349
+Epochs        57000. Current Error: 0.00173217
+Epochs        58000. Current Error: 0.00172944
+Epochs        59000. Current Error: 0.00172672
+Epochs        60000. Current Error: 0.0017242
+Epochs        61000. Current Error: 0.0017218
+Epochs        62000. Current Error: 0.00171941
+Epochs        63000. Current Error: 0.00171702
+Epochs        64000. Current Error: 0.00171462
+Epochs        65000. Current Error: 0.00171225
+Epochs        66000. Current Error: 0.00170988
+Epochs        67000. Current Error: 0.0017075
+Epochs        68000. Current Error: 0.00170515
+Epochs        69000. Current Error: 0.00170279
+Epochs        70000. Current Error: 0.00170045
+Epochs        71000. Current Error: 0.00169812
+Epochs        72000. Current Error: 0.00169579
+Epochs        73000. Current Error: 0.00169344
+Epochs        74000. Current Error: 0.00169116
+Epochs        75000. Current Error: 0.00168886
+Epochs        76000. Current Error: 0.00168653
+Epochs        77000. Current Error: 0.00168424
+Epochs        78000. Current Error: 0.00168196
+Epochs        79000. Current Error: 0.00167967
+Epochs        80000. Current Error: 0.00167737
+Epochs        81000. Current Error: 0.00167513
+Epochs        82000. Current Error: 0.00167297
+Epochs        83000. Current Error: 0.00167099
+Epochs        84000. Current Error: 0.00166902
+Epochs        85000. Current Error: 0.0016671
+Epochs        86000. Current Error: 0.00166517
+Epochs        87000. Current Error: 0.00166323
+Epochs        88000. Current Error: 0.00166128
+Epochs        89000. Current Error: 0.0016594
+Epochs        90000. Current Error: 0.00165749
+Epochs        91000. Current Error: 0.00165557
+Epochs        92000. Current Error: 0.00165363
+Epochs        93000. Current Error: 0.00165176
+Epochs        94000. Current Error: 0.00164988
+Epochs        95000. Current Error: 0.00164798
+Epochs        96000. Current Error: 0.00164606
+Epochs        97000. Current Error: 0.00164419
+Epochs        98000. Current Error: 0.00164234
+Epochs        99000. Current Error: 0.00164047
+Epochs       100000. Current Error: 0.0016386
+Epochs       101000. Current Error: 0.00163676
+Epochs       102000. Current Error: 0.00163494
+Epochs       103000. Current Error: 0.00163312
+Epochs       104000. Current Error: 0.00163128
+Epochs       105000. Current Error: 0.00162944
+Epochs       106000. Current Error: 0.00162766
+Epochs       107000. Current Error: 0.00162588
+Epochs       108000. Current Error: 0.00162409
+Epochs       109000. Current Error: 0.00162228
+Epochs       110000. Current Error: 0.00162051
+Epochs       111000. Current Error: 0.00161877
+Epochs       112000. Current Error: 0.00161702
+Epochs       113000. Current Error: 0.00161526
+Epochs       114000. Current Error: 0.00161349
+Epochs       115000. Current Error: 0.0016118
+Epochs       116000. Current Error: 0.00161011
+Epochs       117000. Current Error: 0.00160839
+Epochs       118000. Current Error: 0.00160667
+Epochs       119000. Current Error: 0.00160496
+Epochs       120000. Current Error: 0.00160331
+Epochs       121000. Current Error: 0.00160166
+Epochs       122000. Current Error: 0.0016
+Epochs       123000. Current Error: 0.00159833
+Epochs       124000. Current Error: 0.00159668
+Epochs       125000. Current Error: 0.00159507
+Epochs       126000. Current Error: 0.00159346
+Epochs       127000. Current Error: 0.00159185
+Epochs       128000. Current Error: 0.00159024
+Epochs       129000. Current Error: 0.00158865
+Epochs       130000. Current Error: 0.0015871
+Epochs       131000. Current Error: 0.00158553
+Epochs       132000. Current Error: 0.00158396
+Epochs       133000. Current Error: 0.00158239
+Epochs       134000. Current Error: 0.00158087
+Epochs       135000. Current Error: 0.00157938
+Epochs       136000. Current Error: 0.00157788
+Epochs       137000. Current Error: 0.00157636
+Epochs       138000. Current Error: 0.00157483
+Epochs       139000. Current Error: 0.00157333
+Epochs       140000. Current Error: 0.00157191
+Epochs       141000. Current Error: 0.00157047
+Epochs       142000. Current Error: 0.00156902
+Epochs       143000. Current Error: 0.00156755
+Epochs       144000. Current Error: 0.00156607
+Epochs       145000. Current Error: 0.00156469
+Epochs       146000. Current Error: 0.00156332
+Epochs       147000. Current Error: 0.00156194
+Epochs       148000. Current Error: 0.00156054
+Epochs       149000. Current Error: 0.00155912
+Epochs       150000. Current Error: 0.00155775
+Epochs       151000. Current Error: 0.00155643
+Epochs       152000. Current Error: 0.00155511
+Epochs       153000. Current Error: 0.00155378
+Epochs       154000. Current Error: 0.00155243
+Epochs       155000. Current Error: 0.00155107
+Epochs       156000. Current Error: 0.0015498
+Epochs       157000. Current Error: 0.00154853
+Epochs       158000. Current Error: 0.00154727
+Epochs       159000. Current Error: 0.00154599
+Epochs       160000. Current Error: 0.00154463
+Epochs       161000. Current Error: 0.0015431
+Epochs       162000. Current Error: 0.00154161
+Epochs       163000. Current Error: 0.00154012
+Epochs       164000. Current Error: 0.00153863
+Epochs       165000. Current Error: 0.00153713
+Epochs       166000. Current Error: 0.00153561
+Epochs       167000. Current Error: 0.00153419
+Epochs       168000. Current Error: 0.00153277
+Epochs       169000. Current Error: 0.00153135
+Epochs       170000. Current Error: 0.00152992
+Epochs       171000. Current Error: 0.00152847
+Epochs       172000. Current Error: 0.00152709
+Epochs       173000. Current Error: 0.00152573
+Epochs       174000. Current Error: 0.00152438
+Epochs       175000. Current Error: 0.00152302
+Epochs       176000. Current Error: 0.00152166
+Epochs       177000. Current Error: 0.00152029
+Epochs       178000. Current Error: 0.001519
+Epochs       179000. Current Error: 0.00151771
+Epochs       180000. Current Error: 0.00151642
+Epochs       181000. Current Error: 0.00151513
+Epochs       182000. Current Error: 0.00151382
+Epochs       183000. Current Error: 0.00151255
+Epochs       184000. Current Error: 0.00151133
+Epochs       185000. Current Error: 0.00151009
+Epochs       186000. Current Error: 0.00150887
+Epochs       187000. Current Error: 0.00150764
+Epochs       188000. Current Error: 0.0015064
+Epochs       189000. Current Error: 0.00150519
+Epochs       190000. Current Error: 0.00150403
+Epochs       191000. Current Error: 0.00150286
+Epochs       192000. Current Error: 0.00150169
+Epochs       193000. Current Error: 0.00150052
+Epochs       194000. Current Error: 0.00149935
+Epochs       195000. Current Error: 0.00149819
+Epochs       196000. Current Error: 0.00149709
+Epochs       197000. Current Error: 0.00149597
+Epochs       198000. Current Error: 0.00149486
+Epochs       199000. Current Error: 0.00149375
+Epochs       200000. Current Error: 0.00149263
+Epochs       201000. Current Error: 0.00149151
+Epochs       202000. Current Error: 0.00149046
+Epochs       203000. Current Error: 0.00148941
+Epochs       204000. Current Error: 0.00148834
+Epochs       205000. Current Error: 0.00148728
+Epochs       206000. Current Error: 0.00148621
+Epochs       207000. Current Error: 0.00148515
+Epochs       208000. Current Error: 0.00148411
+Epochs       209000. Current Error: 0.00148312
+Epochs       210000. Current Error: 0.0014821
+Epochs       211000. Current Error: 0.00148108
+Epochs       212000. Current Error: 0.00148006
+Epochs       213000. Current Error: 0.00147905
+Epochs       214000. Current Error: 0.00147802
+Epochs       215000. Current Error: 0.00147705
+Epochs       216000. Current Error: 0.0014761
+Epochs       217000. Current Error: 0.00147513
+Epochs       218000. Current Error: 0.00147414
+Epochs       219000. Current Error: 0.00147315
+Epochs       220000. Current Error: 0.0014719
+Epochs       221000. Current Error: 0.00147065
+Epochs       222000. Current Error: 0.00146946
+Epochs       223000. Current Error: 0.00146827
+Epochs       224000. Current Error: 0.00146706
+Epochs       225000. Current Error: 0.00146584
+Epochs       226000. Current Error: 0.00146464
+Epochs       227000. Current Error: 0.00146344
+Epochs       228000. Current Error: 0.0014623
+Epochs       229000. Current Error: 0.00146116
+Epochs       230000. Current Error: 0.00146001
+Epochs       231000. Current Error: 0.00145884
+Epochs       232000. Current Error: 0.00145767
+Epochs       233000. Current Error: 0.00145652
+Epochs       234000. Current Error: 0.00145538
+Epochs       235000. Current Error: 0.00145431
+Epochs       236000. Current Error: 0.00145322
+Epochs       237000. Current Error: 0.00145211
+Epochs       238000. Current Error: 0.00145097
+Epochs       239000. Current Error: 0.00144983
+Epochs       240000. Current Error: 0.00144872
+Epochs       241000. Current Error: 0.00144766
+Epochs       242000. Current Error: 0.00144662
+Epochs       243000. Current Error: 0.00144556
+Epochs       244000. Current Error: 0.00144449
+Epochs       245000. Current Error: 0.0014434
+Epochs       246000. Current Error: 0.00144229
+Epochs       247000. Current Error: 0.00144119
+Epochs       248000. Current Error: 0.00144017
+Epochs       249000. Current Error: 0.00143917
+Epochs       250000. Current Error: 0.00143814
+Epochs       251000. Current Error: 0.00143711
+Epochs       252000. Current Error: 0.00143606
+Epochs       253000. Current Error: 0.00143498
+Epochs       254000. Current Error: 0.00143389
+Epochs       255000. Current Error: 0.00143287
+Epochs       256000. Current Error: 0.00143189
+Epochs       257000. Current Error: 0.0014309
+Epochs       258000. Current Error: 0.0014299
+Epochs       259000. Current Error: 0.00142887
+Epochs       260000. Current Error: 0.00142784
+Epochs       261000. Current Error: 0.00142678
+Epochs       262000. Current Error: 0.00142575
+Epochs       263000. Current Error: 0.00142476
+Epochs       264000. Current Error: 0.00142377
+Epochs       265000. Current Error: 0.0014228
+Epochs       266000. Current Error: 0.0014218
+Epochs       267000. Current Error: 0.00142079
+Epochs       268000. Current Error: 0.00141976
+Epochs       269000. Current Error: 0.00141873
+Epochs       270000. Current Error: 0.00141776
+Epochs       271000. Current Error: 0.00141677
+Epochs       272000. Current Error: 0.00141578
+Epochs       273000. Current Error: 0.00141478
+Epochs       274000. Current Error: 0.00141379
+Epochs       275000. Current Error: 0.00141279
+Epochs       276000. Current Error: 0.00141178
+Epochs       277000. Current Error: 0.00141068
+Epochs       278000. Current Error: 0.00140945
+Epochs       279000. Current Error: 0.0014082
+Epochs       280000. Current Error: 0.00140694
+Epochs       281000. Current Error: 0.00140569
+Epochs       282000. Current Error: 0.00140441
+Epochs       283000. Current Error: 0.00140314
+Epochs       284000. Current Error: 0.00140192
+Epochs       285000. Current Error: 0.00140072
+Epochs       286000. Current Error: 0.0013995
+Epochs       287000. Current Error: 0.00139828
+Epochs       288000. Current Error: 0.00139703
+Epochs       289000. Current Error: 0.00139578
+Epochs       290000. Current Error: 0.00139452
+Epochs       291000. Current Error: 0.0013933
+Epochs       292000. Current Error: 0.00139215
+Epochs       293000. Current Error: 0.00139098
+Epochs       294000. Current Error: 0.00138979
+Epochs       295000. Current Error: 0.00138858
+Epochs       296000. Current Error: 0.00138734
+Epochs       297000. Current Error: 0.0013861
+Epochs       298000. Current Error: 0.00138489
+Epochs       299000. Current Error: 0.00138374
+Epochs       300000. Current Error: 0.00138256
+
+Testing network.
+XOR test (-1, +1) -> +0.925634, should be +1, difference = 0.0743656
+
+XOR test completed.
+
+XOR test started.
+
+Network Type                         :  LAYER
+Input layer                          :   2 neurons, 1 bias
+  Hidden layer                       :   3 neurons, 1 bias
+Output layer                         :   1 neurons
+Total neurons and biases             :   8
+Total connections                    :  13
+Connection rate                      :   1.000
+Network type                         :   FANN_NETTYPE_LAYER
+Training algorithm                   :   FANN_TRAIN_QUICKPROP
+Training error function              :   FANN_ERRORFUNC_TANH
+Training stop function               :   FANN_STOPFUNC_MSE
+Bit fail limit                       :   0.350
+Learning rate                        :   0.070
+Learning momentum                    :   0.000
+Quickprop decay                      :  -0.000100
+Quickprop mu                         :   1.750
+RPROP increase factor                :   1.200
+RPROP decrease factor                :   0.500
+RPROP delta min                      :   0.000
+RPROP delta max                      :  50.000
+Cascade output change fraction       :   0.010000
+Cascade candidate change fraction    :   0.010000
+Cascade output stagnation epochs     :  12
+Cascade candidate stagnation epochs  :  12
+Cascade max output epochs            : 150
+Cascade min output epochs            :  50
+Cascade max candidate epochs         : 150
+Cascade min candidate epochs         :  50
+Cascade weight multiplier            :   0.400
+Cascade candidate limit              :1000.000
+Cascade activation functions[0]      :   FANN_SIGMOID
+Cascade activation functions[1]      :   FANN_SIGMOID_SYMMETRIC
+Cascade activation functions[2]      :   FANN_GAUSSIAN
+Cascade activation functions[3]      :   FANN_GAUSSIAN_SYMMETRIC
+Cascade activation functions[4]      :   FANN_ELLIOT
+Cascade activation functions[5]      :   FANN_ELLIOT_SYMMETRIC
+Cascade activation functions[6]      :   FANN_SIN_SYMMETRIC
+Cascade activation functions[7]      :   FANN_COS_SYMMETRIC
+Cascade activation functions[8]      :   FANN_SIN
+Cascade activation functions[9]      :   FANN_COS
+Cascade activation steepnesses[0]    :   0.250
+Cascade activation steepnesses[1]    :   0.500
+Cascade activation steepnesses[2]    :   0.750
+Cascade activation steepnesses[3]    :   1.000
+Cascade candidate groups             :   2
+Cascade no. of candidates            :  80
+
+Training network.
+Max Epochs   300000. Desired Error: 0.001
+Training with FANN_TRAIN_QUICKPROP
+Epochs            1. Current Error: 0.0266702
+Epochs         1000. Current Error: 0.00225187
+Epochs         2000. Current Error: 0.00218118
+Epochs         3000. Current Error: 0.0021168
+Epochs         4000. Current Error: 0.00205808
+Epochs         5000. Current Error: 0.00200444
+Epochs         6000. Current Error: 0.00195537
+Epochs         7000. Current Error: 0.00191039
+Epochs         8000. Current Error: 0.00186913
+Epochs         9000. Current Error: 0.00183125
+Epochs        10000. Current Error: 0.00179643
+Epochs        11000. Current Error: 0.00176437
+Epochs        12000. Current Error: 0.00173478
+Epochs        13000. Current Error: 0.0017077
+Epochs        14000. Current Error: 0.00168261
+Epochs        15000. Current Error: 0.00165952
+Epochs        16000. Current Error: 0.00163818
+Epochs        17000. Current Error: 0.00161856
+Epochs        18000. Current Error: 0.00160023
+Epochs        19000. Current Error: 0.00158365
+Epochs        20000. Current Error: 0.00156821
+Epochs        21000. Current Error: 0.00155379
+Epochs        22000. Current Error: 0.00154062
+Epochs        23000. Current Error: 0.00152864
+Epochs        24000. Current Error: 0.00151752
+Epochs        25000. Current Error: 0.00150718
+Epochs        26000. Current Error: 0.00149758
+Epochs        27000. Current Error: 0.00148869
+Epochs        28000. Current Error: 0.00148045
+Epochs        29000. Current Error: 0.00147283
+Epochs        30000. Current Error: 0.0014663
+Epochs        31000. Current Error: 0.00146037
+Epochs        32000. Current Error: 0.00145495
+Epochs        33000. Current Error: 0.00145002
+Epochs        34000. Current Error: 0.00144555
+Epochs        35000. Current Error: 0.00144122
+Epochs        36000. Current Error: 0.00143704
+Epochs        37000. Current Error: 0.00143326
+Epochs        38000. Current Error: 0.00142986
+Epochs        39000. Current Error: 0.00142681
+Epochs        40000. Current Error: 0.0014241
+Epochs        41000. Current Error: 0.00142171
+Epochs        42000. Current Error: 0.00141961
+Epochs        43000. Current Error: 0.00141781
+Epochs        44000. Current Error: 0.00141629
+Epochs        45000. Current Error: 0.00141501
+Epochs        46000. Current Error: 0.00141397
+Epochs        47000. Current Error: 0.00141318
+Epochs        48000. Current Error: 0.00141245
+Epochs        49000. Current Error: 0.00141153
+Epochs        50000. Current Error: 0.00141082
+Epochs        51000. Current Error: 0.0014103
+Epochs        52000. Current Error: 0.00140995
+Epochs        53000. Current Error: 0.0014098
+Epochs        54000. Current Error: 0.00140978
+Epochs        55000. Current Error: 0.00140967
+Epochs        56000. Current Error: 0.00140969
+Epochs        57000. Current Error: 0.00140987
+Epochs        58000. Current Error: 0.00141011
+Epochs        59000. Current Error: 0.00141028
+Epochs        60000. Current Error: 0.00141056
+Epochs        61000. Current Error: 0.00141097
+Epochs        62000. Current Error: 0.00141132
+Epochs        63000. Current Error: 0.00141168
+Epochs        64000. Current Error: 0.00141211
+Epochs        65000. Current Error: 0.00141266
+Epochs        66000. Current Error: 0.00141308
+Epochs        67000. Current Error: 0.00141351
+Epochs        68000. Current Error: 0.00141404
+Epochs        69000. Current Error: 0.00141463
+Epochs        70000. Current Error: 0.00141503
+Epochs        71000. Current Error: 0.0014155
+Epochs        72000. Current Error: 0.00141603
+Epochs        73000. Current Error: 0.00141661
+Epochs        74000. Current Error: 0.00141702
+Epochs        75000. Current Error: 0.00141746
+Epochs        76000. Current Error: 0.00141796
+Epochs        77000. Current Error: 0.0014185
+Epochs        78000. Current Error: 0.00141884
+Epochs        79000. Current Error: 0.00141921
+Epochs        80000. Current Error: 0.00141966
+Epochs        81000. Current Error: 0.00142182
+Epochs        82000. Current Error: 0.00142534
+Epochs        83000. Current Error: 0.00142887
+Epochs        84000. Current Error: 0.00143214
+Epochs        85000. Current Error: 0.00143535
+Epochs        86000. Current Error: 0.00143848
+Epochs        87000. Current Error: 0.00144135
+Epochs        88000. Current Error: 0.0014442
+Epochs        89000. Current Error: 0.00144694
+Epochs        90000. Current Error: 0.00144948
+Epochs        91000. Current Error: 0.00145196
+Epochs        92000. Current Error: 0.00145435
+Epochs        93000. Current Error: 0.0014565
+Epochs        94000. Current Error: 0.00145861
+Epochs        95000. Current Error: 0.00146072
+Epochs        96000. Current Error: 0.00146254
+Epochs        97000. Current Error: 0.00146431
+Epochs        98000. Current Error: 0.00146608
+Epochs        99000. Current Error: 0.00146774
+Epochs       100000. Current Error: 0.00146915
+Epochs       101000. Current Error: 0.00147057
+Epochs       102000. Current Error: 0.00147198
+Epochs       103000. Current Error: 0.00147328
+Epochs       104000. Current Error: 0.00147433
+Epochs       105000. Current Error: 0.00147539
+Epochs       106000. Current Error: 0.00147643
+Epochs       107000. Current Error: 0.00147741
+Epochs       108000. Current Error: 0.00147823
+Epochs       109000. Current Error: 0.00147895
+Epochs       110000. Current Error: 0.00147967
+Epochs       111000. Current Error: 0.00148034
+Epochs       112000. Current Error: 0.00148097
+Epochs       113000. Current Error: 0.00148151
+Epochs       114000. Current Error: 0.00148185
+Epochs       115000. Current Error: 0.0014822
+Epochs       116000. Current Error: 0.00148252
+Epochs       117000. Current Error: 0.00148278
+Epochs       118000. Current Error: 0.00148303
+Epochs       119000. Current Error: 0.00148321
+Epochs       120000. Current Error: 0.00148317
+Epochs       121000. Current Error: 0.00148312
+Epochs       122000. Current Error: 0.00148307
+Epochs       123000. Current Error: 0.00148302
+Epochs       124000. Current Error: 0.0014829
+Epochs       125000. Current Error: 0.00148275
+Epochs       126000. Current Error: 0.00148259
+Epochs       127000. Current Error: 0.0014822
+Epochs       128000. Current Error: 0.00148176
+Epochs       129000. Current Error: 0.0014813
+Epochs       130000. Current Error: 0.00148084
+Epochs       131000. Current Error: 0.00148038
+Epochs       132000. Current Error: 0.00147991
+Epochs       133000. Current Error: 0.00147943
+Epochs       134000. Current Error: 0.00147895
+Epochs       135000. Current Error: 0.00147846
+Epochs       136000. Current Error: 0.00147782
+Epochs       137000. Current Error: 0.00147703
+Epochs       138000. Current Error: 0.00147621
+Epochs       139000. Current Error: 0.00147532
+Epochs       140000. Current Error: 0.00147444
+Epochs       141000. Current Error: 0.00147354
+Epochs       142000. Current Error: 0.00147264
+Epochs       143000. Current Error: 0.00147173
+Epochs       144000. Current Error: 0.00147082
+Epochs       145000. Current Error: 0.00146989
+Epochs       146000. Current Error: 0.00146896
+Epochs       147000. Current Error: 0.00146803
+Epochs       148000. Current Error: 0.00146711
+Epochs       149000. Current Error: 0.00146605
+Epochs       150000. Current Error: 0.00146489
+Epochs       151000. Current Error: 0.00146376
+Epochs       152000. Current Error: 0.00146263
+Epochs       153000. Current Error: 0.00146149
+Epochs       154000. Current Error: 0.00146034
+Epochs       155000. Current Error: 0.00145918
+Epochs       156000. Current Error: 0.00145801
+Epochs       157000. Current Error: 0.00145684
+Epochs       158000. Current Error: 0.00145566
+Epochs       159000. Current Error: 0.00145447
+Epochs       160000. Current Error: 0.00145327
+Epochs       161000. Current Error: 0.00145207
+Epochs       162000. Current Error: 0.00145086
+Epochs       163000. Current Error: 0.00144964
+Epochs       164000. Current Error: 0.00144841
+Epochs       165000. Current Error: 0.00144717
+Epochs       166000. Current Error: 0.00144592
+Epochs       167000. Current Error: 0.00144468
+Epochs       168000. Current Error: 0.00144323
+Epochs       169000. Current Error: 0.00144168
+Epochs       170000. Current Error: 0.00144019
+Epochs       171000. Current Error: 0.00143872
+Epochs       172000. Current Error: 0.00143724
+Epochs       173000. Current Error: 0.00143576
+Epochs       174000. Current Error: 0.00143426
+Epochs       175000. Current Error: 0.00143277
+Epochs       176000. Current Error: 0.00143126
+Epochs       177000. Current Error: 0.00142974
+Epochs       178000. Current Error: 0.00142822
+Epochs       179000. Current Error: 0.00142671
+Epochs       180000. Current Error: 0.00142522
+Epochs       181000. Current Error: 0.00142381
+Epochs       182000. Current Error: 0.00142239
+Epochs       183000. Current Error: 0.00142094
+Epochs       184000. Current Error: 0.0014195
+Epochs       185000. Current Error: 0.00141804
+Epochs       186000. Current Error: 0.00141659
+Epochs       187000. Current Error: 0.00141513
+Epochs       188000. Current Error: 0.00141366
+Epochs       189000. Current Error: 0.0014122
+Epochs       190000. Current Error: 0.00141073
+Epochs       191000. Current Error: 0.00140932
+Epochs       192000. Current Error: 0.0014079
+Epochs       193000. Current Error: 0.00140647
+Epochs       194000. Current Error: 0.00140504
+Epochs       195000. Current Error: 0.0014036
+Epochs       196000. Current Error: 0.00140218
+Epochs       197000. Current Error: 0.00140073
+Epochs       198000. Current Error: 0.00139928
+Epochs       199000. Current Error: 0.00139784
+Epochs       200000. Current Error: 0.00139639
+Epochs       201000. Current Error: 0.00139472
+Epochs       202000. Current Error: 0.00139304
+Epochs       203000. Current Error: 0.00139136
+Epochs       204000. Current Error: 0.00138968
+Epochs       205000. Current Error: 0.00138799
+Epochs       206000. Current Error: 0.00138631
+Epochs       207000. Current Error: 0.00138468
+Epochs       208000. Current Error: 0.00138307
+Epochs       209000. Current Error: 0.00138146
+Epochs       210000. Current Error: 0.00137985
+Epochs       211000. Current Error: 0.00137823
+Epochs       212000. Current Error: 0.00137662
+Epochs       213000. Current Error: 0.00137497
+Epochs       214000. Current Error: 0.00137335
+Epochs       215000. Current Error: 0.00137178
+Epochs       216000. Current Error: 0.00137019
+Epochs       217000. Current Error: 0.00136862
+Epochs       218000. Current Error: 0.00136704
+Epochs       219000. Current Error: 0.00136545
+Epochs       220000. Current Error: 0.00136387
+Epochs       221000. Current Error: 0.00136228
+Epochs       222000. Current Error: 0.00136075
+Epochs       223000. Current Error: 0.00135925
+Epochs       224000. Current Error: 0.00135774
+Epochs       225000. Current Error: 0.00135621
+Epochs       226000. Current Error: 0.00135471
+Epochs       227000. Current Error: 0.00135319
+Epochs       228000. Current Error: 0.00135166
+Epochs       229000. Current Error: 0.00135016
+Epochs       230000. Current Error: 0.00134871
+Epochs       231000. Current Error: 0.00134725
+Epochs       232000. Current Error: 0.00134579
+Epochs       233000. Current Error: 0.00134435
+Epochs       234000. Current Error: 0.00134289
+Epochs       235000. Current Error: 0.00134141
+Epochs       236000. Current Error: 0.00133996
+Epochs       237000. Current Error: 0.00133853
+Epochs       238000. Current Error: 0.00133715
+Epochs       239000. Current Error: 0.00133581
+Epochs       240000. Current Error: 0.00133446
+Epochs       241000. Current Error: 0.00133309
+Epochs       242000. Current Error: 0.00133171
+Epochs       243000. Current Error: 0.00133033
+Epochs       244000. Current Error: 0.00132895
+Epochs       245000. Current Error: 0.00132758
+Epochs       246000. Current Error: 0.00132625
+Epochs       247000. Current Error: 0.00132494
+Epochs       248000. Current Error: 0.0013236
+Epochs       249000. Current Error: 0.00132201
+Epochs       250000. Current Error: 0.00132041
+Epochs       251000. Current Error: 0.00131883
+Epochs       252000. Current Error: 0.00131725
+Epochs       253000. Current Error: 0.00131572
+Epochs       254000. Current Error: 0.0013142
+Epochs       255000. Current Error: 0.00131272
+Epochs       256000. Current Error: 0.00131122
+Epochs       257000. Current Error: 0.0013097
+Epochs       258000. Current Error: 0.00130817
+Epochs       259000. Current Error: 0.00130668
+Epochs       260000. Current Error: 0.0013052
+Epochs       261000. Current Error: 0.00130378
+Epochs       262000. Current Error: 0.00130234
+Epochs       263000. Current Error: 0.00130092
+Epochs       264000. Current Error: 0.00129951
+Epochs       265000. Current Error: 0.0012981
+Epochs       266000. Current Error: 0.00129667
+Epochs       267000. Current Error: 0.00129524
+Epochs       268000. Current Error: 0.00129386
+Epochs       269000. Current Error: 0.00129253
+Epochs       270000. Current Error: 0.00129119
+Epochs       271000. Current Error: 0.00128985
+Epochs       272000. Current Error: 0.00128854
+Epochs       273000. Current Error: 0.00128724
+Epochs       274000. Current Error: 0.00128594
+Epochs       275000. Current Error: 0.00128462
+Epochs       276000. Current Error: 0.0012833
+Epochs       277000. Current Error: 0.00128206
+Epochs       278000. Current Error: 0.00128083
+Epochs       279000. Current Error: 0.00127961
+Epochs       280000. Current Error: 0.00127838
+Epochs       281000. Current Error: 0.00127715
+Epochs       282000. Current Error: 0.00127591
+Epochs       283000. Current Error: 0.00127469
+Epochs       284000. Current Error: 0.00127348
+Epochs       285000. Current Error: 0.00127225
+Epochs       286000. Current Error: 0.00127109
+Epochs       287000. Current Error: 0.00126992
+Epochs       288000. Current Error: 0.00126877
+Epochs       289000. Current Error: 0.00126765
+Epochs       290000. Current Error: 0.00126654
+Epochs       291000. Current Error: 0.00126542
+Epochs       292000. Current Error: 0.00126418
+Epochs       293000. Current Error: 0.00126278
+Epochs       294000. Current Error: 0.00126142
+Epochs       295000. Current Error: 0.0012601
+Epochs       296000. Current Error: 0.00125881
+Epochs       297000. Current Error: 0.00125753
+Epochs       298000. Current Error: 0.00125624
+Epochs       299000. Current Error: 0.00125494
+Epochs       300000. Current Error: 0.00125367
+
+Testing network.
+XOR test (+1, -1) -> +0.929186, should be +1, difference = 0.0708143
+
+XOR test completed.
+
+XOR test started.
+
+Network Type                         :  LAYER
+Input layer                          :   2 neurons, 1 bias
+  Hidden layer                       :   3 neurons, 1 bias
+Output layer                         :   1 neurons
+Total neurons and biases             :   8
+Total connections                    :  13
+Connection rate                      :   1.000
+Network type                         :   FANN_NETTYPE_LAYER
+Training algorithm                   :   FANN_TRAIN_QUICKPROP
+Training error function              :   FANN_ERRORFUNC_TANH
+Training stop function               :   FANN_STOPFUNC_MSE
+Bit fail limit                       :   0.350
+Learning rate                        :   0.070
+Learning momentum                    :   0.000
+Quickprop decay                      :  -0.000100
+Quickprop mu                         :   1.750
+RPROP increase factor                :   1.200
+RPROP decrease factor                :   0.500
+RPROP delta min                      :   0.000
+RPROP delta max                      :  50.000
+Cascade output change fraction       :   0.010000
+Cascade candidate change fraction    :   0.010000
+Cascade output stagnation epochs     :  12
+Cascade candidate stagnation epochs  :  12
+Cascade max output epochs            : 150
+Cascade min output epochs            :  50
+Cascade max candidate epochs         : 150
+Cascade min candidate epochs         :  50
+Cascade weight multiplier            :   0.400
+Cascade candidate limit              :1000.000
+Cascade activation functions[0]      :   FANN_SIGMOID
+Cascade activation functions[1]      :   FANN_SIGMOID_SYMMETRIC
+Cascade activation functions[2]      :   FANN_GAUSSIAN
+Cascade activation functions[3]      :   FANN_GAUSSIAN_SYMMETRIC
+Cascade activation functions[4]      :   FANN_ELLIOT
+Cascade activation functions[5]      :   FANN_ELLIOT_SYMMETRIC
+Cascade activation functions[6]      :   FANN_SIN_SYMMETRIC
+Cascade activation functions[7]      :   FANN_COS_SYMMETRIC
+Cascade activation functions[8]      :   FANN_SIN
+Cascade activation functions[9]      :   FANN_COS
+Cascade activation steepnesses[0]    :   0.250
+Cascade activation steepnesses[1]    :   0.500
+Cascade activation steepnesses[2]    :   0.750
+Cascade activation steepnesses[3]    :   1.000
+Cascade candidate groups             :   2
+Cascade no. of candidates            :  80
+
+Training network.
+Max Epochs   300000. Desired Error: 0.001
+Training with FANN_TRAIN_QUICKPROP
+Epochs            1. Current Error: 0.90164
+Epochs         1000. Current Error: 0.00113084
+Epochs         2000. Current Error: 0.0011304
+Epochs         3000. Current Error: 0.00112998
+Epochs         4000. Current Error: 0.00112959
+Epochs         5000. Current Error: 0.00112919
+Epochs         6000. Current Error: 0.0011288
+Epochs         7000. Current Error: 0.00112844
+Epochs         8000. Current Error: 0.00112809
+Epochs         9000. Current Error: 0.00112773
+Epochs        10000. Current Error: 0.00112739
+Epochs        11000. Current Error: 0.00112704
+Epochs        12000. Current Error: 0.0011267
+Epochs        13000. Current Error: 0.00112636
+Epochs        14000. Current Error: 0.00112603
+Epochs        15000. Current Error: 0.0011257
+Epochs        16000. Current Error: 0.00112538
+Epochs        17000. Current Error: 0.00112508
+Epochs        18000. Current Error: 0.00112477
+Epochs        19000. Current Error: 0.00112447
+Epochs        20000. Current Error: 0.00112416
+Epochs        21000. Current Error: 0.00112391
+Epochs        22000. Current Error: 0.0011237
+Epochs        23000. Current Error: 0.00112349
+Epochs        24000. Current Error: 0.00112329
+Epochs        25000. Current Error: 0.00112311
+Epochs        26000. Current Error: 0.00112294
+Epochs        27000. Current Error: 0.00112277
+Epochs        28000. Current Error: 0.0011226
+Epochs        29000. Current Error: 0.00112243
+Epochs        30000. Current Error: 0.00112233
+Epochs        31000. Current Error: 0.0011223
+Epochs        32000. Current Error: 0.00112226
+Epochs        33000. Current Error: 0.00112222
+Epochs        34000. Current Error: 0.00112218
+Epochs        35000. Current Error: 0.00112212
+Epochs        36000. Current Error: 0.00112207
+Epochs        37000. Current Error: 0.00112202
+Epochs        38000. Current Error: 0.00112197
+Epochs        39000. Current Error: 0.00112192
+Epochs        40000. Current Error: 0.00112187
+Epochs        41000. Current Error: 0.00112182
+Epochs        42000. Current Error: 0.00112177
+Epochs        43000. Current Error: 0.00112173
+Epochs        44000. Current Error: 0.00112168
+Epochs        45000. Current Error: 0.00112163
+Epochs        46000. Current Error: 0.00112159
+Epochs        47000. Current Error: 0.00112154
+Epochs        48000. Current Error: 0.00112151
+Epochs        49000. Current Error: 0.00112147
+Epochs        50000. Current Error: 0.00112144
+Epochs        51000. Current Error: 0.0011214
+Epochs        52000. Current Error: 0.00112137
+Epochs        53000. Current Error: 0.00112133
+Epochs        54000. Current Error: 0.00112129
+Epochs        55000. Current Error: 0.00112126
+Epochs        56000. Current Error: 0.00112122
+Epochs        57000. Current Error: 0.00112119
+Epochs        58000. Current Error: 0.00112116
+Epochs        59000. Current Error: 0.00112112
+Epochs        60000. Current Error: 0.00112109
+Epochs        61000. Current Error: 0.00112106
+Epochs        62000. Current Error: 0.00112103
+Epochs        63000. Current Error: 0.001121
+Epochs        64000. Current Error: 0.00112097
+Epochs        65000. Current Error: 0.00112094
+Epochs        66000. Current Error: 0.00112091
+Epochs        67000. Current Error: 0.00112088
+Epochs        68000. Current Error: 0.00112086
+Epochs        69000. Current Error: 0.00112083
+Epochs        70000. Current Error: 0.0011208
+Epochs        71000. Current Error: 0.00112078
+Epochs        72000. Current Error: 0.00112075
+Epochs        73000. Current Error: 0.00112073
+Epochs        74000. Current Error: 0.0011207
+Epochs        75000. Current Error: 0.00112067
+Epochs        76000. Current Error: 0.00112065
+Epochs        77000. Current Error: 0.00112063
+Epochs        78000. Current Error: 0.0011206
+Epochs        79000. Current Error: 0.00112058
+Epochs        80000. Current Error: 0.00112056
+Epochs        81000. Current Error: 0.00112053
+Epochs        82000. Current Error: 0.00112051
+Epochs        83000. Current Error: 0.00112048
+Epochs        84000. Current Error: 0.00112045
+Epochs        85000. Current Error: 0.00112042
+Epochs        86000. Current Error: 0.0011204
+Epochs        87000. Current Error: 0.00112037
+Epochs        88000. Current Error: 0.00112035
+Epochs        89000. Current Error: 0.00112032
+Epochs        90000. Current Error: 0.0011203
+Epochs        91000. Current Error: 0.00112027
+Epochs        92000. Current Error: 0.00112025
+Epochs        93000. Current Error: 0.00112022
+Epochs        94000. Current Error: 0.0011202
+Epochs        95000. Current Error: 0.00112017
+Epochs        96000. Current Error: 0.00112015
+Epochs        97000. Current Error: 0.00112013
+Epochs        98000. Current Error: 0.0011201
+Epochs        99000. Current Error: 0.00112008
+Epochs       100000. Current Error: 0.00112006
+Epochs       101000. Current Error: 0.00112003
+Epochs       102000. Current Error: 0.00112001
+Epochs       103000. Current Error: 0.00111999
+Epochs       104000. Current Error: 0.00111997
+Epochs       105000. Current Error: 0.00111995
+Epochs       106000. Current Error: 0.00111993
+Epochs       107000. Current Error: 0.0011199
+Epochs       108000. Current Error: 0.00111988
+Epochs       109000. Current Error: 0.00111986
+Epochs       110000. Current Error: 0.00111984
+Epochs       111000. Current Error: 0.00111982
+Epochs       112000. Current Error: 0.0011198
+Epochs       113000. Current Error: 0.00111978
+Epochs       114000. Current Error: 0.00111976
+Epochs       115000. Current Error: 0.00111974
+Epochs       116000. Current Error: 0.00111972
+Epochs       117000. Current Error: 0.0011197
+Epochs       118000. Current Error: 0.00111969
+Epochs       119000. Current Error: 0.00111967
+Epochs       120000. Current Error: 0.00111965
+Epochs       121000. Current Error: 0.00111963
+Epochs       122000. Current Error: 0.00111961
+Epochs       123000. Current Error: 0.00111959
+Epochs       124000. Current Error: 0.00111957
+Epochs       125000. Current Error: 0.00111955
+Epochs       126000. Current Error: 0.00111953
+Epochs       127000. Current Error: 0.00111951
+Epochs       128000. Current Error: 0.00111949
+Epochs       129000. Current Error: 0.00111948
+Epochs       130000. Current Error: 0.00111946
+Epochs       131000. Current Error: 0.00111944
+Epochs       132000. Current Error: 0.00111942
+Epochs       133000. Current Error: 0.0011194
+Epochs       134000. Current Error: 0.00111938
+Epochs       135000. Current Error: 0.00111936
+Epochs       136000. Current Error: 0.00111934
+Epochs       137000. Current Error: 0.00111932
+Epochs       138000. Current Error: 0.0011193
+Epochs       139000. Current Error: 0.00111929
+Epochs       140000. Current Error: 0.00111927
+Epochs       141000. Current Error: 0.00111925
+Epochs       142000. Current Error: 0.00111923
+Epochs       143000. Current Error: 0.00111922
+Epochs       144000. Current Error: 0.0011192
+Epochs       145000. Current Error: 0.00111918
+Epochs       146000. Current Error: 0.00111917
+Epochs       147000. Current Error: 0.00111915
+Epochs       148000. Current Error: 0.00111913
+Epochs       149000. Current Error: 0.00111912
+Epochs       150000. Current Error: 0.0011191
+Epochs       151000. Current Error: 0.00111908
+Epochs       152000. Current Error: 0.00111906
+Epochs       153000. Current Error: 0.00111905
+Epochs       154000. Current Error: 0.00111903
+Epochs       155000. Current Error: 0.00111902
+Epochs       156000. Current Error: 0.001119
+Epochs       157000. Current Error: 0.00111899
+Epochs       158000. Current Error: 0.00111897
+Epochs       159000. Current Error: 0.00111896
+Epochs       160000. Current Error: 0.00111894
+Epochs       161000. Current Error: 0.00111893
+Epochs       162000. Current Error: 0.00111891
+Epochs       163000. Current Error: 0.0011189
+Epochs       164000. Current Error: 0.00111889
+Epochs       165000. Current Error: 0.00111887
+Epochs       166000. Current Error: 0.00111886
+Epochs       167000. Current Error: 0.00111884
+Epochs       168000. Current Error: 0.00111883
+Epochs       169000. Current Error: 0.00111881
+Epochs       170000. Current Error: 0.00111879
+Epochs       171000. Current Error: 0.00111878
+Epochs       172000. Current Error: 0.00111876
+Epochs       173000. Current Error: 0.00111875
+Epochs       174000. Current Error: 0.00111873
+Epochs       175000. Current Error: 0.00111872
+Epochs       176000. Current Error: 0.0011187
+Epochs       177000. Current Error: 0.00111869
+Epochs       178000. Current Error: 0.00111867
+Epochs       179000. Current Error: 0.00111866
+Epochs       180000. Current Error: 0.00111865
+Epochs       181000. Current Error: 0.00111863
+Epochs       182000. Current Error: 0.00111862
+Epochs       183000. Current Error: 0.0011186
+Epochs       184000. Current Error: 0.00111859
+Epochs       185000. Current Error: 0.00111857
+Epochs       186000. Current Error: 0.00111856
+Epochs       187000. Current Error: 0.00111854
+Epochs       188000. Current Error: 0.00111853
+Epochs       189000. Current Error: 0.00111851
+Epochs       190000. Current Error: 0.0011185
+Epochs       191000. Current Error: 0.00111848
+Epochs       192000. Current Error: 0.00111847
+Epochs       193000. Current Error: 0.00111846
+Epochs       194000. Current Error: 0.00111845
+Epochs       195000. Current Error: 0.00111843
+Epochs       196000. Current Error: 0.00111842
+Epochs       197000. Current Error: 0.00111841
+Epochs       198000. Current Error: 0.0011184
+Epochs       199000. Current Error: 0.00111838
+Epochs       200000. Current Error: 0.00111837
+Epochs       201000. Current Error: 0.00111836
+Epochs       202000. Current Error: 0.00111835
+Epochs       203000. Current Error: 0.00111833
+Epochs       204000. Current Error: 0.00111832
+Epochs       205000. Current Error: 0.00111831
+Epochs       206000. Current Error: 0.0011183
+Epochs       207000. Current Error: 0.00111828
+Epochs       208000. Current Error: 0.00111827
+Epochs       209000. Current Error: 0.00111826
+Epochs       210000. Current Error: 0.00111825
+Epochs       211000. Current Error: 0.00111823
+Epochs       212000. Current Error: 0.00111822
+Epochs       213000. Current Error: 0.00111821
+Epochs       214000. Current Error: 0.0011182
+Epochs       215000. Current Error: 0.00111819
+Epochs       216000. Current Error: 0.00111818
+Epochs       217000. Current Error: 0.00111817
+Epochs       218000. Current Error: 0.00111815
+Epochs       219000. Current Error: 0.00111815
+Epochs       220000. Current Error: 0.00111814
+Epochs       221000. Current Error: 0.00111813
+Epochs       222000. Current Error: 0.00111811
+Epochs       223000. Current Error: 0.0011181
+Epochs       224000. Current Error: 0.00111809
+Epochs       225000. Current Error: 0.00111808
+Epochs       226000. Current Error: 0.00111807
+Epochs       227000. Current Error: 0.00111806
+Epochs       228000. Current Error: 0.00111805
+Epochs       229000. Current Error: 0.00111804
+Epochs       230000. Current Error: 0.00111803
+Epochs       231000. Current Error: 0.00111802
+Epochs       232000. Current Error: 0.00111801
+Epochs       233000. Current Error: 0.001118
+Epochs       234000. Current Error: 0.00111799
+Epochs       235000. Current Error: 0.00111798
+Epochs       236000. Current Error: 0.00111797
+Epochs       237000. Current Error: 0.00111796
+Epochs       238000. Current Error: 0.00111795
+Epochs       239000. Current Error: 0.00111794
+Epochs       240000. Current Error: 0.00111792
+Epochs       241000. Current Error: 0.0011179
+Epochs       242000. Current Error: 0.00111789
+Epochs       243000. Current Error: 0.00111787
+Epochs       244000. Current Error: 0.00111785
+Epochs       245000. Current Error: 0.00111784
+Epochs       246000. Current Error: 0.00111783
+Epochs       247000. Current Error: 0.00111781
+Epochs       248000. Current Error: 0.00111779
+Epochs       249000. Current Error: 0.00111778
+Epochs       250000. Current Error: 0.00111777
+Epochs       251000. Current Error: 0.00111775
+Epochs       252000. Current Error: 0.00111774
+Epochs       253000. Current Error: 0.00111772
+Epochs       254000. Current Error: 0.00111771
+Epochs       255000. Current Error: 0.00111769
+Epochs       256000. Current Error: 0.00111767
+Epochs       257000. Current Error: 0.00111766
+Epochs       258000. Current Error: 0.00111764
+Epochs       259000. Current Error: 0.00111762
+Epochs       260000. Current Error: 0.0011176
+Epochs       261000. Current Error: 0.00111759
+Epochs       262000. Current Error: 0.00111757
+Epochs       263000. Current Error: 0.00111755
+Epochs       264000. Current Error: 0.00111754
+Epochs       265000. Current Error: 0.00111752
+Epochs       266000. Current Error: 0.0011175
+Epochs       267000. Current Error: 0.00111749
+Epochs       268000. Current Error: 0.00111747
+Epochs       269000. Current Error: 0.00111745
+Epochs       270000. Current Error: 0.00111744
+Epochs       271000. Current Error: 0.00111742
+Epochs       272000. Current Error: 0.00111741
+Epochs       273000. Current Error: 0.00111739
+Epochs       274000. Current Error: 0.00111737
+Epochs       275000. Current Error: 0.00111736
+Epochs       276000. Current Error: 0.00111734
+Epochs       277000. Current Error: 0.00111732
+Epochs       278000. Current Error: 0.0011173
+Epochs       279000. Current Error: 0.00111729
+Epochs       280000. Current Error: 0.00111727
+Epochs       281000. Current Error: 0.00111726
+Epochs       282000. Current Error: 0.00111724
+Epochs       283000. Current Error: 0.00111723
+Epochs       284000. Current Error: 0.00111721
+Epochs       285000. Current Error: 0.0011172
+Epochs       286000. Current Error: 0.00111718
+Epochs       287000. Current Error: 0.00111717
+Epochs       288000. Current Error: 0.00111715
+Epochs       289000. Current Error: 0.00111714
+Epochs       290000. Current Error: 0.00111712
+Epochs       291000. Current Error: 0.00111711
+Epochs       292000. Current Error: 0.00111709
+Epochs       293000. Current Error: 0.00111708
+Epochs       294000. Current Error: 0.00111707
+Epochs       295000. Current Error: 0.00111705
+Epochs       296000. Current Error: 0.00111704
+Epochs       297000. Current Error: 0.00111702
+Epochs       298000. Current Error: 0.00111701
+Epochs       299000. Current Error: 0.00111699
+Epochs       300000. Current Error: 0.00111698
+
+Testing network.
+XOR test (+1, +1) -> -0.933158, should be -1, difference = 0.0668423
+
+XOR test completed.
+
+RUN NET
+
+{-1,-1}: -0.400366
+
+{1,-1}: -0.821663
+
+{-1,1}: -0.820916
+
+{1,1}: -0.933158
+
+-0.933158
