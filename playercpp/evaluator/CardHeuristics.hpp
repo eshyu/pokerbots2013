@@ -6,22 +6,22 @@
 
 class CardHeuristics {
 public: 
-  std::vector<int> getPairs(std::vector<int> hand, std::vector<int> board);
+  std::vector<int> getPairs(std::vector<int> hand, std::vector<int> board, std::vector<int> &pairs);
   std::vector<int> getStraight(std::vector<int> hand,
-			       std::vector<int> board);
+			       std::vector<int> board, std::vector<int> &straight);
   std::vector<int> getFlush(std::vector<int> handSuits, 
 			    std::vector<int> handNum, 
 			    std::vector<int> boardSuits, 
-			    std::vector<int> boardNum);
+			    std::vector<int> boardNum, std::vector<int> &flush);
 
   void createBoardTextureInput(const std::vector<std::string> &myHand, 
 			       const std::vector<std::string> &boardCards,
-			       double *textureInputs); 
+			       float *textureInputs); 
   
   void createTextureFeatures(std::vector<int> flush, 
 			     std::vector<int> pairs, 
 			     std::vector<int> straight, 
-			     double *out);
+			     float *out);
   
   std::string getTextureString(std::vector<int> flush, 
 			       std::vector<int> pairs, 
