@@ -7,12 +7,11 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/lexical_cast.hpp>
 
-//return: onePair, twoPair, oneTriple, oneFour, myFirstKicker, mySecondKicker,myFirstPair, mySecondPair, myTriple
+//return: pair, oneTriple, oneFour, myFirstKicker, mySecondKicker,myFirstPair, mySecondPair, myTriple
 void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std::vector<int> &pairs){
   std::sort (hand.begin(), hand.end()); 
   std::sort (board.begin(), board.end()); 
-  int onePair=0;
-  int twoPair=0;
+  int pair=0;
   int triple=0;
   int four=0;
   int myFirstKicker=0;
@@ -24,10 +23,10 @@ void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std
   int firstPair=1;
   int firstKicker=1;
   for(int i=0; i<board.size(); i++){
-    if(i<board.size()-4 && board[i]==board[i+3]){
+    if(i+4<board.size() && board[i]==board[i+3]){
       four=1;
       i+=3;
-    } else if(i<board.size()-3 && board[i]==board[i+2]){
+    } else if(i+3<board.size() && board[i]==board[i+2]){
       triple=1;
       for(int k=0; k<hand.size(); k++){
 	if(hand[k]==board[i]){
@@ -35,15 +34,15 @@ void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std
 	}
       }
       i+=2;
-    }else if(i<board.size()-2 && board[i]==board[i+1]){
-      
+    }else if(i+2<board.size() && board[i]==board[i+1]){
+      pair++;
       for(int k=0; k<hand.size(); k++){
 	if(hand[k]==board[i]){
 	  if(firstPair){
-	    myFirstKicker=board[i];
+	    myFirstPair=board[i];
 	    firstPair=0;
 	  }else{
-	    mySecondKicker=board[i];
+	    mySecondPair=board[i];
 	  }
 	}
       }
@@ -62,8 +61,8 @@ void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std
       }
     }
   }
-  pairs.push_back(onePair);
-  pairs.push_back(twoPair);
+
+  pairs.push_back(pair);
   pairs.push_back(triple);
   pairs.push_back(four);
   pairs.push_back(myFirstKicker);
@@ -90,7 +89,7 @@ void CardHeuristics::getStraight(std::vector<int> hand,
   int secondStraightCard=0;
 
   for(int i=0; i<board.size(); i++){
-    if(i<board.size()-4 && board[i]+5>board[i+4]){
+    if(i+4<board.size() && board[i]+5>board[i+4]){
       fiveStraight=1;
       fourStraight=1;
       threeStraight=1;
@@ -101,7 +100,7 @@ void CardHeuristics::getStraight(std::vector<int> hand,
 	firstStraightCard=board[i+4]+1;
       }
       break;
-    } else if(i<board.size()-3 && board[i]+5>board[i+3]){
+    } else if(i+3<board.size() && board[i]+5>board[i+3]){
       fourStraight=1;
       threeStraight=1;
       std::vector<int> v(5);
@@ -119,7 +118,7 @@ void CardHeuristics::getStraight(std::vector<int> hand,
 	  secondStraightCard=v2[1];
 	}
       }
-    } else if(i<board.size()-2 && board[i]+5>board[i+2]){
+    } else if(i+2<board.size() && board[i]+5>board[i+2]){
       threeStraight=1;
       std::vector<int> v(5);
       std::vector<int> v2(hand.size());   
@@ -278,20 +277,19 @@ void CardHeuristics::createTextureFeatures(std::vector<int> flush, std::vector<i
   *(out+2)=flush[2];
   *(out+3)=(float)flush[3]/14;
   *(out+4)=(float)flush[4]/14;
-  *(out+5)=pairs[0];
+  *(out+5)=pairs[0]/2;
   *(out+6)=pairs[1];
   *(out+7)=pairs[2];
-  *(out+8)=pairs[3];
+  *(out+8)=(float)pairs[3]/14;
   *(out+9)=(float)pairs[4]/14;
   *(out+10)=(float)pairs[5]/14;
   *(out+11)=(float)pairs[6]/14;
   *(out+12)=(float)pairs[7]/14;
-  *(out+13)=(float)pairs[8]/14;
-  *(out+14)=straight[0];
-  *(out+15)=straight[1];
-  *(out+16)=straight[2];
-  *(out+17)=(float)straight[3]/14;
-  *(out+18)=(float)straight[4]/14;
+  *(out+13)=straight[0];
+  *(out+14)=straight[1];
+  *(out+15)=straight[2];
+  *(out+16)=(float)straight[3]/14;
+  *(out+17)=(float)straight[4]/14;
 
 }
 
