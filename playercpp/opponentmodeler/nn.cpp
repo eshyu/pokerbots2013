@@ -23,27 +23,29 @@ using std::ofstream;
 using std::ifstream;
 
 
-float * get_output(FANN::neural_net &net, float * input){
+
+float * get_output(float * input){
   return net.run(input);
 }
 
 // Train the net with all the data
-FANN::neural_net FANN::neural_net train_net( int num_data, int num_input, float** input,int num_output, float ** output)
+void train_net( int num_data, int num_input, float** input,int num_output, float ** output)
 //void train_net(FANN::neural_net &net,unsigned int num_data, unsigned int num_input, fann_type **input,unsigned int num_output,fann_type **output)
 {
-    FANN::neural_net net;
-    const float learning_rate = 0.07f;
+ 
+  net=new FANN::neural_net();
+  const float learning_rate = 0.07f;
     const unsigned int num_layers=3;
     int num_hidden=num_input;
     unsigned int layers[3]={num_input,num_hidden,num_output};
-    net.create_standard_array(num_layers,layers); 
-    net.set_learning_rate(learning_rate);
+    net->create_standard_array(num_layers,layers); 
+    net->set_learning_rate(learning_rate);
   
-    net.set_activation_steepness_hidden(.1);
-    net.set_activation_steepness_output(.1);
+    net->set_activation_steepness_hidden(.1);
+    net->set_activation_steepness_output(.1);
   
-    net.set_activation_function_hidden(FANN::SIGMOID_SYMMETRIC_STEPWISE);
-    net.set_activation_function_output(FANN::SIGMOID_SYMMETRIC_STEPWISE);
+    net->set_activation_function_hidden(FANN::SIGMOID_SYMMETRIC_STEPWISE);
+    net->set_activation_function_output(FANN::SIGMOID_SYMMETRIC_STEPWISE);
 
     //net.set_training_algorithm(FANN::TRAIN_INCREMENTAL);
     // Set additional properties such as the training algorithm
@@ -58,10 +60,9 @@ FANN::neural_net FANN::neural_net train_net( int num_data, int num_input, float*
     data.set_train_data(num_data, num_input, input, num_output, output);
 
     // Initialize and train the network with the data
-    net.init_weights(data);
+    net->init_weights(data);
 
-    net.train_on_data(data, max_iterations,0, desired_error);
-    return net;
+    net->train_on_data(data, max_iterations,0, desired_error);
 
 }
 /*
