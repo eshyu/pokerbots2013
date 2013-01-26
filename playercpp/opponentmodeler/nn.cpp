@@ -4,9 +4,6 @@
  *
  */
 
-#include "../../analysis/fann/src/include/floatfann.h"
-#include "../../analysis/fann/src/include/fann_cpp.h"
-
 #include <ios>
 #include <iostream>
 #include <fstream>
@@ -22,34 +19,37 @@ using std::noshowpos;
 using std::ofstream;
 using std::ifstream;
 
+NeuralNet::NeuralNet()
+{ 
 
+}
 
-float * get_output(float * input){
-  return net.run(input);
+NeuralNet::~NeuralNet(){}
+
+float * NeuralNet::get_output(float * input){
+  return net->run(input);
 }
 
 // Train the net with all the data
-void train_net( int num_data, int num_input, float** input,int num_output, float ** output)
+void NeuralNet::train_net( int num_data, int num_input, float** input,int num_output, float ** output)
 //void train_net(FANN::neural_net &net,unsigned int num_data, unsigned int num_input, fann_type **input,unsigned int num_output,fann_type **output)
 {
- 
-  net=new FANN::neural_net();
+  net = new FANN::neural_net();
   const float learning_rate = 0.07f;
-    const unsigned int num_layers=3;
-    int num_hidden=num_input;
-    unsigned int layers[3]={num_input,num_hidden,num_output};
-    net->create_standard_array(num_layers,layers); 
-    net->set_learning_rate(learning_rate);
+  const unsigned int num_layers=3;
+  int num_hidden=num_input/2;
+  unsigned int layers[3]={num_input,num_hidden,num_output};
+  net->create_standard_array(num_layers,layers); 
+  net->set_learning_rate(learning_rate);
+  net->set_activation_steepness_hidden(.1);
+  net->set_activation_steepness_output(.1);
   
-    net->set_activation_steepness_hidden(.1);
-    net->set_activation_steepness_output(.1);
-  
-    net->set_activation_function_hidden(FANN::SIGMOID_SYMMETRIC_STEPWISE);
-    net->set_activation_function_output(FANN::SIGMOID_SYMMETRIC_STEPWISE);
+  net->set_activation_function_hidden(FANN::SIGMOID_SYMMETRIC_STEPWISE);
+  net->set_activation_function_output(FANN::SIGMOID_SYMMETRIC_STEPWISE);
 
-    //net.set_training_algorithm(FANN::TRAIN_INCREMENTAL);
-    // Set additional properties such as the training algorithm
-    //net.set_training_algorithm(FANN::TRAIN_QUICKPROP);
+  //net.set_training_algorithm(FANN::TRAIN_INCREMENTAL);
+  // Set additional properties such as the training algorithm
+  //net.set_training_algorithm(FANN::TRAIN_QUICKPROP);
 
     const float desired_error = 0.001f;
     const unsigned int max_iterations = 1000;
@@ -64,6 +64,7 @@ void train_net( int num_data, int num_input, float** input,int num_output, float
 
     net->train_on_data(data, max_iterations,0, desired_error);
 
+    data.save_train("ddumbassfile.save");
 }
 /*
 //after we have a neural net, we can find the input that would maximize our EV
@@ -126,8 +127,8 @@ float bet; [0,1]
 float check; [0,1]
 float call; [0,1]
 float fold; [0,1]
-double betSize (in terms of pot odds)
-double oppTrueEquity
+float betSize (in terms of pot odds)
+float oppTrueEquity
 */
 /*
 float calc_ev(float * dist, float equity, float callAmt){
@@ -141,22 +142,3 @@ float calc_ev(float * dist, float equity, float callAmt){
 */
 /* Startup function. Syncronizes C and C++ output, calls the test function
    and reports any exceptions */
-int main(int argc, char **argv)
-{
-    try
-    {
-        std::ios::sync_with_stdio(); // Syncronize cout and printf output
-
-    }
-    catch (...)
-    {
-        cerr << endl << "Abnormal exception." << endl;
-    }
-    return 0;
-}
-
-
-
-
-
-/******************************************************************************/

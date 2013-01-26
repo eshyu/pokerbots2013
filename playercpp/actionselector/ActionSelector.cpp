@@ -15,7 +15,7 @@ ActionSelector::ActionSelector(){}
 
 ActionSelector::ActionSelector(Evaluator *_evaluator, OpponentModeler *_opponentModeler){
   evaluator = _evaluator;
-  opponentModeler = opponentModeler;
+  opponentModeler = _opponentModeler;
 }
 
 ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getaction_str, std::vector<std::string> &holeCards, std::string &myDiscard, bool myButton, int stackSize){
@@ -42,6 +42,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
   legalAction = actionlist2struct(ss, numLegalActions, lastActions[numLastActions-1], myButton);
   opponentAction = actionword2struct(lastActions[numLastActions-1]);
 
+  float mybEq=0;
   switch(legalAction.actionType){
   case DISCARD_ONE:
     //discardUniform(holeCards, myDiscard, actionInfo);
@@ -49,7 +50,7 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
     break;
   case CHECK_BET:
   case FOLD_CALL_RAISE:
-    selectActionForRound(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
+    mybEq=selectActionForRound(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
      break;
    }
     
@@ -60,13 +61,14 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
 					  myButton,
 					  potSize, 
 					  stackSize, 
+					  mybEq,
 					  boardCards, holeCards);
   
   return actionInfo;
 }
 
 /* Different strategies for different rounds*/
-void ActionSelector::selectActionForRound(int potSize, bool myButton, 
+float ActionSelector::selectActionForRound(int potSize, bool myButton, 
 					  const std::vector<std::string> &boardCards, 
 					  const std::vector<std::string> &holeCards, 
 					  const std::string &myDiscard,
@@ -76,18 +78,16 @@ void ActionSelector::selectActionForRound(int potSize, bool myButton,
   int numBoardCards = boardCards.size();
   switch (numBoardCards){
   case 0:
-    preflopSelector(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
-    break;
+    return preflopSelector(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
   case 3:
   case 4:
   case 5:
-    evalMagic(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
-    break;
+    return evalMagic(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
   }
 }
 
  /* this will be replaced with something more sophisticated later */
-void ActionSelector::preflopSelector(int potSize, bool myButton, 
+float ActionSelector::preflopSelector(int potSize, bool myButton, 
 				const std::vector<std::string> &boardCards, 
 				const std::vector<std::string> &holeCards, 
 				const std::string &myDiscard,
@@ -98,12 +98,12 @@ void ActionSelector::preflopSelector(int potSize, bool myButton,
   int raise=0, adjustRaise, noise, toCall;
   toCall = legalAction.callMin;
   
-  double premium = myButton ? 0.05 : 0;
-  double equity = evaluator->evaluate(holeCards, boardCards, myDiscard);
-  double potOdds = (double)toCall/(toCall+potSize);
+  float premium = myButton ? 0.05 : 0;
+  float equity = evaluator->evaluate(holeCards, boardCards, myDiscard);
+  float potOdds = (float)toCall/(toCall+potSize);
   
   // generate betting noise
-  noise = (rand() % 5 - 2);
+  noise = (rand() % 3 - 1);
   
   if (legalAction.raiseMax > 0 && equity+premium > 0.5){
     int bucket = (int)(20*equity)-9;
@@ -130,10 +130,11 @@ void ActionSelector::preflopSelector(int potSize, bool myButton,
       actionInfo.action=CHECK;
     }    
   }   
+  return equity;
 }
 
  /* this will be replaced with something more sophisticated later */
- void ActionSelector::evalMagic(int potSize, bool myButton, 
+ float ActionSelector::evalMagic(int potSize, bool myButton, 
 				const std::vector<std::string> &boardCards, 
 				const std::vector<std::string> &holeCards, 
 				const std::string &myDiscard,
@@ -147,7 +148,7 @@ void ActionSelector::preflopSelector(int potSize, bool myButton,
    //std::cout << "coin is " << coin;
 
    std::cout << "evaluating with # board cards: " << boardCards.size() << std::endl;
-   double equity = evaluator->evaluate(holeCards, boardCards, myDiscard);
+   float equity = evaluator->evaluate(holeCards, boardCards, myDiscard);
 
    if (coin == 1 && equity > 0.8){
      if (legalAction.raiseMax > 0){
@@ -165,7 +166,7 @@ void ActionSelector::preflopSelector(int potSize, bool myButton,
    else {
      
      // compute pot odds and either call or fold    
-     double potOdds = (double)callMin/(callMin+potSize);
+     float potOdds = (float)callMin/(callMin+potSize);
      // TODO: lol
 
      //     if (myButton) equity = equity*1.2;
@@ -173,7 +174,7 @@ void ActionSelector::preflopSelector(int potSize, bool myButton,
      if (equity>0.62){
        std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
        if (legalAction.raiseMax > 0){
-        double oppEquity=1-equity;
+        float oppEquity=1-equity;
         int newPotSize=callMin+potSize;
 	//	int raise=1+(int)(newPotSize/oppEquity-newPotSize);
 	
@@ -216,7 +217,7 @@ void ActionSelector::preflopSelector(int potSize, bool myButton,
      }else{
        std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
 
-       double roundDiscount=0;
+       float roundDiscount=0;
        int numBoardCards = boardCards.size();
 
        // Discount our equity, so we are less willing to call with low equity on later streets (especially the river)
@@ -245,7 +246,8 @@ void ActionSelector::preflopSelector(int potSize, bool myButton,
        }
      }
    }      
- }
+   return equity;
+}
 
 /* Discard functions */
 
@@ -271,9 +273,9 @@ void ActionSelector::discardGreedy(std::vector<std::string> &holeCards, std::vec
   std::string boardString;
   for (int i=0;i<boardCards.size();i++) boardString = boardString + boardCards[i];
 
-  double eval0=evaluator->memoized_evaluate_pairs(discard0, boardString, holeCards[0], 0);
-  double eval1=evaluator->memoized_evaluate_pairs(discard1, boardString, holeCards[1], 1);
-  double eval2=evaluator->memoized_evaluate_pairs(discard2, boardString, holeCards[2], 2);
+  float eval0=evaluator->memoized_evaluate_pairs(discard0, boardString, holeCards[0], 0);
+  float eval1=evaluator->memoized_evaluate_pairs(discard1, boardString, holeCards[1], 1);
+  float eval2=evaluator->memoized_evaluate_pairs(discard2, boardString, holeCards[2], 2);
 
   // higest
   int discard;

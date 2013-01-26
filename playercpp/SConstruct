@@ -22,8 +22,8 @@ if sys.platform.startswith('win'):
     linkflags.extend(['-OPT:REF', '-OPT:ICF', '-NOLOGO'])
     ccflags.extend(['-W3', '-Ox', '-nologo'])
 else:
-    linkflags.extend(['-O3'])
-    ccflags.extend(['-Wall', '-O3', '-Wpointer-arith'])
+    linkflags.extend(['-O3', '-pg'])
+    ccflags.extend(['-Wall', '-O3', '-Wpointer-arith' ])
 
 include = "#export/%s/include" % platform
 lib = "#export/%s/lib" % platform
@@ -37,9 +37,9 @@ env = Environment(ENV = os.environ,
                   CCFLAGS = ccflags,
                   LINKFLAGS = linkflags,
                   BINDIR = bin,
-                  INCDIR = include,
+                  INCDIR = [include, '../analysis/fann/src/include'],
                   LIBDIR = lib,
-                  CPPPATH = [include, 'export/linux2/include'],
+                  CPPPATH = [include, 'export/linux2/include', '../analysis/fann/src/include'],
                   LIBPATH = [lib, 'export/linux2/lib'],
                   LD_LIBRARY_PATH = ld_library_path)
 
@@ -53,5 +53,5 @@ env.Alias('build', ['.'])
 env.SConscript(["evaluator/pbots_calc/src/SConscript"], exports='env')
 
 boost_libs = ['boost_program_options', 'boost_system']
-env.Program('player', ['main.cpp', 'player.cpp', 'actionselector/ActionSelector.cpp', 'evaluator/Evaluator.cpp', 'opponentmodeler/OpponentModeler.cpp'], 
-			LIBS=[boost_libs,'pbots_calc','poker-eval'])
+env.Program('player', ['main.cpp', 'player.cpp', 'actionselector/ActionSelector.cpp', 'evaluator/Evaluator.cpp', 'opponentmodeler/OpponentModeler.cpp', 
+		      'evaluator/CardHeuristics.cpp', 'opponentmodeler/nn.cpp', '../analysis/fann/src/floatfann.c'], LIBS=[boost_libs,'pbots_calc','poker-eval'])
