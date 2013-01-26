@@ -4,10 +4,10 @@ import sys
 import os
 import subprocess
 
-files = subprocess.check_output(["find", "-name", "Casino_Day-8*"]).split('\n')
+files = subprocess.check_output(["find", "-name", "Casino_Day-9*"]).split('\n')
 #print files
 ball_list = ['bAllin', 'Bobbit', 'CALL', 'CallMeMaybe', \
-             'DrBowserzard', 'Ganbatte', 'HandBanana', 'Poseidon', 'team1' ]
+             'DrBowserzard', 'Ganbatte', 'HandBanana', 'Poseidon', 'team1', 'Ralph' ]
 
 for file_path in files:
     m = re.match('.*Casino_Day-([0-9]?)_(.*?)_vs_(.*?).txt', file_path)

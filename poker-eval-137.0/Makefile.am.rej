@@ -1,0 +1,23 @@
+--- Makefile.am	(revision 6581)
++++ Makefile.am	(working copy)
+@@ -45,19 +44,9 @@
+ 	poker-eval.sln \
+ 	WHATS-HERE.Java \
+ 	WHATS-HERE \
+-	gentoo/dev-games/poker-eval/poker-eval-133.0-r1.ebuild \
+-	csharp/API.cs \
+-	csharp/Enum.cs \
+-	csharp/EnumResult.cs \
+-	csharp/GameParams.cs \
+-	csharp/StdDeck.cs \
+-	csharp/Test.cs \
+-	csharp/Makefile \
+-	csharp/TODO \
+ 	packaging-farm.bat \
+ 	poker-eval.nsi \
+-	make_master.sh \
+-	fink/libpoker-eval.info
++	make_master.sh
+ 
+ SUBDIRS = \
+ 	lib \

@@ -15,3 +15,7 @@
 
 #dumb tilde files
 *~
+
+# Sublime Files
+*.sublime-project
+*.sublime-workspace
