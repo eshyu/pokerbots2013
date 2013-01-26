@@ -8,7 +8,7 @@
 #include <boost/lexical_cast.hpp>
 
 //return: onePair, twoPair, oneTriple, oneFour, myFirstKicker, mySecondKicker,myFirstPair, mySecondPair, myTriple
-std::vector<int> CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board){
+void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std::vector<int> &pairs){
   std::sort (hand.begin(), hand.end()); 
   std::sort (board.begin(), board.end()); 
   int onePair=0;
@@ -62,23 +62,27 @@ std::vector<int> CardHeuristics::getPairs(std::vector<int> hand, std::vector<int
       }
     }
   }
-	
-  int myints[] = {onePair, twoPair, triple, four, myFirstKicker, mySecondKicker,myFirstPair, mySecondPair, myTriple};
-	
-  std::vector<int> returnValues (myints, myints + sizeof(myints) / sizeof(int) );
-
-  return returnValues;
+  pairs.push_back(onePair);
+  pairs.push_back(twoPair);
+  pairs.push_back(triple);
+  pairs.push_back(four);
+  pairs.push_back(myFirstKicker);
+  pairs.push_back(mySecondKicker);
+  pairs.push_back(myFirstPair);
+  pairs.push_back(mySecondPair);
+  pairs.push_back(myTriple);
 
 }
 
 //TODO: change to rank instead of raw number
-std::vector<int> CardHeuristics::getStraight(std::vector<int> hand, 
-					     std::vector<int> board){
+void CardHeuristics::getStraight(std::vector<int> hand, 
+					     std::vector<int> board, std::vector<int> &straight){
   //return: threeStraight, fourStraight, fiveStraight, firstStraightCard,secondStraightCard
   std::sort (hand.begin(), hand.end()); 
   hand.erase( unique( hand.begin(), hand.end() ), hand.end() );
   std::sort (board.begin(), board.end()); 
   board.erase( unique( board.begin(), board.end() ), board.end() );
+
   int threeStraight=0;
   int fourStraight=0;
   int fiveStraight=0;
@@ -104,8 +108,7 @@ std::vector<int> CardHeuristics::getStraight(std::vector<int> hand,
       std::vector<int> v2(hand.size());   
       int boardCards[]={board[i],board[i+1],board[i+2],board[i+3]};
       int necCards[]={board[i],board[i]+1,board[i]+2,board[i]+3,board[i]+4};
-      //vector<int> boardCards(board.begin()+i,board.begin()+i+3);
-      //vector<int> necCards(board.begin()+i,board.begin()+i+3);
+
       std::vector<int>::iterator it=set_difference(necCards, necCards+5,boardCards, boardCards+4,v.begin());
 
       std::vector<int>::iterator it2=set_intersection(v.begin(), it, hand.begin(),hand.end(),v2.begin());
@@ -122,8 +125,7 @@ std::vector<int> CardHeuristics::getStraight(std::vector<int> hand,
       std::vector<int> v2(hand.size());   
       int boardCards[]={board[i],board[i+1],board[i+2]};
       int necCards[]={board[i],board[i]+1,board[i]+2,board[i]+3,board[i]+4};
-      //vector<int> boardCards(board.begin()+i,board.begin()+i+3);
-      //vector<int> necCards(board.begin()+i,board.begin()+i+3);
+
       std::vector<int>::iterator it=set_difference(necCards, necCards+5,boardCards, boardCards+3,v.begin());
       std::vector<int>::iterator it2=set_intersection(v.begin(), it, hand.begin(),hand.end(),v2.begin());
       int numStraightCards=int(it2-v2.begin());
@@ -133,31 +135,19 @@ std::vector<int> CardHeuristics::getStraight(std::vector<int> hand,
 	  secondStraightCard=v2[1];
 	}
       }
-      /*
-	vector<int> v(5);
-	vector<int> v2(hand.size());   
-	vector<int> boardCards=(board.begin()+i,board.begin()+i+2);
-	vector<int> necCards(board.begin()+i,board.begin()+i+2);
-	vector<int>::iterator it=set_difference(necCards.begin(), necCards.begin()+5,boardCards.begin(), boardCards.end(),v);//TODO
-	vector<int>::iterator it2=set_intersection(v.begin, it, hand.begin(),hand.end(),v2);
-	int numStraightCards=int(it2-v2.begin());
-	if(numStraightCards>0){
-	firstStraightCard=v2[0];
-	if(numStraightCards>1){
-	secondStraightCard=v2[1];
-	}
-	}*/
+
     }	
   }
-	
-  int myints[] = {threeStraight,fourStraight,fiveStraight,firstStraightCard,secondStraightCard};
-  std::vector<int> returnValues (myints, myints + sizeof(myints) / sizeof(int) );
-  return returnValues;
+  straight.push_back(threeStraight);
+  straight.push_back(fourStraight);
+  straight.push_back(fiveStraight);
+  straight.push_back(firstStraightCard);
+  straight.push_back(secondStraightCard);
+
 }
 
 //return: threeSuit,fourSuit,fiveSuit,firstFlushCard,secondFlushCard
-std::vector<int> CardHeuristics::getFlush(std::vector<int> handSuits, std::vector<int> handNum, std::vector<int> boardSuits, std::vector<int> boardNum){
-  std::vector<int> returnValues;
+void CardHeuristics::getFlush(std::vector<int> handSuits, std::vector<int> handNum, std::vector<int> boardSuits, std::vector<int> boardNum, std::vector<int> &flush){
   int suits[4]={0,0,0,0};
   int flushSuit=-1;
   for(int i=0; i<boardSuits.size(); i++){
@@ -169,8 +159,11 @@ std::vector<int> CardHeuristics::getFlush(std::vector<int> handSuits, std::vecto
     }
   }
   if(flushSuit<0){
-    std::vector<int> returnValues(5,0);
-    return returnValues;
+    flush.push_back(0);
+    flush.push_back(0);
+    flush.push_back(0);
+    flush.push_back(0);
+    flush.push_back(0);
   }
   bool first=1;
   int firstFlushCard=0;
@@ -186,23 +179,29 @@ std::vector<int> CardHeuristics::getFlush(std::vector<int> handSuits, std::vecto
     }
   }
   if(suits[flushSuit]==3){
-    int myints[] = {1,0,0,firstFlushCard,secondFlushCard};
-    std::vector<int> returnValues (myints, myints + sizeof(myints) / sizeof(int) );
-    return returnValues;
+    flush.push_back(1);
+    flush.push_back(0);
+    flush.push_back(0);
+    flush.push_back(firstFlushCard);
+    flush.push_back(secondFlushCard);
   } else if(suits[flushSuit]==4){
-    int myints[] = {1,1,0,firstFlushCard,secondFlushCard};
-    std::vector<int> returnValues (myints, myints + sizeof(myints) / sizeof(int) );
-    return returnValues;
+    flush.push_back(1);
+    flush.push_back(1);
+    flush.push_back(0);
+    flush.push_back(firstFlushCard);
+    flush.push_back(secondFlushCard);
   }else{
-    int myints[] = {1,1,1,firstFlushCard,secondFlushCard};
-    std::vector<int> returnValues (myints, myints + sizeof(myints) / sizeof(int) );
-    return returnValues;
+    flush.push_back(1);
+    flush.push_back(1);
+    flush.push_back(1);
+    flush.push_back(firstFlushCard);
+    flush.push_back(secondFlushCard);
   }
 }
 
 void CardHeuristics::createBoardTextureInput(const std::vector<std::string> &hand, 
 					     const std::vector<std::string> &board,
-					     double *textureInputs){
+					     float *textureInputs){
   int num_hand=hand.size();
   int num_board=board.size();
   
@@ -226,11 +225,14 @@ void CardHeuristics::createBoardTextureInput(const std::vector<std::string> &han
   
   //flush: threeSuit,fourSuit,fiveSuit,firstFlushCard,secondFlushCard
   //cout<<"flush"<<endl;
-  std::vector<int> flush = getFlush(handSuits,handNums,boardSuits,boardNums);	
+  std::vector<int> flush;
+  getFlush(handSuits,handNums,boardSuits,boardNums, flush);	
   //cout<<"pairs"<<endl;
-  std::vector<int> pairs=getPairs(handNums,boardNums);
+  std::vector<int> pairs;
+  getPairs(handNums,boardNums, pairs);
   //cout<<"straight"<<endl;
-  std::vector<int> straight = getStraight(handNums,boardNums);
+  std::vector<int> straight;
+  getStraight(handNums,boardNums, straight);
   //return getTextureString(flush,pairs,straight);  
   createTextureFeatures(flush,pairs,straight, textureInputs);  
 }
@@ -269,36 +271,36 @@ int CardHeuristics::getNum(char card){
 }
 
 
-void CardHeuristics::createTextureFeatures(std::vector<int> flush, std::vector<int> pairs, std::vector<int> straight, double *out)
+void CardHeuristics::createTextureFeatures(std::vector<int> flush, std::vector<int> pairs, std::vector<int> straight, float *out)
 {
   *(out+0)=flush[0];
   *(out+1)=flush[1];
   *(out+2)=flush[2];
-  *(out+3)=(double)flush[3]/14;
-  *(out+4)=(double)flush[4]/14;
+  *(out+3)=(float)flush[3]/14;
+  *(out+4)=(float)flush[4]/14;
   *(out+5)=pairs[0];
   *(out+6)=pairs[1];
   *(out+7)=pairs[2];
   *(out+8)=pairs[3];
-  *(out+9)=(double)pairs[4]/14;
-  *(out+10)=(double)pairs[5]/14;
-  *(out+11)=(double)pairs[6]/14;
-  *(out+12)=(double)pairs[7]/14;
-  *(out+13)=(double)pairs[8]/14;
+  *(out+9)=(float)pairs[4]/14;
+  *(out+10)=(float)pairs[5]/14;
+  *(out+11)=(float)pairs[6]/14;
+  *(out+12)=(float)pairs[7]/14;
+  *(out+13)=(float)pairs[8]/14;
   *(out+14)=straight[0];
   *(out+15)=straight[1];
   *(out+16)=straight[2];
-  *(out+17)=(double)straight[3]/14;
-  *(out+18)=(double)straight[4]/14;
+  *(out+17)=(float)straight[3]/14;
+  *(out+18)=(float)straight[4]/14;
 
 }
 
 /*
 std::string CardHeuristics::getTextureString(std::vector<int> flush, std::vector<int> pairs, std::vector<int> straight){
   std::string textureString="";
-  textureString=boost::lexical_cast<string>(flush[0])+" "+boost::lexical_cast<string>(flush[1])+" "+boost::lexical_cast<string>(flush[2])+" "+boost::lexical_cast<string>((double)flush[3]/14)+" "+boost::lexical_cast<string>((double)flush[4]/14)+" ";
-  textureString+=boost::lexical_cast<string>(pairs[0])+" "+boost::lexical_cast<string>(pairs[1])+" "+boost::lexical_cast<string>(pairs[2])+" "+boost::lexical_cast<string>(pairs[3])+" "+boost::lexical_cast<string>((double)pairs[4]/14)+" "+boost::lexical_cast<string>((double)pairs[5]/14)+" "+boost::lexical_cast<string>((double)pairs[6]/14)+" "+boost::lexical_cast<string>((double)pairs[7]/14)+" "+boost::lexical_cast<string>((double)pairs[8]/14)+" ";
-  textureString+=boost::lexical_cast<string>(straight[0])+" "+boost::lexical_cast<string>(straight[1])+" "+boost::lexical_cast<string>(straight[2])+" "+boost::lexical_cast<string>((double)straight[3]/14)+" "+boost::lexical_cast<string>((double)straight[4]/14)+" ";
+  textureString=boost::lexical_cast<string>(flush[0])+" "+boost::lexical_cast<string>(flush[1])+" "+boost::lexical_cast<string>(flush[2])+" "+boost::lexical_cast<string>((float)flush[3]/14)+" "+boost::lexical_cast<string>((float)flush[4]/14)+" ";
+  textureString+=boost::lexical_cast<string>(pairs[0])+" "+boost::lexical_cast<string>(pairs[1])+" "+boost::lexical_cast<string>(pairs[2])+" "+boost::lexical_cast<string>(pairs[3])+" "+boost::lexical_cast<string>((float)pairs[4]/14)+" "+boost::lexical_cast<string>((float)pairs[5]/14)+" "+boost::lexical_cast<string>((float)pairs[6]/14)+" "+boost::lexical_cast<string>((float)pairs[7]/14)+" "+boost::lexical_cast<string>((float)pairs[8]/14)+" ";
+  textureString+=boost::lexical_cast<string>(straight[0])+" "+boost::lexical_cast<string>(straight[1])+" "+boost::lexical_cast<string>(straight[2])+" "+boost::lexical_cast<string>((float)straight[3]/14)+" "+boost::lexical_cast<string>((float)straight[4]/14)+" ";
   return textureString;
 }
 */
