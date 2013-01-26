@@ -25,14 +25,15 @@ enum ROUND {PREFLOP, FLOP, TURN, RIVER};
 
 int main(int argc, char *argv[])
 {
-  std::string day, p1Name, p2Name;
-
+  std::string day, p1Name, p2Name, type;
+  
   boost::program_options::options_description desc("Allowed options");
   desc.add_options()
     ("help", "produce help message")
     ("day", boost::program_options::value<string>(&day), "day")
     ("p1", boost::program_options::value<string>(&p1Name), "p1")
     ("p2", boost::program_options::value<string>(&p2Name), "p2")    
+    ("t", boost::program_options::value<string>(&type), "t")        
     ;
 
   boost::program_options::variables_map vm;
@@ -63,7 +64,19 @@ int main(int argc, char *argv[])
       return 1;
     }
 
-  std::string suffix = "Casino_Day-" + day + "_" + p1Name + "_vs_" + p2Name + ".txt";
+  bool minitournament;
+  if (vm.count("t") == 0){
+    minitournament = false;
+  } else {
+    minitournament=true;
+  }
+
+  std::string suffix;
+  if (minitournament){
+    suffix = "MiniTournament_Mini-Tournament-Round-1_" + p1Name + "_vs_" + p2Name + ".txt";
+  } else {
+    suffix = "Casino_Day-" + day + "_" + p1Name + "_vs_" + p2Name + ".txt";
+  }
   std::string inPathName = "handhistories/" + suffix;
   std::string outPathName = "output/[ANNOTATED]" + suffix;
   
