@@ -13,13 +13,13 @@ public:
   enum BETTING_ROUND {FLOP, TURN, RIVER};  
 
   // pre-compute pre-flop equities for all starting hands
-  double preFlopEquities[1755];
+  float preFlopEquities[1755];
 
   // memoize the hand equity for the flop, turn, river
-  double memoizedEquities[3];
+  float memoizedEquities[3];
   
   // memoize the equity for discard pairs
-  double memoizedHandPairs[3];
+  float memoizedHandPairs[3];
 
   // populate preflop equity table
   void populatePreFlopTable();
@@ -27,7 +27,7 @@ public:
   // clear memoized equities tables
   void clearMemoizedEquities();
 
-  double adjustEquity(double equity, 
+  float adjustEquity(float equity, 
 		      const std::vector<std::string> &myHoleCards,
 		      const std::vector<std::string> &boardCards,
 		      const std::string &myDiscard
@@ -35,24 +35,24 @@ public:
 
   // todo: use opponent hand distribution
   /* evaluates opponents hand using pbots_calc */
-  double evaluate(const std::vector<std::string> &holeCards,
+  float evaluate(const std::vector<std::string> &holeCards,
 		  const std::vector<std::string> &boardCards,
 		  const std::string &myDiscard,
 		  int manualNumSimulations=0,
 		  bool memoize=true);
 
-  double memoized_evaluate_pairs(const std::string &holeCards,
+  float memoized_evaluate_pairs(const std::string &holeCards,
 				 const std::string &boardCards,
 				 const std::string &myDiscard,
 				 int discardIdx);
 
   // simple version of evaluate function for evaulating discard pairs
-  double evaluate_pairs(const std::string &holeCards,
+  float evaluate_pairs(const std::string &holeCards,
 				const std::string &boardCards,
 				const std::string &myDiscard);
 
   // for evaluation when we know both our and opponent cards
-  double evaluate_true(const std::vector<std::string> &myHoleCards,
+  float evaluate_true(const std::vector<std::string> &myHoleCards,
 		       const std::vector<std::string> &oppHoleCards,
 		       const std::vector<std::string> &boardCards,
 		       const std::string &myDiscard,

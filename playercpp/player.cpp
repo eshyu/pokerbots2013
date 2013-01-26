@@ -69,6 +69,8 @@ void Player::run(tcp::iostream &stream)
     } 
 
   } // end while(std::getline ...)       
+
+  opponentModeler->printStats();
   
   std::cout << "Gameover, engine disconnected.\n";
 
@@ -85,6 +87,8 @@ void Player::newHand(const std::string &holeCard1, const std::string& holeCard2,
   myButton = !button_str.compare("true");
   myDiscard = std::string("");
   evaluator->clearMemoizedEquities();
+  opponentModeler->newHand();
+  //opponentModeler->printStats();
 }
 
 /* Converts ActionInfo struct into string */

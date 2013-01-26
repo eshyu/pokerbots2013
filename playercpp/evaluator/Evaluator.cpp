@@ -23,7 +23,7 @@ Evaluator::~Evaluator(){
 
 /* evaluate current hand given board cards and discard  */
 //  TODO: use opponent hand distribution or implied equity 
-double Evaluator::evaluate(const std::vector<std::string> &holeCards,
+float Evaluator::evaluate(const std::vector<std::string> &holeCards,
 			   const std::vector<std::string> &boardCards,
 			   const std::string &myDiscard, 
 			   int manualNumSimulations,
@@ -52,7 +52,7 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
     return memoizedEquities[round];
   }
 
-  double myEv;
+  float myEv;
   std::string boardString;
   for (int i=0;i<boardCards.size();i++) boardString = boardString + boardCards[i];
     
@@ -61,9 +61,9 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
     std::string discard1 = holeCards[0] + holeCards[2];
     std::string discard2 = holeCards[0] + holeCards[1];
     
-    double eval0 = evaluate_pairs(discard0, boardString, holeCards[0]);
-    double eval1 = evaluate_pairs(discard1, boardString, holeCards[1]);
-    double eval2 = evaluate_pairs(discard2, boardString, holeCards[2]);
+    float eval0 = evaluate_pairs(discard0, boardString, holeCards[0]);
+    float eval1 = evaluate_pairs(discard1, boardString, holeCards[1]);
+    float eval2 = evaluate_pairs(discard2, boardString, holeCards[2]);
     
     std::cout << eval0 << ", " << eval1 << ", " << eval2 << std::endl;
     
@@ -83,7 +83,7 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
     
   }
 
-double Evaluator::memoized_evaluate_pairs(const std::string &holeCards,
+float Evaluator::memoized_evaluate_pairs(const std::string &holeCards,
 					  const std::string &boardCards,
 					  const std::string &myDiscard,
 					  int discardIdx)
@@ -92,12 +92,12 @@ double Evaluator::memoized_evaluate_pairs(const std::string &holeCards,
     return memoizedHandPairs[discardIdx];
   }
 
-  double ev = evaluate_pairs(holeCards, boardCards, myDiscard);
+  float ev = evaluate_pairs(holeCards, boardCards, myDiscard);
   memoizedHandPairs[discardIdx] = ev;
   return ev;
 }
 
-double Evaluator::evaluate_pairs(const std::string &holeCards,
+float Evaluator::evaluate_pairs(const std::string &holeCards,
 					 const std::string &boardCards,
 					 const std::string &myDiscard)
 {   
@@ -120,7 +120,7 @@ double Evaluator::evaluate_pairs(const std::string &holeCards,
 
   calc(calcString.c_str(), board_c_str, discard_c_str, NUM_SIMULATIONS, result);
 
-  double myEv = result->ev[0]; // opponent equity from this calculator is 1-ours
+  float myEv = (float)result->ev[0]; // opponent equity from this calculator is 1-ours
 
   // make sure to free result
   free_results(result);
@@ -130,7 +130,7 @@ double Evaluator::evaluate_pairs(const std::string &holeCards,
  }
 
 /* compute the true equities of both players, if we know real cards */
-double Evaluator::evaluate_true(const std::vector<std::string> &myHoleCards,
+float Evaluator::evaluate_true(const std::vector<std::string> &myHoleCards,
 				const std::vector<std::string> &oppHoleCards,
 				const std::vector<std::string> &boardCards,
 				const std::string &myDiscard,
@@ -165,7 +165,7 @@ double Evaluator::evaluate_true(const std::vector<std::string> &myHoleCards,
 
   calc(calcString.c_str(), board_c_str, discard_c_str, NUM_SIMULATIONS, result);
 
-  double myEv = result->ev[0]; // opponent equity from this calculator is 1-ours
+  float myEv = (float)result->ev[0]; // opponent equity from this calculator is 1-ours
 
   // make sure to free result
   free_results(result);
@@ -180,7 +180,7 @@ void Evaluator::populatePreFlopTable()
   std::ifstream fin("data/preflop.in");
   int index;
   std::string hand;
-  double ev;
+  float ev;
 
   std::cout << "Initializing pre-flop equity table..." << std::endl;
   
