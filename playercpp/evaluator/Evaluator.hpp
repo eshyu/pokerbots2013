@@ -27,6 +27,12 @@ public:
   // clear memoized equities tables
   void clearMemoizedEquities();
 
+  double adjustEquity(double equity, 
+		      const std::vector<std::string> &myHoleCards,
+		      const std::vector<std::string> &boardCards,
+		      const std::string &myDiscard
+		      );
+
   // todo: use opponent hand distribution
   /* evaluates opponents hand using pbots_calc */
   double evaluate(const std::vector<std::string> &holeCards,

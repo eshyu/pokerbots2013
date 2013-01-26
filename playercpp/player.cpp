@@ -27,7 +27,8 @@ void Player::run(tcp::iostream &stream)
   
   evaluator = new Evaluator();
   evaluator->populatePreFlopTable(); //initialize preflop equities
-  actionSelector = new ActionSelector(evaluator);
+  opponentModeler = new OpponentModeler();
+  actionSelector = new ActionSelector(evaluator, opponentModeler);
   srand(time(NULL));
 
   ActionSelector::ActionInfo nextAction;  
@@ -53,6 +54,7 @@ void Player::run(tcp::iostream &stream)
       newHand(holeCard1, holeCard2, holeCard3, button_str);
     } else if (!packet_type.compare("HANDOVER")){
       // TODO: ...
+      // update opponent modeler
       
     } else if (!packet_type.compare("REQUESTKEYVALUES")){
       // TODO ...

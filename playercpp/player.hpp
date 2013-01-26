@@ -5,6 +5,7 @@
 
 #include "actionselector/ActionSelector.hpp"
 #include "evaluator/Evaluator.hpp"
+#include "opponentmodeler/OpponentModeler.hpp"
 
 using boost::asio::ip::tcp;
 
@@ -17,6 +18,7 @@ public:
 private:
   Evaluator *evaluator;
   ActionSelector *actionSelector;
+  OpponentModeler *opponentModeler;
 
   /* match parameters */
   int STACK_SIZE, BIG_BLIND, NUM_HANDS;

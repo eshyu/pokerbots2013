@@ -31,7 +31,7 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
 {   
   BETTING_ROUND round;
   int NUM_SIMULATIONS;
-  // preflop equity table
+  
   switch (boardCards.size()){
   case 0:
     // these are already precomputed
@@ -49,8 +49,6 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
 
   // do not recompute if already computed for this round
   if (memoize && memoizedEquities[round] > 0){
-    std::cout << "====Table says Memoized equities: " << memoizedEquities[0] << " " 
-	      << memoizedEquities[1] << " " << memoizedEquities[2] << std::endl;
     return memoizedEquities[round];
   }
 
@@ -66,7 +64,7 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
     double eval0 = evaluate_pairs(discard0, boardString, holeCards[0]);
     double eval1 = evaluate_pairs(discard1, boardString, holeCards[1]);
     double eval2 = evaluate_pairs(discard2, boardString, holeCards[2]);
-
+    
     std::cout << eval0 << ", " << eval1 << ", " << eval2 << std::endl;
     
     memoizedHandPairs[0]=eval0;
@@ -84,7 +82,6 @@ double Evaluator::evaluate(const std::vector<std::string> &holeCards,
   return myEv;
     
   }
-
 
 double Evaluator::memoized_evaluate_pairs(const std::string &holeCards,
 					  const std::string &boardCards,

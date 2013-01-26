@@ -1,26 +1,27 @@
 #include "ActionSelector.hpp"
 
-#include "../opponentmodeler/OpponentModeler.hpp"
-
 #include <vector>
 #include <string>
 #include <cstdlib>
 #include <ctime>
 #include <sstream>
 #include <algorithm>
+
 #include <boost/algorithm/string.hpp>
 
+#include <boost/lexical_cast.hpp>
 
 ActionSelector::ActionSelector(){}
 
-ActionSelector::ActionSelector(Evaluator *_evaluator){
+ActionSelector::ActionSelector(Evaluator *_evaluator, OpponentModeler *_opponentModeler){
   evaluator = _evaluator;
+  opponentModeler = opponentModeler;
 }
 
 ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getaction_str, std::vector<std::string> &holeCards, std::string &myDiscard, bool myButton, int stackSize){
  
   LegalAction legalAction;
-  ActionInfo actionInfo;
+  ActionInfo actionInfo, opponentAction;
 
   int potSize, numBoardCards, numLastActions, numLegalActions;
 
@@ -37,15 +38,12 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
   ss >> numLastActions;
   packetlist2vector(ss, lastActions, numLastActions);      
   ss >> numLegalActions;
-
+  
   legalAction = actionlist2struct(ss, numLegalActions, lastActions[numLastActions-1], myButton);
-  
-  // OpponentModeler.update(lastAction);
-  
-  //  float myEval = handEval.eval(holeCards, boardCards);  
+  opponentAction = actionword2struct(lastActions[numLastActions-1]);
+
   switch(legalAction.actionType){
   case DISCARD_ONE:
-    // DiscardSelector.discard();
     //discardUniform(holeCards, myDiscard, actionInfo);
     discardGreedy(holeCards, boardCards, myDiscard, actionInfo);
     break;
@@ -54,8 +52,17 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
     selectActionForRound(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
      break;
    }
-
-   return actionInfo;
+    
+  opponentModeler->updateActionStatistics((int)actionInfo.action, 
+					  actionInfo.betAmount, 
+					  (int)opponentAction.action, 
+					  opponentAction.betAmount, 
+					  myButton,
+					  potSize, 
+					  stackSize, 
+					  boardCards, holeCards);
+  
+  return actionInfo;
 }
 
 /* Different strategies for different rounds*/
@@ -301,15 +308,37 @@ void ActionSelector::packetlist2vector(std::stringstream &ss, std::vector<std::s
   }
 }
 
+/* convert last action word into actioninfo*/
+ActionSelector::ActionInfo ActionSelector::actionword2struct(const std::string &actionword){
+  ActionInfo oppLastAction;
+  std::vector<std::string> tokens;
+  boost::split(tokens, actionword, boost::is_any_of(":"));
+  if (!tokens[0].compare("BET")){
+    oppLastAction.action=BET;
+    oppLastAction.betAmount=boost::lexical_cast<int>(tokens[1]);
+  } else if (!tokens[0].compare("CALL")){
+    oppLastAction.action=CALL;
+  } else if (!tokens[0].compare("CHECK")){
+    oppLastAction.action=CHECK;
+  } else if (!tokens[0].compare("FOLD")){
+    oppLastAction.action=FOLD;
+  } else if (!tokens[0].compare("RAISE")){
+    oppLastAction.action=RAISE;
+    oppLastAction.betAmount=boost::lexical_cast<int>(tokens[1]);
+  } else {
+    oppLastAction.action=NONE;
+  }
+
+  return oppLastAction;
+}
+
 ActionSelector::LegalAction ActionSelector::actionlist2struct(std::stringstream &ss, int length, std::string lastAction, bool myButton){
 
   LegalAction legalAction;
   std::vector<std::string> tokens;
   legalAction.actionType = CHECK_BET;
 
-  // get call amount from last action
-
-  
+  // get call amount from last action    
 
   boost::split(tokens, lastAction, boost::is_any_of(":"));
   

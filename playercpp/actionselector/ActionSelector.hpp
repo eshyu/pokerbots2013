@@ -5,11 +5,12 @@
 #include <vector>
 
 #include "../evaluator/Evaluator.hpp"
+#include "../opponentmodeler/OpponentModeler.hpp"
 
 class ActionSelector {
 public:
   ActionSelector();
-  ActionSelector(Evaluator *_evaluator);
+  ActionSelector(Evaluator *_evaluator, OpponentModeler *_opponentModeler);
   
   //TODO:  
   // OpponentModeler oppModel;    
@@ -17,7 +18,7 @@ public:
   // DiscardSelector discardSelector;  
   // BettingSelector bettingSelector;
 
-  enum ACTION {BET, CALL, CHECK, DISCARD, FOLD, RAISE};
+  enum ACTION {BET, CALL, CHECK, DISCARD, FOLD, RAISE, NONE};
 
   // todo: THIS really should be like
   // check-fold
@@ -47,6 +48,9 @@ public:
 
   // hand evaluator 
   Evaluator *evaluator;
+
+  // opponent modeler
+  OpponentModeler *opponentModeler;
 
   /* blackbox for choosing action for current game*/
   ActionInfo getAction(const std::string &getaction_str, std::vector<std::string> &holeCards, std::string &myDiscard, bool myButton, int stackSize);
@@ -86,6 +90,9 @@ private:
 
   /* converts actionlist to legal action */
   LegalAction actionlist2struct(std::stringstream &ss, int length, std::string lastAction, bool myButton);
+
+  /* convert last action word into action info */
+  ActionInfo actionword2struct(const std::string &actionword);
   
 };
 
