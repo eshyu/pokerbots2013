@@ -19,9 +19,17 @@ void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std
   int myFirstPair=0;
   int mySecondPair=0;
   int myTriple=0;
+  int handPair=0;
   
   int firstPair=1;
   int firstKicker=1;
+
+  for(int i=0; i+1<hand.size(); i++){
+    if(hand[i]==hand[i+1]){
+      handPair=hand[i];
+    }
+  }
+
   for(int i=0; i<board.size(); i++){
     if(i+4<board.size() && board[i]==board[i+3]){
       four=1;
@@ -61,7 +69,7 @@ void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std
       }
     }
   }
-
+  pairs.push_back(handPair);
   pairs.push_back(pair);
   pairs.push_back(triple);
   pairs.push_back(four);
@@ -277,19 +285,20 @@ void CardHeuristics::createTextureFeatures(std::vector<int> flush, std::vector<i
   *(out+2)=flush[2];
   *(out+3)=(float)flush[3]/14;
   *(out+4)=(float)flush[4]/14;
-  *(out+5)=pairs[0]/2;
-  *(out+6)=pairs[1];
+  *(out+5)=pairs[0]/14;
+  *(out+6)=pairs[1]/2;
   *(out+7)=pairs[2];
-  *(out+8)=(float)pairs[3]/14;
+  *(out+8)=pairs[3];
   *(out+9)=(float)pairs[4]/14;
   *(out+10)=(float)pairs[5]/14;
   *(out+11)=(float)pairs[6]/14;
   *(out+12)=(float)pairs[7]/14;
-  *(out+13)=straight[0];
-  *(out+14)=straight[1];
-  *(out+15)=straight[2];
-  *(out+16)=(float)straight[3]/14;
-  *(out+17)=(float)straight[4]/14;
+  *(out+13)=(float)pairs[8]/14;
+  *(out+14)=straight[0];
+  *(out+15)=straight[1];
+  *(out+16)=straight[2];
+  *(out+17)=(float)straight[3]/14;
+  *(out+18)=(float)straight[4]/14;
 
 }
 
