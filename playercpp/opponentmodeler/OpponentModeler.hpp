@@ -11,7 +11,7 @@
 #define NUM_PLAYERS 2
 #define POSITIONS 2
 
-#define MAX_ACTIONS 5000
+#define MAX_ACTIONS 200
 
 class OpponentModeler {
 public:
@@ -98,6 +98,9 @@ public:
 
     float mybEq[NUM_ROUNDS];
 
+    float oppBets[NUM_ROUNDS];
+    float totalBets[NUM_ROUNDS];
+
     /*
     // these are only non-zero if hand was a show
     float opponentImpliedEquity[NUM_ROUNDS]; //using pbots_calc with opphand:XXX
@@ -122,6 +125,7 @@ public:
   };
   */
 
+  // CIRCULAR buffer features and outputs
   float **NNFeatures, **NNOut;
   //float NNFeatures[MAX_ACTIONS][43];
   //  float NNOut[MAX_ACTIONS][5];
@@ -153,8 +157,7 @@ public:
   static ROUND numBoardCards2round(int numBoardCards);  
 private:
   
-  int oppActionCount, handCount; 
-  bool havePrediction; // do we have a prediction of opponent already?
+  int oppActionCount, totalActions, handCount; 
 };
 
 #endif  // __OPPONENTMODELER_HPP__

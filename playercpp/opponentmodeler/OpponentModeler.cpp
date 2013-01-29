@@ -6,8 +6,11 @@
 #define ME 0
 #define OPP 1
 
+#define NN_IN_COUNT 51
+#define NN_OUT_COUNT 5
+
 //NOTE: comment this out to turn of using NN
-//#define USE_NN
+#define USE_NN
 
 OpponentModeler::OpponentModeler()
 {
@@ -23,18 +26,19 @@ OpponentModeler::OpponentModeler()
   NNFeatures= new float*[MAX_ACTIONS];
   NNOut= new float*[MAX_ACTIONS];
   for (int i=0;i<MAX_ACTIONS;i++){
-    NNFeatures[i] = new float[43];
-    NNOut[i] = new float[5];
+    NNFeatures[i] = new float[NN_IN_COUNT];
+    NNOut[i] = new float[NN_OUT_COUNT];
   }
 #endif 
 
+  totalActions=0;
+  handCount=0;
   oppActionCount=0;
-  havePrediction=false;
 }
 
 OpponentModeler::~OpponentModeler(){}
 
-void OpponentModeler::updateActionStatistics(int myAction, int betAmnt,
+void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
 					     const std::vector<OpponentModeler::OppActionInfo> &oppActions,
 					     bool myButton,
 					     int potSize,
@@ -43,25 +47,33 @@ void OpponentModeler::updateActionStatistics(int myAction, int betAmnt,
 					     const std::vector<std::string> &boardCards,
 					     const std::vector<std::string> &holeCards)
 {
-    
-  ROUND round = (ROUND)numBoardCards2round(boardCards.size());
-
-  bool doUpdateNN=true;
-
+  bool doUpdateNN=true, finishedOldAction=false;
   std::cout << "OPMODEL:L51: NUMBER OF OPPONENT ACTIONS IS " << oppActions.size() << std::endl;
-  for (int i=0;i<oppActions.size();i++) {
-    float betRatio=0;
-
-    int oppBetAmnt=oppActions[i].betAmount;
-    ROUND round = oppActions[i].round;
-    ACTION oppAction = oppActions[i].action;
+  // TODO(eshyu): LOL indexing is such that the most recent actions are at the front=  
+  float betRatio=0;
+  int oppBetAmnt;
+  ROUND round;
+  ACTION oppAction;
+  for (int i=oppActions.size()-1;i>=0;i--){    
+    betRatio=0;
+    oppBetAmnt=oppActions[i].betAmount;
+    round = oppActions[i].round;
+    oppAction = oppActions[i].action;
 
     std::cout << "OPPONENTMODELER:L52 " << oppAction << std::endl;
 
+#ifdef USE_NN
+    if (finishedOldAction){ //we have not already tried to predict his action as data oint
+      createActionNNFeatures(round, myButton, mybEq, myBetAmount, stackSize, potSize,
+			     holeCards, boardCards, oppActionCount);
+    }
+#endif
     switch(oppAction){
     case BET:
       playerStats[OPP]->numBet[round]+=1;
       betRatio=(float)oppBetAmnt/stackSize;
+      currentHand.oppBets[round]+=oppBetAmnt;
+      currentHand.totalBets[round]+=oppBetAmnt;
       std::cout << "OP BET" << std::endl;
       break;
     case CHECK:
@@ -74,35 +86,42 @@ void OpponentModeler::updateActionStatistics(int myAction, int betAmnt,
       break;
     case FOLD:
       playerStats[OPP]->numFold[round]+=1;
+      
       std::cout << "OP fold" << std::endl;
       break;
     case RAISE:
       playerStats[OPP]->numRaise[round]+=1;
+      currentHand.oppBets[round]+=oppBetAmnt;
+      currentHand.totalBets[round]+=oppBetAmnt;
       std::cout << "OP raise" << std::endl;
       break;
     default:
       doUpdateNN=false;
       break;
     }
-  }
+    
 
 #ifdef USE_NN
-  // TODO(eshyu): create NN input if there are mutliple actions
-  if (doUpdateNN){
-    updateNNOut((ACTION)oppAction, betRatio);
-    oppActionCount++;
-  }
+    if (doUpdateNN){
+      updateNNOut((ACTION)oppAction, betRatio);
+      oppActionCount = (oppActionCount + 1) % MAX_ACTIONS;
+      totalActions++;
+    }
 #endif
+    
+    doUpdateNN=true;
+    finishedOldAction=true;    
+  }
 
   // std::cout <<  "=========================" << handCount << " " << oppActionCount << std::endl;
-  if (handCount > 150 && !havePrediction){
-    //nn->train_net(200, 43, NNFeatures, 5, NNOut);
-  }
-	
+
   bool doCreateFeature=true;
+  round = (ROUND)numBoardCards2round(boardCards.size());
+  
   switch(myAction){
   case BET:
     playerStats[ME]->numBet[round]+=1;    
+    currentHand.totalBets[round]+=myBetAmount;
     break;
   case CHECK:
     playerStats[ME]->numCheck[round]+=1;
@@ -115,6 +134,7 @@ void OpponentModeler::updateActionStatistics(int myAction, int betAmnt,
     break;
   case RAISE:
     playerStats[ME]->numRaise[round]+=1;    
+    currentHand.totalBets[round]+=myBetAmount;
     break;
   default:    
     doCreateFeature=false;
@@ -123,7 +143,7 @@ void OpponentModeler::updateActionStatistics(int myAction, int betAmnt,
   
 #ifdef USE_NN
   if (doCreateFeature){
-    createActionNNFeatures(round, myButton, mybEq, betAmnt, stackSize, potSize,
+    createActionNNFeatures(round, myButton, mybEq, myBetAmount, stackSize, potSize,
 			   holeCards, boardCards, oppActionCount);
   }
 #endif
@@ -160,7 +180,6 @@ void OpponentModeler::updateHandStats(int playerNumber, ACTION action, ROUND rou
 }
 
 void OpponentModeler::newHand(){
-  havePrediction=false;
   handCount++;
   currentHand.round=PREFLOP;
   for (int round=0;round<4;round++){
@@ -168,7 +187,16 @@ void OpponentModeler::newHand(){
     currentHand.hasBet[ME][round]=currentHand.hasBet[OPP][round]=false;
     currentHand.hasRaise[ME][round]=currentHand.hasRaise[OPP][round]=false;
     currentHand.mybEq[round]=0;    
+    currentHand.oppBets[round]=0;
+    currentHand.totalBets[round]=0;
   }
+
+  if (( handCount % 50 == 0) && totalActions > 200){
+    nn->train_net(200, 43, NNFeatures, 5, NNOut);
+  }
+	
+
+
 }
 
 void OpponentModeler::printStats(){ 
@@ -259,7 +287,7 @@ void OpponentModeler::createActionNNFeatures(ROUND round, bool myButton, float m
   // 19-22
   // round number 
   for (int i=19;i<4;i++){
-    NNFeatures[actionNum][i] = (round == (i-19)) ? 1 : 0;
+    NNFeatures[actionNum][i] = ((int)round == (i-19)) ? 1 : 0;
   }
   
   // 23
@@ -269,12 +297,12 @@ void OpponentModeler::createActionNNFeatures(ROUND round, bool myButton, float m
   // 24-29
   // round stats 
   // TODO:(why don't we do this using all the rounds)
-  NNFeatures[actionNum][24] = currentHand.hasCheck[ME][round];
-  NNFeatures[actionNum][25] = currentHand.hasCheck[OPP][round];
-  NNFeatures[actionNum][26] = currentHand.hasBet[ME][round];
-  NNFeatures[actionNum][27] = currentHand.hasBet[OPP][round];
-  NNFeatures[actionNum][28] = currentHand.hasRaise[ME][round];
-  NNFeatures[actionNum][29] = currentHand.hasRaise[OPP][round];
+  NNFeatures[actionNum][24] = currentHand.hasCheck[ME][round] ? 1 : 0;
+  NNFeatures[actionNum][25] = currentHand.hasCheck[OPP][round] ? 1 : 0;
+  NNFeatures[actionNum][26] = currentHand.hasBet[ME][round] ? 1 : 0;
+  NNFeatures[actionNum][27] = currentHand.hasBet[OPP][round] ? 1 : 0;
+  NNFeatures[actionNum][28] = currentHand.hasRaise[ME][round]? 1 : 0;
+  NNFeatures[actionNum][29] = currentHand.hasRaise[OPP][round] ? 1 : 0;
 
   // 30 - 39
   // aggregate stats
@@ -295,20 +323,57 @@ void OpponentModeler::createActionNNFeatures(ROUND round, bool myButton, float m
 
   // prevbet
   // TODO(eshyu): ... why is this not normalized?
-  NNFeatures[actionNum][40] = prevBet;
+  NNFeatures[actionNum][40] = (float)prevBet/stackSize ;
 
   // my beq
   NNFeatures[actionNum][41] = mybEq;
 
   // potSize / (2*stackSize)
   NNFeatures[actionNum][42] = (float)potSize/(2*stackSize);
-  //
+
+  // opp bets
+  for (int i=43;i<47;i++){
+    NNFeatures[actionNum][i] = currentHand.oppBets[i-43];
+  }
+
+  // totalBets
+  for (int i=47;i<51;i++){
+    NNFeatures[actionNum][i] = currentHand.totalBets[i-47];
+  }
+
+
 
   if (actionNum % 5 == 0){
-    std::cout << "=======================FEATURE INPUT IS : ";
-    for (int i =0; i<43;i++){
+    std::cout << "=======================FEATURE INPUT IS : " << totalActions ;
+    std::cout << std::endl << "board heuristic: 0-18= ";
+    for (int i =0; i<19;i++){
+      std::cout << NNFeatures[actionNum][i] << " ";
+    }
+    std::cout << std::endl << "round number, button 19-23= ";
+    for (int i =19; i<24;i++){
+      std::cout << NNFeatures[actionNum][i] << " ";
+    }
+    std::cout << std::endl << "round actions 24-29 =" ;
+    for (int i =24; i<30;i++){
+      std::cout << NNFeatures[actionNum][i] << " ";
+    }
+    std::cout << std::endl << "aggregate stats 30-39= ";
+    for (int i =30; i<40;i++){
+      std::cout << NNFeatures[actionNum][i] << " ";
+    }
+    std::cout << std::endl << "prevBet, myBEq, potsize 40-42= ";
+    for (int i =40; i<43;i++){
       std::cout << NNFeatures[actionNum][i] << " ";
     }
     std::cout << std::endl;
+    std::cout << std::endl << "opp bets 43-46= ";
+    for (int i=43;i<47;i++){
+      std::cout << NNFeatures[actionNum][i] << " ";
+    }
+    std::cout << std::endl;
+    std::cout << std::endl << "opp bets 47-51= ";
+    for (int i=47;i<51;i++){
+      std::cout << NNFeatures[actionNum][i] << " ";
+    }
   }
 }
