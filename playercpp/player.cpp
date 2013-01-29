@@ -43,19 +43,19 @@ void Player::run(tcp::iostream &stream)
       // get next action from action selector, write to stream
 
       nextAction = actionSelector->getAction(line, holeCards, myDiscard,
-					    myButton, STACK_SIZE);      
+					     myButton);      
       std::string action = action2str(nextAction);
       std::cout << "action: " << action;
       stream << action;
-
+      
     } else if (!packet_type.compare("NEWHAND")){
       // update info for new hand
       ss >> myHandId >> button_str >> holeCard1 >> holeCard2 >> holeCard3 >> myBankroll >> oppBankroll >> myTimeBank;
       newHand(holeCard1, holeCard2, holeCard3, button_str);
     } else if (!packet_type.compare("HANDOVER")){
-      // TODO: ...
-      // update opponent modeler
-      
+      // use to update opponent modeler, opponent's last action, shows if any
+      actionSelector->updateHandover(line, myButton, holeCards);
+	
     } else if (!packet_type.compare("REQUESTKEYVALUES")){
       // TODO ...
       stream << "FINISH\n";
@@ -66,6 +66,7 @@ void Player::run(tcp::iostream &stream)
     } else if (!packet_type.compare("NEWGAME")){
       // set game params
       ss >> MY_NAME >> OPP_NAME >> STACK_SIZE >> BIG_BLIND >> NUM_HANDS >> TIME_BANK;
+      actionSelector->setGameParams(MY_NAME, OPP_NAME, STACK_SIZE, BIG_BLIND, NUM_HANDS);
     } 
 
   } // end while(std::getline ...)       
@@ -88,7 +89,7 @@ void Player::newHand(const std::string &holeCard1, const std::string& holeCard2,
   myDiscard = std::string("");
   evaluator->clearMemoizedEquities();
   opponentModeler->newHand();
-  //opponentModeler->printStats();
+  opponentModeler->printStats();
 }
 
 /* Converts ActionInfo struct into string */

@@ -51,10 +51,26 @@ public:
 
   // opponent modeler
   OpponentModeler *opponentModeler;
+  
+  // Game parameters
+  std::string OPP_NAME, MY_NAME;
+  int STACK_SIZE, BIG_BLIND, NUM_HANDS;
 
   /* blackbox for choosing action for current game*/
-  ActionInfo getAction(const std::string &getaction_str, std::vector<std::string> &holeCards, std::string &myDiscard, bool myButton, int stackSize);
+  ActionInfo getAction(const std::string &getaction_str, std::vector<std::string> &holeCards, std::string &myDiscard, bool myButton);
 
+  /* set the inital game parameters */
+  void setGameParams(const std::string &myName, 
+		     const std::string &oppName,
+		     const int stackSize,
+		     const int bb,
+		     const int numHands);
+
+  /* update stats and things */
+  void updateHandover(const std::string &line, bool myButton,
+		      const std::vector<std::string> &holeCards);
+  
+ 
 private:
   float selectActionForRound(int potSize, bool myButton, 
 		 const std::vector<std::string> &boardCards,
@@ -92,8 +108,17 @@ private:
   LegalAction actionlist2struct(std::stringstream &ss, int length, std::string lastAction, bool myButton);
 
   /* convert last action word into action info */
-  ActionInfo actionword2struct(const std::string &actionword);
-  
+  OpponentModeler::OppActionInfo actionword2struct(const std::string &actionword, OpponentModeler::ROUND round);
+
+  /* get opopnent actions from action list */
+  void actionlist2actioninfos(const std::vector<std::string> &lastActions, 
+			      std::vector<OpponentModeler::OppActionInfo> & oppActions,
+			      OpponentModeler::ROUND round);
+
+  /* gets last action of the player from action list */
+  //TODO: get rid of this
+  //  std::string getLastAction(const std::vector<std::string> &lastActions, const std::string &playerName);
+
 };
 
 
