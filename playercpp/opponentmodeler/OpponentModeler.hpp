@@ -17,8 +17,6 @@ class OpponentModeler {
 public:
   OpponentModeler();
   ~OpponentModeler();
-
-  CardHeuristics *cardHeuristics;
   
   /* **Aggregate** Statistics for each betting round aggregate over all hands 
      Positions 0 (no button), 1 (button)
@@ -78,6 +76,7 @@ public:
     ACTION action;
     int betAmount; //only for BET, RAISE
     ROUND round; //round nubmer for this actioS
+    double mybEq;
   };
 
   
@@ -117,25 +116,16 @@ public:
   PlayerStatistics *playerStats[NUM_PLAYERS];
   HandStatistics currentHand;
 
-  /*  
-  // for neural net ..
-  struct ActionNNFeatures {
-    float features[27];
-    float out[5];
-  };
-  */
-
   // CIRCULAR buffer features and outputs
   float **NNFeatures, **NNOut;
-  //float NNFeatures[MAX_ACTIONS][43];
-  //  float NNOut[MAX_ACTIONS][5];
   
+  void updatebEq(float mybEq, ROUND round);
+
   void updateActionStatistics(int myAction, int betAmnt,
 			      const std::vector<OppActionInfo> &oppActions,
 			      bool myButton,
 			      int potSize,
 			      int stackSize,
-			      float mybEq,
 			      const std::vector<std::string> &boardCards,
 			      const std::vector<std::string> &holeCards);
 

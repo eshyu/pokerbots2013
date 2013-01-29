@@ -10,7 +10,7 @@
 #define NN_OUT_COUNT 5
 
 //NOTE: comment this out to turn of using NN
-#define USE_NN
+//#define USE_NN
 
 OpponentModeler::OpponentModeler()
 {
