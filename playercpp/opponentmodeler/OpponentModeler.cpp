@@ -159,14 +159,15 @@ void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
 #endif
 
   //  if (oppActionCount > 0 && !(handCount % 50) && handCount> 200 ){     
-  /*
-  if (
-    float *output = nn->get_output(NNFeatures[0]);
-    std::cout << output[0] << " " << output[1] << " " << output[2] << " "<< " " << output[3] << " " << output[4] << std::endl;
-  }
-  */
-}
 
+#ifdef USE_NN
+  if (totalActions>200){
+    float *output = nn->get_output(NNFeatures[oppActionCount]);
+    std::cout << "Neural Net prediction: " << output[0] << " " << output[1] << " " << output[2] << " "<< " " << output[3] << " " << output[4] << std::endl;    
+  }
+
+#endif
+}
 
 void OpponentModeler::updateHandStats(int playerNumber, ACTION action, ROUND round)
 {
@@ -254,16 +255,12 @@ void OpponentModeler::printStats(){
 OpponentModeler::ROUND OpponentModeler::numBoardCards2round(int numBoardCards){
   switch(numBoardCards){
   case 0:
-    std::cout << "ROUND IS PREFLOP" << std::endl;
     return PREFLOP;
   case 3:
-    std::cout << "ROUND IS FLOP" << std::endl;
     return FLOP;
   case 4:
-    std::cout << "ROUND IS turn" << std::endl;
     return TURN;
   case 5:
-    std::cout << "ROUND IS river" << std::endl;
     return RIVER;
   }
 }
