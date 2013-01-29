@@ -22,6 +22,7 @@
  *
  */
 
+#include <time.h>
 #include "floatfann.h"
 #include "fann_cpp.h"
 
@@ -59,6 +60,15 @@ fann_type* run_net(FANN::neural_net &net, fann_type * arr){
 
 }
 
+float calc_MSE(float * nnoutput, float * trueoutput, int num_output){
+  float sum=0;
+  for(int i=0; i<num_output; i++){
+    float diff=nnoutput[i]-trueoutput[i];
+    sum+=diff*diff;
+  }
+  return sum/num_output;
+}
+
 //Creates a neural net with 1 hidden layer
 FANN::neural_net create_net(float learning_rate, unsigned int num_layers,unsigned int num_input, unsigned int num_hidden, unsigned int num_output){
 
@@ -80,10 +90,47 @@ FANN::neural_net create_net(float learning_rate, unsigned int num_layers,unsigne
 
     return net;
 }
+void validate_net(FANN::neural_net &net,const std::string oFileName, const std::string actionFileName, FANN::training_data * vData, int num_output){
 
+    ofstream outputFile(oFileName.c_str());
+    ifstream finAction(actionFileName.c_str());
+    float sumMSE=0;
+    for (unsigned int i = 0; i < vData->length_train_data(); ++i)
+    {
+        // Run the network on the test data
+      fann_type * input=vData->get_input()[i];
+        fann_type *calc_out = net.run(input);
+	float mse=calc_MSE(calc_out, vData->get_output()[i],num_output);
+	sumMSE+=mse;
+	std::string line;
+	getline(finAction, line);
+	outputFile<< "***********"<<mse<<endl;
+	if((int)input[19]==1){
+	  outputFile<<"PREFLOP"<<endl;
+	}else if((int)input[20]==1){
+	  outputFile<<"FLOP"<<endl;
+	}else if((int)input[21]==1){
+	  outputFile<<"TURN"<<endl;
+	}else if((int)input[22]==1){
+	  outputFile<<"RIVER"<<endl;
+	}
+	outputFile<<line<<endl;
+	outputFile<<"nn output"<<endl;
+	for(int k=0; k<num_output; k++){
+	  outputFile<<calc_out[k]<<" ";
+	}
+	outputFile<<endl;
+	for(int j=0; j<num_output;j++){
+	  outputFile<<vData->get_output()[i][j]<<" ";
+	}
+	outputFile<<endl;
+	
+    }
+    outputFile<<"Average MSE: "<<sumMSE/vData->length_train_data()<<endl;
+    outputFile.close();
+}
 // Train the net with all the data
 void train_net(FANN::neural_net &net,std::string oppName, std::string day, std::string type, const int num_output)
-//void train_net(FANN::neural_net &net,unsigned int num_data, unsigned int num_input, fann_type **input,unsigned int num_output,fann_type **output)
 {
   
 
@@ -91,26 +138,8 @@ void train_net(FANN::neural_net &net,std::string oppName, std::string day, std::
     const unsigned int max_iterations = 1000;
     const unsigned int iterations_between_reports = 1000;
 
-    // Output network type and parameters
-    /*
-    cout << endl << "Network Type                         :  ";
-    switch (net.get_network_type())
-    {
-    case FANN::LAYER:
-        cout << "LAYER" << endl;
-        break;
-    case FANN::SHORTCUT:
-        cout << "SHORTCUT" << endl;
-        break;
-    default:
-        cout << "UNKNOWN" << endl;
-        break;
-    }
-    */
-    //net.print_parameters();
     std::string trainFileName="input/"+type+"_Casino_Day-"+day+"_"+oppName+"_vs_mybotisamazing.txt";
     std::string valFileName="input/"+type+"_Casino_Day-"+day+"_mybotisamazing_vs_"+oppName+".txt";
-
     cout << endl << "Training network." << endl;
 
     FANN::training_data data;
@@ -124,48 +153,22 @@ void train_net(FANN::neural_net &net,std::string oppName, std::string day, std::
     cout << "Max Epochs " << setw(8) << max_iterations << ". "
         << "Desired Error: " << left << desired_error << right << endl;
     net.set_callback(print_callback, NULL);
+    clock_t start=clock();
     net.train_on_data(data, max_iterations,
         iterations_between_reports, desired_error);
-
+    clock_t end=clock();
+    
+    cout<<"Runtime:"<< end-start<<endl;
     cout << endl << "Testing network." << endl;
+    
     std::string oFileName="output/"+type+"_"+oppName+"_day_"+day+".txt";
     std::string actionFile="input/action_Casino_Day-"+day+"_mybotisamazing_vs_"+oppName+".txt";
-    ofstream outputFile(oFileName.c_str());
-    ifstream finAction(actionFile.c_str());
-    for (unsigned int i = 0; i < vData.length_train_data(); ++i)
-    {
-        // Run the network on the test data
-      fann_type * input=vData.get_input()[i];
-        fann_type *calc_out = net.run(input);
-	std::string line;
-	getline(finAction, line);
-	outputFile<< "***********"<<endl;
-	if((int)input[0]==1){
-	  outputFile<<"PREFLOP"<<endl;
-	}else if((int)input[1]==1){
-	  outputFile<<"FLOP"<<endl;
-	}else if((int)input[2]==1){
-	  outputFile<<"TURN"<<endl;
-	}else if((int)input[3]==1){
-	  outputFile<<"RIVER"<<endl;
-	}
-	outputFile<<line<<endl;
-	outputFile<<"nn output"<<endl;
-	for(int k=0; k<num_output; k++){
-	  outputFile<<calc_out[k]<<" ";
-	}
-	outputFile<<endl;
-	for(int j=0; j<num_output;j++){
-	  outputFile<<vData.get_output()[i][j]<<" ";
-	}
-	outputFile<<endl;
-	   //<< "difference = " << noshowpos
-	   //<< fann_abs(*calc_out - data.get_output()[i][0]) << endl;
-	
-    }
-    outputFile.close();
-    
-    //cout << endl << "Saving network." << endl;
+    validate_net(net, oFileName,actionFile, &vData, num_output);
+    /////////////////////////////////////////////////////
+    net.train_on_data(vData,max_iterations,iterations_between_reports,desired_error);
+    std::string oFileName2="output/"+type+"2_"+oppName+"_day_"+day+".txt";
+    std::string actionFile2="input/action_Casino_Day-"+day+"_mybotisamazing_vs_"+oppName+".txt";
+    validate_net(net,oFileName2,actionFile,&vData,num_output);
 
     // Save the network in floating point and fixed point
     std::string netFile="output/"+type+"_"+oppName+"_day_"+day+".net";
@@ -174,20 +177,20 @@ void train_net(FANN::neural_net &net,std::string oppName, std::string day, std::
     //data.save_train_to_fixed("training_fixed.data", decimal_point);
 	
 }
+
+
 /*
 //after we have a neural net, we can find the input that would maximize our EV
-int max_ev(FANN::neural_net &net,float *input,int num_inputs, float callMin, float betMax){
+int max_ev(FANN::neural_net &net,vector<int> hand, vector<int> board,vector<float> input, float callMin, float betMax, float tEq, int round){
   //for EV calculations
-
-  float *next_move=get_next_moves(callMin,betMax);
-  float num_moves=next_move[0];
+  
   float best_move=0;
   float best_ev=-800;
   for(int n=1; n<=num_moves;n++){
     int move=next_move[n];
-    float *i=get_input(next_move,input,num_inputs);
+    float *i=get_input(next_move,input,num_inputs, hand,board);
     float *move_distribution=net.run(i);
-    float ev=calc_ev(next_move,move_distribution);
+    float ev=calc_ev(move_distribution, equity);
     if(ev>best_ev){
       best_ev=ev;
       best_move=n;
@@ -241,11 +244,12 @@ double betSize (in terms of pot odds)
 double oppTrueEquity
 */
 /*
-float calc_ev(int next_move,float * move_distribution){
-  //last entry in move distribution is equity
-  float oppEquity=move_distribution[5];
-  
-  
+float calc_ev(float * dist, float equity, float callAmt){
+  //move_distribution=[bet,call,check,fold,betAmt]
+  float ev=0;
+  float total=dist[0]+dist[1]+dist[2]+dist[3];
+  ev+=(dist[0]*dist[4]*equity+dist[1]*callAmt*equity)/total;
+  return ev;
 }
 
 */
@@ -257,16 +261,16 @@ int main(int argc, char **argv)
     {
         std::ios::sync_with_stdio(); // Syncronize cout and printf output
 	
-	std::string oppName="Poseidon";
-	std::string day="7";
+	std::string oppName="NoodleArm";
+	std::string day="11";
 	const float learning_rate = 0.07f;
 	const unsigned int num_layers=3;
 	
-	const unsigned int num_input_dist = 43;
+	const unsigned int num_input_dist = 51;
 	const unsigned int num_hidden_dist = num_input_dist/2;
 	const unsigned int num_output_dist = 5;
 
-	const unsigned int num_input_eq = 43;
+	const unsigned int num_input_eq = 51;
 	const unsigned int num_hidden_eq = num_input_eq/2;
 	const unsigned int num_output_eq = 1;
 	
@@ -275,8 +279,7 @@ int main(int argc, char **argv)
 
 	train_net(net_dist,oppName,day,"dist",num_output_dist);
 	train_net(net_eq,oppName,day,"equity",num_output_eq);
-	//float *output=run_net(net,a);
-	//cout<< endl<<  output[0]<<" and "<< output[1]<<endl;
+
 
     }
     catch (...)

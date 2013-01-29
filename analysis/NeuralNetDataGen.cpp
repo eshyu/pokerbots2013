@@ -1,5 +1,6 @@
 #include "../playercpp/opponentmodeler/OpponentModeler.hpp"
 #include "../playercpp/evaluator/Evaluator.hpp"
+#include "../playercpp/evaluator/CardHeuristics.hpp"
 
 #include <iostream>
 #include <fstream>
@@ -26,8 +27,20 @@ int numRaise[2][4];
 int numCall[2][4];
 int numFold[2][4];  
 
-void printData(std::string textureString, int potSize,  double myEquity, bool myButton, double prevBet, ROUND round, ofstream &fout){ 
-	fout<<textureString;
+std::string arrayToString(float * arr, int num_values){
+  std::string s="";
+  for(int i=0; i<num_values;i++){
+    s+=boost::lexical_cast<string>(arr[i]);
+    s+=" ";
+  }
+  return s;
+}
+
+
+void printData(float * volBets, float * totalBet,std::string textureString, int potSize,  double myEquity, bool myButton, double prevBet, ROUND round, ofstream &fout){ 
+  fout<<arrayToString(volBets,4);
+  fout<<arrayToString(totalBet,4);
+  fout<<textureString;
    switch (round) {
    case 0:
     fout << "1 0 0 0 ";
@@ -111,253 +124,14 @@ int getNum(char card){
 std::string getTextureString(vector<int> flush, vector<int> pairs, vector<int> straight){
 	std::string textureString="";
 	textureString=boost::lexical_cast<string>(flush[0])+" "+boost::lexical_cast<string>(flush[1])+" "+boost::lexical_cast<string>(flush[2])+" "+boost::lexical_cast<string>((double)flush[3]/14)+" "+boost::lexical_cast<string>((double)flush[4]/14)+" ";
-	textureString+=boost::lexical_cast<string>(pairs[0])+" "+boost::lexical_cast<string>(pairs[1])+" "+boost::lexical_cast<string>(pairs[2])+" "+boost::lexical_cast<string>(pairs[3])+" "+boost::lexical_cast<string>((double)pairs[4]/14)+" "+boost::lexical_cast<string>((double)pairs[5]/14)+" "+boost::lexical_cast<string>((double)pairs[6]/14)+" "+boost::lexical_cast<string>((double)pairs[7]/14)+" "+boost::lexical_cast<string>((double)pairs[8]/14)+" ";
+	textureString+=boost::lexical_cast<string>(pairs[0])+" "+boost::lexical_cast<string>((double)pairs[1]/2)+" "+boost::lexical_cast<string>(pairs[2])+" "+boost::lexical_cast<string>(pairs[3])+" "+boost::lexical_cast<string>((double)pairs[4]/14)+" "+boost::lexical_cast<string>((double)pairs[5]/14)+" "+boost::lexical_cast<string>((double)pairs[6]/14)+" "+boost::lexical_cast<string>((double)pairs[7]/14)+" "+boost::lexical_cast<string>((double)pairs[8]/14)+" ";
 	textureString+=boost::lexical_cast<string>(straight[0])+" "+boost::lexical_cast<string>(straight[1])+" "+boost::lexical_cast<string>(straight[2])+" "+boost::lexical_cast<string>((double)straight[3]/14)+" "+boost::lexical_cast<string>((double)straight[4]/14)+" ";
 	return textureString;
 }
 
 
-vector<int> getPairs(vector<int> hand, vector<int> board){
-	//return: onePair, twoPair, oneTriple, oneFour, myFirstKicker, mySecondKicker,myFirstPair, mySecondPair, myTriple
-	std::sort (hand.begin(), hand.end()); 
-	std::sort (board.begin(), board.end()); 
-	int onePair=0;
-	int twoPair=0;
-	int triple=0;
-	int four=0;
-	int myFirstKicker=0;
-	int mySecondKicker=0;
-	int myFirstPair=0;
-	int mySecondPair=0;
-	int myTriple=0;
-
-	int firstPair=1;
-	int firstKicker=1;
-	for(int i=0; i<board.size(); i++){
-		if(i<board.size()-4 && board[i]==board[i+3]){
-			four=1;
-			i+=3;
-		} else if(i<board.size()-3 && board[i]==board[i+2]){
-			triple=1;
-			for(int k=0; k<hand.size(); k++){
-				if(hand[k]==board[i]){
-					myTriple=board[i];
-				}
-			}
-			i+=2;
-		}else if(i<board.size()-2 && board[i]==board[i+1]){
-
-			for(int k=0; k<hand.size(); k++){
-				if(hand[k]==board[i]){
-					if(firstPair){
-						myFirstKicker=board[i];
-						firstPair=0;
-					}else{
-						mySecondKicker=board[i];
-					}
-				}
-			}
-			i++;
-			
-		}else{
-			for(int k=0; k<hand.size(); k++){
-				if(hand[k]==board[i]){
-					if(firstKicker){
-						myFirstKicker=board[i];
-						firstKicker=0;
-					}else{
-						mySecondKicker=board[i];
-					}
-				}
-			}
-		}
-	}
-	
-	int myints[] = {onePair, twoPair, triple, four, myFirstKicker, mySecondKicker,myFirstPair, mySecondPair, myTriple};
-	
-  	std::vector<int> returnValues (myints, myints + sizeof(myints) / sizeof(int) );
-
-	return returnValues;
-
-}
-
-//TODO: change to rank instead of raw number
-vector<int> getStraight(vector<int> hand, vector<int> board){
-	//return: threeStraight, fourStraight, fiveStraight, firstStraightCard,secondStraightCard
-	std::sort (hand.begin(), hand.end()); 
-	hand.erase( unique( hand.begin(), hand.end() ), hand.end() );
-	std::sort (board.begin(), board.end()); 
-	board.erase( unique( board.begin(), board.end() ), board.end() );
-	int threeStraight=0;
-	int fourStraight=0;
-	int fiveStraight=0;
-	int firstStraightCard=0;
-	int secondStraightCard=0;
-
-	for(int i=0; i<board.size(); i++){
-		if(i<board.size()-4 && board[i]+5>board[i+4]){
-			fiveStraight=1;
-			fourStraight=1;
-			threeStraight=1;
-			if((hand[0]==board[i+4]+1 && hand[1]==board[i+4]+2)){
-				firstStraightCard=hand[0];
-				secondStraightCard=hand[1];
-			} else if(hand[0]==board[i+4]+1 || hand[1]==board[i+4]+1){
-				firstStraightCard=board[i+4]+1;
-			}
-			break;
-		} else if(i<board.size()-3 && board[i]+5>board[i+3]){
-			fourStraight=1;
-			threeStraight=1;
-			vector<int> v(5);
-			vector<int> v2(hand.size());   
-			int boardCards[]={board[i],board[i+1],board[i+2],board[i+3]};
-			int necCards[]={board[i],board[i]+1,board[i]+2,board[i]+3,board[i]+4};
-			//vector<int> boardCards(board.begin()+i,board.begin()+i+3);
-			//vector<int> necCards(board.begin()+i,board.begin()+i+3);
-			vector<int>::iterator it=set_difference(necCards, necCards+5,boardCards, boardCards+4,v.begin());
-
-			vector<int>::iterator it2=set_intersection(v.begin(), it, hand.begin(),hand.end(),v2.begin());
-			int numStraightCards=int(it2-v2.begin());
-			if(numStraightCards>0){
-				firstStraightCard=v2[0];
-				if(numStraightCards>1){
-					secondStraightCard=v2[1];
-				}
-			}
-		} else if(i<board.size()-2 && board[i]+5>board[i+2]){
-			threeStraight=1;
-			vector<int> v(5);
-			vector<int> v2(hand.size());   
-			int boardCards[]={board[i],board[i+1],board[i+2]};
-			int necCards[]={board[i],board[i]+1,board[i]+2,board[i]+3,board[i]+4};
-			//vector<int> boardCards(board.begin()+i,board.begin()+i+3);
-			//vector<int> necCards(board.begin()+i,board.begin()+i+3);
-			vector<int>::iterator it=set_difference(necCards, necCards+5,boardCards, boardCards+3,v.begin());
-
-			vector<int>::iterator it2=set_intersection(v.begin(), it, hand.begin(),hand.end(),v2.begin());
-			int numStraightCards=int(it2-v2.begin());
-			if(numStraightCards>0){
-				firstStraightCard=v2[0];
-				if(numStraightCards>1){
-					secondStraightCard=v2[1];
-				}
-			}
-		/*
-			vector<int> v(5);
-			vector<int> v2(hand.size());   
-			vector<int> boardCards=(board.begin()+i,board.begin()+i+2);
-			vector<int> necCards(board.begin()+i,board.begin()+i+2);
-			vector<int>::iterator it=set_difference(necCards.begin(), necCards.begin()+5,boardCards.begin(), boardCards.end(),v);//TODO
-			vector<int>::iterator it2=set_intersection(v.begin, it, hand.begin(),hand.end(),v2);
-			int numStraightCards=int(it2-v2.begin());
-			if(numStraightCards>0){
-				firstStraightCard=v2[0];
-				if(numStraightCards>1){
-					secondStraightCard=v2[1];
-				}
-			}*/
-		}	
-	}
-	
-	int myints[] = {threeStraight,fourStraight,fiveStraight,firstStraightCard,secondStraightCard};
-  	std::vector<int> returnValues (myints, myints + sizeof(myints) / sizeof(int) );
-	return returnValues;
-}
-
-vector<int> getFlush(vector<int> handSuits, vector<int> handNum, vector<int> boardSuits, vector<int> boardNum){
-	//return: threeSuit,fourSuit,fiveSuit,firstFlushCard,secondFlushCard
-	vector<int> returnValues;
-	int suits[4]={0,0,0,0};
-	int flushSuit=-1;
-	for(int i=0; i<boardSuits.size(); i++){
-		suits[boardSuits[i]]++;
-	}
-	for(int k=0; k<4; k++){
-		if(suits[k]>2){//at least 3
-			flushSuit=k;
-		}
-	}
-	if(flushSuit<0){
-		vector<int> returnValues(5,0);
-		return returnValues;
-	}
-	bool first=1;
-	int firstFlushCard=0;
-	int secondFlushCard=0;
-	for(int i=0; i<handSuits.size(); i++){
-		if(handSuits[i]==flushSuit){
-			if(first){//doesn't quite work for us with 3 cards, but w/e
-				first=0;
-				firstFlushCard=handNum[i];
-			}else{
-				secondFlushCard=handNum[i];
-			}
-		}
-	}
-	if(suits[flushSuit]==3){
-		int myints[] = {1,0,0,firstFlushCard,secondFlushCard};
-  		std::vector<int> returnValues (myints, myints + sizeof(myints) / sizeof(int) );
-		return returnValues;
-	} else if(suits[flushSuit]==4){
-		int myints[] = {1,1,0,firstFlushCard,secondFlushCard};
-  		std::vector<int> returnValues (myints, myints + sizeof(myints) / sizeof(int) );
-		return returnValues;
-	}else{
-		int myints[] = {1,1,1,firstFlushCard,secondFlushCard};
-  		std::vector<int> returnValues (myints, myints + sizeof(myints) / sizeof(int) );
-		return returnValues;
-	}
-}
 std::string boardTexture(vector<string> hand, vector<string> board){
-	//cout<<"board texture"<<endl;
-	/*
-	//straight
-	bool threeStraight=0;
-	bool fourStraight=0;
-	bool fiveStraight=0;
-	
-	//three cards
-	bool threeInRow=0;
-	bool two1one=0;
-	bool two2one=0;
-	bool one1one1one=0;
-	//four cards
-	bool fourInRow=0;
-	bool three1one=0;
-	bool three2one=0;
-	bool two1two=0;
-	bool two2two=0;
-	bool two1one1one=0;
-	//five cards
-	bool fiveInRow=0;
-	bool four1one=0;
-	bool four2one=0;
-	bool three1one=0;
-	bool three2one=0;
-	bool three1one1one=0;
-	bool two1two1one=0;
-	
-	//suits
-	bool threeSuit=0;
-	bool fourSuit=0;
-	bool fiveSuit=0;
-	//pairs, triples
-	bool onePair=0;
-	bool twoPair=0;
-	bool oneTriple=0;
-	bool oneFour=0;
-	//my cards (currently doesn't handle third card, so not great for pre-discard?)
-	float myFirstStraightCard=0;
-	float mySecondStraightCard=0;
-	float myFirstKicker=0;
-	float mySecondKicker=0;
-	float myFirstPair=0;
-	float mySecondPair=0;
-	float myTriple=0;
-	float myFirstSuit=0;
-	float mySecondSuit=0;
-	*/
+
 	//****
 	int num_hand=hand.size();
 	int num_board=board.size();
@@ -380,12 +154,13 @@ std::string boardTexture(vector<string> hand, vector<string> board){
 	}
 
 	//flush: threeSuit,fourSuit,fiveSuit,firstFlushCard,secondFlushCard
-	//cout<<"flush"<<endl;
-	vector<int> flush = getFlush(handSuits,handNum,boardSuits,boardNum);	
-	//cout<<"pairs"<<endl;
-	vector<int> pairs=getPairs(handNum,boardNum);
+	vector<int> flush;
+	CardHeuristics::getFlush(handSuits,handNum,boardSuits,boardNum, flush);	
+	vector<int> pairs;
+	CardHeuristics::getPairs(handNum,boardNum,pairs);
 	//cout<<"straight"<<endl;
-	vector<int> straight = getStraight(handNum,boardNum);
+	vector<int> straight;
+	CardHeuristics::getStraight(handNum,boardNum,straight);
 	return getTextureString(flush,pairs,straight);
 
 }
@@ -468,6 +243,9 @@ int stackSize, bb;
    int numRaisedHands[2]; //preflop
    int bankRoll[2];
 
+   float oppVolBet[4];
+   float totalBet[4];
+
    // hand state vars
    int handNum, potSize, toCall, prevRaise, button;
    bool preflopRaiseOnce[2];
@@ -487,6 +265,8 @@ int stackSize, bb;
        numRaise[i][j]=0;
        numCall[i][j]=0;
        numFold[i][j]=0;
+       oppVolBet[j]=0;
+       totalBet[j]=0;
      }
    }
 
@@ -529,6 +309,8 @@ int stackSize, bb;
 	   check[i][j]=false;
 	   bet[i][j]=false;
 	   hasRaise[i][j]=false;
+	   oppVolBet[j]=0;
+	   totalBet[j]=0;
 	 }
        }
 
@@ -557,14 +339,15 @@ int stackSize, bb;
 	 if (!player){
 	   button = (tokens[5].compare("1")) ? 0 : 1;
 	 }
-
+	 //CALLS**************************************
        } else if (!tokens[1].compare("calls")){
 	if (player==1){
-	   printData(boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevRaise/stackSize, round, foutDist);
+	  printData(oppVolBet,totalBet,boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevRaise/stackSize, round, foutDist);
 	   foutDist<< "0 0 1 0 0"<<endl;
 	 }
-
+	
 	 potSize+=toCall;
+	 
 	 double potOdds = (double)toCall/potSize;
 
 	 //toCall=0;
@@ -573,19 +356,18 @@ int stackSize, bb;
 
 	 if (player == 1){//removed && round == PREFLOP
 	   foutAction << line<<  endl;
-		//cout<<line<<endl;
            numData++;
-	   printData(boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)toCall/stackSize, round, foutEquity);
+	   printData(oppVolBet,totalBet,boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)toCall/stackSize, round, foutEquity);
 	   foutEquity << oppTeq <<  endl;
 	 }
 	 toCall=0;
 	 
-	 
+	 //CHECKS**************************************
        } else if (!tokens[1].compare("checks")){
 
 	 if (player == 1){//removed && round == PREFLOP
 
-	   printData(boardTexture(hands[0],boardCards),potSize, myBeq, button==0, 0, round, foutDist);
+	   printData(oppVolBet,totalBet,boardTexture(hands[0],boardCards),potSize, myBeq, button==0, 0, round, foutDist);
 	   foutDist<< "0 1 0 0 0"<<endl;
 	 }
 
@@ -596,17 +378,19 @@ int stackSize, bb;
 	   foutAction << line <<  endl;
 	//cout<<line<<endl;
            numData++;
-	   printData(boardTexture(hands[0],boardCards),potSize, myBeq, button==0, 0, round, foutEquity);
+	   printData(oppVolBet,totalBet,boardTexture(hands[0],boardCards),potSize, myBeq, button==0, 0, round, foutEquity);
 	   foutEquity << oppTeq <<  endl;
 
 	 }
-
+	 //BETS**************************************
        } else if (!tokens[1].compare("bets")){  
 	 toCall=boost::lexical_cast<int>(tokens[2]);	    
 	 if (player == 1 ){//removed && round == PREFLOP
-	   printData(boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevRaise/stackSize, round, foutDist);
+	   printData(oppVolBet,totalBet,boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevRaise/stackSize, round, foutDist);
 	   foutDist<< "1 0 0 0 "<<(double)toCall/stackSize<<endl;
+	   oppVolBet[round]+=(double)toCall/stackSize;
 	 }
+	 totalBet[round]+=(double)toCall/stackSize;
 	 int prevBet = prevRaise;
 	 prevRaise=toCall;
 	 potSize+=toCall;
@@ -623,11 +407,11 @@ int stackSize, bb;
 	   foutAction << line <<  endl;
 //cout<<line<<endl;
            numData++;
-	   printData(boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevRaise/stackSize, round, foutEquity);
+	   printData(oppVolBet,totalBet,boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevRaise/stackSize, round, foutEquity);
 	   foutEquity << oppTeq <<  endl;
 
 	 }
-	
+	 //RAISES**************************************
        } else if (!tokens[1].compare("raises")){
 
 	 int raise=boost::lexical_cast<int>(tokens[3]);
@@ -645,10 +429,11 @@ int stackSize, bb;
 	int prevBet = prevRaise;
 	toCall = raise-prevRaise;
 	if (player == 1 ){//removed && round == PREFLOP
-	  printData(boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevBet/stackSize, round, foutDist);
+	  printData(oppVolBet,totalBet,boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevBet/stackSize, round, foutDist);
 	  foutDist<< "1 0 0 0 "<<(double)toCall/stackSize<<endl;
+	  oppVolBet[round]+=(double)toCall/stackSize;
 	}
-
+	totalBet[round]+=(double)toCall/stackSize;
 	prevRaise=raise;
 	potSize+=raise;
 
@@ -665,7 +450,7 @@ int stackSize, bb;
 	   foutAction << line <<  endl;
 //cout<<line<<endl;
            numData++;
-	  printData(boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevRaise/stackSize, round, foutEquity);
+	  printData(oppVolBet,totalBet,boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevRaise/stackSize, round, foutEquity);
 	  foutEquity << oppTeq <<  endl;
 
 	}
@@ -680,9 +465,10 @@ int stackSize, bb;
 	    break;
 	  }
 	}
+	//FOLDS**************************************
       } else if (!tokens[1].compare("folds")){
 	if (player == 1){//removed && round == PREFLOP
-	  printData(boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevRaise/stackSize, round, foutDist);
+	  printData(oppVolBet,totalBet,boardTexture(hands[0],boardCards),potSize, myBeq, button==0, (double)prevRaise/stackSize, round, foutDist);
 	  foutDist<< "0 0 0 1 0 "<<endl;
 	}
 	int numSims = (boardCards.size() > 3) ? SIMS_FAST : SIMS_SLOW;
@@ -694,7 +480,7 @@ int stackSize, bb;
 	   foutAction << line <<  endl;
 //cout<<line<<endl;
            numData++;
-	  printData(boardTexture(hands[0],boardCards),potSize, myBeq, button==0, 0, round, foutEquity);
+	  printData(oppVolBet,totalBet,boardTexture(hands[0],boardCards),potSize, myBeq, button==0, 0, round, foutEquity);
 	  foutEquity << oppTeq <<  endl;
 	}
 
@@ -737,9 +523,13 @@ int stackSize, bb;
   ifstream finDist(outPathNameDistTemp.c_str());
   ofstream foutEquityFinal(outPathNameEquity.c_str());
   ofstream foutDistFinal(outPathNameDist.c_str());
-
-  foutEquityFinal << numData << " " << 43 << " " << 1 << endl;
-  foutDistFinal<< numData << " " << 43 << " " << 5 << endl;
+  
+  int num_inputs=51;
+  if(me!=1){
+    numData=200;
+  }
+  foutEquityFinal << numData << " " << num_inputs << " " << 1 << endl;
+  foutDistFinal<< numData << " " << num_inputs << " " << 5 << endl;
   foutEquityFinal<<finEquity.rdbuf();
   foutDistFinal << finDist.rdbuf();
   finEquity.close();
