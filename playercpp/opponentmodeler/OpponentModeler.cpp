@@ -12,18 +12,21 @@
 OpponentModeler::OpponentModeler()
 {
   cardHeuristics = new CardHeuristics();
-  nn = new NeuralNet();
+
 
   for (int i=0;i<NUM_PLAYERS;i++){
     playerStats[i] = new PlayerStatistics();    
   }
 
+#ifdef USE_NN
+  nn = new NeuralNet();
   NNFeatures= new float*[MAX_ACTIONS];
   NNOut= new float*[MAX_ACTIONS];
   for (int i=0;i<MAX_ACTIONS;i++){
     NNFeatures[i] = new float[43];
     NNOut[i] = new float[5];
   }
+#endif 
 
   oppActionCount=0;
   havePrediction=false;
@@ -32,7 +35,7 @@ OpponentModeler::OpponentModeler()
 OpponentModeler::~OpponentModeler(){}
 
 void OpponentModeler::updateActionStatistics(int myAction, int betAmnt,
-					     int oppAction, int oppBetAmnt,
+					     const std::vector<OpponentModeler::OppActionInfo> &oppActions,
 					     bool myButton,
 					     int potSize,
 					     int stackSize,
@@ -44,29 +47,47 @@ void OpponentModeler::updateActionStatistics(int myAction, int betAmnt,
   ROUND round = (ROUND)numBoardCards2round(boardCards.size());
 
   bool doUpdateNN=true;
-  float betRatio=0;
-  switch(oppAction){
-  case BET:
-    playerStats[OPP]->numBet[round]+=1;
-    betRatio=(float)oppBetAmnt/stackSize;
-    break;
-  case CHECK:
-    playerStats[OPP]->numCheck[round]+=1;
-    break;
-  case CALL:
-    playerStats[OPP]->numCall[round]+=1;
-  case FOLD:
-    playerStats[OPP]->numFold[round]+=1;
-    break;
-  case RAISE:
-    playerStats[OPP]->numRaise[round]+=1;
-    break;
-  default:
-    doUpdateNN=false;
-    break;
+
+  std::cout << "OPMODEL:L51: NUMBER OF OPPONENT ACTIONS IS " << oppActions.size() << std::endl;
+  for (int i=0;i<oppActions.size();i++) {
+    float betRatio=0;
+
+    int oppBetAmnt=oppActions[i].betAmount;
+    ROUND round = oppActions[i].round;
+    ACTION oppAction = oppActions[i].action;
+
+    std::cout << "OPPONENTMODELER:L52 " << oppAction << std::endl;
+
+    switch(oppAction){
+    case BET:
+      playerStats[OPP]->numBet[round]+=1;
+      betRatio=(float)oppBetAmnt/stackSize;
+      std::cout << "OP BET" << std::endl;
+      break;
+    case CHECK:
+      playerStats[OPP]->numCheck[round]+=1;
+      std::cout << "OP check" << std::endl;
+      break;
+    case CALL:
+      playerStats[OPP]->numCall[round]+=1;
+      std::cout << "OP call" << std::endl;
+      break;
+    case FOLD:
+      playerStats[OPP]->numFold[round]+=1;
+      std::cout << "OP fold" << std::endl;
+      break;
+    case RAISE:
+      playerStats[OPP]->numRaise[round]+=1;
+      std::cout << "OP raise" << std::endl;
+      break;
+    default:
+      doUpdateNN=false;
+      break;
+    }
   }
-  
+
 #ifdef USE_NN
+  // TODO(eshyu): create NN input if there are mutliple actions
   if (doUpdateNN){
     updateNNOut((ACTION)oppAction, betRatio);
     oppActionCount++;
@@ -167,6 +188,7 @@ void OpponentModeler::printStats(){
       std::cout << "Round: RIVER" << std::endl;
       break;
     }
+    std::cout.precision(3);
     std::cout << std::fixed << ((float)playerStats[ME]->numCheck[round]/(playerStats[ME]->numCheck[round] + playerStats[ME]->numBet[round] + playerStats[ME]->numRaise[round] + playerStats[ME]->numCall[round] + playerStats[ME]->numFold[round]))  << " "
               << ((float)playerStats[OPP]->numCheck[round]/(playerStats[OPP]->numCheck[round] + playerStats[OPP]->numBet[round] + playerStats[OPP]->numRaise[round] + playerStats[OPP]->numCall[round] + playerStats[OPP]->numFold[round]))  << "\t"
 

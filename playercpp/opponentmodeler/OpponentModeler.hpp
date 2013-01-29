@@ -69,6 +69,17 @@ public:
       }
     }
   };	
+
+
+  enum ROUND {PREFLOP, FLOP, TURN, RIVER};
+  enum ACTION {BET, CALL, CHECK, DISCARD, FOLD, RAISE, NONE};  
+
+  struct OppActionInfo {
+    ACTION action;
+    int betAmount; //only for BET, RAISE
+    ROUND round; //round nubmer for this actioS
+  };
+
   
   // stats for one hand to train neural nets or other learning algorithms
   struct HandStatistics {
@@ -96,10 +107,6 @@ public:
 
   NeuralNet *nn;
 
-  enum ROUND {PREFLOP, FLOP, TURN, RIVER};
-  enum ACTION {BET, CALL, CHECK, DISCARD, FOLD, RAISE, NONE};  
-
-
   float flopHandDistr[1755];
   float postFlopHandDistr[169];
 
@@ -120,7 +127,7 @@ public:
   //  float NNOut[MAX_ACTIONS][5];
   
   void updateActionStatistics(int myAction, int betAmnt,
-			      int oppAction, int oppBetAmnt,
+			      const std::vector<OppActionInfo> &oppActions,
 			      bool myButton,
 			      int potSize,
 			      int stackSize,
@@ -142,9 +149,9 @@ public:
   void newHand();
 
   void printStats();
-  
+
+  static ROUND numBoardCards2round(int numBoardCards);  
 private:
-  ROUND numBoardCards2round(int numBoardCards);
   
   int oppActionCount, handCount; 
   bool havePrediction; // do we have a prediction of opponent already?
