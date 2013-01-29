@@ -7,6 +7,17 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/lexical_cast.hpp>
 
+bool CardHeuristics::havePair(std::vector<int>hand){
+  bool pair=false;
+  std::sort(hand.begin(),hand.end());
+  for(int i=0; i+1<hand.size();i++){
+    if(hand[i]==hand[i+1]){
+      pair=true;
+    }
+  }
+  return true;
+}
+
 //return: pair, oneTriple, oneFour, myFirstKicker, mySecondKicker,myFirstPair, mySecondPair, myTriple
 void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std::vector<int> &pairs){
   std::sort (hand.begin(), hand.end()); 
@@ -86,8 +97,16 @@ void CardHeuristics::getStraight(std::vector<int> hand,
 					     std::vector<int> board, std::vector<int> &straight){
   //return: threeStraight, fourStraight, fiveStraight, firstStraightCard,secondStraightCard
   std::sort (hand.begin(), hand.end()); 
+  /*
+  if(hand.end(==14){
+    hand.insert(hand.begin(),1);
+    }*/
   hand.erase( unique( hand.begin(), hand.end() ), hand.end() );
   std::sort (board.begin(), board.end()); 
+  /*
+  if(board[board.size()-1]==14){
+    board.insert(board.begin(),1);
+    }*/
   board.erase( unique( board.begin(), board.end() ), board.end() );
 
   int threeStraight=0;
@@ -120,12 +139,18 @@ void CardHeuristics::getStraight(std::vector<int> hand,
 
       std::vector<int>::iterator it2=set_intersection(v.begin(), it, hand.begin(),hand.end(),v2.begin());
       int numStraightCards=int(it2-v2.begin());
-      if(numStraightCards>0){
+      if(board[i]+3==board[i+3] && (hand[0]==board[i]-1 || hand[1]==board[i]-1)){
+	firstStraightCard=board[i]-1;
+	if(numStraightCards>0){
+	  secondStraightCard=v2[0];
+	}
+      }else if(numStraightCards>0){
 	firstStraightCard=v2[0];
 	if(numStraightCards>1){
 	  secondStraightCard=v2[1];
 	}
       }
+      
     } else if(i+2<board.size() && board[i]+5>board[i+2]){
       threeStraight=1;
       std::vector<int> v(5);
@@ -136,7 +161,17 @@ void CardHeuristics::getStraight(std::vector<int> hand,
       std::vector<int>::iterator it=set_difference(necCards, necCards+5,boardCards, boardCards+3,v.begin());
       std::vector<int>::iterator it2=set_intersection(v.begin(), it, hand.begin(),hand.end(),v2.begin());
       int numStraightCards=int(it2-v2.begin());
-      if(numStraightCards>0){
+      if(board[i]+2==board[i+2]){
+	if(hand[0]==board[i]-2 && hand[1]==board[i]-1){
+	  firstStraightCard=board[i]-2;
+	  secondStraightCard=board[i]-1;
+	}else if(hand[0]==board[i]-1 || hand[1]==board[i]-1){
+	  firstStraightCard=board[i]-1;
+	  if(numStraightCards>0){
+	    secondStraightCard=v2[0];
+	  }
+	}
+      }else if(numStraightCards>0){
 	firstStraightCard=v2[0];
 	if(numStraightCards>1){
 	  secondStraightCard=v2[1];
