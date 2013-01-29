@@ -6,30 +6,31 @@
 
 class CardHeuristics {
 public: 
-  void getPairs(std::vector<int> hand, std::vector<int> board, std::vector<int> &pairs);
-  void getStraight(std::vector<int> hand,
+  static bool havePair(const std::vector<std::string> &had);
+
+  static void getPairs(std::vector<int> hand, std::vector<int> board, std::vector<int> &pairs);
+  static void getStraight(std::vector<int> hand,
 			       std::vector<int> board, std::vector<int> &straight);
-  void getFlush(std::vector<int> handSuits, 
+  static void getFlush(std::vector<int> handSuits, 
 			    std::vector<int> handNum, 
 			    std::vector<int> boardSuits, 
 			    std::vector<int> boardNum, std::vector<int> &flush);
 
-  void createBoardTextureInput(const std::vector<std::string> &myHand, 
+  static void createBoardTextureInput(const std::vector<std::string> &myHand, 
 			       const std::vector<std::string> &boardCards,
 			       float *textureInputs); 
   
-  void createTextureFeatures(std::vector<int> flush, 
+  static void createTextureFeatures(std::vector<int> flush, 
 			     std::vector<int> pairs, 
 			     std::vector<int> straight, 
 			     float *out);
   
-  std::string getTextureString(std::vector<int> flush, 
+  static std::string getTextureString(std::vector<int> flush, 
 			       std::vector<int> pairs, 
 			       std::vector<int> straight);
-  
-private:
-  int getSuit(char suit);
-  int getNum(char card);    
+  private:
+  static int getSuit(char suit);
+  static int getNum(char card);    
     
 };
 
