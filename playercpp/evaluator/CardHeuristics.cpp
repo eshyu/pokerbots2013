@@ -52,10 +52,10 @@ void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std
   }
 
   for(int i=0; i<board.size(); i++){
-    if(i+4<board.size() && board[i]==board[i+3]){
+    if(i+3<board.size() && board[i]==board[i+3]){
       four=1;
       i+=3;
-    } else if(i+3<board.size() && board[i]==board[i+2]){
+    } else if(i+2<board.size() && board[i]==board[i+2]){
       triple=1;
       for(int k=0; k<hand.size(); k++){
 	if(hand[k]==board[i]){
@@ -63,7 +63,7 @@ void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std
 	}
       }
       i+=2;
-    }else if(i+2<board.size() && board[i]==board[i+1]){
+    }else if(i+1<board.size() && board[i]==board[i+1]){
       pair++;
       for(int k=0; k<hand.size(); k++){
 	if(hand[k]==board[i]){
@@ -332,7 +332,7 @@ void CardHeuristics::createTextureFeatures(std::vector<int> flush, std::vector<i
   *(out+2)=flush[2];
   *(out+3)=(float)flush[3]/14;
   *(out+4)=(float)flush[4]/14;
-  *(out+5)=pairs[0]/14;
+  *(out+5)=(float)pairs[0]/14;
   *(out+6)=pairs[1]/2;
   *(out+7)=pairs[2];
   *(out+8)=pairs[3];
