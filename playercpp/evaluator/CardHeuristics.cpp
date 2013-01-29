@@ -7,7 +7,7 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/lexical_cast.hpp>
 
-bool CardHeuristics::havePair(std::vector<std::string> &hand){
+bool CardHeuristics::havePair(const std::vector<std::string> &hand){
   int num_hand=hand.size();
   
   std::vector<int> handNum;
@@ -21,7 +21,7 @@ bool CardHeuristics::havePair(std::vector<std::string> &hand){
   bool pair=false;
   std::sort(handNum.begin(),handNum.end());
   for(int i=0; i+1<handNum.size();i++){
-    if(handNum[i]==handNum[i+1]){
+    if(handNum[i]==handNum[i+1]  && handNum[i]>7){
       pair=true;
     }
   }
