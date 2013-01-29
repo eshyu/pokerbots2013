@@ -96,17 +96,19 @@ void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std
 void CardHeuristics::getStraight(std::vector<int> hand, 
 					     std::vector<int> board, std::vector<int> &straight){
   //return: threeStraight, fourStraight, fiveStraight, firstStraightCard,secondStraightCard
-  std::sort (hand.begin(), hand.end()); 
-  /*
-  if(hand.end(==14){
+  std::sort (hand.begin(), hand.end());
+
+  if(hand.back()==14){
     hand.insert(hand.begin(),1);
-    }*/
+  }
+
   hand.erase( unique( hand.begin(), hand.end() ), hand.end() );
-  std::sort (board.begin(), board.end()); 
-  /*
-  if(board[board.size()-1]==14){
+  std::sort (board.begin(), board.end());
+
+  if(board.size()>0 && board.back()==14){
+
     board.insert(board.begin(),1);
-    }*/
+  } 
   board.erase( unique( board.begin(), board.end() ), board.end() );
 
   int threeStraight=0;
