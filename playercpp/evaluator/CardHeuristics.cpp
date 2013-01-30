@@ -258,7 +258,7 @@ void CardHeuristics::createBoardTextureInput(const std::vector<std::string> &han
 					     float *textureInputs){
   int num_hand=hand.size();
   int num_board=board.size();
-  
+
   std::vector<int> handSuits;
   std::vector<int> handNums;
   std::vector<int> boardSuits;
