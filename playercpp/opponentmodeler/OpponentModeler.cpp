@@ -10,7 +10,7 @@
 #define NN_OUT_COUNT 5
 
 //NOTE: comment this out to turn of using NN
-//#define USE_NN
+#define USE_NN
 
 OpponentModeler::OpponentModeler()
 {
@@ -57,6 +57,7 @@ void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
   int oppBetAmnt=0;
   ROUND round;
   ACTION oppAction;
+
   for (int i=oppActions.size()-1;i>=0;i--){    
     betRatio=0;
     oppBetAmnt=oppActions[i].betAmount;
@@ -68,7 +69,8 @@ void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
 #ifdef USE_NN
     if (finishedOldAction){ //we have not already tried to predict his action as data oint
       std::cout << "Creating NN Feature for old action, oppomdeller:L70" << std::endl;
-      createActionNNFeatures(round, myButton, currentHand.mybEq[round], myBetAmount, stackSize, potSize, holeCards, boardCards, oppActionCount);
+      createActionNNFeatures(round, myButton, currentHand.mybEq[round], myBetAmount, stackSize, currentHand.prevPotSize, holeCards, boardCards, oppActionCount);
+      currentHand.prevPotSize=currentHand.potSize;
     }
 #endif
     switch(oppAction){
@@ -79,15 +81,27 @@ void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
       currentHand.totalBets[round]+=oppBetAmnt;
       currentHand.hasBet[OPP][round]=true;
       std::cout << "OP BET" << std::endl;
+      currentHand.toCall=oppBetAmnt;
+      currentHand.potSize+=oppBetAmnt;
+      currentHand.prevBet=oppBetAmnt;
       break;
     case CHECK:
       playerStats[OPP]->numCheck[round]+=1;
       currentHand.hasCheck[OPP][round]=true;
       std::cout << "OP check" << std::endl;
+      currentHand.toCall=0;
+      currentHand.prevBet=0;
       break;
     case CALL:
       playerStats[OPP]->numCall[round]+=1;
       std::cout << "OP call" << std::endl;
+      currentHand.potSize+=currentHand.toCall;
+      currentHand.toCall=0;
+			if(!currentHand.firstMove){
+				currentHand.prevBet=0;
+			} else{
+				currentHand.firstMove=false;
+			}
       break;
     case FOLD:
       playerStats[OPP]->numFold[round]+=1;
@@ -100,12 +114,17 @@ void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
       currentHand.totalBets[round]+=oppBetAmnt;
       currentHand.hasRaise[OPP][round]=true;
       std::cout << "OP raise" << std::endl;
+      currentHand.potSize+=currentHand.toCall;
+      currentHand.toCall=oppBetAmnt-currentHand.prevBet;
+      currentHand.potSize+=currentHand.toCall;
+      currentHand.prevBet=oppBetAmnt;
       break;
     default:
       doUpdateNN=false;
       break;
     }
-    
+
+
 
 #ifdef USE_NN
     if (doUpdateNN && oppActions.size() > 0){
@@ -118,6 +137,7 @@ void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
     
     doUpdateNN=true;
     finishedOldAction=true;    
+
   }
 
   // std::cout <<  "=========================" << handCount << " " << oppActionCount << std::endl;
@@ -130,13 +150,25 @@ void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
     playerStats[ME]->numBet[round]+=1;    
     currentHand.totalBets[round]+=myBetAmount;
     currentHand.hasBet[ME][round]=true;
+    currentHand.toCall=myBetAmount;
+    currentHand.potSize+=myBetAmount;
+    currentHand.prevBet=myBetAmount;
     break;
   case CHECK:
     playerStats[ME]->numCheck[round]+=1;
     currentHand.hasCheck[ME][round]=true;
+    currentHand.toCall=0;
+    currentHand.prevBet=0;
     break;
   case CALL:
     playerStats[ME]->numCall[round]+=1;
+    currentHand.potSize+=currentHand.toCall;
+    currentHand.toCall=0;
+		if(!currentHand.firstMove){
+			currentHand.prevBet=0;
+		} else{	
+			currentHand.firstMove=false;
+		}
     break;
   case FOLD:
     playerStats[ME]->numFold[round]+=1;
@@ -145,16 +177,23 @@ void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
     playerStats[ME]->numRaise[round]+=1;    
     currentHand.totalBets[round]+=myBetAmount;
     currentHand.hasRaise[ME][round]=true;
+
+    currentHand.potSize+=currentHand.toCall;
+    currentHand.toCall=myBetAmount-currentHand.prevBet;
+    currentHand.potSize+=currentHand.toCall;
+    currentHand.prevBet=myBetAmount;
     break;
   default:    
     doCreateFeature=false;
     break;
   }
-  
+
+
 #ifdef USE_NN
   if (doCreateFeature){
     std::cout << "Creating NN Feature for new action, oppomdeller:L151" << std::endl;
-    createActionNNFeatures(round, myButton, currentHand.mybEq[round], myBetAmount, stackSize, potSize, holeCards, boardCards, oppActionCount);
+    createActionNNFeatures(round, myButton, currentHand.mybEq[round], myBetAmount, stackSize, currentHand.prevPotSize, holeCards, boardCards, oppActionCount);
+    currentHand.prevPotSize=currentHand.potSize;
   }
 #endif
 
@@ -201,7 +240,13 @@ void OpponentModeler::newHand(){
     currentHand.oppBets[round]=0;
     currentHand.totalBets[round]=0;
     currentHand.mybEq[round]=0;
+    
   }
+  currentHand.toCall=1;
+  currentHand.potSize=3;
+  currentHand.prevBet=2;
+  currentHand.prevPotSize=3;
+	currentHand.firstMove=true;
 
   // re-train neural net after every 50 hands 
   if (( handCount % 50 == 0) && totalActions > 200){
