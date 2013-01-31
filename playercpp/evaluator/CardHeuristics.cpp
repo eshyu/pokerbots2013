@@ -28,6 +28,71 @@ bool CardHeuristics::havePair(const std::vector<std::string> &hand){
   return pair;
 }
 
+/*
+void CardHeuristics::getCards(std::vector<int> handSuits, std::vector<int> handNums,std::vector<int> boardSuits,std::vector<int> boardNums){
+  std::string card;
+  for(int i=0; i<num_hand; i++){
+    card=hand[i];
+    handNums.push_back(getNum(card[0]));
+    handSuits.push_back(getSuit(card[1]));
+  }
+  
+  for(int j=0; j<num_board; j++){
+    card=board[j];
+    boardNums.push_back(getNum(card[0]));
+    boardSuits.push_back(getSuit(card[1]));
+  }
+}
+
+void CardHeuristics::getPairStrings(const std::vector<int> &hand, const std::vector<int> &board, const std::vector<float> weights){
+	std::vector<int> boardKicker; //get pairs, two pairs
+	std::vector<int> boardPair; //get two pairs, triples
+	std::vector<int> boardTriple;//get fok
+	std::vector<int> boardFour;//get high kickers
+
+	for(int i=0; i<board.size(); i++){
+		if(i+3<board.size() && board[i]==board[i+3]){
+			boardFour.push_back(board[i]);
+			i+=3;
+		}else if(i+2<board.size() && board[i]==board[i+2]){
+			boardTriple.push_back(board[i]);
+			i+=2;
+		}else if(i+1<board.size() && board[i]==board[i+1]){
+			boardPair.push_back(board[i]);
+			i++;
+		}else{
+			boardKicker.push_back(board[i]);
+		}
+	}
+	
+	
+	
+	
+
+	
+	
+	
+}
+void CardHeuristics::getEquityString(const std::vector<float> weights,const std::vector<std::string> &hand, const std::vector<std::string> &board, std::vector<std::string> &equityString){
+	
+  std::vector<int> handSuits;
+  std::vector<int> handNums;
+  std::vector<int> boardSuits;
+  std::vector<int> boardNums;
+
+	getCards(handSuits, handNums, boardSuits, boardNums);
+
+  std::sort (boardNums.begin(), boardNums.end()); 
+  std::sort (handNums.begin(), handNums.end()); 		
+	
+	getPairStrings(equityString);
+	getFlushStrings(equityString);
+	getStraightStrings(equityString);
+	
+}
+
+*/
+
 //return: pair, oneTriple, oneFour, myFirstKicker, mySecondKicker,myFirstPair, mySecondPair, myTriple
 void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std::vector<int> &pairs){
   std::sort (hand.begin(), hand.end()); 
@@ -332,8 +397,8 @@ void CardHeuristics::createTextureFeatures(std::vector<int> flush, std::vector<i
   *(out+2)=flush[2];
   *(out+3)=(float)flush[3]/14;
   *(out+4)=(float)flush[4]/14;
-  *(out+5)=(float)pairs[0]/14;
-  *(out+6)=pairs[1]/2;
+  *(out+5)=(float)pairs[0]/14.0;
+  *(out+6)=(float)pairs[1]/2;
   *(out+7)=pairs[2];
   *(out+8)=pairs[3];
   *(out+9)=(float)pairs[4]/14;

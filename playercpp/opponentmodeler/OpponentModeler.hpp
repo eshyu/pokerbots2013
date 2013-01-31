@@ -11,7 +11,7 @@
 #define NUM_PLAYERS 2
 #define POSITIONS 2
 
-#define MAX_ACTIONS 200
+#define MAX_ACTIONS 3000
 
 class OpponentModeler {
 public:
@@ -120,7 +120,7 @@ public:
   float **NNFeatures, **NNOut;
   
   void updatebEq(float mybEq, ROUND round);
-
+	float calc_MSE(float * nnoutput, float * trueoutput, int num_output);
   void updateActionStatistics(int myAction, int betAmnt,
 			      const std::vector<OppActionInfo> &oppActions,
 			      bool myButton,
@@ -147,7 +147,9 @@ public:
   static ROUND numBoardCards2round(int numBoardCards);  
 private:
   
-  int oppActionCount, totalActions, handCount; 
+  int oppActionCount, totalActions, handCount, trained; 
+	float *output;
+	float mse;
 };
 
 #endif  // __OPPONENTMODELER_HPP__

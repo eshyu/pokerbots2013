@@ -31,6 +31,8 @@ OpponentModeler::OpponentModeler()
   totalActions=0;
   handCount=0;
   oppActionCount=0;
+	trained=0;
+	
 }
 
 OpponentModeler::~OpponentModeler(){}
@@ -41,7 +43,14 @@ void OpponentModeler::updatebEq(float myBeq, ROUND round)
 {
   currentHand.mybEq[round] = myBeq;
 }
-
+float OpponentModeler::calc_MSE(float * nnoutput, float * trueoutput, int num_output){
+  float sum=0;
+  for(int i=0; i<num_output; i++){
+    float diff=nnoutput[i]-trueoutput[i];
+    sum+=diff*diff;
+  }
+  return sum/num_output;
+}
 void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
 const std::vector<OpponentModeler::OppActionInfo> &oppActions,
 bool myButton,
@@ -50,6 +59,7 @@ int stackSize,
 const std::vector<std::string> &boardCards,
 const std::vector<std::string> &holeCards)
 {
+	bool predict=false;
   bool doUpdateNN=true, finishedOldAction=false;
   std::cout << "OPMODEL:L51: NUMBER OF OPPONENT ACTIONS IS " << oppActions.size() << std::endl;
   // TODO(eshyu): LOL indexing is such that the most recent actions are at the front=
@@ -57,9 +67,18 @@ const std::vector<std::string> &holeCards)
   int oppBetAmnt=0;
   ROUND round;
   ACTION oppAction;
+	int betAmnts[oppActions.size()];
+	for(int i=oppActions.size()-1; i>=0; i--){
+		betAmnts[i]=oppActions[i].betAmount;
+	}
   for (int i=oppActions.size()-1;i>=0;i--){
     betRatio=0;
     oppBetAmnt=oppActions[i].betAmount;
+		int modPotSize=potSize;
+		for(int j=0; j<i+1; j++){
+			modPotSize-=betAmnts[j];
+		}
+		std::cout<<"&&& Modified Pot Size: "<<modPotSize<<std::endl;
     round = oppActions[i].round;
     oppAction = oppActions[i].action;
 
@@ -68,7 +87,7 @@ const std::vector<std::string> &holeCards)
 #ifdef USE_NN
     if (finishedOldAction){ //we have not already tried to predict his action as data oint
       std::cout << "Creating NN Feature for old action, oppomdeller:L70" << std::endl;
-      createActionNNFeatures(round, myButton, currentHand.mybEq[round], myBetAmount, stackSize, potSize, holeCards, boardCards, oppActionCount);
+      createActionNNFeatures(round, myButton, currentHand.mybEq[round], myBetAmount, stackSize, modPotSize, holeCards, boardCards, oppActionCount);
     }
 #endif
     switch(oppAction){
@@ -130,10 +149,12 @@ const std::vector<std::string> &holeCards)
     playerStats[ME]->numBet[round]+=1;
     currentHand.totalBets[round]+=myBetAmount;
     currentHand.hasBet[ME][round]=true;
+		predict=true;
     break;
   case CHECK:
     playerStats[ME]->numCheck[round]+=1;
     currentHand.hasCheck[ME][round]=true;
+		predict=true;
     break;
   case CALL:
     playerStats[ME]->numCall[round]+=1;
@@ -145,6 +166,7 @@ const std::vector<std::string> &holeCards)
     playerStats[ME]->numRaise[round]+=1;
     currentHand.totalBets[round]+=myBetAmount;
     currentHand.hasRaise[ME][round]=true;
+		predict=true;
     break;
   default:
     doCreateFeature=false;
@@ -161,8 +183,9 @@ const std::vector<std::string> &holeCards)
   // if (oppActionCount > 0 && !(handCount % 50) && handCount> 200 ){
 
 #ifdef USE_NN
-  if (totalActions>300){
-    float *output = nn->get_output(NNFeatures[oppActionCount]);
+  if (trained && predict){
+    output = nn->get_output(NNFeatures[oppActionCount]);
+
     std::cout << "Neural Net prediction: " << output[0] << " " << output[1] << " " << output[2] << " "<< " " << output[3] << " " << output[4] << std::endl;
   }
 
@@ -204,8 +227,9 @@ void OpponentModeler::newHand(){
   }
 
   // re-train neural net after every 50 hands
-  if (( handCount % 50 == 0) && totalActions > 200){
-    nn->train_net(200, 43, NNFeatures, 5, NNOut);
+  if (( handCount % 501 == 0)){
+    nn->train_net(totalActions, NN_IN_COUNT, NNFeatures, NN_OUT_COUNT, NNOut);
+		trained=1;
   }
 
 }
@@ -290,6 +314,10 @@ void OpponentModeler::updateNNOut(ACTION oppAction, float normalizedOppBet)
   default:
     break;
   }
+  if(trained){
+		mse=calc_MSE(output, NNOut[oppActionCount], NN_OUT_COUNT);
+		std::cout<<"calcMSE: "<<mse<<std::endl;
+	}
 }
 
 void OpponentModeler::createActionNNFeatures(ROUND round, bool myButton, float mybEq, int prevBet, int stackSize, int potSize,
