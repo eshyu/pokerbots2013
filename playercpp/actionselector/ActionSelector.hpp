@@ -68,16 +68,23 @@ public:
 
   /* update stats and things */
   void updateHandover(const std::string &line, bool myButton,
-		      const std::vector<std::string> &holeCards);
-  
+		      const std::vector<std::string> &holeCards,
+		      const std::string &myDiscard);
  
 private:
+  void Bet(ActionInfo &action, int bet);
+  void Check(ActionInfo &action);
+  void Call(ActionInfo &action);
+  void Raise(ActionInfo &action, int bet);
+  void Fold(ActionInfo &action);
+
   float selectActionForRound(int potSize, bool myButton, 
-		 const std::vector<std::string> &boardCards,
-		 const std::vector<std::string> &holeCards,
-		 const std::string &myDiscard,
-		 const LegalAction &legalAction, 
-		 ActionInfo &actionInfo);
+			     const std::vector<std::string> &boardCards,
+			     const std::vector<std::string> &holeCards,
+			     const std::string &myDiscard,
+			     const LegalAction &legalAction, 
+			     ActionInfo &actionInfo,
+			     float mybEq);
 
   /* Different rounds */
   float preflopSelector(int potSize, bool myButton, 
@@ -85,7 +92,8 @@ private:
 		       const std::vector<std::string> &holeCards,
 		       const std::string &myDiscard,
 		       const LegalAction &legalAction, 
-		       ActionInfo &actionInfo);
+			ActionInfo &actionInfo,
+			float mybEq);
   
   
   /* TODO lol this should disappear in favor of BettingSelector, DiscardSelector*/
@@ -94,7 +102,8 @@ private:
 		 const std::vector<std::string> &holeCards,
 		 const std::string &myDiscard,
 		 const LegalAction &legalAction, 
-		 ActionInfo &actionInfo);
+		  ActionInfo &actionInfo,
+		  float mybEq);
 
   /* TODO: this should be in a DiscardSelector */
   void discardUniform(std::vector<std::string> &holeCards, std::string &myDiscard, ActionInfo &actionInfo);
