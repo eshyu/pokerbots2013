@@ -30,13 +30,17 @@ bool CardHeuristics::havePair(const std::vector<std::string> &hand){
 
 
 void CardHeuristics::getCards(const std::vector<std::string> &hand, 
-					     const std::vector<std::string> &board, std::vector<int> handSuits, std::vector<int> handNums,std::vector<int> boardSuits,std::vector<int> boardNums){
+					     const std::vector<std::string> &board, std::vector<int> &handSuits, std::vector<int> &handNums,std::vector<int> &boardSuits,std::vector<int> &boardNums){
   int num_hand=hand.size();
 	int num_board=board.size();
 	std::string card;
   for(int i=0; i<num_hand; i++){
     card=hand[i];
     handNums.push_back(getNum(card[0]));
+		std::cout<<"CARD"<<std::endl;
+		std::cout<<hand[i]<<std::endl;
+		std::cout<<getNum(card[0])<<std::endl;
+		std::cout<<getSuit(card[1])<<std::endl;
     handSuits.push_back(getSuit(card[1]));
   }
   
@@ -101,7 +105,7 @@ std::string suitJ=convertSuit2String(j);
 for(int a=0; a<14; a++){
 	for(int b=0; b<14; b++){
 		if(!cardSuits[i*14+a] && !cardSuits[j*14+b] && (i!=j || a!=b)){
-			std::string cardString=boost::lexical_cast<std::string>(a)+suitI+boost::lexical_cast<std::string>(b)+suitJ;
+			std::string cardString=convertInd2Num(a)+suitI+convertInd2Num(b)+suitJ;
 			if(have0){
 				flushDraw.push_back(cardString);
 			}else if(have1){
@@ -114,6 +118,22 @@ for(int a=0; a<14; a++){
 	
 }
 
+std::string CardHeuristics::convertInd2Num(int index){
+  switch(index){
+  case 13:
+    return "A";
+  case 12:
+    return "K";
+  case 11:
+    return "Q";
+  case 10:
+    return "J";
+  case 9:
+    return "T";
+  default:
+    return boost::lexical_cast<std::string>(index);
+  }	
+}
 std::string CardHeuristics::convertSuit2String(int suit){
   switch(suit){
   case 0:
@@ -129,6 +149,7 @@ std::string CardHeuristics::convertSuit2String(int suit){
   }
 }
 std::string CardHeuristics::getNumStrings(const std::vector<int> &hand, const std::vector<int> &board, const std::vector<float> &weights){
+	std::cout<<"GETTING NUM STRINGS"<<std::endl;
 	std::vector<std::string> lowPairs;
 	std::vector<std::string> midPairs;
 	std::vector<std::string> highPairs;
@@ -157,8 +178,8 @@ std::string CardHeuristics::getNumStrings(const std::vector<int> &hand, const st
 			low=boardCards[i]+1;
 		}
 	}
-	for(int i=0; i<14; i++){
-		for(int j=0; j<14; j++){
+	for(int i=1; i<14; i++){
+		for(int j=1; j<14; j++){
 			combCards[i]++;
 			combCards[j]++;
 			if(combCards[i]<=4 && combCards[j]<=4){
@@ -169,8 +190,9 @@ std::string CardHeuristics::getNumStrings(const std::vector<int> &hand, const st
 				std::vector<int> have;
 				std::vector<int> have2;
 				haveMulti(allCards, have, high, low);
+				if(allCards[allCards.size()-1]==14)allCards.insert(allCards.begin(),1);
 				haveStraight(allCards, have2);
-				std::string cardString=""+boost::lexical_cast<std::string>(i)+boost::lexical_cast<std::string>(j);
+				std::string cardString=""+convertInd2Num(i)+convertInd2Num(j);
 				if(have[3]>=2){
 					twoPairs.push_back(cardString);
 				}
@@ -201,6 +223,7 @@ std::string CardHeuristics::getNumStrings(const std::vector<int> &hand, const st
 			combCards[j]--;
 		}
 	}
+	std::cout<<"vector sizes: "<<lowPairs.size()<<" "<<midPairs.size()<<" "<<highPairs.size()<<" "<<twoPairs.size()<<" "<<triples.size()<<" "<<fours.size()<<" "<<straightDraw.size()<<" "<<straight.size()<<" "<<std::endl;
 	float weight=weights[0];
 	for(int i=(int)((1-weight)*lowPairs.size()); i<lowPairs.size(); i++){
 		numString+=lowPairs[i];
@@ -309,6 +332,7 @@ void CardHeuristics::haveMulti(const std::vector<int> &cards, std::vector<int> &
 			i++;
 		}
 	}
+	//std::cout<<"multi: "<<hasLow<<hasMid<<hasHigh<<pairs<<triples<<fours<<std::endl;
 	have.push_back(hasLow);
 	have.push_back(hasMid);
 	have.push_back(hasHigh);
@@ -331,7 +355,10 @@ std::string CardHeuristics::getEquityString(const std::vector<float> &weights,co
 
   std::sort (boardNums.begin(), boardNums.end()); 
   std::sort (handNums.begin(), handNums.end()); 		
-	
+	for(int i; i<boardNums.size(); i++){
+		std::cout<<boardNums[i]<<" ";
+	}
+	std::cout<<std::endl;
 	std::string returnString =getNumStrings(handNums, boardNums, weights);
 	returnString+=getSuitStrings(handSuits, boardSuits, handNums, boardNums, weights);
 	return returnString;

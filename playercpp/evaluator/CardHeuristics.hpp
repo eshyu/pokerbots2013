@@ -9,6 +9,7 @@ public:
 	enum HAND_TYPE {LOW_PAIR, MID_PAIR, HI_PAIR, TWO_PAIR, TRIPLE, FOUR, STRAIGHT_DRAW, STRAIGHT, FLUSH_DRAW, FLUSH};
 	static void getHandType(const std::vector<std::string> &cards, const std::vector<std::string> &board, std::vector<HAND_TYPE> &handType);
 	static std::string getEquityString(const std::vector<float> &weights, const std::vector<std::string> &hand, const std::vector<std::string> &board);
+	static std::string convertInd2Num(int index);
 	static void haveMulti(const std::vector<int> &cards, std::vector<int> &have, int hi, int low);	
 	static void haveStraight(const std::vector<int> &cards, std::vector<int> &have);
 	static void haveFlush(const std::vector<int> &cards, std::vector<int> &have);
@@ -18,7 +19,7 @@ public:
   static bool havePair(const std::vector<std::string> &had);
 	static std::string getSuitStrings(const std::vector<int> &hand, const std::vector<int> &board, const std::vector<int> &handNums, const std::vector<int> &boardNums, const std::vector<float> &weights);
 	static void getCards(const std::vector<std::string> &hand, 
-					     const std::vector<std::string> &board, std::vector<int> handSuits, std::vector<int> handNums,std::vector<int> boardSuits,std::vector<int> boardNums);
+					     const std::vector<std::string> &board, std::vector<int> &handSuits, std::vector<int> &handNums,std::vector<int> &boardSuits,std::vector<int> &boardNums);
 
   static void getPairs(std::vector<int> hand, std::vector<int> board, std::vector<int> &pairs);
   static void getStraight(std::vector<int> hand,
