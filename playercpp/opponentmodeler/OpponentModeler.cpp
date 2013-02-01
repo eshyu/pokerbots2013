@@ -106,11 +106,12 @@ void OpponentModeler::updateOpponentActionStatistics(const std::vector<OpponentM
       break;
     case CALL:
       playerStats[OPP]->numCall[round]+=1;
+      currentHand.hasCall[OPP][round]=true;
       std::cout << "OP call" << std::endl;
       break;
     case FOLD:
       playerStats[OPP]->numFold[round]+=1;
-      
+      currentHand.hasFold[OPP][round]=true;
       std::cout << "OP fold" << std::endl;
       break;
     case RAISE:
@@ -167,9 +168,11 @@ void OpponentModeler::updateOurActionStatistics(int myAction, int myBetAmount,
     break;
   case CALL:
     playerStats[ME]->numCall[round]+=1;
+    currentHand.hasCall[ME][round]=true;
     break;
   case FOLD:
     playerStats[ME]->numFold[round]+=1;
+    currentHand.hasCheck[ME][round]=true;
     break;
   case RAISE:
     playerStats[ME]->numRaise[round]+=1;
@@ -210,7 +213,11 @@ void OpponentModeler::updateHandStats(int playerNumber, ACTION action, ROUND rou
     currentHand.hasRaise[playerNumber][round] |= true;
     break;
   case CALL:
+    currentHand.hasCall[playerNumber][round] |= true;
+    break;
   case FOLD:
+    currentHand.hasFold[playerNumber][round] |= true;
+    break;
   case DISCARD:
   case NONE:
     break;
@@ -224,6 +231,33 @@ void OpponentModeler::updateShow(const std::vector<std::string> &ourCards,
 				 const std::string &myDiscard)
 {
   // update the counts for actions/hand types
+  for (int round=3; round>0;round--){
+    std::vector<int> handTypes;// = getHandType(oppCards, boardCards);
+    if (handTypes.size() == 0)
+      //      handTypes.push_back(BLUFF);
+    for (int i=0;i<handTypes.size();i++){
+      int handType = handTypes[i]; //ENUM
+      if (currentHand.hasCheck[OPP][round]) HandDistribution[CHECK][handType]+=1;
+      if (currentHand.hasBet[OPP][round]) HandDistribution[BET][handType]+=1;
+      if (currentHand.hasRaise[OPP][round]) HandDistribution[RAISE][handType]+=1;
+      if (currentHand.hasCall[OPP][round]) HandDistribution[CALL][handType]+=1;
+    }
+    
+    boardCards.erase(boardCards.end());
+ }  
+}
+
+void OpponentModeler::getHandDistribution(ACTION action, std::vector<float> &probs)
+{
+  float p;
+  for (int i=0;i<NUM_HAND_TYPES;i++){
+    p = (float)HandDistribution[action][i]/
+      (HandDistribution[BET][i] + 
+       HandDistribution[CHECK][i] + 
+       HandDistribution[RAISE][i]);
+    std::cout << "Probability " << p << "for action " << action << std::endl;
+    probs.push_back(p);
+  }
 }
 
 void OpponentModeler::newHand(){

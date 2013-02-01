@@ -66,6 +66,10 @@ public:
     bool hasBet[NUM_PLAYERS][NUM_ROUNDS];
     bool hasRaise[NUM_PLAYERS][NUM_ROUNDS];
 
+    // for other book-keeping
+    bool hasCall[NUM_PLAYERS][NUM_ROUNDS];
+    bool hasFold[NUM_PLAYERS][NUM_ROUNDS];
+    
     float mybEq[NUM_ROUNDS];
 
     float oppBets[NUM_ROUNDS];
@@ -133,6 +137,9 @@ public:
 		  const std::vector<std::string> &oppCards,
 		  std::vector<std::string> boardCards,
 		  const std::string &myDiscard);
+
+  void getHandDistribution(ACTION action, std::vector<float> &probs);
+
 
   void newHand();
 
