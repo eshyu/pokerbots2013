@@ -2,6 +2,8 @@
 #define __OPPONENTMODELER_HPP__
 
 #include "../evaluator/CardHeuristics.hpp"
+#include "../evaluator/Evaluator.hpp"
+
 #include "nn.hpp"
 
 #include <string>
@@ -40,6 +42,8 @@ public:
     int numRaise[NUM_ROUNDS];
     int numCall[NUM_ROUNDS];    
     int numFold[NUM_ROUNDS];
+
+	int numWonShowdowns; //tells us how good the other play is
 
     /*    int numAllin[POSITIONS][NUM_ROUNDS]; //number of occurences of all-in
 
@@ -140,6 +144,12 @@ public:
   void updateNNOut(ACTION oppAction, float normalizedOppBet);
     
   void updateHandStats(int playerNumber, ACTION action, ROUND round);
+
+  void updateShow(const std::vector<std::string> &ourCards,
+		  const std::vector<std::string> &oppCards,
+		  std::vector<std::string> boardCards,
+		  const std::string &myDiscard);
+
   void newHand();
 
   void printStats();
