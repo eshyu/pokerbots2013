@@ -140,7 +140,7 @@ private:
 
   /* gets last action of the player from action list */
   //TODO: get rid of this
-  //  std::string getLastAction(const std::vector<std::string> &lastActions, const std::string &playerName);
+  std::string getLastAction(const std::vector<std::string> &lastActions, const std::string &playerName);
 
 };
 

@@ -60,8 +60,13 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
 
   // get opponent's last action's information
   std::vector<OpponentModeler::OppActionInfo> oppActions;
-  actionlist2actioninfos(lastActions, oppActions, round);
+  actionlist2actioninfos(lastActions, oppActions, round);  
 
+  OpponentModeler::OppActionInfo lastAction = actionword2struct(lastActions[lastActions.size()-1], round);
+
+  
+  int lastaction = (int)lastAction.action;
+ 
   float mybEq=0;
   switch(legalAction.actionType){
   case DISCARD_ONE:
@@ -70,14 +75,26 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
     break;
   case CHECK_BET:
   case FOLD_CALL_RAISE:
-    mybEq=evaluator->evaluate(holeCards, boardCards, myDiscard);
-    opponentModeler->updatebEq(mybEq, round);
+
+    if (numBoardCards > 0 && 
+	(lastaction == 0 || 
+	 lastaction == 1 ||
+	 lastaction == 2 ||
+	 lastaction == 5)){
+      mybEq=informedEvaluate(holeCards, boardCards, myDiscard, lastaction);
+
+    } else {
+      mybEq=evaluator->evaluate(holeCards, boardCards, myDiscard);
+    }   
+
     opponentModeler->updateOpponentActionStatistics(oppActions,
 						    myButton,
 						    potSize,
 						    STACK_SIZE,
 						    boardCards,
 						    holeCards);
+
+    opponentModeler->updatebEq(mybEq, round);
 
     selectActionForRound(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo, mybEq);
 
@@ -197,18 +214,17 @@ void ActionSelector::evalMagic(int potSize, bool myButton,
   bool canRaise=legalAction.raiseMax>0, isAllin=legalAction.raiseMax==0, mustCall=legalAction.callMin>0;
   // raise with the worst and best cards in our range
 
-  
   if (equity>0.62){
     std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
     if (legalAction.raiseMax > 0){
       float oppEquity=1-equity;
       int newPotSize=callMin+potSize;
       
-      int raise=(int)((newPotSize*oppEquity/equity)) + callMin;
+      int raise=(int)((newPotSize*equity/oppEquity)) + callMin;
       //	int raise=(int)((newPotSize*equity/oppEquity)) + callMin;
 		
       int numBoardCards = boardCards.size();
-      if (numBoardCards >= 3) raise = std::max(raise, 100); // so we actually can make money      
+      if (numBoardCards >= 3) raise = 7; //7std::max(raise, 100); // so we actually can make money      
       if (numBoardCards >= 4 && equity > 0.7) raise = std::max(raise, 200);      
       if (numBoardCards >= 5 && equity > 0.85) raise = std::max(raise, 300);      
 	  
@@ -223,7 +239,7 @@ void ActionSelector::evalMagic(int potSize, bool myButton,
 	actionInfo.betAmount=0;
       }//end if(betAmt)
     } else {	 
-      if (boardCards.size()==5 && (equity - 0.2) < potOdds)
+      if ((legalAction.callMin > 100 && equity < 0.65))
 	Fold(actionInfo);
       else 
 	Call(actionInfo);
@@ -240,7 +256,7 @@ void ActionSelector::evalMagic(int potSize, bool myButton,
     }       
 
     if (legalAction.callMin > 0){
-      if (numBoardCards>=4 && equity < 0.53){ // fold if our equity is bad by the turn	  
+      if (numBoardCards>=3 && equity < 0.55){ // fold if our equity is bad by the turn	  
 	Fold(actionInfo);
       }else if (equity-roundDiscount>(potOdds)+0.04){ //less likely to call if we are down
 	Call(actionInfo);
@@ -334,7 +350,7 @@ void ActionSelector::discardGreedy(std::vector<std::string> &holeCards, std::vec
 /* Helper methods*/
 
 /* Get last action done by the player*/
-/*
+
   std::string ActionSelector::getLastAction(const std::vector<std::string> &lastActions, const std::string &playerName)
   {
   std::vector<std::string> tokens;
@@ -356,7 +372,7 @@ void ActionSelector::discardGreedy(std::vector<std::string> &holeCards, std::vec
   }
 
   }
-*/
+
 
 void ActionSelector::packetlist2vector(std::stringstream &ss, std::vector<std::string> &packetlist, int length){
   std::string item;

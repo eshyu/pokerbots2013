@@ -10,7 +10,7 @@
 #define NN_OUT_COUNT 4
 
 //NOTE: comment this out to turn of using NN
-#define USE_NN
+//#define USE_NN
 
 OpponentModeler::OpponentModeler()
 {
@@ -239,8 +239,6 @@ void OpponentModeler::updateShow(const std::vector<std::string> &ourCards,
   for (int round=3; round>0;round--){
     std::vector<CardHeuristics::HAND_TYPE> handTypes;
     CardHeuristics::getHandType(oppCards, boardCards, handTypes);   
-    if (handTypes.size() == 0)
-      //      handTypes.push_back(BLUFF);
     for (int i=0;i<handTypes.size();i++){
       int handType = handTypes[i]; //ENUM
       if (currentHand.hasCheck[OPP][round]) HandDistribution[CHECK][handType]+=1;
@@ -255,7 +253,6 @@ void OpponentModeler::updateShow(const std::vector<std::string> &ourCards,
 
 void OpponentModeler::getHandDistribution(int actionNum, std::vector<float> &probs)
 {
-
   ACTION action = (ACTION)actionNum;
   float p;
   for (int i=0;i<NUM_HAND_TYPES;i++){
@@ -270,7 +267,7 @@ void OpponentModeler::getHandDistribution(int actionNum, std::vector<float> &pro
  
 std::string OpponentModeler::getHandRangeString(const std::vector<std::string> &myHand,
 						const std::vector<std::string> &board,
-						const std::vector<float> &probs){
+						std::vector<float> &probs){
   return CardHeuristics::getEquityString(probs, myHand, board);  
 }
 
@@ -288,11 +285,13 @@ void OpponentModeler::newHand(){
     currentHand.mybEq[round]=0;
   }
 
+#ifdef USE_NN
   // re-train neural net after every 50 hands
   if (( handCount % 501 == 0)){
     nn->train_net(totalActions, NN_IN_COUNT, NNFeatures, NN_OUT_COUNT, NNOut);
     trained=1;
   }
+#endif
 }
 
 void OpponentModeler::printStats(){

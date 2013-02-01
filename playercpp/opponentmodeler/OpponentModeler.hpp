@@ -145,7 +145,7 @@ public:
   
   std::string getHandRangeString(const std::vector<std::string> &myHand,
 				 const std::vector<std::string> &board,
-				 const std::vector<float> &probs);
+				 std::vector<float> &probs);
 
   void newHand();
 
