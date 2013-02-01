@@ -77,8 +77,8 @@ private:
   void Call(ActionInfo &action);
   void Raise(ActionInfo &action, int bet);
   void Fold(ActionInfo &action);
-
-  float selectActionForRound(int potSize, bool myButton, 
+  
+  void selectActionForRound(int potSize, bool myButton, 
 			     const std::vector<std::string> &boardCards,
 			     const std::vector<std::string> &holeCards,
 			     const std::string &myDiscard,
@@ -87,7 +87,7 @@ private:
 			     float mybEq);
 
   /* Different rounds */
-  float preflopSelector(int potSize, bool myButton, 
+  void preflopSelector(int potSize, bool myButton, 
 		       const std::vector<std::string> &boardCards,
 		       const std::vector<std::string> &holeCards,
 		       const std::string &myDiscard,
@@ -97,13 +97,16 @@ private:
   
   
   /* TODO lol this should disappear in favor of BettingSelector, DiscardSelector*/
-  float evalMagic(int potSize, bool myButton, 
+  void evalMagic(int potSize, bool myButton, 
 		 const std::vector<std::string> &boardCards,
 		 const std::vector<std::string> &holeCards,
 		 const std::string &myDiscard,
 		 const LegalAction &legalAction, 
 		  ActionInfo &actionInfo,
 		  float mybEq);
+
+  // decide if we go all-in
+  bool decideJam(ActionInfo &action);
 
   /* TODO: this should be in a DiscardSelector */
   void discardUniform(std::vector<std::string> &holeCards, std::string &myDiscard, ActionInfo &actionInfo);
