@@ -344,7 +344,10 @@ void CardHeuristics::haveMulti(const std::vector<int> &cards, std::vector<int> &
 
 
 
-std::string CardHeuristics::getEquityString(const std::vector<float> &weights,const std::vector<std::string> &hand, const std::vector<std::string> &board){
+std::string CardHeuristics::getEquityString(std::vector<float> &weights,const std::vector<std::string> &hand, const std::vector<std::string> &board){
+	for(int i=0; i<weights.size(); i++){
+		if(isnan(weights[i]))weights[i]=0;
+	}
 	
   std::vector<int> handSuits;
   std::vector<int> handNums;
