@@ -37,6 +37,7 @@ public:
     int numWonShowdowns; //tells us how good the other play is
     PlayerStatistics(){
       numHandsPlayed=0;
+      numWonShowdowns=0;
       for (int j=0;j<NUM_ROUNDS;++j){
 	numCheck[j]=0;
 	numBet[j]=0;
@@ -97,6 +98,9 @@ public:
   float calc_MSE(float * nnoutput, float * trueoutput, int num_output);
 
   // updating stats
+
+  void updateWinner(int player);
+
   void updateActionStatistics(int myAction, int betAmnt,
 			      const std::vector<OppActionInfo> &oppActions,
 			      bool myButton,
@@ -120,7 +124,6 @@ public:
 				 const std::vector<std::string> &holeCards);
   
 
-
   // print summary of opponent statistics
   void printSummary();
 
@@ -138,8 +141,11 @@ public:
 		  std::vector<std::string> boardCards,
 		  const std::string &myDiscard);
 
-  void getHandDistribution(ACTION action, std::vector<float> &probs);
-
+  void getHandDistribution(int action, std::vector<float> &probs);
+  
+  std::string getHandRangeString(const std::vector<std::string> &myHand,
+				 const std::vector<std::string> &board,
+				 const std::vector<float> &probs);
 
   void newHand();
 

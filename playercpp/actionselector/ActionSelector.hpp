@@ -77,7 +77,12 @@ private:
   void Call(ActionInfo &action);
   void Raise(ActionInfo &action, int bet);
   void Fold(ActionInfo &action);
-  
+
+  // evaluation mish mash
+  float informedEvaluate(const std::vector<std::string> &holeCards,
+			 const std::vector<std::string> &boardCards,
+			 const std::string &myDiscard);
+			 
   void selectActionForRound(int potSize, bool myButton, 
 			     const std::vector<std::string> &boardCards,
 			     const std::vector<std::string> &holeCards,
@@ -126,6 +131,12 @@ private:
   void actionlist2actioninfos(const std::vector<std::string> &lastActions, 
 			      std::vector<OpponentModeler::OppActionInfo> & oppActions,
 			      OpponentModeler::ROUND round);
+
+
+  float informedEvaluate(const std::vector<std::string> &holeCards,
+			 const std::vector<std::string> &boardCards,
+			 const std::string &myDiscard,
+			 int lastOpponentAction);
 
   /* gets last action of the player from action list */
   //TODO: get rid of this

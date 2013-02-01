@@ -134,8 +134,7 @@ void ActionSelector::preflopSelector(int potSize, bool myButton,
   // generate betting noise
   noise = (rand() % 3 - 1);
 
-  bool canRaise=legalAction.raiseMax>0, isAllin=legalAction.raiseMax==0, 
-    mustCall=legalAction.callMin>0;;  
+  bool canRaise=legalAction.raiseMax>0, isAllin=legalAction.raiseMax==0, mustCall=legalAction.callMin>0;;  
   if (canRaise > 0 && equity-discount > 0.5){
     int bucket = (int)(20*equity)-9;
     raise = std::max(7, 7 + (bucket + noise)*8);
@@ -194,22 +193,25 @@ void ActionSelector::evalMagic(int potSize, bool myButton,
    
   // compute pot odds and either call or fold    
   float potOdds = (float)callMin/(callMin+potSize);
-     
+
+  bool canRaise=legalAction.raiseMax>0, isAllin=legalAction.raiseMax==0, mustCall=legalAction.callMin>0;
   // raise with the worst and best cards in our range
+
+  
   if (equity>0.62){
     std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
     if (legalAction.raiseMax > 0){
       float oppEquity=1-equity;
       int newPotSize=callMin+potSize;
-	
+      
       int raise=(int)((newPotSize*oppEquity/equity)) + callMin;
       //	int raise=(int)((newPotSize*equity/oppEquity)) + callMin;
 		
       int numBoardCards = boardCards.size();
       if (numBoardCards >= 3) raise = std::max(raise, 100); // so we actually can make money      
       if (numBoardCards >= 4 && equity > 0.7) raise = std::max(raise, 200);      
-      if (numBoardCards >= 5 && equity > 0.85 raise = std::max(raise, 300);      
-
+      if (numBoardCards >= 5 && equity > 0.85) raise = std::max(raise, 300);      
+	  
       int betAmt= std::max(std::min(raise,legalAction.raiseMax), legalAction.raiseMin);
 
       std::cout << "betAmt: " << betAmt << " vs. raise: " << raise << "(raiseMin, max) " << legalAction.raiseMin << ", " << legalAction.raiseMax << std::endl;
@@ -483,6 +485,9 @@ void ActionSelector::updateHandover(const std::string &line, bool myButton,
     if (!actionword.compare("WINS")){
       // update hand modeler or something with hands
       pot=boost::lexical_cast<int>(tokens[1]);
+      int player = tokens[2].compare(MY_NAME);
+      std::cout << "winnnnnnnnnnnnnnnnnnnnewr is: " << player << std::endl;
+      opponentModeler->updateWinner(player);
     }
     
     if (!actionword.compare("SHOW") && !player.compare(OPP_NAME)){
@@ -528,4 +533,20 @@ void ActionSelector::actionlist2actioninfos(const std::vector<std::string> &last
     
     if (!actionword.compare("DEAL")) round=(OpponentModeler::ROUND)((int)round-1);
   }
+}
+
+float ActionSelector::informedEvaluate(const std::vector<std::string> &holeCards,
+				       const std::vector<std::string> &boardCards,
+				       const std::string &myDiscard,
+				       int lastOpponentAction)
+{
+  std::vector<float> weights;
+
+  std::vector<std::string> knowncards = std::vector<std::string>(holeCards);
+  knowncards.push_back(myDiscard);
+
+  opponentModeler->getHandDistribution(lastOpponentAction, weights);
+  std::string oppRange = opponentModeler->getHandRangeString(holeCards, boardCards, weights);  
+  
+  return evaluator->evaluate_range(holeCards, boardCards, oppRange, myDiscard);
 }

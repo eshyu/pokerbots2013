@@ -199,6 +199,11 @@ void OpponentModeler::updateOurActionStatistics(int myAction, int myBetAmount,
 #endif
 }
 
+/* remind us who is the better player */
+void OpponentModeler::updateWinner(int player)
+{
+  playerStats[player]->numWonShowdowns++;
+}
 
 void OpponentModeler::updateHandStats(int playerNumber, ACTION action, ROUND round)
 {
@@ -232,7 +237,8 @@ void OpponentModeler::updateShow(const std::vector<std::string> &ourCards,
 {
   // update the counts for actions/hand types
   for (int round=3; round>0;round--){
-    std::vector<int> handTypes;// = getHandType(oppCards, boardCards);
+    std::vector<CardHeuristics::HAND_TYPE> handTypes;
+    CardHeuristics::getHandType(oppCards, boardCards, handTypes);   
     if (handTypes.size() == 0)
       //      handTypes.push_back(BLUFF);
     for (int i=0;i<handTypes.size();i++){
@@ -247,8 +253,10 @@ void OpponentModeler::updateShow(const std::vector<std::string> &ourCards,
  }  
 }
 
-void OpponentModeler::getHandDistribution(ACTION action, std::vector<float> &probs)
+void OpponentModeler::getHandDistribution(int actionNum, std::vector<float> &probs)
 {
+
+  ACTION action = (ACTION)actionNum;
   float p;
   for (int i=0;i<NUM_HAND_TYPES;i++){
     p = (float)HandDistribution[action][i]/
@@ -258,6 +266,12 @@ void OpponentModeler::getHandDistribution(ACTION action, std::vector<float> &pro
     std::cout << "Probability " << p << "for action " << action << std::endl;
     probs.push_back(p);
   }
+}
+ 
+std::string OpponentModeler::getHandRangeString(const std::vector<std::string> &myHand,
+						const std::vector<std::string> &board,
+						const std::vector<float> &probs){
+  return CardHeuristics::getEquityString(probs, myHand, board);  
 }
 
 void OpponentModeler::newHand(){
@@ -301,7 +315,9 @@ void OpponentModeler::printStats(){
 
     int myTotal = (playerStats[ME]->numCheck[round] + playerStats[ME]->numBet[round] + playerStats[ME]->numRaise[round] + playerStats[ME]->numCall[round] + playerStats[ME]->numFold[round]);
     int oppTotal= (playerStats[OPP]->numCheck[round] + playerStats[OPP]->numBet[round] + playerStats[OPP]->numRaise[round] + playerStats[OPP]->numCall[round] + playerStats[OPP]->numFold[round]);
-    
+
+    int totalShowdowns = playerStats[0]->numWonShowdowns + playerStats[1]->numWonShowdowns;
+									  
     std::cout.precision(3);
     std::cout << std::fixed
 	      << ((float)playerStats[ME]->numCheck[round]/myTotal) << " "
@@ -317,9 +333,10 @@ void OpponentModeler::printStats(){
 	      << ((float)playerStats[OPP]->numCall[round]/oppTotal) << "\t"
       
 	      << ((float)playerStats[ME]->numFold[round]/myTotal) << " "
-	      << ((float)playerStats[OPP]->numFold[round]/oppTotal) << "\t"
-      
-	      << std::endl << std::endl;
+	      << ((float)playerStats[OPP]->numFold[round]/oppTotal) << "\t" 
+	      << std::endl 
+	      << "We win " << ((float)playerStats[0]->numWonShowdowns/totalShowdowns) << "% of " << totalShowdowns << " of showdowns" << std::endl
+	      << std::endl;
   }
 }
   
