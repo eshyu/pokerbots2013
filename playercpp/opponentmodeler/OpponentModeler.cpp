@@ -7,7 +7,7 @@
 #define OPP 1
 
 #define NN_IN_COUNT 51
-#define NN_OUT_COUNT 5
+#define NN_OUT_COUNT 4
 
 //NOTE: comment this out to turn of using NN
 #define USE_NN
@@ -31,11 +31,11 @@ OpponentModeler::OpponentModeler()
   totalActions=0;
   handCount=0;
   oppActionCount=0;
-	trained=0;
-	predicted=0;
-	averageMse=0;
-	sumMse=0;
-	numMse=0;
+  trained=0;
+  predicted=0;
+  averageMse=0;
+  sumMse=0;
+  numMse=0;
 }
 
 OpponentModeler::~OpponentModeler(){}
@@ -46,44 +46,39 @@ void OpponentModeler::updatebEq(float myBeq, ROUND round)
 {
   currentHand.mybEq[round] = myBeq;
 }
-float OpponentModeler::calc_MSE(float * nnoutput, float * trueoutput, int num_output){
-  float sum=0;
-  for(int i=0; i<num_output; i++){
-		std::cout<<"l49: "<<nnoutput[i]<<std::endl;
-		std::cout<<"l51: "<<trueoutput[i]<<std::endl;
-    float diff=nnoutput[i]-trueoutput[i];
-    sum+=diff*diff;
-  }
-  return sum/num_output;
-}
-void OpponentModeler::updateActionStatistics(int myAction, int myBetAmount,
-const std::vector<OpponentModeler::OppActionInfo> &oppActions,
-bool myButton,
-int potSize,
-int stackSize,
-const std::vector<std::string> &boardCards,
-const std::vector<std::string> &holeCards)
+
+/* Update opponent's statistics and NN output */
+void OpponentModeler::updateOpponentActionStatistics(const std::vector<OpponentModeler::OppActionInfo> &oppActions,
+					     bool myButton,
+					     int potSize,
+					     int stackSize,
+					     const std::vector<std::string> &boardCards,
+					     const std::vector<std::string> &holeCards)
 {
-	bool predict=false;
+  bool predict=false;
   bool doUpdateNN=true, finishedOldAction=false;
   std::cout << "OPMODEL:L51: NUMBER OF OPPONENT ACTIONS IS " << oppActions.size() << std::endl;
   // TODO(eshyu): LOL indexing is such that the most recent actions are at the front=
+  int myBetAmount = currentHand.myPreviousBetAmount;
   float betRatio=0;
   int oppBetAmnt=0;
   ROUND round;
   ACTION oppAction;
-	int betAmnts[oppActions.size()];
-	for(int i=oppActions.size()-1; i>=0; i--){
-		betAmnts[i]=oppActions[i].betAmount;
-	}
+
+  int betAmnts[oppActions.size()];
+  for(int i=oppActions.size()-1; i>=0; i--){
+    betAmnts[i]=oppActions[i].betAmount;
+  }
   for (int i=oppActions.size()-1;i>=0;i--){
     betRatio=0;
     oppBetAmnt=oppActions[i].betAmount;
-		int modPotSize=potSize;
-		for(int j=0; j<i+1; j++){
-			modPotSize-=betAmnts[j];
-		}
-		std::cout<<"&&& Modified Pot Size: "<<modPotSize<<std::endl;
+
+    int modPotSize=potSize;
+    for(int j=0; j<i+1; j++){
+      modPotSize-=betAmnts[j];
+    }
+
+    std::cout<<"&&& Modified Pot Size: "<<modPotSize<<std::endl;
     round = oppActions[i].round;
     oppAction = oppActions[i].action;
 
@@ -111,11 +106,12 @@ const std::vector<std::string> &holeCards)
       break;
     case CALL:
       playerStats[OPP]->numCall[round]+=1;
+      currentHand.hasCall[OPP][round]=true;
       std::cout << "OP call" << std::endl;
       break;
     case FOLD:
       playerStats[OPP]->numFold[round]+=1;
-      
+      currentHand.hasFold[OPP][round]=true;
       std::cout << "OP fold" << std::endl;
       break;
     case RAISE:
@@ -143,35 +139,46 @@ const std::vector<std::string> &holeCards)
     doUpdateNN=true;
     finishedOldAction=true;
   }
+}
 
-  // std::cout << "=========================" << handCount << " " << oppActionCount << std::endl;
-
+/* Update our own statistics and NN inputs */
+void OpponentModeler::updateOurActionStatistics(int myAction, int myBetAmount,
+					     bool myButton,
+					     int potSize,
+					     int stackSize,
+					     const std::vector<std::string> &boardCards,
+					     const std::vector<std::string> &holeCards)
+{
+  bool predict=false;
   bool doCreateFeature=true;
-  round = (ROUND)numBoardCards2round(boardCards.size());
+  currentHand.myPreviousBetAmount=myBetAmount;
+  ROUND round = (ROUND)numBoardCards2round(boardCards.size());
   
   switch(myAction){
   case BET:
     playerStats[ME]->numBet[round]+=1;
     currentHand.totalBets[round]+=myBetAmount;
     currentHand.hasBet[ME][round]=true;
-		predict=true;
+    predict=true;
     break;
   case CHECK:
     playerStats[ME]->numCheck[round]+=1;
     currentHand.hasCheck[ME][round]=true;
-		predict=true;
+    predict=true;
     break;
   case CALL:
     playerStats[ME]->numCall[round]+=1;
+    currentHand.hasCall[ME][round]=true;
     break;
   case FOLD:
     playerStats[ME]->numFold[round]+=1;
+    currentHand.hasCheck[ME][round]=true;
     break;
   case RAISE:
     playerStats[ME]->numRaise[round]+=1;
     currentHand.totalBets[round]+=myBetAmount;
     currentHand.hasRaise[ME][round]=true;
-		predict=true;
+    predict=true;
     break;
   default:
     doCreateFeature=false;
@@ -183,19 +190,15 @@ const std::vector<std::string> &holeCards)
     std::cout << "Creating NN Feature for new action, oppomdeller:L151" << std::endl;
     createActionNNFeatures(round, myButton, currentHand.mybEq[round], myBetAmount, stackSize, potSize, holeCards, boardCards, oppActionCount);
   }
-#endif
 
-  // if (oppActionCount > 0 && !(handCount % 50) && handCount> 200 ){
-
-#ifdef USE_NN
   if (trained && predict){
     output = nn->get_output(NNFeatures[oppActionCount]);
-		predicted=1;
-    std::cout << "Neural Net prediction: " << output[0] << " " << output[1] << " " << output[2] << " "<< " " << output[3] << " " << output[4] << std::endl;
+    predicted=1;
+    std::cout << "Neural Net prediction: " << output[0] << " " << output[1] << " " << output[2] << " "<< " " << output[3] << std::endl;//" " << output[4] << std::endl;
   }
-
 #endif
 }
+
 
 void OpponentModeler::updateHandStats(int playerNumber, ACTION action, ROUND round)
 {
@@ -210,17 +213,57 @@ void OpponentModeler::updateHandStats(int playerNumber, ACTION action, ROUND rou
     currentHand.hasRaise[playerNumber][round] |= true;
     break;
   case CALL:
+    currentHand.hasCall[playerNumber][round] |= true;
+    break;
   case FOLD:
+    currentHand.hasFold[playerNumber][round] |= true;
+    break;
   case DISCARD:
   case NONE:
     break;
   }
+}
 
+// update stats when there is a show, what were real equities and stuff
+void OpponentModeler::updateShow(const std::vector<std::string> &ourCards,
+				 const std::vector<std::string> &oppCards,
+				 std::vector<std::string> boardCards,
+				 const std::string &myDiscard)
+{
+  // update the counts for actions/hand types
+  for (int round=3; round>0;round--){
+    std::vector<int> handTypes;// = getHandType(oppCards, boardCards);
+    if (handTypes.size() == 0)
+      //      handTypes.push_back(BLUFF);
+    for (int i=0;i<handTypes.size();i++){
+      int handType = handTypes[i]; //ENUM
+      if (currentHand.hasCheck[OPP][round]) HandDistribution[CHECK][handType]+=1;
+      if (currentHand.hasBet[OPP][round]) HandDistribution[BET][handType]+=1;
+      if (currentHand.hasRaise[OPP][round]) HandDistribution[RAISE][handType]+=1;
+      if (currentHand.hasCall[OPP][round]) HandDistribution[CALL][handType]+=1;
+    }
+    
+    boardCards.erase(boardCards.end());
+ }  
+}
+
+void OpponentModeler::getHandDistribution(ACTION action, std::vector<float> &probs)
+{
+  float p;
+  for (int i=0;i<NUM_HAND_TYPES;i++){
+    p = (float)HandDistribution[action][i]/
+      (HandDistribution[BET][i] + 
+       HandDistribution[CHECK][i] + 
+       HandDistribution[RAISE][i]);
+    std::cout << "Probability " << p << "for action " << action << std::endl;
+    probs.push_back(p);
+  }
 }
 
 void OpponentModeler::newHand(){
   handCount++;
   currentHand.round=PREFLOP;
+  currentHand.myPreviousBetAmount=0;
   for (int round=0;round<4;round++){
     currentHand.hasCheck[ME][round]=currentHand.hasCheck[OPP][round]=false;
     currentHand.hasBet[ME][round]=currentHand.hasBet[OPP][round]=false;
@@ -234,9 +277,8 @@ void OpponentModeler::newHand(){
   // re-train neural net after every 50 hands
   if (( handCount % 501 == 0)){
     nn->train_net(totalActions, NN_IN_COUNT, NNFeatures, NN_OUT_COUNT, NNOut);
-		trained=1;
+    trained=1;
   }
-
 }
 
 void OpponentModeler::printStats(){
@@ -262,22 +304,22 @@ void OpponentModeler::printStats(){
     
     std::cout.precision(3);
     std::cout << std::fixed
-<< ((float)playerStats[ME]->numCheck[round]/myTotal) << " "
-<< ((float)playerStats[OPP]->numCheck[round]/oppTotal) << "\t"
+	      << ((float)playerStats[ME]->numCheck[round]/myTotal) << " "
+	      << ((float)playerStats[OPP]->numCheck[round]/oppTotal) << "\t"
       
-<< ((float)playerStats[ME]->numBet[round]/myTotal) << " "
-<< ((float)playerStats[OPP]->numBet[round]/oppTotal) << "\t"
+	      << ((float)playerStats[ME]->numBet[round]/myTotal) << " "
+	      << ((float)playerStats[OPP]->numBet[round]/oppTotal) << "\t"
       
-<< ((float)playerStats[ME]->numRaise[round]/myTotal) << " "
-<< ((float)playerStats[OPP]->numRaise[round]/oppTotal) << "\t"
+	      << ((float)playerStats[ME]->numRaise[round]/myTotal) << " "
+	      << ((float)playerStats[OPP]->numRaise[round]/oppTotal) << "\t"
       
-<< ((float)playerStats[ME]->numCall[round]/myTotal) << " "
-<< ((float)playerStats[OPP]->numCall[round]/oppTotal) << "\t"
+	      << ((float)playerStats[ME]->numCall[round]/myTotal) << " "
+	      << ((float)playerStats[OPP]->numCall[round]/oppTotal) << "\t"
       
-<< ((float)playerStats[ME]->numFold[round]/myTotal) << " "
-<< ((float)playerStats[OPP]->numFold[round]/oppTotal) << "\t"
+	      << ((float)playerStats[ME]->numFold[round]/myTotal) << " "
+	      << ((float)playerStats[OPP]->numFold[round]/oppTotal) << "\t"
       
-<< std::endl << std::endl;
+	      << std::endl << std::endl;
   }
 }
   
@@ -297,41 +339,54 @@ OpponentModeler::ROUND OpponentModeler::numBoardCards2round(int numBoardCards){
 /* NN Functions */
 void OpponentModeler::updateNNOut(ACTION oppAction, float normalizedOppBet)
 {
-  for (int i=0;i<5;i++){
+  for (int i=0;i<NN_OUT_COUNT;i++){
     NNOut[oppActionCount][i]=0;
   }
-
+  std::string realAction;
   switch(oppAction){
   case BET:
   case RAISE:
     NNOut[oppActionCount][0]=1;
-    NNOut[oppActionCount][4]=normalizedOppBet;
+    //    NNOut[oppActionCount][4]=normalizedOppBet;
+    realAction="betraise";
     break;
   case CHECK:
     NNOut[oppActionCount][1]=1;
+    realAction="check";
     break;
   case CALL:
     NNOut[oppActionCount][2]=1;
+    realAction="call";
     break;
   case FOLD:
     NNOut[oppActionCount][3]=1;
+    realAction="fold";
     break;
   default:
     break;
   }
-		std::cout<<"trainedbool: "<<trained<<std::endl;
+  //std::cout<<"trainedbool: "<<trained<<std::endl;
   if(trained && predicted){
-		mse=calc_MSE(output, NNOut[oppActionCount], NN_OUT_COUNT);
-		numMse++;
-		sumMse+=mse;
-		std::cout<<"calcMSE: "<<mse<<std::endl;
-		std::cout<<"averageMse: "<<sumMse/numMse<<std::endl;
-	}
+    mse=calc_MSE(output, NNOut[oppActionCount], NN_OUT_COUNT);
+    numMse++;
+    sumMse+=mse;
+
+    std::cout << "realaction: " << realAction << " vs. " << "predicted action:(bet,check,call,fold,raiseamnt" 
+	      << output[0] 
+	      << " " << output[1] 
+      	      << " " << output[2] 
+	      << " " << output[3] 
+	      << " " << output[4]*400      
+	      << std::endl;
+
+    std::cout<<"calcMSE: "<<mse<<std::endl;
+    std::cout<<"averageMse: "<<sumMse/numMse<<std::endl;
+  }
 }
 
 void OpponentModeler::createActionNNFeatures(ROUND round, bool myButton, float mybEq, int prevBet, int stackSize, int potSize,
-const std::vector<std::string> &myHand,
-const std::vector<std::string> &boardCards, int actionNum){
+					     const std::vector<std::string> &myHand,
+					     const std::vector<std::string> &boardCards, int actionNum){
   // 0-18
   //
   CardHeuristics::createBoardTextureInput(myHand, boardCards, &NNFeatures[actionNum][0]);
@@ -415,7 +470,7 @@ const std::vector<std::string> &boardCards, int actionNum){
   std::cout << std::endl << "round actions 24-29 =" ;
   for (int i =24; i<30;i++){
     std::cout << NNFeatures[actionNum][i] << " ";
-    }
+  }
   std::cout << std::endl << "aggregate stats 30-39= ";
   for (int i =30; i<40;i++){
     std::cout << NNFeatures[actionNum][i] << " ";
@@ -435,4 +490,13 @@ const std::vector<std::string> &boardCards, int actionNum){
   std::cout << std::endl;
 }
 
-
+float OpponentModeler::calc_MSE(float * nnoutput, float * trueoutput, int num_output){
+  float sum=0;
+  for(int i=0; i<num_output; i++){
+    std::cout<<"l49: "<<nnoutput[i]<<std::endl;
+    std::cout<<"l51: "<<trueoutput[i]<<std::endl;
+    float diff=nnoutput[i]-trueoutput[i];
+    sum+=diff*diff;
+  }
+  return sum/num_output;
+}

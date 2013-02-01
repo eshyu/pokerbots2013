@@ -54,7 +54,7 @@ void Player::run(tcp::iostream &stream)
       newHand(holeCard1, holeCard2, holeCard3, button_str);
     } else if (!packet_type.compare("HANDOVER")){
       // use to update opponent modeler, opponent's last action, shows if any
-      actionSelector->updateHandover(line, myButton, holeCards);
+      actionSelector->updateHandover(line, myButton, holeCards, myDiscard);
 	
     } else if (!packet_type.compare("REQUESTKEYVALUES")){
       // TODO ...
@@ -90,6 +90,9 @@ void Player::newHand(const std::string &holeCard1, const std::string& holeCard2,
   evaluator->clearMemoizedEquities();
   opponentModeler->newHand();
   opponentModeler->printStats();
+  
+  std::cout << "Player.cpp:L94, Hand Num: " << myHandId << ", myButton: " << myButton << std::endl;
+
 }
 
 /* Converts ActionInfo struct into string */
@@ -116,4 +119,4 @@ std::string Player::action2str(const ActionSelector::ActionInfo &info)
     break;
   }
 }
-  
+

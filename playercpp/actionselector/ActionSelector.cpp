@@ -19,10 +19,10 @@ ActionSelector::ActionSelector(Evaluator *_evaluator, OpponentModeler *_opponent
 }
 
 void ActionSelector::setGameParams(const std::string &myName, 
-			      const std::string &oppName,
-			      const int stackSize,
-			      const int bb,
-			      const int numHands)
+				   const std::string &oppName,
+				   const int stackSize,
+				   const int bb,
+				   const int numHands)
 {
   MY_NAME=myName;
   OPP_NAME=oppName;
@@ -70,83 +70,73 @@ ActionSelector::ActionInfo ActionSelector::getAction(const std::string &getactio
     break;
   case CHECK_BET:
   case FOLD_CALL_RAISE:
-    mybEq=selectActionForRound(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
-     break;
-   }
-  
-  // update the believed equity 
-  opponentModeler->updatebEq(mybEq, round);
-    
-  // update other statistics, from this GETACTION packet
-  opponentModeler->updateActionStatistics((int)actionInfo.action, 
-					  actionInfo.betAmount, 
-					  oppActions,
-					  myButton,
-					  potSize, 
-					  STACK_SIZE, 
-					  boardCards, holeCards);
+    mybEq=evaluator->evaluate(holeCards, boardCards, myDiscard);
+    opponentModeler->updatebEq(mybEq, round);
+    opponentModeler->updateOpponentActionStatistics(oppActions,
+						    myButton,
+						    potSize,
+						    STACK_SIZE,
+						    boardCards,
+						    holeCards);
+
+    selectActionForRound(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo, mybEq);
+
+    break;
+  }
+
+  // update our other statistics, from this GETACTION packet
+  opponentModeler->updateOurActionStatistics((int)actionInfo.action, 
+					     actionInfo.betAmount, 
+					     myButton,
+					     potSize, 
+					     STACK_SIZE, 
+					     boardCards, holeCards);
   
   return actionInfo;
 }
 
 /* Different strategies for different rounds*/
-float ActionSelector::selectActionForRound(int potSize, bool myButton, 
-					  const std::vector<std::string> &boardCards, 
-					  const std::vector<std::string> &holeCards, 
-					  const std::string &myDiscard,
-					  const ActionSelector::LegalAction &legalAction,
-					  ActionSelector::ActionInfo &actionInfo)
+void ActionSelector::selectActionForRound(int potSize, bool myButton, 
+					   const std::vector<std::string> &boardCards, 
+					   const std::vector<std::string> &holeCards, 
+					   const std::string &myDiscard,
+					   const ActionSelector::LegalAction &legalAction,
+					   ActionSelector::ActionInfo &actionInfo,
+					   float mybEq)
 {
   int numBoardCards = boardCards.size();
   switch (numBoardCards){
   case 0:
-    return preflopSelector(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
+    preflopSelector(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo, mybEq);
   case 3:
   case 4:
   case 5:
-    return evalMagic(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo);
+    evalMagic(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo, mybEq);
   }
 }
 
- /* this will be replaced with something more sophisticated later */
-float ActionSelector::preflopSelector(int potSize, bool myButton, 
-				const std::vector<std::string> &boardCards, 
-				const std::vector<std::string> &holeCards, 
-				const std::string &myDiscard,
-				const ActionSelector::LegalAction &legalAction,
-				ActionSelector::ActionInfo &actionInfo)
+/* this will be replaced with something more sophisticated later */
+void ActionSelector::preflopSelector(int potSize, bool myButton, 
+				      const std::vector<std::string> &boardCards, 
+				      const std::vector<std::string> &holeCards, 
+				      const std::string &myDiscard,
+				      const ActionSelector::LegalAction &legalAction,
+				      ActionSelector::ActionInfo &actionInfo,
+				      float equity)
 {
   // open with the top 75% of hands on the button, and with top 50% otherwise
   int raise=0, adjustRaise, noise, toCall;
   toCall = legalAction.callMin;
   
-  float discount = myButton ? 0.09 : 0;
-  float equity = evaluator->evaluate(holeCards, boardCards, myDiscard);
+  float discount = myButton ? 0.09 : 0;  
   float potOdds = (float)toCall/(toCall+potSize);
   
   // generate betting noise
   noise = (rand() % 3 - 1);
-  
-  CardHeuristics h;
-  int coin = rand() % 2;
-  //  CardHeuristics cardheuristcs;
-  if (CardHeuristics::havePair(holeCards) && coin == 1){
-    if (legalAction.raiseMax > 0){
-      std::cout << "L129: ALL IN"<< std::endl;
-      actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
-      actionInfo.betAmount=legalAction.raiseMax;
-      return equity;
-    } else { 
-      // opponent already put us all in
-      std::cout << "ActionSelector.cpp:L135 Calling All-in" << std::endl;
-      actionInfo.action = CALL;
-      actionInfo.betAmount=0;
-      return equity;
-    }
-    //std::cout << "raising to " << actionInfo.betAmount << std::endl;
-  }
 
-  if (legalAction.raiseMax > 0 && equity-discount > 0.5){
+  bool canRaise=legalAction.raiseMax>0, isAllin=legalAction.raiseMax==0, 
+    mustCall=legalAction.callMin>0;;  
+  if (canRaise > 0 && equity-discount > 0.5){
     int bucket = (int)(20*equity)-9;
     raise = std::max(7, 7 + (bucket + noise)*8);
     adjustRaise = std::max(std::min(raise,legalAction.raiseMax), legalAction.raiseMin);
@@ -154,161 +144,139 @@ float ActionSelector::preflopSelector(int potSize, bool myButton,
   }  
 
   // for now no re-raising pre-flop more than our normal raise
-  if (raise && (raise == adjustRaise)){
-    actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
-    actionInfo.betAmount=raise;
-    std::cout << "ActionSelector.cpp:99 Raising " << raise << std::endl;
+  if (raise && (raise == adjustRaise)){ //can raise/bet without any problem
+    if (legalAction.actionType == CHECK_BET)
+      Bet(actionInfo,raise);
+    else
+      Raise(actionInfo,raise);
   } else {    
-    std::cout << "ActionSelector L117: myPotOdds: " << toCall << "/" << (toCall+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
-    if (legalAction.raiseMax == 0) {
-      if (equity > 0.59){
-	std::cout << "ActionSelector.cpp:L142 Calling Preflop All-in" << std::endl;
-	actionInfo.action=CALL;
-	actionInfo.betAmount=0;
-	return equity;
-      } else {
-	std::cout << "ActionSelector.cpp:L146 Folding Preflop  All-in" << std::endl;
-	actionInfo.action=FOLD;
-	return equity;
-      }
-    } else if (legalAction.callMin > 0){
-      if (equity > potOdds+0.05){
-	std::cout << "ActionSelector.cpp:L00 Calling" << std::endl;
-	actionInfo.action=CALL;
-	actionInfo.betAmount=0;
-      } else {
-	actionInfo.action=FOLD;
-	actionInfo.betAmount=0;
-      }
+    if (isAllin) {
+      if (equity > 0.59)
+	Call(actionInfo);   //only call all-in if have top hands
+      else 
+	Fold(actionInfo);
+    } else if (mustCall){
+      if (equity > potOdds+0.05)
+	Call(actionInfo);  // call if cheap enough to call
+      else 
+	Fold(actionInfo);
     } else {      
-      actionInfo.action=CHECK;
-      actionInfo.betAmount=0;
+      Check(actionInfo);
     }    
   }   
-  return equity;
 }
-  
- /* this will be replaced with something more sophisticated later */
- float ActionSelector::evalMagic(int potSize, bool myButton, 
+ 
+
+/* this will be replaced with something more sophisticated later */
+void ActionSelector::evalMagic(int potSize, bool myButton, 
 				const std::vector<std::string> &boardCards, 
 				const std::vector<std::string> &holeCards, 
 				const std::string &myDiscard,
 				const ActionSelector::LegalAction &legalAction,
-				ActionSelector::ActionInfo &actionInfo){
-   // TODO: .....
-   //  case CHECKFOLD_BET:   case FOLD_CALL_RAISE:  
-   int coin = rand() % 4; //LOL
-   int callMin = legalAction.callMin;
+				ActionSelector::ActionInfo &actionInfo,
+				float equity){
+  int coin = rand() % 3; //LOL
+  int callMin = legalAction.callMin;
    
-   //std::cout << "coin is " << coin;
-
-   std::cout << "evaluating with # board cards: " << boardCards.size() << std::endl;
-   float equity = evaluator->evaluate(holeCards, boardCards, myDiscard);
-
-   if (coin == 1 && equity > 0.8){
-     if (legalAction.raiseMax > 0){
-       std::cout << "ALL IN"<< std::endl;
-       actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
-       actionInfo.betAmount=legalAction.raiseMax;
-     } else { 
-       // opponent already put us all in
-       std::cout << "ActionSelector.cpp:L78 Calling All-in" << std::endl;
-       actionInfo.action = CALL;
-       actionInfo.betAmount=0;
-     }
-     //std::cout << "raising to " << actionInfo.betAmount << std::endl;
-   } 
+  if (coin == 1 && equity > 0.8){
+    if (legalAction.raiseMax > 0){
+      if (legalAction.actionType == CHECK_BET)
+	Bet(actionInfo, legalAction.raiseMax);
+      else 
+	Raise(actionInfo, legalAction.raiseMax);
+    } else { 
+      std::cout << "ActionSelector.cpp:L78 Calling All-in" << std::endl;
+      Call(actionInfo);
+    }
+    //std::cout << "raising to " << actionInfo.betAmount << std::endl;
+    return;
+  } 
    
-   else {
+  // compute pot odds and either call or fold    
+  float potOdds = (float)callMin/(callMin+potSize);
      
-     // compute pot odds and either call or fold    
-     float potOdds = (float)callMin/(callMin+potSize);
-     // TODO: lol
-
-     //     if (myButton) equity = equity*1.2;
-     
-     if (equity>0.62){
-       std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
-       if (legalAction.raiseMax > 0){
-        float oppEquity=1-equity;
-        int newPotSize=callMin+potSize;
-	//	int raise=1+(int)(newPotSize/oppEquity-newPotSize);
+  // raise with the worst and best cards in our range
+  if (equity>0.62){
+    std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
+    if (legalAction.raiseMax > 0){
+      float oppEquity=1-equity;
+      int newPotSize=callMin+potSize;
 	
-	int raise=(int)((newPotSize*oppEquity/equity)) + callMin;
-	//	int raise=(int)((newPotSize*equity/oppEquity)) + callMin;
+      int raise=(int)((newPotSize*oppEquity/equity)) + callMin;
+      //	int raise=(int)((newPotSize*equity/oppEquity)) + callMin;
 		
-	int numBoardCards = boardCards.size();
+      int numBoardCards = boardCards.size();
+      if (numBoardCards >= 3) raise = std::max(raise, 100); // so we actually can make money      
+      if (numBoardCards >= 4 && equity > 0.7) raise = std::max(raise, 200);      
+      if (numBoardCards >= 5 && equity > 0.85 raise = std::max(raise, 300);      
 
-	if (numBoardCards >= 3){
-	  raise = std::max(raise, 100); // so we actually can make money
-	}
+      int betAmt= std::max(std::min(raise,legalAction.raiseMax), legalAction.raiseMin);
 
-	if (numBoardCards >= 4 && equity > 0.7){
-	  raise = std::max(raise, 200);
-	}
+      std::cout << "betAmt: " << betAmt << " vs. raise: " << raise << "(raiseMin, max) " << legalAction.raiseMin << ", " << legalAction.raiseMax << std::endl;
+      if (betAmt){
+	actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
+	actionInfo.betAmount=betAmt;
+      } else {
+	actionInfo.action = (legalAction.actionType == CHECK_BET) ? CHECK : FOLD;
+	actionInfo.betAmount=0;
+      }//end if(betAmt)
+    } else {	 
+      if (boardCards.size()==5 && (equity - 0.2) < potOdds)
+	Fold(actionInfo);
+      else 
+	Call(actionInfo);
+    } //end if(raisMax > 0)
+  }else{
+    std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
 
-	if (numBoardCards >= 5 && equity > 0.85){
-	  raise = std::max(raise, 300);
-	}
+    float roundDiscount=0;
+    int numBoardCards = boardCards.size();
 
-        int betAmt= std::max(std::min(raise,legalAction.raiseMax), legalAction.raiseMin);
+    // Discount our equity, so we are less willing to call with low equity on later streets (especially the river)
+    if (numBoardCards == 5){
+      roundDiscount=0.2;
+    }       
 
-	std::cout << "betAmt: " << betAmt << " vs. raise: " << raise << "(raiseMin, max) " << legalAction.raiseMin << ", " << legalAction.raiseMax << std::endl;
-	if (betAmt){
-	  actionInfo.action= (legalAction.actionType == CHECK_BET) ? BET : RAISE;
-	  actionInfo.betAmount=betAmt;
-	} else {
-	  actionInfo.action = (legalAction.actionType == CHECK_BET) ? CHECK : FOLD;
-	  actionInfo.betAmount=0;
-	}//end if(betAmt)
-       } else {
-	 
-	 if (boardCards.size()==5 && (equity - 0.2) < potOdds){
-	   actionInfo.action = FOLD;
-	 } else {
-	   std::cout << "ActionSelector.cpp:L103 Calling All-in" << std::endl;
-	   actionInfo.action = CALL;
-	   actionInfo.betAmount=0;
-	 }	 	 
-       } //end if(raisMax > 0)
-     }else{
-       std::cout << "myPotOdds: " << callMin << "/" << (callMin+potSize) << ":" << potOdds << " vs. equity: " << equity << std::endl;
-
-       float roundDiscount=0;
-       int numBoardCards = boardCards.size();
-
-       // Discount our equity, so we are less willing to call with low equity on later streets (especially the river)
-	if (numBoardCards == 5){
-	  roundDiscount=0.2;
-	}       
-
-	std::cout << "Numboard cards: " << numBoardCards << " and discounting by: " << roundDiscount << std::endl;
-
-	std::cout << "equity: " << equity << ", w/ round discount: " << equity-roundDiscount << std::endl;
-       //TODO: lol
-       if (legalAction.callMin > 0){
-	 if (numBoardCards>=4 && equity < 0.53){ // fold if our equity is bad by the turn	   
-	   actionInfo.action=FOLD;
-	   actionInfo.betAmount=0;
-	   std::cout << "ActionSelector.cpp:L235 Folding" << std::endl;
-	 }else if (equity-roundDiscount>(potOdds)+0.04){ //less likely to call if we are down
-	   std::cout << "ActionSelector.cpp:L237 Calling" << std::endl;
-	   actionInfo.action=CALL;
-	   actionInfo.betAmount=0;
-	 } else {
-	   std::cout << "ActionSelector.cpp:L240 Folding" << std::endl;
-	   actionInfo.action=FOLD;
-	   actionInfo.betAmount=0;
-	 }
-       } else {      
-	 std::cout << "ActionSelector.cpp:L244 Checkingg" << std::endl;
-	 actionInfo.action=CHECK;
-	 actionInfo.betAmount=0;
-       }
-     }
-   }      
-   return equity;
+    if (legalAction.callMin > 0){
+      if (numBoardCards>=4 && equity < 0.53){ // fold if our equity is bad by the turn	  
+	Fold(actionInfo);
+      }else if (equity-roundDiscount>(potOdds)+0.04){ //less likely to call if we are down
+	Call(actionInfo);
+      } else {
+	Fold(actionInfo);
+      }
+    } else {      
+      Check(actionInfo);
+    }
+  }
 }
+
+/* actions */ 
+void ActionSelector::Bet(ActionInfo &actionInfo, int bet){
+  actionInfo.action=BET;
+  actionInfo.betAmount=bet;
+}
+
+void ActionSelector::Check(ActionInfo &actionInfo){
+  actionInfo.action=CHECK;
+  actionInfo.betAmount=0;
+}
+
+void ActionSelector::Call(ActionInfo &actionInfo){
+  actionInfo.action=CALL;
+  actionInfo.betAmount=0;
+}
+
+void ActionSelector::Fold(ActionInfo &actionInfo){
+  actionInfo.action=FOLD;
+  actionInfo.betAmount=0;
+}
+
+void ActionSelector::Raise(ActionInfo &actionInfo, int bet){
+  actionInfo.action=RAISE;
+  actionInfo.betAmount=bet;
+}
+
 
 /* Discard functions */
 
@@ -365,27 +333,27 @@ void ActionSelector::discardGreedy(std::vector<std::string> &holeCards, std::vec
 
 /* Get last action done by the player*/
 /*
-std::string ActionSelector::getLastAction(const std::vector<std::string> &lastActions, const std::string &playerName)
-{
+  std::string ActionSelector::getLastAction(const std::vector<std::string> &lastActions, const std::string &playerName)
+  {
   std::vector<std::string> tokens;
   std::string actionword;
   std::string player;
   for (int i=lastActions.size()-1;i>=0;i--){
-    boost::split(tokens, lastActions[i], boost::is_any_of(":"));
-    std::string actionword = tokens[0];
-    std::string player = tokens[tokens.size()-1];
+  boost::split(tokens, lastActions[i], boost::is_any_of(":"));
+  std::string actionword = tokens[0];
+  std::string player = tokens[tokens.size()-1];
 
-    if (!player.compare(playerName)){
-      if (!actionword.compare("BET") ||
-	  !actionword.compare("CALL") ||
-	  !actionword.compare("FOLD") ||
-	  !actionword.compare("RAISE")){
-	return lastActions[i];
-      }
-    } 
+  if (!player.compare(playerName)){
+  if (!actionword.compare("BET") ||
+  !actionword.compare("CALL") ||
+  !actionword.compare("FOLD") ||
+  !actionword.compare("RAISE")){
+  return lastActions[i];
+  }
+  } 
   }
 
-}
+  }
 */
 
 void ActionSelector::packetlist2vector(std::stringstream &ss, std::vector<std::string> &packetlist, int length){
@@ -438,7 +406,7 @@ ActionSelector::LegalAction ActionSelector::actionlist2struct(std::stringstream 
 
   int callMin=0, raiseMin=0, raiseMax=0;
   if ((!tokens[0].compare("BET") || !tokens[0].compare("RAISE"))){
-      // cuz the call amount doesnt appear in the action..
+    // cuz the call amount doesnt appear in the action..
     callMin = atoi(tokens[1].c_str());    
     legalAction.actionType = FOLD_CALL_RAISE;
   }
@@ -481,7 +449,8 @@ ActionSelector::LegalAction ActionSelector::actionlist2struct(std::stringstream 
 
 /* Update states at end of hand over */
 void ActionSelector::updateHandover(const std::string &line, bool myButton, 
-				    const std::vector<std::string> &holeCards)
+				    const std::vector<std::string> &holeCards,
+				    const std::string &myDiscard)
 {
   float myBankroll, oppBankroll;
   int numBoardCards, numLastActions;
@@ -500,6 +469,7 @@ void ActionSelector::updateHandover(const std::string &line, bool myButton,
   std::vector<std::string> tokens;
   std::string actionword;
   std::string player;
+  int pot=3;
   for (int i=lastActions.size()-1;i>=0;i--){
     boost::split(tokens, lastActions[i], boost::is_any_of(":"));
     actionword = tokens[0];
@@ -507,29 +477,36 @@ void ActionSelector::updateHandover(const std::string &line, bool myButton,
     
     if (!actionword.compare("TIE")){
       // update hand modeler or something with hands
+      pot=2*boost::lexical_cast<int>(tokens[1]);
     }
     
     if (!actionword.compare("WINS")){
       // update hand modeler or something with hands
+      pot=boost::lexical_cast<int>(tokens[1]);
     }
     
-    if (!actionword.compare("SHOW")){
+    if (!actionword.compare("SHOW") && !player.compare(OPP_NAME)){
       // update hand modeler or something with hands
+      std::vector<std::string> oppCards;
+      oppCards.push_back(tokens[1]); oppCards.push_back(tokens[2]);
+
+      opponentModeler->updateShow(holeCards, oppCards, 
+				  boardCards, myDiscard);
+
     }
+
   }
   
   std::vector<OpponentModeler::OppActionInfo> oppActions;
   actionlist2actioninfos(lastActions, oppActions, 
 			 OpponentModeler::numBoardCards2round(numBoardCards));
-
-  opponentModeler->updateActionStatistics((int)NONE,
-					  0, 
-					  oppActions,
-					  myButton,
-					  0,
-					  0,
-					  boardCards,
-					  holeCards);				    				    
+  
+  opponentModeler->updateOpponentActionStatistics(oppActions,
+						  myButton,
+						  pot,
+						  STACK_SIZE,
+						  boardCards,
+						  holeCards);	 				    
 }
 
 
