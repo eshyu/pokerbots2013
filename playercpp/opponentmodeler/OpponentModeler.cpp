@@ -32,7 +32,10 @@ OpponentModeler::OpponentModeler()
   handCount=0;
   oppActionCount=0;
 	trained=0;
-	
+	predicted=0;
+	averageMse=0;
+	sumMse=0;
+	numMse=0;
 }
 
 OpponentModeler::~OpponentModeler(){}
@@ -46,6 +49,8 @@ void OpponentModeler::updatebEq(float myBeq, ROUND round)
 float OpponentModeler::calc_MSE(float * nnoutput, float * trueoutput, int num_output){
   float sum=0;
   for(int i=0; i<num_output; i++){
+		std::cout<<"l49: "<<nnoutput[i]<<std::endl;
+		std::cout<<"l51: "<<trueoutput[i]<<std::endl;
     float diff=nnoutput[i]-trueoutput[i];
     sum+=diff*diff;
   }
@@ -185,7 +190,7 @@ const std::vector<std::string> &holeCards)
 #ifdef USE_NN
   if (trained && predict){
     output = nn->get_output(NNFeatures[oppActionCount]);
-
+		predicted=1;
     std::cout << "Neural Net prediction: " << output[0] << " " << output[1] << " " << output[2] << " "<< " " << output[3] << " " << output[4] << std::endl;
   }
 
@@ -314,9 +319,13 @@ void OpponentModeler::updateNNOut(ACTION oppAction, float normalizedOppBet)
   default:
     break;
   }
-  if(trained){
+		std::cout<<"trainedbool: "<<trained<<std::endl;
+  if(trained && predicted){
 		mse=calc_MSE(output, NNOut[oppActionCount], NN_OUT_COUNT);
+		numMse++;
+		sumMse+=mse;
 		std::cout<<"calcMSE: "<<mse<<std::endl;
+		std::cout<<"averageMse: "<<sumMse/numMse<<std::endl;
 	}
 }
 

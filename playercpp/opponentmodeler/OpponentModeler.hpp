@@ -147,9 +147,9 @@ public:
   static ROUND numBoardCards2round(int numBoardCards);  
 private:
   
-  int oppActionCount, totalActions, handCount, trained; 
+  int oppActionCount, totalActions, handCount, trained,numMse, predicted; 
 	float *output;
-	float mse;
+	float mse, sumMse,averageMse;
 };
 
 #endif  // __OPPONENTMODELER_HPP__
