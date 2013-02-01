@@ -102,8 +102,8 @@ void CardHeuristics::getStringFromSuits(int i,int j, int * cardSuits, int have0,
 std::string suitI=convertSuit2String(i);
 std::string suitJ=convertSuit2String(j);
 
-for(int a=0; a<14; a++){
-	for(int b=0; b<14; b++){
+for(int a=1; a<14; a++){
+	for(int b=1; b<14; b++){
 		if(!cardSuits[i*14+a] && !cardSuits[j*14+b] && (i!=j || a!=b)){
 			std::string cardString=convertInd2Num(a)+suitI+convertInd2Num(b)+suitJ;
 			if(have0){
@@ -131,7 +131,7 @@ std::string CardHeuristics::convertInd2Num(int index){
   case 9:
     return "T";
   default:
-    return boost::lexical_cast<std::string>(index);
+    return boost::lexical_cast<std::string>(index+1);
   }	
 }
 std::string CardHeuristics::convertSuit2String(int suit){
