@@ -359,8 +359,10 @@ std::string CardHeuristics::getEquityString(const std::vector<float> &weights,co
 		std::cout<<boardNums[i]<<" ";
 	}
 	std::cout<<std::endl;
-	std::string returnString =getNumStrings(handNums, boardNums, weights);
+	std::string returnString="";
+	returnString+=getNumStrings(handNums, boardNums, weights);
 	returnString+=getSuitStrings(handSuits, boardSuits, handNums, boardNums, weights);
+	if(returnString=="")returnString="xx";
 	return returnString;
 	
 }
