@@ -28,9 +28,12 @@ bool CardHeuristics::havePair(const std::vector<std::string> &hand){
   return pair;
 }
 
-/*
-void CardHeuristics::getCards(std::vector<int> handSuits, std::vector<int> handNums,std::vector<int> boardSuits,std::vector<int> boardNums){
-  std::string card;
+
+void CardHeuristics::getCards(const std::vector<std::string> &hand, 
+					     const std::vector<std::string> &board, std::vector<int> handSuits, std::vector<int> handNums,std::vector<int> boardSuits,std::vector<int> boardNums){
+  int num_hand=hand.size();
+	int num_board=board.size();
+	std::string card;
   for(int i=0; i<num_hand; i++){
     card=hand[i];
     handNums.push_back(getNum(card[0]));
@@ -43,55 +46,360 @@ void CardHeuristics::getCards(std::vector<int> handSuits, std::vector<int> handN
     boardSuits.push_back(getSuit(card[1]));
   }
 }
+std::string CardHeuristics::getSuitStrings(const std::vector<int> &hand, const std::vector<int> &board, const std::vector<int> &handNums, const std::vector<int> &boardNums, const std::vector<float> &weights){
+	std::string numString="";
+	std::vector<std::string> flush;
+	std::vector<std::string> flushDraw;
+	int combSuits[4]={0,0,0,0};
+	int cardSuits[56];
+	for(int i=0; i<56; i++){
 
-void CardHeuristics::getPairStrings(const std::vector<int> &hand, const std::vector<int> &board, const std::vector<float> weights){
-	std::vector<int> boardKicker; //get pairs, two pairs
-	std::vector<int> boardPair; //get two pairs, triples
-	std::vector<int> boardTriple;//get fok
-	std::vector<int> boardFour;//get high kickers
+		cardSuits[i]=0;
 
+	}
 	for(int i=0; i<board.size(); i++){
-		if(i+3<board.size() && board[i]==board[i+3]){
-			boardFour.push_back(board[i]);
-			i+=3;
-		}else if(i+2<board.size() && board[i]==board[i+2]){
-			boardTriple.push_back(board[i]);
-			i+=2;
-		}else if(i+1<board.size() && board[i]==board[i+1]){
-			boardPair.push_back(board[i]);
-			i++;
-		}else{
-			boardKicker.push_back(board[i]);
+		combSuits[board[i]]++;
+		cardSuits[board[i]*14+boardNums[i]-1]++;
+	}
+	for(int i=0; i<hand.size(); i++){
+		combSuits[hand[i]]++;
+		cardSuits[hand[i]*14+handNums[i]-1]++;
+	}
+	for(int i=0; i<4; i++){
+		for(int j=0; j<4; j++){
+			combSuits[i]++;
+			combSuits[j]++;
+			if(combSuits[i]<=13 && combSuits[j]<=13){
+				std::vector<int> allCards(board);
+				allCards.insert(allCards.begin(), i);
+				allCards.insert(allCards.begin(), j);
+				std::sort(allCards.begin(), allCards.end());
+				std::vector<int> have;
+				haveFlush(allCards, have);
+				
+				getStringFromSuits(i,j,cardSuits, have[0], have[1], flushDraw,flush);
+
+			}
 		}
 	}
-	
-	
-	
-	
+	float weight=weights[8];
+	for(int i=(int)((1-weight)*flushDraw.size()); i<flushDraw.size(); i++){
+		numString+=flushDraw[i];
+		numString+=",";
+	}
+	weight=weights[9];
+	for(int i=(int)((1-weight)*flush.size()); i<flush.size(); i++){
+		numString+=flush[i];
+		numString+=",";
+	}
+	return numString;
+}
+void CardHeuristics::getStringFromSuits(int i,int j, int * cardSuits, int have0, int have1, std::vector<std::string> &flushDraw, std::vector<std::string> &flush){
+std::string suitI=convertSuit2String(i);
+std::string suitJ=convertSuit2String(j);
+
+for(int a=0; a<14; a++){
+	for(int b=0; b<14; b++){
+		if(!cardSuits[i*14+a] && !cardSuits[j*14+b] && (i!=j || a!=b)){
+			std::string cardString=boost::lexical_cast<std::string>(a)+suitI+boost::lexical_cast<std::string>(b)+suitJ;
+			if(have0){
+				flushDraw.push_back(cardString);
+			}else if(have1){
+				flush.push_back(cardString);
+			}
+		}
+	}
+}
 
 	
-	
+}
+
+std::string CardHeuristics::convertSuit2String(int suit){
+  switch(suit){
+  case 0:
+    return "s";
+  case 1:
+    return "h";
+  case 2:
+    return "c";
+  case 3:
+    return "d";
+  default:
+    return "s";
+  }
+}
+std::string CardHeuristics::getNumStrings(const std::vector<int> &hand, const std::vector<int> &board, const std::vector<float> &weights){
+	std::vector<std::string> lowPairs;
+	std::vector<std::string> midPairs;
+	std::vector<std::string> highPairs;
+	std::vector<std::string> twoPairs;
+	std::vector<std::string> triples;
+	std::vector<std::string> fours;
+	std::vector<std::string> straight;
+	std::vector<std::string> straightDraw;
+	int high=0;
+	int low=0;
+	std::string numString="";
+	int combCards[14]={0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	int boardCards[14]={0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	for(int i=0; i<board.size(); i++){
+		combCards[board[i]-1]++;
+		boardCards[board[i]-1]++;
+	}
+	for(int i=0; i<hand.size(); i++){
+		combCards[hand[i]-1]++;
+	}
+	for(int i=0; i<14; i++){
+		if(boardCards[i]>0){
+			high=boardCards[i]+1;
+		}
+		if(boardCards[14-1-i]>0){
+			low=boardCards[i]+1;
+		}
+	}
+	for(int i=0; i<14; i++){
+		for(int j=0; j<14; j++){
+			combCards[i]++;
+			combCards[j]++;
+			if(combCards[i]<=4 && combCards[j]<=4){
+				std::vector<int> allCards(board);
+				allCards.insert(allCards.begin(), i);
+				allCards.insert(allCards.begin(), j);
+				std::sort(allCards.begin(), allCards.end());
+				std::vector<int> have;
+				std::vector<int> have2;
+				haveMulti(allCards, have, high, low);
+				haveStraight(allCards, have2);
+				std::string cardString=""+boost::lexical_cast<std::string>(i)+boost::lexical_cast<std::string>(j);
+				if(have[3]>=2){
+					twoPairs.push_back(cardString);
+				}
+				else if(have[2]){
+					highPairs.push_back(cardString);
+				}
+				else if(have[0]){
+					lowPairs.push_back(cardString);
+				}
+				else if(have[1]){
+					midPairs.push_back(cardString);
+				}
+
+				if(have[4]){
+					triples.push_back(cardString);
+				}
+				if(have[5]){
+					fours.push_back(cardString);
+				}
+				if(have2[0]){
+					straightDraw.push_back(cardString);
+				}
+				if(have2[1]){
+					straight.push_back(cardString);
+				}				
+			}
+			combCards[i]--;
+			combCards[j]--;
+		}
+	}
+	float weight=weights[0];
+	for(int i=(int)((1-weight)*lowPairs.size()); i<lowPairs.size(); i++){
+		numString+=lowPairs[i];
+		numString+=",";
+	}
+	weight=weights[1];
+	for(int i=(int)((1-weight)*midPairs.size()); i<midPairs.size(); i++){
+		numString+=midPairs[i];
+		numString+=",";
+	}
+	weight=weights[2];
+	for(int i=(int)((1-weight)*highPairs.size()); i<highPairs.size(); i++){
+		numString+=highPairs[i];
+		numString+=",";
+	}
+	weight=weights[3];
+	for(int i=(int)((1-weight)*twoPairs.size()); i<twoPairs.size(); i++){
+		numString+=twoPairs[i];
+		numString+=",";
+	}
+	weight=weights[4];
+	for(int i=(int)((1-weight)*triples.size()); i<triples.size(); i++){
+		numString+=triples[i];
+		numString+=",";
+	}
+	weight=weights[5];
+	for(int i=(int)((1-weight)*fours.size()); i<fours.size(); i++){
+		numString+=fours[i];
+		numString+=",";
+	}
+	weight=weights[6];
+	for(int i=(int)((1-weight)*straight.size()); i<straight.size(); i++){
+		numString+=straight[i];
+		numString+=",";
+	}
+	weight=weights[7];
+	for(int i=(int)((1-weight)*straightDraw.size()); i<straightDraw.size(); i++){
+		numString+=straightDraw[i];
+		numString+=",";
+	}
+	return numString;
 	
 }
-void CardHeuristics::getEquityString(const std::vector<float> weights,const std::vector<std::string> &hand, const std::vector<std::string> &board, std::vector<std::string> &equityString){
+
+//cardSuits
+void CardHeuristics::haveFlush(const std::vector<int> &cards, std::vector<int> &have){
+	int flush=0;
+	int flushDraw=0;
+
+	for(int i=0; i<cards.size(); i++){
+		if(i+4<cards.size() && cards[i]==cards[i+4]){
+			flush=1;
+		}else if( i+3<cards.size() && cards[i]==cards[i+3]){
+			flushDraw=1;
+		}
+	}
+	if(flush)flushDraw=0;
+	have.push_back(flushDraw);
+	have.push_back(flush);	
+}
+
+//cardNums
+void CardHeuristics::haveStraight(const std::vector<int> &cards, std::vector<int> &have){
+	int straight=0;
+	int straightDraw=0;
+	std::vector<int> copy(cards);
+  copy.erase( unique( copy.begin(), copy.end() ), copy.end() );	
+	for(int i=0; i<copy.size(); i++){
+		if(i+4<copy.size() && copy[i]+5>copy[i+4]){
+			straight=1;
+		}else if( i+3<copy.size() && copy[i]+5>copy[i+3]){
+			straightDraw=1;
+		}
+	}
+	if(straight)straightDraw=0;
+	have.push_back(straightDraw);
+	have.push_back(straight);
+
+}
+//cardNums
+void CardHeuristics::haveMulti(const std::vector<int> &cards, std::vector<int> &have, int hi, int low){
+
+	int hasLow=0;
+	int hasHigh=0;
+	int hasMid=0;
+	int pairs=0;
+	int triples=0;
+	int fours=0;
+
+	for(int i=0; i<cards.size(); i++){
+		if(i+3<cards.size() && cards[i]==cards[i+3]){
+			fours++;
+			i+=3;
+		}else if(i+2<cards.size() && cards[i]==cards[i+2]){
+			triples++;
+			i+=2;
+		}else if(i+1<cards.size() && cards[i]==cards[i+1]){
+			if(cards[i]>=hi){
+				hasHigh=1;
+			}else if(cards[i]<=low){
+				hasLow=1;
+			} else{
+				hasMid=1;
+			}
+			pairs++;
+			i++;
+		}
+	}
+	have.push_back(hasLow);
+	have.push_back(hasMid);
+	have.push_back(hasHigh);
+	have.push_back(pairs);
+	have.push_back(triples);
+	have.push_back(fours);
+}
+
+
+
+
+std::string CardHeuristics::getEquityString(const std::vector<float> &weights,const std::vector<std::string> &hand, const std::vector<std::string> &board){
 	
   std::vector<int> handSuits;
   std::vector<int> handNums;
   std::vector<int> boardSuits;
   std::vector<int> boardNums;
 
-	getCards(handSuits, handNums, boardSuits, boardNums);
+	getCards(hand, board, handSuits, handNums, boardSuits, boardNums);
 
   std::sort (boardNums.begin(), boardNums.end()); 
   std::sort (handNums.begin(), handNums.end()); 		
 	
-	getPairStrings(equityString);
-	getFlushStrings(equityString);
-	getStraightStrings(equityString);
+	std::string returnString =getNumStrings(handNums, boardNums, weights);
+	returnString+=getSuitStrings(handSuits, boardSuits, handNums, boardNums, weights);
+	return returnString;
 	
 }
 
-*/
+void CardHeuristics::getHandType(const std::vector<std::string> &cards, const std::vector<std::string> &board, std::vector<CardHeuristics::HAND_TYPE> &handType){
+  std::vector<int> handSuits;
+  std::vector<int> handNums;
+  std::vector<int> boardSuits;
+  std::vector<int> boardNums;
+
+
+	getCards(cards, board, handSuits, handNums, boardSuits, boardNums);
+
+	int hi=boardNums[boardNums.size()-1];
+	int low=boardNums[0];
+
+	std::vector<int> multi;
+	std::vector<int> straight;
+	std::vector<int> flush;
+
+	std::vector<int> numCards;
+	std::vector<int> suitCards;
+
+	numCards.reserve( handNums.size() + boardNums.size() ); // preallocate memory
+	numCards.insert( numCards.end(), handNums.begin(), handNums.end() );
+	numCards.insert( numCards.end(), boardNums.begin(), boardNums.end() );
+	suitCards.reserve( handSuits.size() + boardSuits.size() ); // preallocate memory
+	suitCards.insert( suitCards.end(), handSuits.begin(), handSuits.end() );
+	suitCards.insert( suitCards.end(), boardSuits.begin(), boardSuits.end() );
+	std::sort(numCards.begin(), numCards.end());
+	std::sort(suitCards.begin(), suitCards.end());
+	haveMulti(numCards, multi, hi, low);
+	haveStraight(numCards,straight);
+	haveFlush(suitCards, flush);
+	if(multi[3]>=2){
+		handType.push_back(TWO_PAIR);
+	}
+	else if(multi[2]){
+		handType.push_back(HI_PAIR);
+	}
+	else if(multi[0]){
+		handType.push_back(LOW_PAIR);
+	}
+	else if(multi[1]){
+		handType.push_back(MID_PAIR);
+	}
+	if(multi[4]){
+		handType.push_back(TRIPLE);
+	}
+	if(multi[5]){
+		handType.push_back(FOUR);
+	}
+	if(straight[0]){
+		handType.push_back(STRAIGHT_DRAW);
+	}
+	if(straight[1]){
+		handType.push_back(STRAIGHT);
+	}
+	if(flush[0]){
+		handType.push_back(FLUSH_DRAW);
+	}
+	if(flush[1]){
+		handType.push_back(FLUSH);
+	}							
+	
+}
 
 //return: pair, oneTriple, oneFour, myFirstKicker, mySecondKicker,myFirstPair, mySecondPair, myTriple
 void CardHeuristics::getPairs(std::vector<int> hand, std::vector<int> board, std::vector<int> &pairs){
