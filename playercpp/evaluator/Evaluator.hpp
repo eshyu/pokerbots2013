@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+#include "../opponentmodeler/OpponentModeler.hpp"
+
 class Evaluator {
 public:
   Evaluator();
@@ -50,6 +52,12 @@ public:
   float evaluate_pairs(const std::string &holeCards,
 				const std::string &boardCards,
 				const std::string &myDiscard);
+
+  // evaluate opponents based on a range
+  float evaluate_range(const std::vector<std::string> &holeCards,
+		      const std::vector<std::string> &boardCards,
+		      const std::string &opponentRangeString,
+		      const std::string &myDiscard);
 
   // for evaluation when we know both our and opponent cards
   float evaluate_true(const std::vector<std::string> &myHoleCards,

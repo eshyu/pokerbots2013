@@ -174,6 +174,47 @@ float Evaluator::evaluate_true(const std::vector<std::string> &myHoleCards,
 
  }
 
+/* compute the true equities of both players, if we know real cards */
+float Evaluator::evaluate_range(const std::vector<std::string> &myHoleCards,
+				const std::vector<std::string> &boardCards,
+				const std::string &opponentRangeString,
+				const std::string &myDiscard)
+{   
+  int NUM_SIMULATIONS = 10000;
+
+  std::string myHoleCards_str;
+  for (int i=0;i<myHoleCards.size();i++) myHoleCards_str = myHoleCards_str + myHoleCards[i];
+  std::string calcString = myHoleCards_str + ":" + opponentRangeString;
+
+  // create board c_str
+  std::string boardCards_str;
+  char board_c_str[boardCards_str.size()+1];
+  for (int i=0;i<boardCards.size();i++) boardCards_str = boardCards_str + boardCards[i];
+  for (int i=0;i<boardCards_str.size();++i) board_c_str[i] = boardCards_str[i];
+  board_c_str[boardCards_str.size()] = '\0';
+
+  // create discard c_string
+  char discard_c_str[myDiscard.size()+1];
+  int i;
+  for (i=0;i<myDiscard.size(); i++) discard_c_str[i] = myDiscard[i];
+  discard_c_str[myDiscard.size()] = '\0';
+  
+  std::cout << "calcstring: " << calcString << " | " << "boardCards: " << boardCards_str << " |  discard: " << discard_c_str << std::endl;
+
+  Results *result = alloc_results();
+
+  calc(calcString.c_str(), board_c_str, discard_c_str, NUM_SIMULATIONS, result);
+
+  float myEv = (float)result->ev[0]; // opponent equity from this calculator is 1-ours
+
+  // make sure to free result
+  free_results(result);
+
+  return myEv;
+
+ }
+
+
 /* This should be called by main() during set-up to initialize pre-flop equities*/
 void Evaluator::populatePreFlopTable()
 {

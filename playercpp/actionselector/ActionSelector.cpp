@@ -125,10 +125,12 @@ void ActionSelector::selectActionForRound(int potSize, bool myButton,
   switch (numBoardCards){
   case 0:
     preflopSelector(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo, mybEq);
+    break;
   case 3:
   case 4:
   case 5:
     evalMagic(potSize, myButton, boardCards, holeCards, myDiscard, legalAction, actionInfo, mybEq);
+    break;
   }
 }
 
